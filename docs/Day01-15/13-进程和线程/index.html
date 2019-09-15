@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+<script defer src="/python100days/search.min.60214faf2667d486f5a5c602eb23dff270f5cbd9d003a2a159b89871099dc1b4.js" integrity="sha256-YCFPryZn1Ib1pcYC6yPf8nD1y9nQA6KhWbiYcQmdwbQ="></script>
 
 
 
@@ -228,7 +228,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>一个进程还可以拥有多个并发的执行线索，简单的说就是拥有多个可以获得CPU调度的执行单元，这就是所谓的线程。由于线程在同一个进程下，它们可以共享相同的上下文，因此相对于进程而言，线程间的信息共享和通信更加容易。当然在单核CPU系统中，真正的并发是不可能的，因为在某个时刻能够获得CPU的只有唯一的一个线程，多个线程共享了CPU的执行时间。使用多线程实现并发编程为程序带来的好处是不言而喻的，最主要的体现在提升程序的性能和改善用户体验，今天我们使用的软件几乎都用到了多线程技术，这一点可以利用系统自带的进程监控工具（如macOS中的“活动监视器”、Windows中的“任务管理器”）来证实，如下图所示。</p>
 
-<p><img src="/Day01-15/res/macos-monitor.png" alt="" /></p>
+<p><img src="Day01-15/res/macos-monitor.png" alt="" /></p>
 
 <p>当然多线程也并不是没有坏处，站在其他进程的角度，多线程的程序对其他程序并不友好，因为它占用了更多的CPU执行时间，导致其他程序无法获得足够的CPU执行时间；另一方面，站在开发者的角度，编写和调试多线程的程序都对开发者有较高的要求，对于初学者来说更加困难。</p>
 

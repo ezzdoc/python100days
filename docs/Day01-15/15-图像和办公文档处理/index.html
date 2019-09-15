@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+<script defer src="/python100days/search.min.60214faf2667d486f5a5c602eb23dff270f5cbd9d003a2a159b89871099dc1b4.js" integrity="sha256-YCFPryZn1Ib1pcYC6yPf8nD1y9nQA6KhWbiYcQmdwbQ="></script>
 
 
 
@@ -248,57 +248,57 @@ https://github.com/alex-shpak/hugo-book
 <p>Pillow中最为重要的是Image类，读取和处理图像都要通过这个类来完成。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
 <span style="color:#f92672">&gt;&gt;&gt;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/Day01-15/res/guido.jpg&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;Day01-15/res/guido.jpg&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> image<span style="color:#f92672">.</span>format, image<span style="color:#f92672">.</span>size, image<span style="color:#f92672">.</span>mode
 (<span style="color:#e6db74">&#39;JPEG&#39;</span>, (<span style="color:#ae81ff">500</span>, <span style="color:#ae81ff">750</span>), <span style="color:#e6db74">&#39;RGB&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> image<span style="color:#f92672">.</span>show()</code></pre></div>
-<p><img src="/Day01-15/res/image-show.png" alt="" /></p>
+<p><img src="Day01-15/res/image-show.png" alt="" /></p>
 
 <ol>
 <li><p>剪裁图像</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/Day01-15/res/guido.jpg&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;Day01-15/res/guido.jpg&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> rect <span style="color:#f92672">=</span> <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">310</span>, <span style="color:#ae81ff">360</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> image<span style="color:#f92672">.</span>crop(rect)<span style="color:#f92672">.</span>show()</code></pre></div></li>
 </ol>
 
-<p><img src="/Day01-15/res/image-crop.png" alt="" /></p>
+<p><img src="Day01-15/res/image-crop.png" alt="" /></p>
 
 <ol>
 <li><p>生成缩略图</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/Day01-15/res/guido.jpg&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;Day01-15/res/guido.jpg&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> size <span style="color:#f92672">=</span> <span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">128</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> image<span style="color:#f92672">.</span>thumbnail(size)
 <span style="color:#f92672">&gt;&gt;&gt;</span> image<span style="color:#f92672">.</span>show()</code></pre></div></li>
 </ol>
 
-<p><img src="/Day01-15/res/image-thumbnail.png" alt="" /></p>
+<p><img src="Day01-15/res/image-thumbnail.png" alt="" /></p>
 
 <ol>
 <li><p>缩放和黏贴图像</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image1 <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/Day01-15/res/luohao.png&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> image2 <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/Day01-15/res/guido.jpg&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image1 <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;Day01-15/res/luohao.png&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> image2 <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;Day01-15/res/guido.jpg&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> rect <span style="color:#f92672">=</span> <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">310</span>, <span style="color:#ae81ff">360</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> guido_head <span style="color:#f92672">=</span> image2<span style="color:#f92672">.</span>crop(rect)
 <span style="color:#f92672">&gt;&gt;&gt;</span> width, height <span style="color:#f92672">=</span> guido_head<span style="color:#f92672">.</span>size
 <span style="color:#f92672">&gt;&gt;&gt;</span> image1<span style="color:#f92672">.</span>paste(guido_head<span style="color:#f92672">.</span>resize((int(width <span style="color:#f92672">/</span> <span style="color:#ae81ff">1.5</span>), int(height <span style="color:#f92672">/</span> <span style="color:#ae81ff">1.5</span>))), (<span style="color:#ae81ff">172</span>, <span style="color:#ae81ff">40</span>))</code></pre></div></li>
 </ol>
 
-<p><img src="/Day01-15/res/image-paste.png" alt="" /></p>
+<p><img src="Day01-15/res/image-paste.png" alt="" /></p>
 
 <ol>
 <li><p>旋转和翻转</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/Day01-15/res/guido.png&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;Day01-15/res/guido.png&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> image<span style="color:#f92672">.</span>rotate(<span style="color:#ae81ff">180</span>)<span style="color:#f92672">.</span>show()
 <span style="color:#f92672">&gt;&gt;&gt;</span> image<span style="color:#f92672">.</span>transpose(Image<span style="color:#f92672">.</span>FLIP_LEFT_RIGHT)<span style="color:#f92672">.</span>show()</code></pre></div></li>
 </ol>
 
-<p><img src="/Day01-15/res/image-rotate.png" alt="" /></p>
+<p><img src="Day01-15/res/image-rotate.png" alt="" /></p>
 
-<p><img src="/Day01-15/res/image-transpose.png" alt="" /></p>
+<p><img src="Day01-15/res/image-transpose.png" alt="" /></p>
 
 <ol>
 <li><p>操作像素</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/Day01-15/res/guido.jpg&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;Day01-15/res/guido.jpg&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">310</span>):
 <span style="color:#f92672">...</span>     <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">360</span>):
 <span style="color:#f92672">...</span>         image<span style="color:#f92672">.</span>putpixel((x, y), (<span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">128</span>))
@@ -306,17 +306,17 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#f92672">&gt;&gt;&gt;</span> image<span style="color:#f92672">.</span>show()</code></pre></div></li>
 </ol>
 
-<p><img src="/Day01-15/res/image-putpixel.png" alt="" /></p>
+<p><img src="Day01-15/res/image-putpixel.png" alt="" /></p>
 
 <ol>
 <li><p>滤镜效果</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image, ImageFilter
 <span style="color:#f92672">&gt;&gt;&gt;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;/Day01-15/res/guido.jpg&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> image <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#39;Day01-15/res/guido.jpg&#39;</span>)
 <span style="color:#f92672">&gt;&gt;&gt;</span> image<span style="color:#f92672">.</span>filter(ImageFilter<span style="color:#f92672">.</span>CONTOUR)<span style="color:#f92672">.</span>show()</code></pre></div></li>
 </ol>
 
-<p><img src="/Day01-15/res/image-filter.png" alt="" /></p>
+<p><img src="Day01-15/res/image-filter.png" alt="" /></p>
 
 <h2 id="处理excel电子表格">处理Excel电子表格</h2>
 

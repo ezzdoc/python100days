@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+<script defer src="/python100days/search.min.60214faf2667d486f5a5c602eb23dff270f5cbd9d003a2a159b89871099dc1b4.js" integrity="sha256-YCFPryZn1Ib1pcYC6yPf8nD1y9nQA6KhWbiYcQmdwbQ="></script>
 
 
 
@@ -251,29 +251,29 @@ https://github.com/alex-shpak/hugo-book
     main()</code></pre></div>
 <p>运行程序，效果如下图所示。</p>
 
-<p><img src="/Day76-90/res/result1.png" alt="" /></p>
+<p><img src="Day76-90/res/result1.png" alt="" /></p>
 
 <p>如果使用jupyter的notebook，需要使用魔法指令<code>%matplotlib inresline</code>来设置在页面中显示图表，效果如下所示。</p>
 
-<p><img src="/Day76-90/res/result-in-jupyter.png" alt="" /></p>
+<p><img src="Day76-90/res/result-in-jupyter.png" alt="" /></p>
 
 <h2 id="绘制散点图">绘制散点图</h2>
 
 <p>可以将上面代码中的的<code>plot</code>函数换成<code>scatter</code>函数来绘制散点图，效果如下图所示。</p>
 
-<p><img src="/Day76-90/res/result2.png" alt="" /></p>
+<p><img src="Day76-90/res/result2.png" alt="" /></p>
 
 <p>当然，也可以直接通过<code>plot</code>函数设置绘图的颜色和线条的形状将折线图改造为散点图，对应的代码如下所示，其中参数&rsquo;xr&rsquo;表示每个点的记号是‘x’图形，颜色是红色（<u>r</u>ed）。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">plt<span style="color:#f92672">.</span>plot(x_values, y_values, <span style="color:#e6db74">&#39;xr&#39;</span>)</code></pre></div>
 <p>重新运行程序，效果如下图所示。</p>
 
-<p><img src="/Day76-90/res/result3.png" alt="" /></p>
+<p><img src="Day76-90/res/result3.png" alt="" /></p>
 
 <p>可能大家已经注意到了，1和10对应的‘x’记号在图形边角的位置不太明显，要解决这个问题可以通过添加下面的代码调整x轴和y轴的坐标范围。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">plt<span style="color:#f92672">.</span>axis([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">120</span>])</code></pre></div>
 <p>调整后的效果如下图所示。</p>
 
-<p><img src="/Day76-90/res/result4.png" alt="" /></p>
+<p><img src="Day76-90/res/result4.png" alt="" /></p>
 
 <h2 id="绘制正弦曲线">绘制正弦曲线</h2>
 
@@ -297,7 +297,7 @@ https://github.com/alex-shpak/hugo-book
     main()</code></pre></div>
 <p>运行程序，效果如下图所示。</p>
 
-<p><img src="/Day76-90/res/result5.png" alt="" /></p>
+<p><img src="Day76-90/res/result5.png" alt="" /></p>
 
 <p>如果要在一个坐标系上绘制多个图像，可以按照如下的方式修改代码。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># coding: utf-8</span>
@@ -316,7 +316,7 @@ https://github.com/alex-shpak/hugo-book
     main()</code></pre></div>
 <p>修改后的代码运行效果如下图所示。</p>
 
-<p><img src="/Day76-90/res/result6.png" alt="" /></p>
+<p><img src="Day76-90/res/result6.png" alt="" /></p>
 
 <p>如果需要分别在两个坐标系上绘制出两条曲线，可以按照如下的方式操作。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># coding: utf-8</span>
@@ -340,7 +340,7 @@ https://github.com/alex-shpak/hugo-book
     main()</code></pre></div>
 <p>效果如下图所示。</p>
 
-<p><img src="/Day76-90/res/result7.png" alt="" /></p>
+<p><img src="Day76-90/res/result7.png" alt="" /></p>
 
 <h2 id="绘制直方图">绘制直方图</h2>
 
@@ -362,7 +362,7 @@ https://github.com/alex-shpak/hugo-book
     main()</code></pre></div>
 <p>运行效果如下图所示。</p>
 
-<p><img src="/Day76-90/res/result8.png" alt="" /></p>
+<p><img src="Day76-90/res/result8.png" alt="" /></p>
 
 <h2 id="使用pygal绘制矢量图">使用Pygal绘制矢量图</h2>
 
@@ -404,7 +404,7 @@ https://github.com/alex-shpak/hugo-book
     main()</code></pre></div>
 <p>运行上面的程序，效果如下图所示。</p>
 
-<p><img src="/Day76-90/res/result9.png" alt="" /></p>
+<p><img src="Day76-90/res/result9.png" alt="" /></p>
 
 <h2 id="后记">后记</h2>
 

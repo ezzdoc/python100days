@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+<script defer src="/python100days/search.min.60214faf2667d486f5a5c602eb23dff270f5cbd9d003a2a159b89871099dc1b4.js" integrity="sha256-YCFPryZn1Ib1pcYC6yPf8nD1y9nQA6KhWbiYcQmdwbQ="></script>
 
 
 
@@ -296,7 +296,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="git简介">Git简介</h3>
 
-<p><img src="/Day91-100/res/git-logo.png" alt="" /></p>
+<p><img src="Day91-100/res/git-logo.png" alt="" /></p>
 
 <p>Git是诞生于2005年的一个开源分布式版本控制系统，最初是Linus Torvalds（Linux之父） 为了帮助管理Linux内核开发而开发的一个版本控制软件。Git与常用的版本控制工具Subversion等不同，它采用了分布式版本控制的方式，在没有中央服务器支持的环境下也能够实施版本控制。</p>
 
@@ -319,7 +319,7 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">git init</code></pre></div>
 <p>当你完成了上述操作后，本地目录就变成了下面的样子，左边是你正在操作的工作目录，而右边是你的本地仓库，中间是工作目录和本地仓库之间的一个暂存区（也称为缓存区）。</p>
 
-<p><img src="/Day91-100/res/git_repository.png" alt="" /></p>
+<p><img src="Day91-100/res/git_repository.png" alt="" /></p>
 
 <p>通过<code>git add</code>可以将文件添加到暂存区。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">git add &lt;file&gt; ...</code></pre></div>
@@ -342,7 +342,7 @@ git reset --hard HEAD^</code></pre></div>
 
 <p>对于Git来说不像SVN那样一定需要一个中心服务器，刚才我们的操作都是在本地执行的，如果你想通过Git分享你的代码或者与其他人协作，那么就需要服务器的支持。Github为Git提供了远程仓库，它是一个基于Git的代码托管平台，企业用户（付费用户）可以创建仓库，普通用户只能创建公开仓库（代码是可以是他人可见的）。Github是在2008年4月创办的，它上面代码库惊人的增长速度已经证明了它是非常成功的，在2018年6月，微软以75亿美元的天价收购了Github。国内也有类似的代码托管平台，最有名的当属<a href="https://gitee.com/">码云</a>和<a href="https://coding.net/">CODING</a>，目前码云和CODING对注册用户都提供了受限的使用私有仓库的功能，同时还提供了对Pull Request的支持（后面会讲到），而且目前提供代码托管服务的平台都集成了“缺陷管理”、“WebHook”等一系列的功能，让我们能做的事情不仅仅是版本控制。当然，如果公司需要也可以搭建自己的Git服务器，具体的方式我们就不在这里进行介绍了，有兴趣的可以自行了解。</p>
 
-<p><img src="/Day91-100/res/git_logo.png" alt="" /></p>
+<p><img src="Day91-100/res/git_logo.png" alt="" /></p>
 
 <p>我们可以在码云或者CODING上注册账号，也可以使用第三方登录（github账号、微信账号、新浪微博账号、CSDN账号等）的方式。登录成功后就可以创建项目，创建项目几乎是“傻瓜式”的，我们只说几个值得注意的地方。</p>
 
@@ -402,7 +402,7 @@ git checkout &lt;branch-name&gt;</code></pre></div>
 
 <p>Redmine是基于Ruby on Rails框架的开源缺陷管理系统，提供了问题管理、代码管理、Wiki等必要的功能，而且支持插件系统，扩展起来也非常容易。</p>
 
-<p><img src="/Day91-100/res/redmine_new_issue.png" alt="" /></p>
+<p><img src="Day91-100/res/redmine_new_issue.png" alt="" /></p>
 
 <p>如果希望了解和使用Redmine，可以关注<a href="http://www.redmine.org.cn/">Redmine中文网</a>，上面提供了视频教程、经验分享以及其他的安装和使用上的指导。</p>
 
@@ -412,7 +412,7 @@ git checkout &lt;branch-name&gt;</code></pre></div>
 
 <p>在所有的CI工具中，Jenkins和TravisCI是最具有代表性的。</p>
 
-<p><img src="/Day91-100/res/jenkins_new_project.png" alt="" />Jenkins 是基 Java的开源CI工具，其安装和操作都很简单。另外，Jenkins不仅能在面板上轻松看出任务成功或失败，还可以借助通知功能将结果以邮件或RSS订阅的形式发给用户。与此同时，Jenkins也允许通过插件进行功能扩展，所需功能可以随用随添加，而且还支持主从式集群，能够轻松的进行水平扩展。</p>
+<p><img src="Day91-100/res/jenkins_new_project.png" alt="" />Jenkins 是基 Java的开源CI工具，其安装和操作都很简单。另外，Jenkins不仅能在面板上轻松看出任务成功或失败，还可以借助通知功能将结果以邮件或RSS订阅的形式发给用户。与此同时，Jenkins也允许通过插件进行功能扩展，所需功能可以随用随添加，而且还支持主从式集群，能够轻松的进行水平扩展。</p>
 </article>
 
       

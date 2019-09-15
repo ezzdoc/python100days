@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+<script defer src="/python100days/search.min.60214faf2667d486f5a5c602eb23dff270f5cbd9d003a2a159b89871099dc1b4.js" integrity="sha256-YCFPryZn1Ib1pcYC6yPf8nD1y9nQA6KhWbiYcQmdwbQ="></script>
 
 
 
@@ -284,7 +284,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">hexo s -p <span style="color:#ae81ff">8000</span> -o</code></pre></div>
 <p>至此，我们已经可以看到Hexo在没有配置也没有加入自己的Markdown文件下生成的首页，如下图所示。</p>
 
-<p><img src="/common/res/hexo-default-index.png" alt="" /></p>
+<p><img src="common/res/hexo-default-index.png" alt="" /></p>
 
 <p>接下来我们修改博客的配置文件。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">vim _config.yml</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#75715e"># Hexo Configuration</span>
@@ -597,7 +597,7 @@ hexo server -p <span style="color:#ae81ff">8000</span> -o</code></pre></div>
 <li>根据自己的用户名创建一个仓库，仓库<strong>一定</strong>要取名为“用户名.github.io”。例如：我在GitHub上的用户名是jackfrued，那么我的托管博客项目的仓库一定要命名为jackfrued.github.io。</li>
 </ol>
 
-<p><img src="/common/res/create-new-repo.png" alt="" /></p>
+<p><img src="common/res/create-new-repo.png" alt="" /></p>
 
 <ol>
 <li><p>修改博客项目的配置文件<code>_config.yml</code>，配置使用GitHub来部署该博客项目。</p>
@@ -630,7 +630,7 @@ deploy:
 
 <p>虽然我们已经通过GitHub提供的域名访问到了自己的博客，但是如果我们不愿意“寄人篱下”，我们在利用GitHub Pages提供的托管服务同时，也可以将博客绑定到自己专属的域名。如果暂时还没有购买域名，我们可以在提供域名购买服务的网站（如：<a href="https://www.hichina.com/">万网</a>、<a href="https://www.godaddy.com/">GoDaddy</a>）上进行购买。</p>
 
-<p><img src="/common/res/wanwang.png" alt="" /></p>
+<p><img src="common/res/wanwang.png" alt="" /></p>
 
 <blockquote>
 <p>说明：目前国内对域名的管理日趋严格，在购买域名时需要填写一大堆的个人信息，进行实名认证后才能获得域名，这一点相信大家能够理解。</p>
@@ -638,7 +638,7 @@ deploy:
 
 <p>比如说，我现在已经购买了一个名为“jackfrued.top”的域名，如何让它跟“jackfrued.github.io”这个域名做一个绑定呢，我们可以利用<a href="https://dns.console.aliyun.com/">阿里云控制台</a>或者<a href="https://www.dnspod.cn/">DNSPod</a>来做一个域名解析服务。在域名解析平台登录成功后，可以添加或选择自己的域名来配置域名解析。点击“添加记录”按钮，创建一个类型为CNAME的域名解析，CNAME类型的解析代表将一个域名解析到另一个域名，如下图所示。</p>
 
-<p><img src="/common/res/dns-configuration.png" alt="" /></p>
+<p><img src="common/res/dns-configuration.png" alt="" /></p>
 
 <p>完成这一步后，还不能马上通过自己的域名访问到博客项目，最后需要在博客项目的<code>source</code>目录下添加一个名为CNAME的文件（请注意这个文件的名字是全大写字母的）。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">vim CNAME</code></pre></div>

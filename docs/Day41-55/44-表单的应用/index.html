@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+<script defer src="/python100days/search.min.60214faf2667d486f5a5c602eb23dff270f5cbd9d003a2a159b89871099dc1b4.js" integrity="sha256-YCFPryZn1Ib1pcYC6yPf8nD1y9nQA6KhWbiYcQmdwbQ="></script>
 
 
 
@@ -274,7 +274,7 @@ https://github.com/alex-shpak/hugo-book
 &lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
 <p>注意，在上面的表单中，我们使用了模板指令<code>{% csrf_token %}</code>为表单添加一个隐藏域（type属性值为hidden的input标签），它的作用是在表单中生成一个随机令牌（token）来防范<a href="https://zh.wikipedia.org/wiki/%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0">跨站请求伪造</a>（通常简称为CSRF），这也是Django在提交表单时的硬性要求，除非我们设置了免除CSRF令牌。下图是一个关于CSRF简单生动的例子，它来自于<a href="https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5">维基百科</a>。</p>
 
-<p><img src="/Day41-55/res/CSRF.png" alt="" /></p>
+<p><img src="Day41-55/res/CSRF.png" alt="" /></p>
 
 <p>用户在提交注册表单时，我们还需要对用户的输入进行验证，例如我们的网站要求用户名必须由字母、数字、下划线构成且长度在4-20个字符之间，密码的长度为8-20个字符，确认密码必须跟密码保持一致。这些验证操作首先可以通过浏览器中的JavaScript代码来完成，但是即便如此，在服务器端仍然要对用户输入再次进行验证来避免将无效的数据库交给数据库，因为用户可能会禁用浏览器的JavaScript功能，也有可能绕过浏览器的输入检查将注册数据提交给服务器，所以服务器端的用户输入检查仍然是必要的。</p>
 
@@ -588,7 +588,7 @@ urlpatterns <span style="color:#f92672">=</span> [
     <span style="color:#66d9ef">return</span> HttpResponse(image, content_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;image/png&#39;</span>)</code></pre></div>
 <p>生成的验证码如下图所示。</p>
 
-<p><img src="/Day41-55/res/captcha.png" alt="" /></p>
+<p><img src="Day41-55/res/captcha.png" alt="" /></p>
 
 <p>为了验证用户提交的登录表单，我们再定义个表单类。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoginForm</span>(forms<span style="color:#f92672">.</span>Form):

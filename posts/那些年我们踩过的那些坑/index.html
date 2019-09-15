@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+<script defer src="/python100days/search.min.60214faf2667d486f5a5c602eb23dff270f5cbd9d003a2a159b89871099dc1b4.js" integrity="sha256-YCFPryZn1Ib1pcYC6yPf8nD1y9nQA6KhWbiYcQmdwbQ="></script>
 
 
 
@@ -254,7 +254,7 @@ https://github.com/alex-shpak/hugo-book
 	main()</code></pre></div>
 <p>上面代码的部分运行结果如下图所示，出现这个结果的原因是Python出于对性能的考虑所做的一项优化。对于整数对象，Python把一些频繁使用的整数对象缓存起来，保存到一个叫<code>small_ints</code>的链表中，在Python的整个生命周期内，任何需要引用这些整数对象的地方，都不再重新创建新的对象，而是直接引用缓存中的对象。Python把频繁使用的整数对象的值定在[-5, 256]这个区间，如果需要这个范围的整数，就直接从<code>small_ints</code>中获取引用而不是临时创建新的对象。因为大于256或小于-5的整数不在该范围之内，所以就算两个整数的值是一样，但它们是不同的对象。</p>
 
-<p><img src="/common/res/int-is-comparation.png" alt="" /></p>
+<p><img src="common/res/int-is-comparation.png" alt="" /></p>
 
 <p>当然仅仅如此这个坑就不值一提了，如果你理解了上面的规则，我们就再看看下面的代码。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">a <span style="color:#f92672">=</span> <span style="color:#ae81ff">257</span>
@@ -277,7 +277,7 @@ https://github.com/alex-shpak/hugo-book
 dis<span style="color:#f92672">.</span>dis(main)</code></pre></div>
 <p>代码的执行结果如下图所示。可以看出代码第6行和第7行，也就是<code>main</code>函数中的257是从同一个位置加载的，因此是同一个对象；而代码第9行的<code>a</code>明显是从不同的地方加载的，因此引用的是不同的对象。</p>
 
-<p><img src="/common/res/result-of-dis.png" alt="" /></p>
+<p><img src="common/res/result-of-dis.png" alt="" /></p>
 
 <p>如果还想对这个问题进行进一步深挖，推荐大家阅读<a href="https://foofish.net/python_int_implement.html">《Python整数对象实现原理》</a>这篇文章。</p>
 
@@ -319,9 +319,9 @@ scores <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</spa
         <span style="color:#66d9ef">print</span>(scores)</code></pre></div>
 <p>如果对内存的使用不是很理解，可以看看<a href="http://www.pythontutor.com/">PythonTutor网站</a>上提供的代码可视化执行功能，通过可视化执行，我们可以看到内存是如何分配的，从而避免在使用嵌套列表或者复制对象时可能遇到的坑。</p>
 
-<p><img src="/common/res/python-tutor-visualize.png" alt="" /></p>
+<p><img src="common/res/python-tutor-visualize.png" alt="" /></p>
 
-<p><img src="/common/res/python-tutor-visualize2.png" alt="" /></p>
+<p><img src="common/res/python-tutor-visualize2.png" alt="" /></p>
 
 <h3 id="坑3-访问修饰符的坑">坑3 - 访问修饰符的坑</h3>
 

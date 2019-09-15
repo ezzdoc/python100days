@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+<script defer src="/python100days/search.min.60214faf2667d486f5a5c602eb23dff270f5cbd9d003a2a159b89871099dc1b4.js" integrity="sha256-YCFPryZn1Ib1pcYC6yPf8nD1y9nQA6KhWbiYcQmdwbQ="></script>
 
 
 
@@ -226,11 +226,11 @@ https://github.com/alex-shpak/hugo-book
 
 <p>下面我们以“360图片”网站为例，说明什么是JavaScript逆向工程。其实所谓的JavaScript逆向工程就是找到通过Ajax技术动态获取数据的接口。在浏览器中输入<a href="http://image.so.com/z?ch=beauty">http://image.so.com/z?ch=beauty</a>就可以打开“360图片”的“美女”版块，如下图所示。</p>
 
-<p><img src="/Day66-75/res/image360-website.png" alt="" /></p>
+<p><img src="Day66-75/res/image360-website.png" alt="" /></p>
 
 <p>但是当我们在浏览器中通过右键菜单“显示网页源代码”的时候，居然惊奇的发现页面的HTML代码中连一个<code>&lt;img&gt;</code>标签都没有，那么我们看到的图片是怎么显示出来的呢？原来所有的图片都是通过JavaScript动态加载的，而在浏览器的“开发人员工具”的“网络”中可以找到获取这些图片数据的网络API接口，如下图所示。</p>
 
-<p><img src="/Day66-75/res/api-image360.png" alt="" /></p>
+<p><img src="Day66-75/res/api-image360.png" alt="" /></p>
 
 <p>那么结论就很简单了，只要我们找到了这些网络API接口，那么就能通过这些接口获取到数据，当然实际开发的时候可能还要对这些接口的参数以及接口返回的数据进行分析，了解每个参数的意义以及返回的JSON数据的格式，这样才能在我们的爬虫中使用这些数据。</p>
 

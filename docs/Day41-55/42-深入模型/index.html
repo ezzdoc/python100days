@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
 
 
-<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+<script defer src="/python100days/search.min.60214faf2667d486f5a5c602eb23dff270f5cbd9d003a2a159b89871099dc1b4.js" integrity="sha256-YCFPryZn1Ib1pcYC6yPf8nD1y9nQA6KhWbiYcQmdwbQ="></script>
 
 
 
@@ -352,7 +352,7 @@ Running migrations:
 
 <p>执行完数据模型迁移操作之后，可以在通过图形化的MySQL客户端工具查看到E-R图（实体关系图）。</p>
 
-<p><img src="/Day41-55/res/er-graph.png" alt="" /></p>
+<p><img src="Day41-55/res/er-graph.png" alt="" /></p>
 
 <h2 id="利用django后台管理模型">利用Django后台管理模型</h2>
 
@@ -373,11 +373,11 @@ Superuser created successfully.</code></pre></div></li>
 
 <p>访问<a href="http://127.0.0.1:8000/admin">http://127.0.0.1:8000/admin</a>，会来到如下图所示的登录界面。</p>
 
-<p><img src="/Day41-55/res/admin-login.png" alt="" /></p>
+<p><img src="Day41-55/res/admin-login.png" alt="" /></p>
 
 <p>登录后进入管理员操作平台。</p>
 
-<p><img src="/Day41-55/res/admin-welcome.png" alt="" /></p>
+<p><img src="Day41-55/res/admin-welcome.png" alt="" /></p>
 
 <p>至此我们还没有看到之前创建的模型类，需要在应用的admin.py文件中模型进行注册。</p>
 
@@ -393,7 +393,7 @@ admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span
 
 <p>注册模型类后，就可以在后台管理系统中看到它们。</p>
 
-<p><img src="/Day41-55/res/admin-model.png" alt="" /></p>
+<p><img src="Day41-55/res/admin-model.png" alt="" /></p>
 
 <ol>
 <li>对模型进行CRUD操作。</li>
@@ -405,19 +405,19 @@ admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span
 <li>添加新的部门。</li>
 </ul>
 
-<p><img src="/Day41-55/res/admin-model-create.png" alt="" /></p>
+<p><img src="Day41-55/res/admin-model-create.png" alt="" /></p>
 
 <ul>
 <li>查看所有部门。</li>
 </ul>
 
-<p><img src="/Day41-55/res/admin-model-read.png" alt="" /></p>
+<p><img src="Day41-55/res/admin-model-read.png" alt="" /></p>
 
 <ul>
 <li>更新和删除部门。</li>
 </ul>
 
-<p><img src="/Day41-55/res/admin-model-delete-and-update.png" alt="" /></p>
+<p><img src="Day41-55/res/admin-model-delete-and-update.png" alt="" /></p>
 
 <ol>
 <li>注册模型管理类。</li>
@@ -443,9 +443,9 @@ admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span
 
    admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(Dept, DeptAdmin)
    admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(Emp, EmpAdmin)</code></pre></div>
-<p><img src="/Day41-55/res/admin-model-depts.png" alt="" /></p>
+<p><img src="Day41-55/res/admin-model-depts.png" alt="" /></p>
 
-<p><img src="/Day41-55/res/admin-model-emps.png" alt="" /></p>
+<p><img src="Day41-55/res/admin-model-emps.png" alt="" /></p>
 
 <p>为了更好的查看模型数据，可以为Dept和Emp两个模型类添加<code>__str__</code>魔法方法。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">   <span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
@@ -473,7 +473,7 @@ admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span
        <span style="color:#75715e"># 此处省略下面的代码</span></code></pre></div>
 <p>修改代码后刷新查看Emp模型的页面，效果如下图所示。</p>
 
-<p><img src="/Day41-55/res/admin-model-emps-modified.png" alt="" /></p>
+<p><img src="Day41-55/res/admin-model-emps-modified.png" alt="" /></p>
 
 <h2 id="使用orm完成模型的crud操作">使用ORM完成模型的CRUD操作</h2>
 
