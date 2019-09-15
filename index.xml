@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python - 100天从新手到大师 on Python-100天从新手到大师</title>
+    <link>https://ezzdoc.github.io/python100days/</link>
+    <description>Recent content in Python - 100天从新手到大师 on Python-100天从新手到大师</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://ezzdoc.github.io/python100days/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PEP 8风格指南</title>
+      <link>https://ezzdoc.github.io/python100days/posts/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;h2 id=&#34;pep-8风格指南&#34;&gt;PEP 8风格指南&lt;/h2&gt;
+
+&lt;p&gt;PEP是Python Enhancement Proposal的缩写，通常翻译为“Python增强提案”。每个PEP都是一份为Python社区提供的指导Python往更好的方向发展的技术文档，其中的第8号增强提案（PEP 8）是针对Python语言编订的代码风格指南。尽管我们可以在保证语法没有问题的前提下随意书写Python代码，但是在实际开发中，采用一致的风格书写出可读性强的代码是每个专业的程序员应该做到的事情，也是每个公司的编程规范中会提出的要求，这些在多人协作开发一个项目（团队开发）的时候显得尤为重要。我们可以从Python官方网站的&lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34;&gt;PEP 8链接&lt;/a&gt;中找到该文档，下面我们对该文档的关键部分做一个简单的总结。&lt;/p&gt;
+
+&lt;h3 id=&#34;空格的使用&#34;&gt;空格的使用&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;u&gt;使用空格来表示缩进而不要用制表符（Tab）。&lt;/u&gt;这一点对习惯了其他编程语言的人来说简直觉得不可理喻，因为绝大多数的程序员都会用Tab来表示缩进，但是要知道Python并没有像C/C++或Java那样的用花括号来构造一个代码块的语法，在Python中分支和循环结构都使用缩进来表示哪些代码属于同一个级别，鉴于此Python代码对缩进以及缩进宽度的依赖比其他很多语言都强得多。在不同的编辑器中，Tab的宽度可能是2、4或8个字符，甚至是其他更离谱的值，用Tab来表示缩进对Python代码来说可能是一场灾难。&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;和语法相关的每一层缩进都用4个空格来表示。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;每行的字符数不要超过79个字符，如果表达式因太长而占据了多行，除了首行之外的其余各行都应该在正常的缩进宽度上再加上4个空格。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;函数和类的定义，代码前后都要用两个空行进行分隔。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;在同一个类中，各个方法之间应该用一个空行进行分隔。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;二元运算符的左右两侧应该保留一个空格，而且只要一个空格就好。&lt;/u&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python之禅</title>
+      <link>https://ezzdoc.github.io/python100days/posts/Python%E4%B9%8B%E7%A6%85/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/Python%E4%B9%8B%E7%A6%85/</guid>
+      <description>&lt;h2 id=&#34;python之禅&#34;&gt;Python之禅&lt;/h2&gt;
+
+&lt;p&gt;Beautiful is better than ugly. （优美比丑陋好）&lt;br /&gt;
+Explicit is better than implicit.（清晰比晦涩好）&lt;br /&gt;
+Simple is better than complex.（简单比复杂好）&lt;br /&gt;
+Complex is better than complicated.（复杂比错综复杂好）&lt;br /&gt;
+Flat is better than nested.（扁平比嵌套好）&lt;br /&gt;
+Sparse is better than dense.（稀疏比密集好）&lt;br /&gt;
+Readability counts.（可读性很重要）&lt;br /&gt;
+Special cases aren&amp;rsquo;t special enough to break the rules.（特殊情况也不应该违反这些规则）&lt;br /&gt;
+Although practicality beats purity.（但现实往往并不那么完美）&lt;br /&gt;
+Errors should never pass silently.（异常不应该被静默处理）&lt;br /&gt;
+Unless explicitly silenced.（除非你希望如此）&lt;br /&gt;
+In the face of ambiguity, refuse the temptation to guess.（遇到模棱两可的地方，不要胡乱猜测）&lt;br /&gt;
+There should be one&amp;ndash; and preferably only one &amp;ndash;obvious way to do it.（肯定有一种通常也是唯一一种最佳的解决方案）&lt;br /&gt;
+Although that way may not be obvious at first unless you&amp;rsquo;re Dutch.（虽然这种方案并不是显而易见的，因为你不是那个荷兰人^这里指的是Python之父Guido^）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python参考书籍</title>
+      <link>https://ezzdoc.github.io/python100days/posts/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/</guid>
+      <description>&lt;h2 id=&#34;python参考书籍&#34;&gt;Python参考书籍&lt;/h2&gt;
+
+&lt;h3 id=&#34;入门读物&#34;&gt;入门读物&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;《Python基础教程》（*Beginning Python From Novice to Professional*）&lt;/li&gt;
+&lt;li&gt;《Python学习手册》（*Learning Python*）&lt;/li&gt;
+&lt;li&gt;《Python编程》（*Programming Python*）&lt;/li&gt;
+&lt;li&gt;《Python Cookbook》&lt;/li&gt;
+&lt;li&gt;《Python程序设计》（*Python Programming: An Introduction to Computer Science*）&lt;/li&gt;
+&lt;li&gt;《Modern Python Cookbook》&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python惯例</title>
+      <link>https://ezzdoc.github.io/python100days/posts/Python%E6%83%AF%E4%BE%8B/</link>
+      <pubDate>Sat, 07 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/Python%E6%83%AF%E4%BE%8B/</guid>
+      <description>&lt;h2 id=&#34;python惯例&#34;&gt;Python惯例&lt;/h2&gt;
+
+&lt;p&gt;“惯例”这个词指的是“习惯的做法，常规的办法，一贯的做法”，与这个词对应的英文单词叫“idiom”。由于Python跟其他很多编程语言在语法和使用上还是有比较显著的差别，因此作为一个Python开发者如果不能掌握这些惯例，就无法写出“Pythonic”的代码。下面我们总结了一些在Python开发中的惯用的代码。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;让代码既可以被导入又可以被执行。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Hexo搭建自己的博客</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;h2 id=&#34;使用hexo搭建自己的博客&#34;&gt;使用Hexo搭建自己的博客&lt;/h2&gt;
+
+&lt;p&gt;对于一个程序员来说，搭建一个属于自己的博客平台是非常有意义的事情。首先，博客可以记录自己的成长历程，也是对自己一段时间学习和工作的总结和沉淀；其他，通过博客可以营销自己，增强自己在互联网或行业内的影响力，为将来更好的职业生涯打一个坚实的基础。前几年有一本名为《软技能 - 代码之外的生存指南》的畅销书，我记得书中有这么一段话：“流行乐队的音乐才华可能并不比夜店驻场乐队高多少，他们为什么就可以在全世界巡回演出，创造一个又一个白金记录？……你的营销做得越好，你的才华才能表现得淋漓尽致。”&lt;/p&gt;
+
+&lt;p&gt;这里顺便啰嗦两句，在互联网如此发达的今天，我们应该如何营销自己呢？自我营销首先要从打造个人品牌做起，对于程序员来说，最容易去做好的一件事情还是搭建自己的博客。博客相当于是你在互联网上的一个基地，尤其是当你拥有了属于自己的独立博客后，你可以做很多自己想做的事情，既可以传达自己的思想，又可以提升自己的影响力，当然如果你的博客经营得非常好，你可以从中获利。当然，除了博客，直播、视频网站、投稿、写书、技术活动都是可选的自我营销方式。当然，做自我营销也需要持之以恒，三天打鱼两天晒网是很难有什么收获的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>常见反爬策略及应对方案</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/</guid>
+      <description>&lt;h2 id=&#34;常见反爬策略及应对方案&#34;&gt;常见反爬策略及应对方案&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;构造合理的HTTP请求头。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Accept&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;User-Agent - 三方库fake-useragent&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; fake_useragent &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; UserAgent
+ua &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; UserAgent()
+
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ie
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US);&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;msie
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (compatible; MSIE 10.0; Macintosh; Intel Mac OS X 10_7_3; Trident/6.0)&amp;#39;&lt;/span&gt;
+ua[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Internet Explorer&amp;#39;&lt;/span&gt;]
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; GTB7.4; InfoPath.2; SV1; .NET CLR 3.3.69573; WOW64; en-US)&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;opera
+&lt;span style=&#34;color:#75715e&#34;&gt;# Opera/9.80 (X11; Linux i686; U; ru) Presto/2.8.131 Version/11.11&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;chrome
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) Chrome/22.0.1216.0 Safari/537.2&amp;#39;&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;google
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13&lt;/span&gt;
+ua[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;google chrome&amp;#39;&lt;/span&gt;]
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;firefox
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ff
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safari
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# and the best one, random via real world browser usage statistic&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>玩转PyCharm</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E7%8E%A9%E8%BD%ACPyCharm/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E7%8E%A9%E8%BD%ACPyCharm/</guid>
+      <description>&lt;h2 id=&#34;玩转pycharm&#34;&gt;玩转PyCharm&lt;/h2&gt;
+
+&lt;p&gt;PyCharm是由JetBrains公司开发的提供给Python专业的开发者的一个集成开发环境，它最大的优点是能够大大提升Python开发者的工作效率，为开发者集成了很多用起来非常顺手的功能，包括代码调试、高亮语法、代码跳转、智能提示、自动补全、单元测试、版本控制等等。此外，PyCharm还提供了对一些高级功能的支持，包括支持基于Django框架的Web开发。&lt;/p&gt;
+
+&lt;h3 id=&#34;pycharm的安装&#34;&gt;PyCharm的安装&lt;/h3&gt;
+
+&lt;p&gt;可以在[JetBrains公司的官方网站]()找到PyCharm的&lt;a href=&#34;https://www.jetbrains.com/pycharm/download/&#34;&gt;下载链接&lt;/a&gt;，有两个可供下载的版本一个是社区版一个是专业版，社区版在&lt;a href=&#34;https://zh.wikipedia.org/wiki/Apache%E8%AE%B8%E5%8F%AF%E8%AF%81&#34;&gt;Apache许可证&lt;/a&gt;下发布，专业版在专用许可证下发布（需要购买授权下载后可试用30天），其拥有许多额外功能。安装PyCharm需要有JRE（Java运行时环境）的支持，如果没有可以在安装过程中选择在线下载安装。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;说明：如果你是一名学生，希望购买PyCharm来使用，可以看看&lt;a href=&#34;https://sales.jetbrains.com/hc/zh-cn/articles/207154369&#34;&gt;教育优惠官方申请指南&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;首次使用的设置&#34;&gt;首次使用的设置&lt;/h3&gt;
+
+&lt;p&gt;第一次使用PyCharm时，会有一个导入设置的向导，如果之前没有使用PyCharm或者没有保存过设置的就直接选择“Do not import settings”进入下一步即可。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用函数还是用复杂的表达式</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>&lt;h2 id=&#34;用函数还是用复杂的表达式&#34;&gt;用函数还是用复杂的表达式&lt;/h2&gt;
+
+&lt;h3 id=&#34;要不要使用复杂表达式&#34;&gt;要不要使用复杂表达式&lt;/h3&gt;
+
+&lt;p&gt;Perl语言的原作者*Larry Wall*曾经说过，伟大的程序员都有三个优点：懒惰、暴躁和自负。乍一看这三个词语没有一个是褒义词，但在程序员的世界里，这三个词有不同的意义。首先，懒惰会促使程序员去写一些省事儿的程序来辅助自己或别人更好的完成工作，这样我们就无需做那些重复和繁琐的劳动；同理能够用3行代码解决的事情，我们也绝不会写出10行代码来。其次，暴躁会让程序员主动的去完成一些你还没有提出的工作，去优化自己的代码让它更有效率，能够3秒钟完成的任务，我们绝不能容忍1分钟的等待。最后，自负会促使程序员写出可靠无误的代码，我们写代码不是为了接受批评和指责，而是为了让其他人来膜拜。&lt;/p&gt;
+
+&lt;p&gt;那么接下来就有一个很有意思的问题值得探讨一下，我们需要一个程序从输入的三个数中找出最大的那个数。这个程序对任何会编程的人来说都是小菜一碟，甚至不会编程的人经过10分钟的学习也能搞定。下面是用来解决这个问题的Python代码。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a = &amp;#39;&lt;/span&gt;))
+b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;b = &amp;#39;&lt;/span&gt;))
+c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;c = &amp;#39;&lt;/span&gt;))
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; b:
+	the_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a
+&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+	the_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; b
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; c &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; the_max:
+	the_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; c
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;The max is:&amp;#39;&lt;/span&gt;, the_max)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;但是我们刚才说了，程序员都是懒惰的，很多程序员都会使用三元条件运算符来改写上面的代码。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>知乎问题回答</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/</link>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/</guid>
+      <description>&lt;h2 id=&#34;知乎问题回答&#34;&gt;知乎问题回答&lt;/h2&gt;
+
+&lt;h3 id=&#34;python学习完基础语法知识后-如何进一步提高&#34;&gt;Python学习完基础语法知识后，如何进一步提高？&lt;/h3&gt;
+
+&lt;p&gt;如果你已经完成了Python基础语法的学习，想要知道接下来如何提高，那么你得先问问自己你要用Python来做什么？目前学习Python后可能的就业方向包括以下几个领域，我把每个领域需要的技术作为了一个简单的关键词摘要。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;说明：以下数据参考了主要的招聘门户网站以及职友集。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;职位&lt;/th&gt;
+&lt;th&gt;所需技能&lt;/th&gt;
+&lt;th&gt;招聘需求量&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Python后端开发工程师&lt;/td&gt;
+&lt;td&gt;Python基础&lt;br&gt;Django / Flask / Tornado / Sanic&lt;br&gt;RESTful / 接口文档撰写&lt;br&gt;MySQL / Redis / MongoDB / ElasticSearch&lt;br&gt;Linux / Git / Scrum / PyCharm&lt;/td&gt;
+&lt;td&gt;大&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python爬虫开发工程师&lt;/td&gt;
+&lt;td&gt;Python基础&lt;br&gt;常用标准库和三方库&lt;br&gt;Scrapy / PySpider&lt;br&gt;Selenium / Appnium&lt;br&gt;Redis / MongoDB / MySQL&lt;br&gt;前端 / HTTP(S) / 抓包工具&lt;/td&gt;
+&lt;td&gt;较少&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python量化交易开发工程师&lt;/td&gt;
+&lt;td&gt;Python基础&lt;br&gt;数据结构 / 算法 / 设计模式&lt;br&gt;NoSQL（KV数据库）&lt;br&gt;金融学（两融、期权、期货、股票） / 数字货币&lt;/td&gt;
+&lt;td&gt;较大（一线城市）&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python数据分析工程师 /&lt;br&gt;Python机器学习工程师&lt;/td&gt;
+&lt;td&gt;统计学专业 / 数学专业 / 计算机专业&lt;br&gt;Python基础 / 算法设计&lt;br&gt;SQL / NoSQL / Hive / Hadoop / Spark&lt;br&gt;NumPy / Scikit-Learn / Pandas / Seaborn&lt;br&gt;PyTorch / Tensorflow / OpenCV&lt;/td&gt;
+&lt;td&gt;较大（一线城市）&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python自动化测试工程师&lt;/td&gt;
+&lt;td&gt;Python基础 / 单元测试 / 软件测试基础&lt;br&gt;Linux / Shell / JIRA / 禅道 / Jenkins / CI / CD&lt;br&gt;Selenium / Robot Framework / Appnium&lt;br&gt;ab / sysbench / JMeter / LoadRunner / QTP&lt;/td&gt;
+&lt;td&gt;大&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python自动化运维工程师&lt;/td&gt;
+&lt;td&gt;Python基础 / Linux / Shell &lt;br&gt;Fabric / Ansible / Playbook&lt;br&gt;Zabbix / Saltstack / Puppet&lt;br&gt;Docker / paramiko&lt;/td&gt;
+&lt;td&gt;较大（一线城市）&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python云平台开发工程师&lt;/td&gt;
+&lt;td&gt;Python基础&lt;br&gt;OpenStack / CloudStack&lt;br&gt;Ovirt / KVM&lt;br&gt;Docker / K8S&lt;/td&gt;
+&lt;td&gt;较少（一线城市）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;如果弄清了自己将来要做的方向，就可以开始有针对性的学习了，下面给大家一个推荐书籍的清单。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>那些年我们踩过的那些坑</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</guid>
+      <description>&lt;h2 id=&#34;那些年我们踩过的那些坑&#34;&gt;那些年我们踩过的那些坑&lt;/h2&gt;
+
+&lt;h3 id=&#34;坑1-整数比较的坑&#34;&gt;坑1 - 整数比较的坑&lt;/h3&gt;
+
+&lt;p&gt;在 Python 中一切都是对象，整数也是对象，在比较两个整数时有两个运算符&lt;code&gt;==&lt;/code&gt;和&lt;code&gt;is&lt;/code&gt;，它们的区别是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;is&lt;/code&gt;比较的是两个整数对象的id值是否相等，也就是比较两个引用是否代表了内存中同一个地址。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;==&lt;/code&gt;比较的是两个整数对象的内容是否相等，使用&lt;code&gt;==&lt;/code&gt;时其实是调用了对象的&lt;code&gt;__eq__()&lt;/code&gt;方法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;知道了&lt;code&gt;is&lt;/code&gt;和&lt;code&gt;==&lt;/code&gt;的区别之后，我们可以来看看下面的代码，了解Python中整数比较有哪些坑：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;():
+	x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; True:
+		x &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+		y &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; y:
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; is &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; (x, y))
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Attention! &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; is not &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; (x, y))
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+
+	x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; True:
+		x &lt;span style=&#34;color:#f92672&#34;&gt;-=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+		y &lt;span style=&#34;color:#f92672&#34;&gt;-=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; y:
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; is &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; (x, y))
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Attention! &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; is not &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; (x, y))
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+	main()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/01-%E5%88%9D%E8%AF%86Python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/01-%E5%88%9D%E8%AF%86Python/</guid>
+      <description>初识Python Python简介 Python的历史  1989年圣诞节：Guido von Rossum开始写Python语言的编译器。 1991年2月：第一个Python编译器（同时也是解释器）诞生，它是用C语言实现的（后面又出现了Java和C#实现的版本Jython和IronPython，以及PyPy、Brython、Pyston等其他实现），可以调用C语言的库函数。在最早的版本中，Python已经提供了对“类”，“函数”，“异常处理”等构造块的支持，同时提供了“列表”和“字典”等核心数据类型，同时支持以模块为基础来构造应用程序。 1994年1月：Python 1.0正式发布。 2000年10月16日：Python 2.0发布，增加了实现完整的垃圾回收，提供了对Unicode的支持。与此同时，Python的整个开发过程更加透明，社区对开发进度的影响逐渐扩大，生态圈开始慢慢形成。 2008年12月3日：Python 3.0发布，它并不完全兼容之前的Python代码，不过因为目前还有不少公司在项目和运维中使用Python 2.x版本，所以Python 3.x的很多新特性后来也被移植到Python 2.6&amp;frasl;2.7版本中。  目前我们使用的Python 3.7.x的版本是在2018年发布的，Python的版本号分为三段，形如A.B.C。其中A表示大版本号，一般当整体重写，或出现不向后兼容的改变时，增加A；B表示功能更新，出现新功能时增加B；C表示小的改动（例如：修复了某个Bug），只要有修改就增加C。如果对Python的历史感兴趣，可以阅读名为《Python简史》的博文。
+Python的优缺点 Python的优点很多，简单的可以总结为以下几点。
+ 简单和明确，做一件事只有一种方法。 学习曲线低，跟其他很多语言相比，Python更容易上手。 开放源代码，拥有强大的社区和生态圈。 解释型语言，天生具有平台可移植性。 支持两种主流的编程范式（面向对象编程和函数式编程）都提供了支持。 可扩展性和可嵌入性，可以调用C/C++代码，也可以在C/C++中调用Python。 代码规范程度高，可读性强，适合有代码洁癖和强迫症的人群。  Python的缺点主要集中在以下几点。
+ 执行效率稍低，因此计算密集型任务可以由C/C++编写。 代码无法加密，但是现在很多公司都不销售卖软件而是销售服务，这个问题会被淡化。 在开发时可以选择的框架太多（如Web框架就有100多个），有选择的地方就有错误。  Python的应用领域 目前Python在Web应用开发、云基础设施、DevOps、网络爬虫开发、数据分析挖掘、机器学习等领域都有着广泛的应用，因此也产生了Web后端开发、数据接口开发、自动化运维、自动化测试、科学计算和可视化、数据分析、量化交易、机器人开发、图像识别和处理等一系列的职位。
+搭建编程环境 Windows环境 可以在Python官方网站下载到Python的Windows安装程序（exe文件），需要注意的是如果在Windows 7环境下安装Python 3.x，需要先安装Service Pack 1补丁包（可以通过一些工具软件自动安装系统补丁的功能来安装），安装过程建议勾选“Add Python 3.x to PATH”（将Python 3.x添加到PATH环境变量）并选择自定义安装，在设置“Optional Features”界面最好将“pip”、“tcl/tk”、“Python test suite”等项全部勾选上。强烈建议选择自定义的安装路径并保证路径中没有中文。安装完成会看到“Setup was successful”的提示。如果稍后运行Python程序时，出现因为缺失一些动态链接库文件而导致Python解释器无法工作的问题，可以按照下面的方法加以解决。
+如果系统显示api-ms-win-crt*.dll文件缺失，可以参照《api-ms-win-crt*.dll缺失原因分析和解决方法》一文讲解的方法进行处理或者直接在微软官网下载Visual C++ Redistributable for Visual Studio 2015文件进行修复；如果是因为更新Windows的DirectX之后导致某些动态链接库文件缺失问题，可以下载一个DirectX修复工具进行修复。
+Linux环境 Linux环境自带了Python 2.x版本，但是如果要更新到3.x的版本，可以在Python的官方网站下载Python的源代码并通过源代码构建安装的方式进行安装，具体的步骤如下所示。
+安装依赖库（因为没有这些依赖库可能在源代码构件安装时因为缺失底层依赖库而失败）。
+yum -y install wget gcc zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel 下载Python源代码并解压缩到指定目录。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/02-%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/02-%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/</guid>
+      <description>语言元素 指令和程序 计算机的硬件系统通常由五大部件构成，包括：运算器、控制器、存储器、输入设备和输出设备。其中，运算器和控制器放在一起就是我们通常所说的中央处理器，它的功能是执行各种运算和控制指令以及处理计算机软件中的数据。我们通常所说的程序实际上就是指令的集合，我们程序就是将一系列的指令按照某种方式组织到一起，然后通过这些指令去控制计算机做我们想让它做的事情。今天我们大多数时候使用的计算机，虽然它们的元器件做工越来越精密，处理能力越来越强大，但究其本质来说仍然属于“冯·诺依曼结构”的计算机。“冯·诺依曼结构”有两个关键点，一是指出要将存储设备与中央处理器分开，二是提出了将数据以二进制方式编码。二进制是一种“逢二进一”的计数法，跟我们人类使用的“逢十进一”的计数法没有实质性的区别，人类因为有十根手指所以使用了十进制（因为在数数时十根手指用完之后就只能进位了，当然凡事都有例外，玛雅人可能是因为长年光着脚的原因把脚趾头也算上了，于是他们使用了二十进制的计数法，在这种计数法的指导下玛雅人的历法就与我们平常使用的历法不一样，而按照玛雅人的历法，2012年是上一个所谓的“太阳纪”的最后一年，而2013年则是新的“太阳纪”的开始，后来这件事情被以讹传讹的方式误传为”2012年是玛雅人预言的世界末日“这种荒诞的说法，今天我们可以大胆的猜测，玛雅文明之所以发展缓慢估计也与使用了二十进制有关）。对于计算机来说，二进制在物理器件上来说是最容易实现的（高电压表示1，低电压表示0），于是在“冯·诺依曼结构”的计算机都使用了二进制。虽然我们并不需要每个程序员都能够使用二进制的思维方式来工作，但是了解二进制以及它与我们生活中的十进制之间的转换关系，以及二进制与八进制和十六进制的转换关系还是有必要的。如果你对这一点不熟悉，可以自行使用维基百科或者百度百科科普一下。
+ 提示：近期关于量子计算机的研究已经被推倒了风口浪尖，量子计算机基于量子力学进行运算，使用量子瞬移的方式来传递信息。2018年6月，Intel宣布开发出新款量子芯片并通过了在接近绝对零度环境下的测试；2019年1月，IBM向全世界发布了首款商业化量子计算机。
+ 变量和类型 在程序设计中，变量是一种存储数据的载体。计算机中的变量是实际存在的数据或者说是存储器中存储数据的一块内存空间，变量的值可以被读取和修改，这是所有计算和控制的基础。计算机能处理的数据有很多种类型，除了数值之外还可以处理文本、图形、音频、视频等各种各样的数据，那么不同的数据就需要定义不同的存储类型。Python中的数据类型很多，而且也允许我们自定义新的数据类型（这一点在后面会讲到），我们先介绍几种常用的数据类型。
+ 整型：Python中可以处理任意大小的整数（Python 2.x中有int和long两种类型的整数，但这种区分对Python来说意义不大，因此在Python 3.x中整数只有int这一种了），而且支持二进制（如0b100，换算成十进制是4）、八进制（如0o100，换算成十进制是64）、十进制（100）和十六进制（0x100，换算成十进制是256）的表示法。 浮点型：浮点数也就是小数，之所以称为浮点数，是因为按照科学记数法表示时，一个浮点数的小数点位置是可变的，浮点数除了数学写法（如123.456）之外还支持科学计数法（如1.23456e2）。 字符串型：字符串是以单引号或双引号括起来的任意文本，比如&#39;hello&#39;和&amp;quot;hello&amp;quot;,字符串还有原始字符串表示法、字节字符串表示法、Unicode字符串表示法，而且可以书写成多行的形式（用三个单引号或三个双引号开头，三个单引号或三个双引号结尾）。 布尔型：布尔值只有True、False两种值，要么是True，要么是False，在Python中，可以直接用True、False表示布尔值（请注意大小写），也可以通过布尔运算计算出来（例如3 &amp;lt; 5会产生布尔值True，而2 == 1会产生布尔值False）。 复数型：形如3+5j，跟数学上的复数表示一样，唯一不同的是虚部的i换成了j。  变量命名 对于每个变量我们需要给它取一个名字，就如同我们每个人都有属于自己的响亮的名字一样。在Python中，变量命名需要遵循以下这些必须遵守硬性规则和强烈建议遵守的非硬性规则。
+ 硬性规则：  变量名由字母（广义的Unicode字符，不包括特殊字符）、数字和下划线构成，数字不能开头。 大小写敏感（大写的a和小写的A是两个不同的变量）。 不要跟关键字（有特殊含义的单词，后面会讲到）和系统保留字（如函数、模块等的名字）冲突。  PEP 8要求：  用小写字母拼写，多个单词用下划线连接。 受保护的实例属性用单个下划线开头（后面会讲到）。 私有的实例属性用两个下划线开头（后面会讲到）。   当然，作为一个专业的程序员，给变量（事实上应该是所有的标识符）命名时做到见名知意也是非常重要的。
+变量的使用 下面通过几个例子来说明变量的类型和变量使用。
+&amp;#34;&amp;#34;&amp;#34; 使用变量保存数据并进行算术运算 Version: 0.1 Author: 骆昊 &amp;#34;&amp;#34;&amp;#34; a = 321 b = 123 print(a + b) print(a - b) print(a * b) print(a / b) print(a // b) print(a % b) print(a ** b)&amp;#34;&amp;#34;&amp;#34; 使用input()函数获取键盘输入 使用int()进行类型转换 用占位符格式化输出的字符串 Version: 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/03-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/03-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/</guid>
+      <description>分支结构 应用场景 迄今为止，我们写的Python代码都是一条一条语句顺序执行，这种代码结构通常称之为顺序结构。然而仅有顺序结构并不能解决所有的问题，比如我们设计一个游戏，游戏第一关的通关条件是玩家获得1000分，那么在完成本局游戏后，我们要根据玩家得到分数来决定究竟是进入第二关，还是告诉玩家“Game Over”，这里就会产生两个分支，而且这两个分支只有一个会被执行。类似的场景还有很多，我们将这种结构称之为“分支结构”或“选择结构”。给大家一分钟的时间，你应该可以想到至少5个以上这样的例子，赶紧试一试。
+if语句的使用 在Python中，要构造分支结构可以使用if、elif和else关键字。所谓关键字就是有特殊含义的单词，像if和else就是专门用于构造分支结构的关键字，很显然你不能够使用它作为变量名（事实上，用作其他的标识符也是不可以）。下面的例子中演示了如何构造一个分支结构。
+&amp;#34;&amp;#34;&amp;#34; 用户身份验证 Version: 0.1 Author: 骆昊 &amp;#34;&amp;#34;&amp;#34; username = input(&amp;#39;请输入用户名: &amp;#39;) password = input(&amp;#39;请输入口令: &amp;#39;) # 如果希望输入口令时 终端中没有回显 可以使用getpass模块的getpass函数 # import getpass # password = getpass.getpass(&amp;#39;请输入口令: &amp;#39;) if username == &amp;#39;admin&amp;#39; and password == &amp;#39;123456&amp;#39;: print(&amp;#39;身份验证成功!&amp;#39;) else: print(&amp;#39;身份验证失败!&amp;#39;) 唯一需要说明的是和C/C++、Java等语言不同，Python中没有用花括号来构造代码块而是使用了缩进的方式来设置代码的层次结构，如果if条件成立的情况下需要执行多条语句，只要保持多条语句具有相同的缩进就可以了，换句话说连续的代码如果又保持了相同的缩进那么它们属于同一个代码块，相当于是一个执行的整体。
+当然如果要构造出更多的分支，可以使用if…elif…else…结构，例如下面的分段函数求值。
+&amp;#34;&amp;#34;&amp;#34; 分段函数求值 3x - 5 (x &amp;gt; 1) f(x) = x + 2 (-1 &amp;lt;= x &amp;lt;= 1) 5x + 3 (x &amp;lt; -1) Version: 0.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/04-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/04-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</guid>
+      <description>循环结构 应用场景 如果在程序中我们需要重复的执行某条或某些指令，例如用程序控制机器人踢足球，如果机器人持球而且还没有进入射门范围，那么我们就要一直发出让机器人向球门方向奔跑的指令。当然你可能已经注意到了，刚才的描述中其实不仅仅有需要重复的动作，还有我们上一个章节讲到的分支结构。再举一个简单的例子，比如在我们的程序中要实现每隔1秒中在屏幕上打印一个&amp;quot;hello, world&amp;quot;这样的字符串并持续一个小时，我们肯定不能够将print(&#39;hello, world&#39;)这句代码写上3600遍，如果真的需要这样做，那么编程的工作就太无聊了。因此，我们还需要了解一下循环结构，有了循环结构我们就可以轻松的控制某件事或者某些事重复、重复、再重复的去执行。
+在Python中构造循环结构有两种做法，一种是for-in循环，一种是while循环。
+for-in循环 如果明确的知道循环执行的次数或者要对一个容器进行迭代（后面会讲到），那么我们推荐使用for-in循环，例如下面代码中计算1~100求和的结果（$\displaystyle \sum \limits_{n=1}^{100}n$）。
+&amp;#34;&amp;#34;&amp;#34; 用for循环实现1~100求和 Version: 0.1 Author: 骆昊 &amp;#34;&amp;#34;&amp;#34; sum = 0 for x in range(101): sum += x print(sum) 需要说明的是上面代码中的range类型，range可以用来产生一个不变的数值序列，而且这个序列通常都是用在循环中的，例如：
+ range(101)可以产生一个0到100的整数序列。 range(1, 100)可以产生一个1到99的整数序列。 range(1, 100, 2)可以产生一个1到99的奇数序列，其中的2是步长，即数值序列的增量。  知道了这一点，我们可以用下面的代码来实现1~100之间的偶数求和。
+&amp;#34;&amp;#34;&amp;#34; 用for循环实现1~100之间的偶数求和 Version: 0.1 Author: 骆昊 &amp;#34;&amp;#34;&amp;#34; sum = 0 for x in range(2, 101, 2): sum += x print(sum) 也可以通过在循环中使用分支结构的方式来实现相同的功能，代码如下所示。
+&amp;#34;&amp;#34;&amp;#34; 用for循环实现1~100之间的偶数求和 Version: 0.1 Author: 骆昊 &amp;#34;&amp;#34;&amp;#34; sum = 0 for x in range(1, 101): if x % 2 == 0: sum += x print(sum) while循环 如果要构造不知道具体循环次数的循环结构，我们推荐使用while循环。while循环通过一个能够产生或转换出bool值的表达式来控制循环，表达式的值为True循环继续，表达式的值为False循环结束。下面我们通过一个“猜数字”的小游戏（计算机出一个1~100之间的随机数，人输入自己猜的数字，计算机给出对应的提示信息，直到人猜出计算机出的数字）来看看如何使用while循环。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/05-%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/05-%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/</guid>
+      <description> 构造程序逻辑 分支和循环结构会帮助我们将程序中逻辑建立起来，将来我们的程序无论简单复杂，都是由顺序结构、分支结构、循环结构构成的。对于编程语言的初学者来说，首先要锻炼的是将人类自然语言描述的解决问题的步骤和方法翻译成代码的能力，其次就是熟练的运用之前学过的运算符、表达式以及最近的两个章节讲解的分支结构和循环结构的知识。有了这些基本的能力才能够通过计算机程序去解决各种各样的现实问题。所以，开始做练习吧！
+练习清单  寻找“水仙花数”。 寻找“完美数”。 “百钱百鸡”问题。 生成“斐波拉切数列”。 Craps赌博游戏。   提示：练习的参考答案在code/Day05目录下。
+ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/06-%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/06-%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>函数和模块的使用 在讲解本章节的内容之前，我们先来研究一道数学题，请说出下面的方程有多少组正整数解。
+事实上，上面的问题等同于将8个苹果分成四组每组至少一个苹果有多少种方案。想到这一点问题的答案就呼之欲出了。
+可以用Python的程序来计算出这个值，代码如下所示。
+&amp;#34;&amp;#34;&amp;#34; 输入M和N计算C(M,N) &amp;#34;&amp;#34;&amp;#34; m = int(input(&amp;#39;m = &amp;#39;)) n = int(input(&amp;#39;n = &amp;#39;)) fm = 1 for num in range(1, m + 1): fm *= num fn = 1 for num in range(1, n + 1): fn *= num fmn = 1 for num in range(1, m - n + 1): fmn *= num print(fm // fn // fmn) 函数的作用 不知道大家是否注意到，在上面的代码中，我们做了3次求阶乘，这样的代码实际上就是重复代码。编程大师*Martin Fowler*先生曾经说过：“代码有很多种坏味道，重复是最坏的一种！”，要写出高质量的代码首先要解决的就是重复代码的问题。对于上面的代码来说，我们可以将计算阶乘的功能封装到一个称之为“函数”的功能模块中，在需要计算阶乘的地方，我们只需要“调用”这个“函数”就可以了。
+定义函数 在Python中可以使用def关键字来定义函数，和变量一样每个函数也有一个响亮的名字，而且命名规则跟变量的命名规则是一致的。在函数名后面的圆括号中可以放置传递给函数的参数，这一点和数学上的函数非常相似，程序中函数的参数就相当于是数学上说的函数的自变量，而函数执行完成后我们可以通过return关键字来返回一个值，这相当于数学上说的函数的因变量。
+在了解了如何定义函数后，我们可以对上面的代码进行重构，所谓重构就是在不影响代码执行结果的前提下对代码的结构进行调整，重构之后的代码如下所示。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/07-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/07-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description>字符串和常用数据结构 使用字符串 第二次世界大战促使了现代电子计算机的诞生，最初的目的用计算机来快速的完成导弹弹道的计算，因此在计算机刚刚诞生的那个年代，计算机处理的信息基本上都是数值型的信息，而世界上的第一台电子计算机ENIAC每秒钟能够完成约5000次浮点运算。随着时间的推移，虽然数值运算仍然是计算机日常工作中最为重要的事情之一，但是今天的计算机更多的时间需要处理的数据可能都是以文本的方式存在的，如果我们希望通过Python程序操作本这些文本信息，就必须要先了解字符串类型以及与它相关的知识。
+所谓字符串，就是由零个或多个字符组成的有限序列，一般记为。
+我们可以通过下面的代码来了解字符串的使用。
+def main(): str1 = &amp;#39;hello, world!&amp;#39; # 通过len函数计算字符串的长度 print(len(str1)) # 13 # 获得字符串首字母大写的拷贝 print(str1.capitalize()) # Hello, world! # 获得字符串变大写后的拷贝 print(str1.upper()) # HELLO, WORLD! # 从字符串中查找子串所在位置 print(str1.find(&amp;#39;or&amp;#39;)) # 8 print(str1.find(&amp;#39;shit&amp;#39;)) # -1 # 与find类似但找不到子串时会引发异常 # print(str1.index(&amp;#39;or&amp;#39;)) # print(str1.index(&amp;#39;shit&amp;#39;)) # 检查字符串是否以指定的字符串开头 print(str1.startswith(&amp;#39;He&amp;#39;)) # False print(str1.startswith(&amp;#39;hel&amp;#39;)) # True # 检查字符串是否以指定的字符串结尾 print(str1.endswith(&amp;#39;!&amp;#39;)) # True # 将字符串以指定的宽度居中并在两侧填充指定的字符 print(str1.center(50, &amp;#39;*&amp;#39;)) # 将字符串以指定的宽度靠右放置左侧填充指定的字符 print(str1.rjust(50, &amp;#39; &amp;#39;)) str2 = &amp;#39;abc123456&amp;#39; # 从字符串中取出指定位置的字符(下标运算) print(str2[2]) # c # 字符串切片(从指定的开始索引到指定的结束索引) print(str2[2:5]) # c12 print(str2[2:]) # c123456 print(str2[2::2]) # c246 print(str2[::2]) # ac246 print(str2[::-1]) # 654321cba print(str2[-3:-1]) # 45 # 检查字符串是否由数字构成 print(str2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/08-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/08-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/</guid>
+      <description>面向对象编程基础 活在当下的程序员应该都听过“面向对象编程”一词，也经常有人问能不能用一句话解释下什么是“面向对象编程”，我们先来看看比较正式的说法。
+“把一组数据结构和处理它们的方法组成对象（object），把相同行为的对象归纳为类（class），通过类的封装（encapsulation）隐藏内部细节，通过继承（inheritance）实现类的特化（specialization）和泛化（generalization），通过多态（polymorphism）实现基于对象类型的动态分派。”
+这样一说是不是更不明白了。所以我们还是看看更通俗易懂的说法，下面这段内容来自于知乎。
+ 说明： 以上的内容来自于网络，不代表作者本人的观点和看法，与作者本人立场无关，相关责任不由作者承担。
+ 之前我们说过“程序是指令的集合”，我们在程序中书写的语句在执行时会变成一条或多条指令然后由CPU去执行。当然为了简化程序的设计，我们引入了函数的概念，把相对独立且经常重复使用的代码放置到函数中，在需要使用这些功能的时候只要调用函数即可；如果一个函数的功能过于复杂和臃肿，我们又可以进一步将函数继续切分为子函数来降低系统的复杂性。但是说了这么多，不知道大家是否发现，所谓编程就是程序员按照计算机的工作方式控制计算机完成各种任务。但是，计算机的工作方式与正常人类的思维模式是不同的，如果编程就必须得抛弃人类正常的思维方式去迎合计算机，编程的乐趣就少了很多，“每个人都应该学习编程”这样的豪言壮语就只能说说而已。当然，这些还不是最重要的，最重要的是当我们需要开发一个复杂的系统时，代码的复杂性会让开发和维护工作都变得举步维艰，所以在上世纪60年代末期，“软件危机”、“软件工程”等一系列的概念开始在行业中出现。
+当然，程序员圈子内的人都知道，现实中并没有解决上面所说的这些问题的“银弹”，真正让软件开发者看到希望的是上世纪70年代诞生的Smalltalk编程语言中引入的面向对象的编程思想（面向对象编程的雏形可以追溯到更早期的Simula语言）。按照这种编程理念，程序中的数据和操作数据的函数是一个逻辑上的整体，我们称之为“对象”，而我们解决问题的方式就是创建出需要的对象并向对象发出各种各样的消息，多个对象的协同工作最终可以让我们构造出复杂的系统来解决现实中的问题。
+ 说明： 当然面向对象也不是解决软件开发中所有问题的最后的“银弹”，所以今天的高级程序设计语言几乎都提供了对多种编程范式的支持，Python也不例外。
+ 类和对象 简单的说，类是对象的蓝图和模板，而对象是类的实例。这个解释虽然有点像用概念在解释概念，但是从这句话我们至少可以看出，类是抽象的概念，而对象是具体的东西。在面向对象编程的世界中，一切皆为对象，对象都有属性和行为，每个对象都是独一无二的，而且对象一定属于某个类（型）。当我们把一大堆拥有共同特征的对象的静态特征（属性）和动态特征（行为）都抽取出来后，就可以定义出一个叫做“类”的东西。
+定义类 在Python中可以使用class关键字定义类，然后在类中通过之前学习过的函数来定义方法，这样就可以将对象的动态特征描述出来，代码如下所示。
+class Student(object): # __init__是一个特殊方法用于在创建对象时进行初始化操作 # 通过这个方法我们可以为学生对象绑定name和age两个属性 def __init__(self, name, age): self.name = name self.age = age def study(self, course_name): print(&amp;#39;%s正在学习%s.&amp;#39; % (self.name, course_name)) # PEP 8要求标识符的名字用全小写多个单词用下划线连接 # 但是部分程序员和公司更倾向于使用驼峰命名法(驼峰标识) def watch_movie(self): if self.age &amp;lt; 18: print(&amp;#39;%s只能观看《熊出没》.&amp;#39; % self.name) else: print(&amp;#39;%s正在观看岛国爱情大电影.&amp;#39; % self.name)  说明： 写在类中的函数，我们通常称之为（对象的）方法，这些方法就是对象可以接收的消息。
+ 创建和使用对象 当我们定义好一个类之后，可以通过下面的方式来创建对象并给对象发消息。
+def main(): # 创建学生对象并指定姓名和年龄 stu1 = Student(&amp;#39;骆昊&amp;#39;, 38) # 给对象发study消息 stu1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/09-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/09-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/</guid>
+      <description>面向对象进阶 在前面的章节我们已经了解了面向对象的入门知识，知道了如何定义类，如何创建对象以及如何给对象发消息。为了能够更好的使用面向对象编程思想进行程序开发，我们还需要对Python中的面向对象编程进行更为深入的了解。
+@property装饰器 之前我们讨论过Python中属性和方法访问权限的问题，虽然我们不建议将属性设置为私有的，但是如果直接将属性暴露给外界也是有问题的，比如我们没有办法检查赋给属性的值是否有效。我们之前的建议是将属性命名以单下划线开头，通过这种方式来暗示属性是受保护的，不建议外界直接访问，那么如果想访问属性可以通过属性的getter（访问器）和setter（修改器）方法进行对应的操作。如果要做到这点，就可以考虑使用@property包装器来包装getter和setter方法，使得对属性的访问既安全又方便，代码如下所示。
+class Person(object): def __init__(self, name, age): self._name = name self._age = age # 访问器 - getter方法 @property def name(self): return self._name # 访问器 - getter方法 @property def age(self): return self._age # 修改器 - setter方法 @age.setter def age(self, age): self._age = age def play(self): if self._age &amp;lt;= 16: print(&amp;#39;%s正在玩飞行棋.&amp;#39; % self._name) else: print(&amp;#39;%s正在玩斗地主.&amp;#39; % self._name) def main(): person = Person(&amp;#39;王大锤&amp;#39;, 12) person.play() person.age = 22 person.play() # person.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/10-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/10-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/</guid>
+      <description>图形用户界面和游戏开发 基于tkinter模块的GUI GUI是图形用户界面的缩写，图形化的用户界面对使用过计算机的人来说应该都不陌生，在此也无需进行赘述。Python默认的GUI开发模块是tkinter（在Python 3以前的版本中名为Tkinter），从这个名字就可以看出它是基于Tk的，Tk是一个工具包，最初是为Tcl设计的，后来被移植到很多其他的脚本语言中，它提供了跨平台的GUI控件。当然Tk并不是最新和最好的选择，也没有功能特别强大的GUI控件，事实上，开发GUI应用并不是Python最擅长的工作，如果真的需要使用Python开发GUI应用，wxPython、PyQt、PyGTK等模块都是不错的选择。
+基本上使用tkinter来开发GUI应用需要以下5个步骤：
+ 导入tkinter模块中我们需要的东西。 创建一个顶层窗口对象并用它来承载整个GUI应用。 在顶层窗口对象上添加GUI组件。 通过代码将这些GUI组件的功能组织起来。 进入主事件循环(main loop)。  下面的代码演示了如何使用tkinter做一个简单的GUI应用。
+import tkinter import tkinter.messagebox def main(): flag = True # 修改标签上的文字 def change_label_text(): nonlocal flag flag = not flag color, msg = (&amp;#39;red&amp;#39;, &amp;#39;Hello, world!&amp;#39;)\ if flag else (&amp;#39;blue&amp;#39;, &amp;#39;Goodbye, world!&amp;#39;) label.config(text=msg, fg=color) # 确认退出 def confirm_to_quit(): if tkinter.messagebox.askokcancel(&amp;#39;温馨提示&amp;#39;, &amp;#39;确定要退出吗?&amp;#39;): top.quit() # 创建顶层窗口 top = tkinter.Tk() # 设置窗口大小 top.geometry(&amp;#39;240x160&amp;#39;) # 设置窗口标题 top.title(&amp;#39;小游戏&amp;#39;) # 创建标签对象并添加到顶层窗口 label = tkinter.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/11-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/11-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/</guid>
+      <description>文件和异常 实际开发中常常会遇到对数据进行持久化操作的场景，而实现数据持久化最直接简单的方式就是将数据保存到文件中。说到“文件”这个词，可能需要先科普一下关于文件系统的知识，但是这里我们并不浪费笔墨介绍这个概念，请大家自行通过维基百科进行了解。
+在Python中实现文件的读写操作其实非常简单，通过Python内置的open函数，我们可以指定文件名、操作模式、编码信息等来获得操作文件的对象，接下来就可以对文件进行读写操作了。这里所说的操作模式是指要打开什么样的文件（字符文件还是二进制文件）以及做什么样的操作（读、写还是追加），具体的如下表所示。
+   操作模式 具体含义     &#39;r&#39; 读取 （默认）   &#39;w&#39; 写入（会先截断之前的内容）   &#39;x&#39; 写入，如果文件已经存在会产生异常   &#39;a&#39; 追加，将内容写入到已有文件的末尾   &#39;b&#39; 二进制模式   &#39;t&#39; 文本模式（默认）   &#39;+&#39; 更新（既可以读又可以写）    下面这张图来自于菜鸟教程网站，它展示了如果根据应用程序的需要来设置操作模式。
+读写文本文件 读取文本文件时，需要在使用open函数时指定好带路径的文件名（可以使用相对路径或绝对路径）并将文件模式设置为&#39;r&#39;（如果不指定，默认值也是&#39;r&#39;），然后通过encoding参数指定编码（如果不指定，默认值是None，那么在读取文件时使用的是操作系统默认的编码），如果不能保证保存文件时使用的编码方式与encoding参数指定的编码方式是一致的，那么就可能因无法解码字符而导致读取失败。下面的例子演示了如何读取一个纯文本文件。
+def main(): f = open(&amp;#39;致橡树.txt&amp;#39;, &amp;#39;r&amp;#39;, encoding=&amp;#39;utf-8&amp;#39;) print(f.read()) f.close() if __name__ == &amp;#39;__main__&amp;#39;: main() 请注意上面的代码，如果open函数指定的文件并不存在或者无法打开，那么将引发异常状况导致程序崩溃。为了让代码有一定的健壮性和容错性，我们可以使用Python的异常机制对可能在运行时发生状况的代码进行适当的处理，如下所示。
+def main(): f = None try: f = open(&amp;#39;致橡树.txt&amp;#39;, &amp;#39;r&amp;#39;, encoding=&amp;#39;utf-8&amp;#39;) print(f.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/12-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/12-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>使用正则表达式 正则表达式相关知识 在编写处理字符串的程序或网页时，经常会有查找符合某些复杂规则的字符串的需要，正则表达式就是用于描述这些规则的工具，换句话说正则表达式是一种工具，它定义了字符串的匹配模式（如何检查一个字符串是否有跟某种模式匹配的部分或者从一个字符串中将与模式匹配的部分提取出来或者替换掉）。如果你在Windows操作系统中使用过文件查找并且在指定文件名时使用过通配符（*和?），那么正则表达式也是与之类似的用来进行文本匹配的工具，只不过比起通配符正则表达式更强大，它能更精确地描述你的需求（当然你付出的代价是书写一个正则表达式比打出一个通配符要复杂得多，要知道任何给你带来好处的东西都是有代价的，就如同学习一门编程语言一样），比如你可以编写一个正则表达式，用来查找所有以0开头，后面跟着2-3个数字，然后是一个连字号“-”，最后是7或8位数字的字符串（像028-12345678或0813-7654321），这不就是国内的座机号码吗。最初计算机是为了做数学运算而诞生的，处理的信息基本上都是数值，而今天我们在日常工作中处理的信息基本上都是文本数据，我们希望计算机能够识别和处理符合某些模式的文本，正则表达式就显得非常重要了。今天几乎所有的编程语言都提供了对正则表达式操作的支持，Python通过标准库中的re模块来支持正则表达式操作。
+我们可以考虑下面一个问题：我们从某个地方（可能是一个文本文件，也可能是网络上的一则新闻）获得了一个字符串，希望在字符串中找出手机号和座机号。当然我们可以设定手机号是11位的数字（注意并不是随机的11位数字，因为你没有见过“25012345678”这样的手机号吧）而座机号跟上一段中描述的模式相同，如果不使用正则表达式要完成这个任务就会很麻烦。
+关于正则表达式的相关知识，大家可以阅读一篇非常有名的博客叫《正则表达式30分钟入门教程》，读完这篇文章后你就可以看懂下面的表格，这是我们对正则表达式中的一些基本符号进行的扼要总结。
+   符号 解释 示例 说明     . 匹配任意字符 b.t 可以匹配bat / but / b#t / b1t等   \w 匹配字母/数字/下划线 b\wt 可以匹配bat / b1t / b_t等
+但不能匹配b#t   \s 匹配空白字符（包括\r、\n、\t等） love\syou 可以匹配love you   \d 匹配数字 \d\d 可以匹配01 / 23 / 99等   \b 匹配单词的边界 \bThe\b    ^ 匹配字符串的开始 ^The 可以匹配The开头的字符串   $ 匹配字符串的结束 .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/13-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/13-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/</guid>
+      <description>进程和线程 今天我们使用的计算机早已进入多CPU或多核时代，而我们使用的操作系统都是支持“多任务”的操作系统，这使得我们可以同时运行多个程序，也可以将一个程序分解为若干个相对独立的子任务，让多个子任务并发的执行，从而缩短程序的执行时间，同时也让用户获得更好的体验。因此在当下不管是用什么编程语言进行开发，实现让程序同时执行多个任务也就是常说的“并发编程”，应该是程序员必备技能之一。为此，我们需要先讨论两个概念，一个叫进程，一个叫线程。
+概念 进程就是操作系统中执行的一个程序，操作系统以进程为单位分配存储空间，每个进程都有自己的地址空间、数据栈以及其他用于跟踪进程执行的辅助数据，操作系统管理所有进程的执行，为它们合理的分配资源。进程可以通过fork或spawn的方式来创建新的进程来执行其他的任务，不过新的进程也有自己独立的内存空间，因此必须通过进程间通信机制（IPC，Inter-Process Communication）来实现数据共享，具体的方式包括管道、信号、套接字、共享内存区等。
+一个进程还可以拥有多个并发的执行线索，简单的说就是拥有多个可以获得CPU调度的执行单元，这就是所谓的线程。由于线程在同一个进程下，它们可以共享相同的上下文，因此相对于进程而言，线程间的信息共享和通信更加容易。当然在单核CPU系统中，真正的并发是不可能的，因为在某个时刻能够获得CPU的只有唯一的一个线程，多个线程共享了CPU的执行时间。使用多线程实现并发编程为程序带来的好处是不言而喻的，最主要的体现在提升程序的性能和改善用户体验，今天我们使用的软件几乎都用到了多线程技术，这一点可以利用系统自带的进程监控工具（如macOS中的“活动监视器”、Windows中的“任务管理器”）来证实，如下图所示。
+当然多线程也并不是没有坏处，站在其他进程的角度，多线程的程序对其他程序并不友好，因为它占用了更多的CPU执行时间，导致其他程序无法获得足够的CPU执行时间；另一方面，站在开发者的角度，编写和调试多线程的程序都对开发者有较高的要求，对于初学者来说更加困难。
+Python既支持多进程又支持多线程，因此使用Python实现并发编程主要有3种方式：多进程、多线程、多进程+多线程。
+Python中的多进程 Unix和Linux操作系统上提供了fork()系统调用来创建进程，调用fork()函数的是父进程，创建出的是子进程，子进程是父进程的一个拷贝，但是子进程拥有自己的PID。fork()函数非常特殊它会返回两次，父进程中可以通过fork()函数的返回值得到子进程的PID，而子进程中的返回值永远都是0。Python的os模块提供了fork()函数。由于Windows系统没有fork()调用，因此要实现跨平台的多进程编程，可以使用multiprocessing模块的Process类来创建子进程，而且该模块还提供了更高级的封装，例如批量启动进程的进程池（Pool）、用于进程间通信的队列（Queue）和管道（Pipe）等。
+下面用一个下载文件的例子来说明使用多进程和不使用多进程到底有什么差别，先看看下面的代码。
+from random import randint from time import time, sleep def download_task(filename): print(&amp;#39;开始下载%s...&amp;#39; % filename) time_to_download = randint(5, 10) sleep(time_to_download) print(&amp;#39;%s下载完成! 耗费了%d秒&amp;#39; % (filename, time_to_download)) def main(): start = time() download_task(&amp;#39;Python从入门到住院.pdf&amp;#39;) download_task(&amp;#39;Peking Hot.avi&amp;#39;) end = time() print(&amp;#39;总共耗费了%.2f秒.&amp;#39; % (end - start)) if __name__ == &amp;#39;__main__&amp;#39;: main() 下面是运行程序得到的一次运行结果。
+开始下载Python从入门到住院.pdf... Python从入门到住院.pdf下载完成! 耗费了6秒 开始下载Peking Hot.avi... Peking Hot.avi下载完成! 耗费了7秒 总共耗费了13.01秒. 从上面的例子可以看出，如果程序中的代码只能按顺序一点点的往下执行，那么即使执行两个毫不相关的下载任务，也需要先等待一个文件下载完成后才能开始下一个下载任务，很显然这并不合理也没有效率。接下来我们使用多进程的方式将两个下载任务放到不同的进程中，代码如下所示。
+from multiprocessing import Process from os import getpid from random import randint from time import time, sleep def download_task(filename): print(&amp;#39;启动下载进程，进程号[%d].</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/14-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/14-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</guid>
+      <description>网络编程入门 计算机网络基础 计算机网络是独立自主的计算机互联而成的系统的总称，组建计算机网络最主要的目的是实现多台计算机之间的通信和资源共享。今天计算机网络中的设备和计算机网络的用户已经多得不可计数，而计算机网络也可以称得上是一个“复杂巨系统”，对于这样的系统，我们不可能用一两篇文章把它讲清楚，有兴趣的读者可以自行阅读Andrew S.Tanenbaum老师的经典之作《计算机网络》或Kurose和Ross老师合著的《计算机网络:自顶向下方法》来了解计算机网络的相关知识。
+计算机网络发展史  1960s - 美国国防部ARPANET项目问世，奠定了分组交换网络的基础。   1980s - 国际标准化组织（ISO）发布OSI/RM，奠定了网络技术标准化的基础。   1990s - 英国人蒂姆·伯纳斯-李发明了图形化的浏览器，浏览器的简单易用性使得计算机网络迅速被普及。  在没有浏览器的年代，上网是这样的。
+有了浏览器以后，上网是这样的。
+TCP/IP模型 实现网络通信的基础是网络通信协议，这些协议通常是由互联网工程任务组 （IETF）制定的。所谓“协议”就是通信计算机双方必须共同遵从的一组约定，例如怎样建立连接、怎样互相识别等，网络协议的三要素是：语法、语义和时序。构成我们今天使用的Internet的基础的是TCP/IP协议族，所谓协议族就是一系列的协议及其构成的通信模型，我们通常也把这套东西称为TCP/IP模型。与国际标准化组织发布的OSI/RM这个七层模型不同，TCP/IP是一个四层模型，也就是说，该模型将我们使用的网络从逻辑上分解为四个层次，自底向上依次是：网络接口层、网络层、传输层和应用层，如下图所示。
+IP通常被翻译为网际协议，它服务于网络层，主要实现了寻址和路由的功能。接入网络的每一台主机都需要有自己的IP地址，IP地址就是主机在计算机网络上的身份标识。当然由于IPv4地址的匮乏，我们平常在家里、办公室以及其他可以接入网络的公共区域上网时获得的IP地址并不是全球唯一的IP地址，而是一个局域网（LAN）中的内部IP地址，通过网络地址转换（NAT）服务我们也可以实现对网络的访问。计算机网络上有大量的被我们称为“路由器”的网络中继设备，它们会存储转发我们发送到网络上的数据分组，让从源头发出的数据最终能够找到传送到目的地通路，这项功能就是所谓的路由。
+TCP全称传输控制协议，它是基于IP提供的寻址和路由服务而建立起来的负责实现端到端可靠传输的协议，之所以将TCP称为可靠的传输协议是因为TCP向调用者承诺了三件事情：
+ 数据不传丢不传错（利用握手、校验和重传机制可以实现）。 流量控制（通过滑动窗口匹配数据发送者和接收者之间的传输速度）。 拥塞控制（通过RTT时间以及对滑动窗口的控制缓解网络拥堵）。  网络应用模式  C/S模式和B/S模式。这里的C指的是Client（客户端），通常是一个需要安装到某个宿主操作系统上的应用程序；而B指的是Browser（浏览器），它几乎是所有图形化操作系统都默认安装了的一个应用软件；通过C或B都可以实现对S（服务器）的访问。关于二者的比较和讨论在网络上有一大堆的文章，在此我们就不再浪费笔墨了。 去中心化的网络应用模式。不管是B/S还是C/S都需要服务器的存在，服务器就是整个应用模式的中心，而去中心化的网络应用通常没有固定的服务器或者固定的客户端，所有应用的使用者既可以作为资源的提供者也可以作为资源的访问者。  基于HTTP协议的网络资源访问 HTTP（超文本传输协议） HTTP是超文本传输协议（Hyper-Text Transfer Proctol）的简称，维基百科上对HTTP的解释是：超文本传输协议是一种用于分布式、协作式和超媒体信息系统的应用层协议，它是万维网数据通信的基础，设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法，通过HTTP或者HTTPS（超文本传输安全协议）请求的资源由URI（统一资源标识符）来标识。关于HTTP的更多内容，我们推荐阅读阮一峰老师的《HTTP 协议入门》，简单的说，通过HTTP我们可以获取网络上的（基于字符的）资源，开发中经常会用到的网络API（有的地方也称之为网络数据接口）就是基于HTTP来实现数据传输的。
+JSON格式 JSON（JavaScript Object Notation）是一种轻量级的数据交换语言，该语言以易于让人阅读的文字（纯文本）为基础，用来传输由属性值或者序列性的值组成的数据对象。尽管JSON是最初只是Javascript中一种创建对象的字面量语法，但它在当下更是一种独立于语言的数据格式，很多编程语言都支持JSON格式数据的生成和解析，Python内置的json模块也提供了这方面的功能。由于JSON是纯文本，它和XML一样都适用于异构系统之间的数据交换，而相较于XML，JSON显得更加的轻便和优雅。下面是表达同样信息的XML和JSON，而JSON的优势是相当直观的。
+XML的例子：
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;message&amp;gt; &amp;lt;from&amp;gt;Alice&amp;lt;/from&amp;gt; &amp;lt;to&amp;gt;Bob&amp;lt;/to&amp;gt; &amp;lt;content&amp;gt;Will you marry me?&amp;lt;/content&amp;gt; &amp;lt;/message&amp;gt; JSON的例子：
+{ &amp;#34;from&amp;#34;: &amp;#34;Alice&amp;#34;, &amp;#34;to&amp;#34;: &amp;#34;Bob&amp;#34;, &amp;#34;content&amp;#34;: &amp;#34;Will you marry me?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day01-15/15-%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day01-15/15-%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/</guid>
+      <description>图像和办公文档处理 用程序来处理图像和办公文档经常出现在实际开发中，Python的标准库中虽然没有直接支持这些操作的模块，但我们可以通过Python生态圈中的第三方模块来完成这些操作。
+操作图像 计算机图像相关知识  颜色。如果你有使用颜料画画的经历，那么一定知道混合红、黄、蓝三种颜料可以得到其他的颜色，事实上这三种颜色就是被我们称为美术三原色的东西，它们是不能再分解的基本颜色。在计算机中，我们可以将红、绿、蓝三种色光以不同的比例叠加来组合成其他的颜色，因此这三种颜色就是色光三原色，所以我们通常会将一个颜色表示为一个RGB值或RGBA值（其中的A表示Alpha通道，它决定了透过这个图像的像素，也就是透明度）。  | 名称 | RGBA值 | 名称 | RGBA值 | | :&amp;mdash;: | :&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;: | :&amp;mdash;-: | :&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-: | | White | (255, 255, 255, 255) | Red | (255, 0, 0, 255) | | Green | (0, 255, 0, 255) | Blue | (0, 0, 255, 255) | | Gray | (128, 128, 128, 255) | Yellow | (255, 255, 0, 255) | | Black | (0, 0, 0, 255) | Purple | (128, 0, 128, 255) |</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day16-20/16-20-Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day16-20/16-20-Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/</guid>
+      <description>Python语言进阶  数据结构和算法
+ 算法：解决问题的方法和步骤
+ 评价算法的好坏：渐近时间复杂度和渐近空间复杂度。
+ 渐近时间复杂度的大O标记：
+ - 常量时间复杂度 - 布隆过滤器 / 哈希存储 - 对数时间复杂度 - 折半查找（二分查找） - 线性时间复杂度 - 顺序查找 / 桶排序 - 对数线性时间复杂度 - 高级排序算法（归并排序、快速排序） - 平方时间复杂度 - 简单排序算法（选择排序、插入排序、冒泡排序） - 立方时间复杂度 - Floyd算法 / 矩阵乘法运算 - 几何级数时间复杂度 - 汉诺塔 - 阶乘时间复杂度 - 旅行经销商问题 - NP    排序算法（选择、冒泡和归并）和查找算法（顺序和折半）
+def select_sort(origin_items, comp=lambda x, y: x &amp;lt; y): &amp;#34;&amp;#34;&amp;#34;简单选择排序&amp;#34;&amp;#34;&amp;#34; items = origin_items[:] for i in range(len(items) - 1): min_index = i for j in range(i + 1, len(items)): if comp(items[j], items[min_index]): min_index = j items[i], items[min_index] = items[min_index], items[i] return itemsdef bubble_sort(origin_items, comp=lambda x, y: x &amp;gt; y): &amp;#34;&amp;#34;&amp;#34;高质量冒泡排序(搅拌排序)&amp;#34;&amp;#34;&amp;#34; items = origin_items[:] for i in range(len(items) - 1): swapped = False for j in range(i, len(items) - 1 - i): if comp(items[j], items[j + 1]): items[j], items[j + 1] = items[j + 1], items[j] swapped = True if swapped: swapped = False for j in range(len(items) - 2 - i, i, -1): if comp(items[j - 1], items[j]): items[j], items[j - 1] = items[j - 1], items[j] swapped = True if not swapped: break return itemsdef merge_sort(items, comp=lambda x, y: x &amp;lt;= y): &amp;#34;&amp;#34;&amp;#34;归并排序(分治法)&amp;#34;&amp;#34;&amp;#34; if len(items) &amp;lt; 2: return items[:] mid = len(items) // 2 left = merge_sort(items[:mid], comp) right = merge_sort(items[mid:], comp) return merge(left, right, comp) def merge(items1, items2, comp): &amp;#34;&amp;#34;&amp;#34;合并(将两个有序的列表合并成一个有序的列表)&amp;#34;&amp;#34;&amp;#34; items = [] index1, index2 = 0, 0 while index1 &amp;lt; len(items1) and index2 &amp;lt; len(items2): if comp(items1[index1], items2[index2]): items.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day21-30/21-30-Web%E5%89%8D%E7%AB%AF%E6%A6%82%E8%BF%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day21-30/21-30-Web%E5%89%8D%E7%AB%AF%E6%A6%82%E8%BF%B0/</guid>
+      <description>Web前端概述  说明：本文使用的部分插图来自*Jon Duckett先生的HTML and CSS: Design and Build Websites*一书，这是一本非常棒的前端入门书，有兴趣的读者可以在亚马逊或者其他网站上找到该书的购买链接。
+ HTML简史  1991年10月：一个非正式CERN（欧洲核子研究中心）文件首次公开18个HTML标签，这个文件的作者是物理学家蒂姆·伯纳斯-李，因此他是万维网的发明者，也是万维网联盟的主席。 1995年11月：HTML 2.0标准发布（RFC 1866）。 1997年1月：HTML 3.2作为W3C推荐标准发布。 1997年12月：HTML 4.0作为W3C推荐标准发布。 1999年12月：HTML4.01作为W3C推荐标准发布。 2008年1月：HTML5由W3C作为工作草案发布。 2011年5月：W3C将HTML5推进至“最终征求”（Last Call）阶段。 2012年12月：W3C指定HTML5作为“候选推荐”阶段。 2014年10月：HTML5作为稳定W3C推荐标准发布，这意味着HTML5的标准化已经完成。  HTML5新特性  引入原生多媒体支持（audio和video标签） 引入可编程内容（canvas标签） 引入语义Web（article、aside、details、figure、footer、header、nav、section、summary等标签） 引入新的表单控件（日历、邮箱、搜索、滑条等） 引入对离线存储更好的支持（localStorage和sessionStorage） 引入对定位、拖放、WebSocket、后台任务等的支持  使用标签承载内容 结构  html  head title meta body   文本  标题（heading）和段落（paragraph）  h1 ~ h6 p  上标（superscript）和下标（subscript）  sup sub  空白（白色空间折叠） 折行（break）和水平标尺（horizontal ruler）  br hr  语义化标签  加粗和强调 - strong 引用 - blockquote 缩写词和首字母缩写词 - abbr / acronym 引文 - cite 所有者联系信息 - address 内容的修改 - ins / del   列表（list）  有序列表（ordered list）- ol / li 无序列表（unordered list）- ul / li 定义列表（definition list）- dl / dt / dd  链接（anchor）  页面链接 锚链接 功能链接  图像（image）  图像存储位置   图像及其宽高</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day31-35/31-35-%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day31-35/31-35-%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <description>玩转Linux操作系统  说明：本文中对Linux命令的讲解都是基于名为CentOS的Linux发行版本，我自己使用的是阿里云服务器，系统版本为CentOS Linux release 7.6.1810。不同的Linux发行版本在Shell命令和工具程序上会有一些差别，但是这些差别是很小的。
+ 操作系统发展史 只有硬件没有软件的计算机系统被称之为“裸机”，我们很难用“裸机”来完成计算机日常的工作（如存储和运算），所以必须用特定的软件来控制硬件的工作。最靠近计算机硬件的软件是系统软件，其中最为重要的就是“操作系统”。“操作系统”是控制和管理整个计算机硬件和软件资源、实现资源分配和任务调配、为系统用户以及其他软件提供接口和环境的程序的集合。
+没有操作系统（手工操作） 在计算机诞生之初没有操作系统的年代，人们先把程序纸带（或卡片）装上计算机，然后启动输入机把程序送入计算机，接着通过控制台开关启动程序运行。当程序执行完毕，打印机输出计算的结果，用户卸下并取走纸带（或卡片）。第二个用户上机，重复同样的步骤。在整个过程中用户独占机器，CPU等待手工操作，资源利用率极低。
+批处理系统 首先启动计算机上的一个监督程序，在监督程序的控制下，计算机能够自动的、成批的处理一个或多个用户的作业。完成一批作业后，监督程度又从输入机读取作业存入磁带机。按照上面的步骤重复处理任务。监督程序不停的处理各个作业，实现了作业的自动转接，减少了作业的建立时间和手工操作时间，提高了计算机资源的利用率。 批处理系统又可以分为单道批处理系统、多道批处理系统、联机批处理系统、脱机批处理系统。
+分时系统和实时系统 分时系统是把处理器的运行时间分成很短的时间片，按时间片轮流把处理机分配给各联机作业使用。 若某个作业在分配给它的时间片内不能完成其计算，则该作业暂时中断，把处理机让给另一作业使用，等待下一轮调度时再继续其运行。由于计算机速度很快，作业运行轮转得很快，给每个用户的感觉是他独占了一台计算机。而每个用户可以通过自己的终端向系统发出各种操作控制命令，在充分的人机交互情况下，完成作业的运行。为了解决分时系统不能及时响应用户指令的情况，又出现了能够在在严格的时间范围内完成事件处理，及时响应随机外部事件的实时系统。
+通用操作系统  1960s：IBM的System/360系列的机器有了统一的操作系统OS/360。
+ 1965年：AT&amp;amp;T的贝尔实验室加入GE和MIT的合作计划开始开发MULTICS。
+ 1969年：MULTICS项目失败，Ken Tompson赋闲在家，为了玩“Space Travel”游戏用汇编语言在当时已经被淘汰的PDP-7上开发了Unics。
+   注：很难想象，Unix这么伟大的系统，居然是一个赋闲在家的程序员（关键是老婆回娘家还带上了孩子）在一台被淘汰的设备上为了玩游戏开发出来的。
+  1970年~1971年：Ken Tompson和Dennis Ritchie用B语言在PDP-11上重写了Unics，并在Brian Kernighan的建议下将其更名为Unix。   1972年~1973年：Dennis Ritchie发明了C语言来取代可移植性较差的B语言，并开启了用C语言重写Unix的工作。
+ 1974年：Unix推出了里程碑意义的第5版，几乎完全用C语言来实现。
+ 1979年：从Unix第7版开始，AT&amp;amp;T发布新的使用条款，将Unix私有化。
+ 1987年：Andrew S. Tanenbaum教授为了能在课堂上为学生讲解操作系统运作的细节，决定在不使用任何AT&amp;amp;T的源代码前提下，自行开发与Unix兼容的操作系统以避免版权上的争议，该系统被命名为Minix。
+   1991年：Linus Torvalds就读于芬兰赫尔辛基大学期间，尝试在Minix上做一些开发工作，但因为Minix只是作为教学用途的操作系统，功能并不强大，为了方便在学校的新闻组和邮件系统中读写和下载文件，Linus编写了磁盘驱动程序和文件系统，这些东西形成了Linux系统内核的雏形。  下图是Unix操作系统家族的图谱。
+Linux概述 Linux是一个通用操作系统。一个操作系统要负责任务调度、内存分配、处理外围设备I/O等操作。操作系统通常由内核（运行其他程序，管理像磁盘、打印机等硬件设备的核心程序）和系统程序（设备驱动、底层库、shell、服务程序等）两部分组成。
+Linux内核是芬兰人Linus Torvalds开发的，于1991年9月发布。而Linux操作系统作为Internet时代的产物，它是由全世界许多开发者共同合作开发的，是一个自由的操作系统（注意自由和免费并不是同一个概念，想了解二者的差别可以点击这里）。
+Linux系统优点  通用操作系统，不跟特定的硬件绑定。 用C语言编写，可移植性强，有内核编程接口。 支持多用户和多任务，支持安全的分层文件系统。 大量的实用程序，完善的网络功能以及强大的支持文档。 可靠的安全性和良好的稳定性，对开发者更友好。  Linux系统发行版本  Redhat Ubuntu CentOS Fedora Debian openSUSE  基础命令 Linux系统的命令通常都是如下所示的格式：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day36-40/36-38-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93MySQL/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day36-40/36-38-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93MySQL/</guid>
+      <description>关系数据库入门 关系数据库概述  数据持久化 - 将数据保存到能够长久保存数据的存储介质中，在掉电的情况下数据也不会丢失。
+ 数据库发展史 - 网状数据库、层次数据库、关系数据库、NoSQL数据库。
+   1970年，IBM的研究员E.F.Codd在*Communication of the ACM*上发表了名为*A Relational Model of Data for Large Shared Data Banks*的论文，提出了关系模型的概念，奠定了关系模型的理论基础。后来Codd又陆续发表多篇文章，论述了范式理论和衡量关系系统的12条标准，用数学理论奠定了关系数据库的基础。
+  关系数据库特点。
+ 理论基础：集合论和关系代数。
+ 具体表象：用二维表（有行和列）组织数据。
+ 编程语言：结构化查询语言（SQL）。
+  ER模型（实体关系模型）和概念模型图。
+  ER模型，全称为实体关系模型（Entity-Relationship Model），由美籍华裔计算机科学家陈品山先生提出，是概念数据模型的高层描述方式，如下图所示。
+ 实体 - 矩形框 属性 - 椭圆框 关系 - 菱形框 重数 - 1:1（一对一） / 1:N（一对多） / M:N（多对多）  实际项目开发中，我们可以利用数据库建模工具（如：PowerDesigner）来绘制概念数据模型（其本质就是ER模型），然后再设置好目标数据库系统，将概念模型转换成物理模型，最终生成创建二维表的SQL（很多工具都可以根据我们设计的物理模型图以及设定的目标数据库来导出SQL或直接生成数据表）。
+ 关系数据库产品。  Oracle - 目前世界上使用最为广泛的数据库管理系统，作为一个通用的数据库系统，它具有完整的数据管理功能；作为一个关系数据库，它是一个完备关系的产品；作为分布式数据库，它实现了分布式处理的功能。在Oracle最新的12c版本中，还引入了多承租方架构，使用该架构可轻松部署和管理数据库云。 DB2 - IBM公司开发的、主要运行于Unix（包括IBM自家的AIX）、Linux、以及Windows服务器版等系统的关系数据库产品。DB2历史悠久且被认为是最早使用SQL的数据库产品，它拥有较为强大的商业智能功能。 SQL Server - 由Microsoft开发和推广的关系型数据库产品，最初适用于中小企业的数据管理，但是近年来它的应用范围有所扩展，部分大企业甚至是跨国公司也开始基于它来构建自己的数据管理系统。 MySQL - MySQL是开放源代码的，任何人都可以在GPL（General Public License）的许可下下载并根据个性化的需要对其进行修改。MySQL因为其速度、可靠性和适应性而备受关注。 [PostgreSQL]() - 在BSD许可证下发行的开放源代码的关系数据库产品。   MySQL简介 MySQL最早是由瑞典的MySQL AB公司开发的一个开放源码的关系数据库管理系统，该公司于2008年被昇阳微系统公司（Sun Microsystems）收购。在2009年，甲骨文公司（Oracle）收购昇阳微系统公司，因此在这之后MySQL成为了Oracle旗下产品。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day36-40/39-40-NoSQL%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day36-40/39-40-NoSQL%E5%85%A5%E9%97%A8/</guid>
+      <description>NoSQL入门 NoSQL概述 如今，大多数的计算机系统（包括服务器、PC、移动设备等）都会产生庞大的数据量。其实，早在2012年的时候，全世界每天产生的数据量就达到了2.5EB（艾字节，$$1EB\approx10^{18}B$$）。这些数据有很大一部分是由关系型数据库来存储和管理的。 早在1970年，E.F.Codd发表了论述关系型数据库的著名论文“*A relational model of data for large shared data banks*”，这篇文章奠定了关系型数据库的基础并在接下来的数十年时间内产生了深远的影响。实践证明，关系型数据库是实现数据持久化最为重要的方式，它也是大多数应用在选择持久化方案时的首选技术。
+NoSQL是一项全新的数据库革命性运动，虽然它的历史可以追溯到1998年，但是NoSQL真正深入人心并得到广泛的应用是在进入大数据时候以后，业界普遍认为NoSQL是更适合大数据存储的技术方案，这才使得NoSQL的发展达到了前所未有的高度。2012年《纽约时报》的一篇专栏中写到，大数据时代已经降临，在商业、经济及其他领域中，决策将不再基于经验和直觉而是基于数据和分析而作出。事实上，在天文学、气象学、基因组学、生物学、社会学、互联网搜索引擎、金融、医疗、社交网络、电子商务等诸多领域，由于数据过于密集和庞大，在数据的分析和处理上也遇到了前所未有的限制和阻碍，这一切都使得对大数据处理技术的研究被提升到了新的高度，也使得各种NoSQL的技术方案进入到了公众的视野。
+NoSQL数据库按照其存储类型可以大致分为以下几类：
+   类型 部分代表 特点     列族数据库 HBase
+Cassandra
+Hypertable 顾名思义是按列存储数据的。最大的特点是方便存储结构化和半结构化数据，方便做数据压缩，对针对某一列或者某几列的查询有非常大的I/O优势，适合于批量数据处理和即时查询。   文档数据库 MongoDB
+CouchDB
+ElasticSearch 文档数据库一般用类JSON格式存储数据，存储的内容是文档型的。这样也就有机会对某些字段建立索引，实现关系数据库的某些功能，但不提供对参照完整性和分布事务的支持。   KV数据库 DynamoDB
+Redis
+LevelDB 可以通过key快速查询到其value，有基于内存和基于磁盘两种实现方案。   图数据库 Neo4J
+FlockDB
+JanusGraph 使用图结构进行语义查询的数据库，它使用节点、边和属性来表示和存储数据。图数据库从设计上，就可以简单快速的检索难以在关系系统中建模的复杂层次结构。   对象数据库 db4o
+Versant 通过类似面向对象语言的语法操作数据库，通过对象的方式存取数据。     说明：想了解更多的NoSQL数据库，可以访问http://nosql-database.org/。
+ Redis概述 Redis是一种基于键值对的NoSQL数据库，它提供了对多种数据类型（字符串、哈希、列表、集合、有序集合、位图等）的支持，能够满足很多应用场景的需求。Redis将数据放在内存中，因此读写性能是非常惊人的。与此同时，Redis也提供了持久化机制，能够将内存中的数据保存到硬盘上，在发生意外状况时数据也不会丢掉。此外，Redis还支持键过期、地理信息运算、发布订阅、事务、管道、Lua脚本扩展等功能，总而言之，Redis的功能和性能都非常强大，如果项目中要实现高速缓存和消息队列这样的服务，直接交给Redis就可以了。目前，国内外很多著名的企业和商业项目都使用了Redis，包括：Twitter、Github、StackOverflow、新浪微博、百度、优酷土豆、美团、小米、唯品会等。
+Redis简介 2008年，一个名为Salvatore Sanfilippo的程序员为他开发的LLOOGG项目定制了专属的数据库（因为之前他无论怎样优化MySQL，系统性能已经无法再提升了），这项工作的成果就是Redis的初始版本。后来他将Redis的代码放到了全球最大的代码托管平台Github，从那以后，Redis引发了大量开发者的好评和关注，继而有数百人参与了Redis的开发和维护，这使得Redis的功能越来越强大和性能越来越好。
+Redis是REmote DIctionary Server的缩写，它是一个用ANSI C编写的高性能的key-value存储系统，与其他的key-value存储系统相比，Redis有以下一些特点（也是优点）：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/41-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/41-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</guid>
+      <description>快速上手 Web开发的早期阶段，开发者需要手动编写每个页面，例如一个新闻门户网站，每天都要修改它的HTML页面，随着网站规模和体量的增大，这种方式就变得极度糟糕。为了解决这个问题，开发人员想到了用外部程序来为Web服务器生成动态内容，也就是说HTML页面以及页面中的动态内容不再通过手动编写而是通过程序自动生成。最早的时候，这项技术被称为CGI（公共网关接口），当然随着时间的推移，CGI暴露出的问题也越来越多，例如大量重复的样板代码，总体性能较为低下等，因此在时代呼唤新英雄的背景下，PHP、ASP、JSP这类Web应用开发技术在上世纪90年代中后期如雨后春笋般涌现。通常我们说的Web应用是指通过浏览器来访问网络资源的应用程序，因为浏览器的普及性以及易用性，Web应用使用起来方便简单，免除了安装和更新应用程序带来的麻烦，而且也不用关心用户到底用的是什么操作系统，甚至不用区分是PC端还是移动端。
+Web应用机制和术语 下图向我们展示了Web应用的工作流程，其中涉及到的术语如下表所示。
+ 说明：相信有经验的读者会发现，这张图中其实还少了很多东西，例如反向代理服务器、数据库服务器、防火墙等，而且图中的每个节点在实际项目部署时可能是一组节点组成的集群。当然，如果你对这些没有什么概念也不要紧，继续下去就行了，后面会给大家一一讲解的。
+    术语 解释     URL/URI 统一资源定位符/统一资源标识符，网络资源的唯一标识   域名 与Web服务器地址对应的一个易于记忆的字符串名字   DNS 域名解析服务，可以将域名转换成对应的IP地址   IP地址 网络上的主机的身份标识，通过IP地址可以区分不同的主机   HTTP 超文本传输协议，构建在TCP之上的应用级协议，万维网数据通信的基础   反向代理 代理客户端向服务器发出请求，然后将服务器返回的资源返回给客户端   Web服务器 接受HTTP请求，然后返回HTML文件、纯文本文件、图像等资源给请求者   Nginx 高性能的Web服务器，也可以用作反向代理，负载均衡 和 HTTP缓存    HTTP协议 这里我们稍微费一些笔墨来谈谈上面提到的HTTP。HTTP（超文本传输协议）是构建于TCP（传输控制协议）之上应用级协议，它利用了TCP提供的可靠的传输服务实现了Web应用中的数据交换。按照维基百科上的介绍，设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法，也就是说这个协议是浏览器和Web服务器之间传输的数据的载体。关于这个协议的详细信息以及目前的发展状况，大家可以阅读阮一峰老师的《HTTP 协议入门》、《互联网协议入门》系列以及《图解HTTPS协议》进行了解。下图是我在四川省网络通信技术重点实验室学习和工作期间使用开源协议分析工具Ethereal（抓包工具WireShark的前身）截取的访问百度首页时的HTTP请求和响应的报文（协议数据），由于Ethereal截取的是经过网络适配器的数据，因此可以清晰的看到从物理链路层到应用层的协议数据。
+HTTP请求（请求行+请求头+空行+[消息体]）：
+HTTP响应（响应行+响应头+空行+消息体）：
+ 说明：这两张图是在2009年9月10日截取的，但愿这两张如同泛黄的照片般的截图能帮助你了解HTTP到底是什么样子的。
+ Django概述 Python的Web框架有上百个，比它的关键字还要多。所谓Web框架，就是用于开发Web服务器端应用的基础设施（通常指封装好的模块和一系列的工具）。事实上，即便没有Web框架，我们仍然可以通过socket或CGI来开发Web服务器端应用，但是这样做的成本和代价在实际开发中通常是不能接受的。通过Web框架，我们可以化繁为简，同时降低创建、更新、扩展应用程序的工作量。Python的Web框架中比较有名的有：Flask、Django、Tornado、Sanic、Pyramid、Bottle、Web2py、web.py等。
+在基于Python的Web框架中，Django是所有重量级选手中最有代表性的一位，开发者可以基于Django快速的开发可靠的Web应用程序，因为它减少了Web开发中不必要的开销，对常用的设计和开发模式进行了封装，并对MVC架构提供了支持（MTV）。许多成功的网站和App都是基于Django框架构建的，国内比较有代表性的网站包括：知乎、豆瓣网、果壳网、搜狐闪电邮箱、101围棋网、海报时尚网、背书吧、堆糖、手机搜狐网、咕咚、爱福窝、果库等。
+Django诞生于2003年，它是一个在真正的应用中成长起来的项目，由劳伦斯出版集团旗下在线新闻网站的内容管理系统（CMS）研发团队编写（主要是Adrian Holovaty和Simon Willison），以比利时的吉普赛爵士吉他手Django Reinhardt来命名，在2005年夏天作为开源框架发布。使用Django能用很短的时间构建出功能完备的网站，因为它代替程序员完成了所有乏味和重复的劳动，剩下真正有意义的核心业务给程序员，这一点就是对DRY（Don&amp;rsquo;t Repeat Yourself）理念的最好践行。
+快速上手 准备工作  检查Python环境：Django 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/42-%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/42-%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/</guid>
+      <description>深入模型 在上一个章节中，我们提到了Django是基于MVC架构的Web框架，MVC架构追求的是“模型”和“视图”的解耦合。所谓“模型”说得更直白一些就是数据（的表示），所以通常也被称作“数据模型”。在实际的项目中，数据模型通常通过数据库实现持久化操作，而关系型数据库在过去和当下都是持久化的首选方案，下面我们以MySQL为例来说明如何使用关系型数据库来实现持久化操作。
+配置关系型数据库MySQL 我们继续来完善上一个章节中的OA项目，首先从配置项目使用的数据库开始。
+ 修改项目的settings.py文件，首先将我们之前创建的应用hrs添加已安装的项目中，然后配置MySQL作为持久化方案。
+(venv)$ vim oa/settings.py# 此处省略上面的代码 INSTALLED_APPS = [ &amp;#39;django.contrib.admin&amp;#39;, &amp;#39;django.contrib.auth&amp;#39;, &amp;#39;django.contrib.contenttypes&amp;#39;, &amp;#39;django.contrib.sessions&amp;#39;, &amp;#39;django.contrib.messages&amp;#39;, &amp;#39;django.contrib.staticfiles&amp;#39;, &amp;#39;hrs&amp;#39;, ] DATABASES = { &amp;#39;default&amp;#39;: { &amp;#39;ENGINE&amp;#39;: &amp;#39;django.db.backends.mysql&amp;#39;, &amp;#39;NAME&amp;#39;: &amp;#39;oa&amp;#39;, &amp;#39;HOST&amp;#39;: &amp;#39;127.0.0.1&amp;#39;, &amp;#39;PORT&amp;#39;: 3306, &amp;#39;USER&amp;#39;: &amp;#39;root&amp;#39;, &amp;#39;PASSWORD&amp;#39;: &amp;#39;123456&amp;#39;, } } # 此处省略下面的代码  在配置ENGINE属性时，常用的可选值包括：
+ &#39;django.db.backends.sqlite3&#39;：SQLite嵌入式数据库。 &#39;django.db.backends.postgresql&#39;：BSD许可证下发行的开源关系型数据库产品。 &#39;django.db.backends.mysql&#39;：转手多次目前属于甲骨文公司的经济高效的数据库产品。 &#39;django.db.backends.oracle&#39;：甲骨文公司的关系型数据库旗舰产品。  其他的配置可以参考官方文档中数据库配置的部分。
+NAME属性代表数据库的名称，如果使用SQLite它对应着一个文件，在这种情况下NAME的属性值应该是一个绝对路径；使用其他关系型数据库，则要配置对应的HOST（主机）、PORT（端口）、USER（用户名）、PASSWORD（口令）等属性。
+ 安装Python操作MySQL的依赖库，Python 3中通常使用PyMySQL，Python 2中通常用MySQLdb。
+(venv)$ pip install pymysql  如果使用Python 3需要修改项目目录下的__init__.py文件并加入如下所示的代码，这段代码的作用是将PyMySQL视为MySQLdb来使用，从而避免Django找不到连接MySQL的客户端工具而询问你：“Did you install mysqlclient? ”（你安装了mysqlclient吗？）。
+import pymysql pymysql.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/43-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/43-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82/</guid>
+      <description>静态资源和Ajax请求 基于前面两个章节讲解的知识，我们已经可以使用Django框架来完成Web应用的开发了。接下来我们就尝试实现一个投票应用，具体的需求是用户进入应用首先查看到“学科介绍”页面，该页面显示了一个学校所开设的所有学科；通过点击某个学科，可以进入“老师介绍”页面，该页面展示了该学科所有老师的详细情况，可以在该页面上给老师点击“好评”或“差评”；如果用户没有登录，在投票时会先跳转到“登录页”要求用户登录，登录成功才能投票；对于未注册的用户，可以在“登录页”点击“新用户注册”进入“注册页”完成用户注册操作，注册成功后会跳转到“登录页”，注册失败会获得相应的提示信息。
+准备工作 由于之前已经详细的讲解了如何创建Django项目以及项目的相关配置，因此我们略过这部分内容，唯一需要说明的是，从上面对投票应用需求的描述中我们可以分析出三个业务实体：学科、老师和用户。学科和老师之间通常是一对多关联关系（一个学科有多个老师，一个老师通常只属于一个学科），用户因为要给老师投票，所以跟老师之间是多对多关联关系（一个用户可以给多个老师投票，一个老师也可以收到多个用户的投票）。首先修改应用下的models.py文件来定义数据模型，先给出学科和老师的模型。
+from django.db import models class Subject(models.Model): &amp;#34;&amp;#34;&amp;#34;学科&amp;#34;&amp;#34;&amp;#34; no = models.IntegerField(primary_key=True, verbose_name=&amp;#39;编号&amp;#39;) name = models.CharField(max_length=20, verbose_name=&amp;#39;名称&amp;#39;) intro = models.CharField(max_length=511, default=&amp;#39;&amp;#39;, verbose_name=&amp;#39;介绍&amp;#39;) create_date = models.DateField(null=True, verbose_name=&amp;#39;成立日期&amp;#39;) is_hot = models.BooleanField(default=False, verbose_name=&amp;#39;是否热门&amp;#39;) def __str__(self): return self.name class Meta: db_table = &amp;#39;tb_subject&amp;#39; verbose_name = &amp;#39;学科&amp;#39; verbose_name_plural = &amp;#39;学科&amp;#39; class Teacher(models.Model): &amp;#34;&amp;#34;&amp;#34;老师&amp;#34;&amp;#34;&amp;#34; no = models.AutoField(primary_key=True, verbose_name=&amp;#39;编号&amp;#39;) name = models.CharField(max_length=20, verbose_name=&amp;#39;姓名&amp;#39;) detail = models.CharField(max_length=1023, default=&amp;#39;&amp;#39;, blank=True, verbose_name=&amp;#39;详情&amp;#39;) photo = models.CharField(max_length=1023, default=&amp;#39;&amp;#39;, verbose_name=&amp;#39;照片&amp;#39;) good_count = models.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/44-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/44-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <description>表单的应用 我们继续来完成上一章节中的项目，实现“用户注册”和“用户登录”的功能，并限制只有登录的用户才能为老师投票。Django框架中提供了对表单的封装，而且提供了多种不同的使用方式。
+首先添加用户模型。
+class User(models.Model): &amp;#34;&amp;#34;&amp;#34;用户&amp;#34;&amp;#34;&amp;#34; no = models.AutoField(primary_key=True, verbose_name=&amp;#39;编号&amp;#39;) username = models.CharField(max_length=20, unique=True, verbose_name=&amp;#39;用户名&amp;#39;) password = models.CharField(max_length=32, verbose_name=&amp;#39;密码&amp;#39;) regdate = models.DateTimeField(auto_now_add=True, verbose_name=&amp;#39;注册时间&amp;#39;) class Meta: db_table = &amp;#39;tb_user&amp;#39; verbose_name_plural = &amp;#39;用户&amp;#39; 通过生成迁移和执行迁移操作，在数据库中创建对应的用户表。
+(venv)$ python manage.py makemigrations vote ... (venv)$ python manage.py migrate ... 定制一个非常简单的注册模板页面。
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;用户注册&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt;/* 此处省略层叠样式表选择器 */&amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;用户注册&amp;lt;/h1&amp;gt; &amp;lt;hr&amp;gt; &amp;lt;p class=&amp;#34;hint&amp;#34;&amp;gt;{{ hint }}&amp;lt;/p&amp;gt; &amp;lt;form action=&amp;#34;/register/&amp;#34; method=&amp;#34;post&amp;#34;&amp;gt; {% csrf_token %} &amp;lt;div class=&amp;#34;input&amp;#34;&amp;gt; &amp;lt;label for=&amp;#34;username&amp;#34;&amp;gt;用户名：&amp;lt;/label&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; id=&amp;#34;username&amp;#34; name=&amp;#34;username&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;input&amp;#34;&amp;gt; &amp;lt;label for=&amp;#34;password&amp;#34;&amp;gt;密码：&amp;lt;/label&amp;gt; &amp;lt;input type=&amp;#34;password&amp;#34; id=&amp;#34;password&amp;#34; name=&amp;#34;password&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;input&amp;#34;&amp;gt; &amp;lt;label for=&amp;#34;repassword&amp;#34;&amp;gt;确认密码：&amp;lt;/label&amp;gt; &amp;lt;input type=&amp;#34;password&amp;#34; id=&amp;#34;repassword&amp;#34; name=&amp;#34;repassword&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;input&amp;#34;&amp;gt; &amp;lt;input type=&amp;#34;submit&amp;#34; value=&amp;#34;注册&amp;#34;&amp;gt; &amp;lt;input type=&amp;#34;reset&amp;#34; value=&amp;#34;重置&amp;#34;&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;a href=&amp;#34;/login&amp;#34;&amp;gt;返回登录&amp;lt;/a&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 注意，在上面的表单中，我们使用了模板指令{% csrf_token %}为表单添加一个隐藏域（type属性值为hidden的input标签），它的作用是在表单中生成一个随机令牌（token）来防范跨站请求伪造（通常简称为CSRF），这也是Django在提交表单时的硬性要求，除非我们设置了免除CSRF令牌。下图是一个关于CSRF简单生动的例子，它来自于维基百科。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/45-Cookie%E5%92%8CSession/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/45-Cookie%E5%92%8CSession/</guid>
+      <description>Cookie和Session 实现用户跟踪 如今，一个网站如果不通过某种方式记住你是谁以及你之前在网站的活动情况，失去的就是网站的可用性和便利性，继而很有可能导致网站用户的流式，所以记住一个用户（更专业的说法叫用户跟踪）对绝大多数Web应用来说都是必需的功能。
+在服务器端，我们想记住一个用户最简单的办法就是创建一个对象，通过这个对象就可以把用户相关的信息都保存起来，这个对象就是我们常说的session（用户会话对象）。那么问题来了，HTTP本身是一个无连接（每次请求和响应的过程中，服务器一旦完成对客户端请求的响应之后就断开连接）、无状态（客户端再次发起对服务器的请求时，服务器无法得知这个客户端之前的任何信息）的协议，即便服务器通过session对象保留了用户数据，还得通过某种方式来确定当前的请求与之前保存过的哪一个session是有关联的。相信很多人都能想到，我们可以给每个session对象分配一个全局唯一的标识符来识别session对象，我们姑且称之为sessionid，每次客户端发起请求时，只要携带上这个sessionid，就有办法找到与之对应的session对象，从而实现在两次请求之间记住该用户的信息，也就是我们之前说的用户跟踪。
+要让客户端记住并在每次请求时带上sessionid又有以下几种做法：
+ URL重写。所谓URL重写就是在URL中携带sessionid，例如：http://www.example.com/index.html?sessionid=123456，服务器通过获取sessionid参数的值来取到与之对应的session对象。
+ 隐藏域（隐式表单域）。在提交表单的时候，可以通过在表单中设置隐藏域向服务器发送额外的数据。例如：&amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;sessionid&amp;quot; value=&amp;quot;123456&amp;quot;&amp;gt;。
+ 本地存储。现在的浏览器都支持多种本地存储方案，包括：cookie、localStorage、sessionStorage、IndexedDB等。在这些方案中，cookie是历史最为悠久也是被诟病得最多的一种方案，也是我们接下来首先为大家讲解的一种方案。简单的说，cookie是一种以键值对方式保存在浏览器临时文件中的数据，每次请求时，请求头中会携带本站点的cookie到服务器，那么只要将sessionid写入cookie，下次请求时服务器只要读取请求头中的cookie就能够获得这个sessionid，如下图所示。
+  在HTML5时代要，除了cookie，还可以使用新的本地存储API来保存数据，就是刚才提到的localStorage、sessionStorage、IndexedDB等技术，如下图所示。
+Django框架对session的支持 在创建Django项目时，默认的配置文件settings.py文件中已经激活了一个名为SessionMiddleware的中间件（关于中间件的知识我们在下一个章节做详细的讲解，这里只需要知道它的存在即可），因为这个中间件的存在，我们可以直接通过请求对象的session属性来操作会话对象。session属性是一个像字典一样可以读写数据的容器对象，因此我们可以使用“键值对”的方式来保留用户数据。与此同时，SessionMiddleware中间件还封装了对cookie的操作，在cookie中保存了sessionid，就如同我们之前描述的那样。
+在默认情况下，Django将session的数据序列化后保存在关系型数据库中，在Django 1.6以后的版本中，默认的序列化数据的方式是JSON序列化，而在此之前一直使用Pickle序列化。JSON序列化和Pickle序列化的差别在于前者将对象序列化为字符串（字符形式），而后者将对象序列化为字节串（二进制形式），因为安全方面的原因，JSON序列化成为了目前Django框架默认序列化数据的方式，这就要求在我们保存在session中的数据必须是能够JSON序列化的，否则就会引发异常。还有一点需要说明的是，使用关系型数据库保存session中的数据在大多数时候并不是最好的选择，因为数据库可能会承受巨大的压力而成为系统性能的瓶颈，在后面的章节中我们会告诉大家如何将session的数据保存到缓存服务中。
+我们继续完善之前的投票应用，前一个章节中我们实现了用户的登录和注册，下面我们首先完善登录时对验证码的检查。
+def get_captcha(request): &amp;#34;&amp;#34;&amp;#34;验证码&amp;#34;&amp;#34;&amp;#34; captcha_text = random_captcha_text() request.session[&amp;#39;captcha&amp;#39;] = captcha_text image_data = Captcha.instance().generate(captcha_text) return HttpResponse(image_data, content_type=&amp;#39;image/png&amp;#39;) 注意上面代码中的第4行，我们将随机生成的验证码字符串保存到session中，稍后用户登录时，我们要将保存在session中的验证码字符串和用户输入的验证码字符串进行比对，如果用户输入了正确的验证码才能够执行后续的登录流程，代码如下所示。
+def login(request: HttpRequest): &amp;#34;&amp;#34;&amp;#34;登录&amp;#34;&amp;#34;&amp;#34; hint = &amp;#39;&amp;#39; if request.method == &amp;#39;POST&amp;#39;: form = LoginForm(request.POST) if form.is_valid(): # 对验证码的正确性进行验证 captcha_from_user = form.cleaned_data[&amp;#39;captcha&amp;#39;] captcha_from_sess = request.session.get(&amp;#39;captcha&amp;#39;, &amp;#39;&amp;#39;) if captcha_from_sess.lower() != captcha_from_user.lower(): hint = &amp;#39;请输入正确的验证码&amp;#39; else: username = form.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/46-%E6%8A%A5%E8%A1%A8%E5%92%8C%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/46-%E6%8A%A5%E8%A1%A8%E5%92%8C%E6%97%A5%E5%BF%97/</guid>
+      <description>报表和日志 导出Excel报表 报表就是用表格、图表等格式来动态显示数据，所以有人用这样的公式来描述报表：
+报表 = 多样的格式 + 动态的数据  有很多的三方库支持在Python程序中写Excel文件，包括xlwt、xlwings、openpyxl、xlswriter、pandas等，其中的xlwt虽然只支持写xls格式的Excel文件，但在性能方面的表现还是不错的。下面我们就以xlwt为例，来演示如何在Django项目中导出Excel报表，例如导出一个包含所有老师信息的Excel表格。
+def export_teachers_excel(request): # 创建工作簿 wb = xlwt.Workbook() # 添加工作表 sheet = wb.add_sheet(&amp;#39;老师信息表&amp;#39;) # 查询所有老师的信息(注意：这个地方稍后需要优化) queryset = Teacher.objects.all() # 向Excel表单中写入表头 colnames = (&amp;#39;姓名&amp;#39;, &amp;#39;介绍&amp;#39;, &amp;#39;好评数&amp;#39;, &amp;#39;差评数&amp;#39;, &amp;#39;学科&amp;#39;) for index, name in enumerate(colnames): sheet.write(0, index, name) # 向单元格中写入老师的数据 props = (&amp;#39;name&amp;#39;, &amp;#39;detail&amp;#39;, &amp;#39;good_count&amp;#39;, &amp;#39;bad_count&amp;#39;, &amp;#39;subject&amp;#39;) for row, teacher in enumerate(queryset): for col, prop in enumerate(props): value = getattr(teacher, prop, &amp;#39;&amp;#39;) if isinstance(value, Subject): value = value.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/47-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/47-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <description>中间件的应用 实现登录验证 我们继续来完善投票应用。在上一个章节中，我们在用户登录成功后通过session保留了用户信息，接下来我们可以应用做一些调整，要求在为老师投票时必须要先登录，登录过的用户可以投票，否则就将用户引导到登录页面，为此我们可以这样修改视图函数。
+def praise_or_criticize(request: HttpRequest): &amp;#34;&amp;#34;&amp;#34;投票&amp;#34;&amp;#34;&amp;#34; if &amp;#39;username&amp;#39; in request.session: try: tno = int(request.GET.get(&amp;#39;tno&amp;#39;, &amp;#39;0&amp;#39;)) teacher = Teacher.objects.get(no=tno) if request.path.startswith(&amp;#39;/praise&amp;#39;): teacher.good_count += 1 else: teacher.bad_count += 1 teacher.save() data = {&amp;#39;code&amp;#39;: 200, &amp;#39;message&amp;#39;: &amp;#39;操作成功&amp;#39;} except (ValueError, Teacher.DoesNotExist): data = {&amp;#39;code&amp;#39;: 404, &amp;#39;message&amp;#39;: &amp;#39;操作失败&amp;#39;} else: data = {&amp;#39;code&amp;#39;: 401, &amp;#39;message&amp;#39;: &amp;#39;请先登录&amp;#39;} return JsonResponse(data) 前端页面在收到{&#39;code&#39;: 401, &#39;message&#39;: &#39;请先登录&#39;}后，可以将用户引导到登录页面，修改后的teacher.html页面的JavaScript代码部门如下所示。
+&amp;lt;script&amp;gt; $(() =&amp;gt; { $(&amp;#39;.comment &amp;gt; a&amp;#39;).on(&amp;#39;click&amp;#39;, (evt) =&amp;gt; { evt.preventDefault() let a = $(evt.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/48-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/48-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</guid>
+      <description>前后端分离开发入门 在传统的Web应用开发中，大多数的程序员会将浏览器作为前后端的分界线。将浏览器中为用户进行页面展示的部分称之为前端，而将运行在服务器，为前端提供业务逻辑和数据准备的所有代码统称为后端。所谓前后端分离的开发，就是前后端工程师约定好数据交互接口，并行的进行开发和测试，后端只提供数据，不负责将数据渲染到页面上，前端通过HTTP请求获取数据并负责将数据渲染到页面上，这个工作是交给浏览器中的JavaScript代码来完成。
+使用前后端分离开发有诸多的好处，下面我们简要的说下这些好处：
+ 提升开发效率。前后端分离以后，可以实现前后端代码的解耦，只要前后端沟通约定好应用所需接口以及接口参数，便可以开始并行开发，无需等待对方的开发工作结束。在这种情况下，前后端工程师都可以只专注于自己的开发工作，有助于打造出更好的团队。除此之外，在前后端分离的开发模式下，即使需求发生变更，只要接口与数据格式不变，后端开发人员就不需要修改代码，只要前端进行变动即可。 增强代码的可维护性。前后端分离后，应用的代码不再是前后端混合，只有在运行期才会有调用依赖关系，这样的话维护代码的工作将变得轻松愉快很多，再不会牵一发而动全身。当你的代码变得简明且整洁时，代码的可读性和可维护性都会有质的提升。 支持多终端和服务化架构。前后端分离后，同一套数据接口可以为不同的终端提供服务，更有助于打造多终端应用；此外，由于后端提供的接口之间可以通过HTTP(S)进行调用，有助于打造服务化架构（包括微服务）。  接下来我们就用前后端分离的方式来改写之前的投票应用。
+返回JSON格式的数据 刚才说过，在前后端分离的开发模式下，后端需要为前端提供数据接口，这些接口通常返回JSON格式的数据。在Django项目中，我们可以先将对象处理成字典，然后就可以利用Django封装的JsonResponse向浏览器返回JSON格式的数据，具体的做法如下所示。
+def show_subjects(request): queryset = Subject.objects.all() subjects = [] for subject in queryset: subjects.append({ &amp;#39;no&amp;#39;: subject.no, &amp;#39;name&amp;#39;: subject.name, &amp;#39;intro&amp;#39;: subject.intro, &amp;#39;isHot&amp;#39;: subject.is_hot }) return JsonResponse(subjects, safe=False) 上面的代码中，我们通过循环遍历查询学科得到的QuerySet对象，将每个学科的数据处理成一个字典，在将字典保存在名为subjects的列表容器中，最后利用JsonResponse完成对列表的序列化，向浏览器返回JSON格式的数据。由于JsonResponse序列化的是一个列表而不是字典，所以需要指定safe参数的值为False才能完成对subjects的序列化，否则会产生TypeError异常。
+可能大家已经发现了，自己写代码将一个对象转成字典是比较麻烦的，如果对象的属性很多而且某些属性又关联到一个比较复杂的对象时，情况会变得更加糟糕。为此我们可以使用一个名为bpmappers的三方库来简化将对象转成字典的操作，这个三方库本身也提供了对Django框架的支持。
+安装三方库bpmappers。
+pip install bpmappers 编写映射器（实现对象到字典转换）。
+from bpmappers.djangomodel import ModelMapper from poll2.models import Subject class SubjectMapper(ModelMapper): class Meta: model = Subject 修改视图函数。
+def show_subjects(request): queryset = Subject.objects.all() subjects = [] for subject in queryset: subjects.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/49-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/49-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/</guid>
+      <description> RESTful架构和DRF入门 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/50-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/50-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/</guid>
+      <description> RESTful架构和DRF进阶 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/51-%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/51-%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/</guid>
+      <description> 使用缓存 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/52-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/52-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/</guid>
+      <description> 文件上传和富文本编辑 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/53-%E7%9F%AD%E4%BF%A1%E5%92%8C%E9%82%AE%E4%BB%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/53-%E7%9F%AD%E4%BF%A1%E5%92%8C%E9%82%AE%E4%BB%B6/</guid>
+      <description> 短信和邮件 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/54-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/54-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</guid>
+      <description> 异步任务和定时任务 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day41-55/55-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%92%8C%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day41-55/55-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%92%8C%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/</guid>
+      <description> 单元测试和项目上线 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day56-60/56-Flask%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day56-60/56-Flask%E5%85%A5%E9%97%A8/</guid>
+      <description> Flask入门 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day56-60/57-%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day56-60/57-%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description> 模板的使用 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day56-60/58-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day56-60/58-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/</guid>
+      <description> 表单的处理 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day56-60/59-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day56-60/59-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</guid>
+      <description> 数据库操作 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day56-60/60-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day56-60/60-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</guid>
+      <description> 项目实战 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day61-65/61-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day61-65/61-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</guid>
+      <description>预备知识 并发编程 所谓并发编程就是让程序中有多个部分能够并发或同时执行，并发编程带来的好处不言而喻，其中最为关键的两点是提升了执行效率和改善了用户体验。下面简单阐述一下Python中实现并发编程的三种方式：
+ 多线程：Python中通过threading模块的Thread类并辅以Lock、Condition、Event、Semaphore和Barrier等类来支持多线程编程。Python解释器通过GIL（全局解释器锁）来防止多个线程同时执行本地字节码，这个锁对于CPython（Python解释器的官方实现）是必须的，因为CPython的内存管理并不是线程安全的。因为GIL的存在，Python的多线程并不能利用CPU的多核特性。
+ 多进程：使用多进程可以有效的解决GIL的问题，Python中的multiprocessing模块提供了Process类来实现多进程，其他的辅助类跟threading模块中的类类似，由于进程间的内存是相互隔离的（操作系统对进程的保护），进程间通信（共享数据）必须使用管道、套接字等方式，这一点从编程的角度来讲是比较麻烦的，为此，Python的multiprocessing模块提供了一个名为Queue的类，它基于管道和锁机制提供了多个进程共享的队列。
+&amp;#34;&amp;#34;&amp;#34; 用下面的命令运行程序并查看执行时间，例如： time python3 example06.py real 0m20.657s user 1m17.749s sys 0m0.158s 使用多进程后实际执行时间为20.657秒，而用户时间1分17.749秒约为实际执行时间的4倍 这就证明我们的程序通过多进程使用了CPU的多核特性，而且这台计算机配置了4核的CPU &amp;#34;&amp;#34;&amp;#34; import concurrent.futures import math PRIMES = [ 1116281, 1297337, 104395303, 472882027, 533000389, 817504243, 982451653, 112272535095293, 112582705942171, 112272535095293, 115280095190773, 115797848077099, 1099726899285419 ] * 5 def is_prime(num): &amp;#34;&amp;#34;&amp;#34;判断素数&amp;#34;&amp;#34;&amp;#34; assert num &amp;gt; 0 for i in range(2, int(math.sqrt(num)) + 1): if num % i == 0: return False return num != 1 def main(): &amp;#34;&amp;#34;&amp;#34;主函数&amp;#34;&amp;#34;&amp;#34; with concurrent.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day61-65/62-Tornado%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day61-65/62-Tornado%E5%85%A5%E9%97%A8/</guid>
+      <description>Tornado入门 Tornado概述 Python的Web框架种类繁多（比Python语言的关键字还要多），但在众多优秀的Web框架中，Tornado框架最适合用来开发需要处理长连接和应对高并发的Web应用。Tornado框架在设计之初就考虑到性能问题，通过对非阻塞I/O和epoll（Linux 2.5.44内核引入的一种多路I/O复用方式，旨在实现高性能网络服务，在BSD和macOS中是kqueue）的运用，Tornado可以处理大量的并发连接，更轻松的应对C10K（万级并发）问题，是非常理想的实时通信Web框架。
+ 扩展：基于线程的Web服务器产品（如：Apache）会维护一个线程池来处理用户请求，当用户请求到达时就为该请求分配一个线程，如果线程池中没有空闲线程了，那么可以通过创建新的线程来应付新的请求，但前提是系统尚有空闲的内存空间，显然这种方式很容易将服务器的空闲内存耗尽（大多数Linux发行版本中，默认的线程栈大小为8M）。想象一下，如果我们要开发一个社交类应用，这类应用中，通常需要显示实时更新的消息、对象状态的变化和各种类型的通知，那也就意味着客户端需要保持请求连接来接收服务器的各种响应，在这种情况下，服务器上的工作线程很容易被耗尽，这也就意味着新的请求很有可能无法得到响应。
+ Tornado框架源于FriendFeed网站，在FriendFeed网站被Facebook收购之后得以开源，正式发布的日期是2009年9月10日。Tornado能让你能够快速开发高速的Web应用，如果你想编写一个可扩展的社交应用、实时分析引擎，或RESTful API，那么Tornado框架就是很好的选择。Tornado其实不仅仅是一个Web开发的框架，它还是一个高性能的事件驱动网络访问引擎，内置了高性能的HTTP服务器和客户端（支持同步和异步请求），同时还对WebSocket提供了完美的支持。
+了解和学习Tornado最好的资料就是它的官方文档，在tornadoweb.org上面有很多不错的例子，你也可以在Github上找到Tornado的源代码和历史版本。
+5分钟上手Tornado  创建并激活虚拟环境。
+mkdir hello-tornado cd hello-tornado python3 -m venv venv source venv/bin/activate 安装Tornado。
+pip install tornado 编写Web应用。
+&amp;#34;&amp;#34;&amp;#34; example01.py &amp;#34;&amp;#34;&amp;#34; import tornado.ioloop import tornado.web class MainHandler(tornado.web.RequestHandler): def get(self): self.write(&amp;#39;&amp;lt;h1&amp;gt;Hello, world!&amp;lt;/h1&amp;gt;&amp;#39;) def main(): app = tornado.web.Application(handlers=[(r&amp;#39;/&amp;#39;, MainHandler), ]) app.listen(8888) tornado.ioloop.IOLoop.current().start() if __name__ == &amp;#39;__main__&amp;#39;: main() 运行并访问应用。
+python example01.py  在上面的例子中，代码example01.py通过定义一个继承自RequestHandler的类（MainHandler）来处理用户请求，当请求到达时，Tornado会实例化这个类（创建MainHandler对象），并调用与HTTP请求方法（GET、POST等）对应的方法，显然上面的MainHandler只能处理GET请求，在收到GET请求时，它会将一段HTML的内容写入到HTTP响应中。main函数的第1行代码创建了Tornado框架中Application类的实例，它代表了我们的Web应用，而创建该实例最为重要的参数就是handlers，该参数告知Application对象，当收到一个请求时应该通过哪个类的对象来处理这个请求。在上面的例子中，当通过HTTP的GET请求访问站点根路径时，就会调用MainHandler的get方法。 main函数的第2行代码通过Application对象的listen方法指定了监听HTTP请求的端口。main函数的第3行代码用于获取Tornado框架的IOLoop实例并启动它，该实例代表一个条件触发的I/O循环，用于持续的接收来自于客户端的请求。
+ 扩展：在Python 3中，IOLoop实例的本质就是asyncio的事件循环，该事件循环在非Windows系统中就是SelectorEventLoop对象，它基于selectors模块（高级I/O复用模块），会使用当前操作系统最高效的I/O复用选择器，例如在Linux环境下它使用EpollSelector，而在macOS和BSD环境下它使用的是KqueueSelector；在Python 2中，IOLoop直接使用select模块（低级I/O复用模块）的epoll或kqueue函数，如果这两种方式都不可用，则调用select函数实现多路I/O复用。当然，如果要支持高并发，你的系统最好能够支持epoll或者kqueue这两种多路I/O复用方式中的一种。
+ 如果希望通过命令行参数来指定Web应用的监听端口，可以对上面的代码稍作修改。
+&amp;#34;&amp;#34;&amp;#34; example01.py &amp;#34;&amp;#34;&amp;#34; import tornado.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day61-65/63-%E5%BC%82%E6%AD%A5%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day61-65/63-%E5%BC%82%E6%AD%A5%E5%8C%96/</guid>
+      <description>异步化 在前面的例子中，我们并没有对RequestHandler中的get或post方法进行异步处理，这就意味着，一旦在get或post方法中出现了耗时间的操作，不仅仅是当前请求被阻塞，按照Tornado框架的工作模式，其他的请求也会被阻塞，所以我们需要对耗时间的操作进行异步化处理。
+在Tornado稍早一些的版本中，可以用装饰器实现请求方法的异步化或协程化来解决这个问题。
+ 给RequestHandler的请求处理函数添加@tornado.web.asynchronous装饰器，如下所示：
+class AsyncReqHandler(RequestHandler): @tornado.web.asynchronous def get(self): http = httpclient.AsyncHTTPClient() http.fetch(&amp;#34;http://example.com/&amp;#34;, self._on_download) def _on_download(self, response): do_something_with_response(response) self.render(&amp;#34;template.html&amp;#34;) 给RequestHandler的请求处理函数添加@tornado.gen.coroutine装饰器，如下所示：
+class GenAsyncHandler(RequestHandler): @tornado.gen.coroutine def get(self): http_client = AsyncHTTPClient() response = yield http_client.fetch(&amp;#34;http://example.com&amp;#34;) do_something_with_response(response) self.render(&amp;#34;template.html&amp;#34;) 使用@return_future装饰器，如下所示：
+@return_future def future_func(arg1, arg2, callback): # Do stuff (possibly asynchronous) callback(result) async def caller(): await future_func(arg1, arg2)  在Tornado 5.x版本中，这几个装饰器都被标记为deprcated（过时），我们可以通过Python 3.5中引入的async和await（在Python 3.7中已经成为正式的关键字）来达到同样的效果。当然，要实现异步化还得靠其他的支持异步操作的三方库来支持，如果请求处理函数中用到了不支持异步操作的三方库，就需要靠自己写包装类来支持异步化。
+下面的代码演示了在读写数据库时如何实现请求处理的异步化。我们用到的数据库建表语句如下所示：
+create database hrs default charset utf8; use hrs; /* 创建部门表 */ create table tb_dept ( dno int not null comment &amp;#39;部门编号&amp;#39;, dname varchar(10) not null comment &amp;#39;部门名称&amp;#39;, dloc varchar(20) not null comment &amp;#39;部门所在地&amp;#39;, primary key (dno) ); insert into tb_dept values (10, &amp;#39;会计部&amp;#39;, &amp;#39;北京&amp;#39;), (20, &amp;#39;研发部&amp;#39;, &amp;#39;成都&amp;#39;), (30, &amp;#39;销售部&amp;#39;, &amp;#39;重庆&amp;#39;), (40, &amp;#39;运维部&amp;#39;, &amp;#39;深圳&amp;#39;); 我们通过下面的代码实现了查询和新增部门两个操作。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day61-65/64-WebSocket%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day61-65/64-WebSocket%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <description>WebSocket的应用 Tornado的异步特性使其非常适合处理高并发的业务，同时也适合那些需要在客户端和服务器之间维持长连接的业务。传统的基于HTTP协议的Web应用，服务器和客户端（浏览器）的通信只能由客户端发起，这种单向请求注定了如果服务器有连续的状态变化，客户端（浏览器）是很难得知的。事实上，今天的很多Web应用都需要服务器主动向客户端（浏览器）发送数据，我们将这种通信方式称之为“推送”。过去很长一段时间，程序员都是用定时轮询（Polling）或长轮询（Long Polling）等方式来实现“推送”，但是这些都不是真正意义上的“推送”，而且浪费资源且效率低下。在HTML5时代，可以通过一种名为WebSocket的技术在服务器和客户端（浏览器）之间维持传输数据的长连接，这种方式可以实现真正的“推送”服务。
+WebSocket简介 WebSocket 协议在2008年诞生，2011年成为国际标准（RFC 6455），现在的浏览器都能够支持它，它可以实现浏览器和服务器之间的全双工通信。我们之前学习或了解过Python的Socket编程，通过Socket编程，可以基于TCP或UDP进行数据传输；而WebSocket与之类似，只不过它是基于HTTP来实现通信握手，使用TCP来进行数据传输。WebSocket的出现打破了HTTP请求和响应只能一对一通信的模式，也改变了服务器只能被动接受客户端请求的状况。目前有很多Web应用是需要服务器主动向客户端发送信息的，例如股票信息的网站可能需要向浏览器发送股票涨停通知，社交网站可能需要向用户发送好友上线提醒或聊天信息。
+WebSocket的特点如下所示：
+ 建立在TCP协议之上，服务器端的实现比较容易。 与HTTP协议有着良好的兼容性，默认端口是80（WS）和443（WSS），通信握手阶段采用HTTP协议，能通过各种 HTTP 代理服务器（不容易被防火墙阻拦）。 数据格式比较轻量，性能开销小，通信高效。 可以发送文本，也可以发送二进制数据。 没有同源策略的限制，客户端（浏览器）可以与任意服务器通信。  WebSocket服务器端编程 Tornado框架中有一个tornado.websocket.WebSocketHandler类专门用于处理来自WebSocket的请求，通过继承该类并重写open、on_message、on_close 等方法来处理WebSocket通信，下面我们对WebSocketHandler的核心方法做一个简单的介绍。
+ open(*args, **kwargs)方法：建立新的WebSocket连接后，Tornado框架会调用该方法，该方法的参数与RequestHandler的get方法的参数类似，这也就意味着在open方法中可以执行获取请求参数、读取Cookie信息这样的操作。
+ on_message(message)方法：建立WebSocket之后，当收到来自客户端的消息时，Tornado框架会调用该方法，这样就可以对收到的消息进行对应的处理，必须重写这个方法。
+ on_close()方法：当WebSocket被关闭时，Tornado框架会调用该方法，在该方法中可以通过close_code和close_reason了解关闭的原因。
+ write_message(message, binary=False)方法：将指定的消息通过WebSocket发送给客户端，可以传递utf-8字符序列或者字节序列，如果message是一个字典，将会执行JSON序列化。正常情况下，该方法会返回一个Future对象；如果WebSocket被关闭了，将引发WebSocketClosedError。
+ set_nodelay(value)方法：默认情况下，因为TCP的Nagle算法会导致短小的消息被延迟发送，在考虑到交互性的情况下就要通过将该方法的参数设置为True来避免延迟。
+ close(code=None, reason=None)方法：主动关闭WebSocket，可以指定状态码（详见RFC 6455 7.4.1节）和原因。
+  WebSocket客户端编程  创建WebSocket对象。
+var webSocket = new WebSocket(&amp;#39;ws://localhost:8000/ws&amp;#39;);    说明：webSocket对象的readyState属性表示该对象当前状态，取值为CONNECTING-正在连接，OPEN-连接成功可以通信，CLOSING-正在关闭，CLOSED-已经关闭。
+  编写回调函数。
+webSocket.onopen = function(evt) { webSocket.send(&amp;#39;...&amp;#39;); }; webSocket.onmessage = function(evt) { console.log(evt.data); }; webSocket.onclose = function(evt) {}; webSocket.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day61-65/65-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day61-65/65-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</guid>
+      <description> 项目实战 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/66-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/66-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</guid>
+      <description>网络爬虫和相关工具 网络爬虫的概念 网络爬虫（web crawler），以前经常称之为网络蜘蛛（spider），是按照一定的规则自动浏览万维网并获取信息的机器人程序（或脚本），曾经被广泛的应用于互联网搜索引擎。使用过互联网和浏览器的人都知道，网页中除了供用户阅读的文字信息之外，还包含一些超链接。网络爬虫系统正是通过网页中的超链接信息不断获得网络上的其它页面。正因如此，网络数据采集的过程就像一个爬虫或者蜘蛛在网络上漫游，所以才被形象的称为网络爬虫或者网络蜘蛛。
+爬虫的应用领域 在理想的状态下，所有ICP（Internet Content Provider）都应该为自己的网站提供API接口来共享它们允许其他程序获取的数据，在这种情况下爬虫就不是必需品，国内比较有名的电商平台（如淘宝、京东等）、社交平台（如腾讯微博等）等网站都提供了自己的Open API，但是这类Open API通常会对可以抓取的数据以及抓取数据的频率进行限制。对于大多数的公司而言，及时的获取行业相关数据是企业生存的重要环节之一，然而大部分企业在行业数据方面的匮乏是其与生俱来的短板，合理的利用爬虫来获取数据并从中提取出有商业价值的信息是至关重要的。当然爬虫还有很多重要的应用领域，下面列举了其中的一部分：
+ 搜索引擎 新闻聚合 社交应用 舆情监控 行业数据  合法性和背景调研 爬虫合法性探讨  网络爬虫领域目前还属于拓荒阶段，虽然互联网世界已经通过自己的游戏规则建立起一定的道德规范(Robots协议，全称是“网络爬虫排除标准”)，但法律部分还在建立和完善中，也就是说，现在这个领域暂时还是灰色地带。 “法不禁止即为许可”，如果爬虫就像浏览器一样获取的是前端显示的数据（网页上的公开信息）而不是网站后台的私密敏感信息，就不太担心法律法规的约束，因为目前大数据产业链的发展速度远远超过了法律的完善程度。 在爬取网站的时候，需要限制自己的爬虫遵守Robots协议，同时控制网络爬虫程序的抓取数据的速度；在使用数据的时候，必须要尊重网站的知识产权（从Web 2.0时代开始，虽然Web上的数据很多都是由用户提供的，但是网站平台是投入了运营成本的，当用户在注册和发布内容时，平台通常就已经获得了对数据的所有权、使用权和分发权）。如果违反了这些规定，在打官司的时候败诉几率相当高。  Robots.txt文件 大多数网站都会定义robots.txt文件，下面以淘宝的robots.txt文件为例，看看该网站对爬虫有哪些限制。
+ User-agent: Baiduspider Allow: /article Allow: /oshtml Disallow: /product/ Disallow: / User-Agent: Googlebot Allow: /article Allow: /oshtml Allow: /product Allow: /spu Allow: /dianpu Allow: /oversea Allow: /list Disallow: / User-agent: Bingbot Allow: /article Allow: /oshtml Allow: /product Allow: /spu Allow: /dianpu Allow: /oversea Allow: /list Disallow: / User-Agent: 360Spider Allow: /article Allow: /oshtml Disallow: / User-Agent: Yisouspider Allow: /article Allow: /oshtml Disallow: / User-Agent: Sogouspider Allow: /article Allow: /oshtml Allow: /product Disallow: / User-Agent: Yahoo!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/67-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/67-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E8%A7%A3%E6%9E%90/</guid>
+      <description>数据采集和解析 通过上一个章节的讲解，我们已经了解到了开发一个爬虫需要做的工作以及一些常见的问题，下面我们给出一个爬虫开发相关技术的清单以及这些技术涉及到的标准库和第三方库，稍后我们会一一介绍这些内容。
+ 下载数据 - urllib / requests / aiohttp。 解析数据 - re / lxml / beautifulsoup4 / pyquery。 缓存和持久化 - pymysql / sqlalchemy / peewee/ redis / pymongo。 生成数字签名 - hashlib。 序列化和压缩 - pickle / json / zlib。 调度器 - 多进程（multiprocessing） / 多线程（threading）。  HTML页面 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Home&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; /* 此处省略层叠样式表代码 */ &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div class=&amp;#34;wrapper&amp;#34;&amp;gt; &amp;lt;header&amp;gt; &amp;lt;h1&amp;gt;Yoko&amp;#39;s Kitchen&amp;lt;/h1&amp;gt; &amp;lt;nav&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34; class=&amp;#34;current&amp;#34;&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Classes&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Catering&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;About&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;Contact&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;section class=&amp;#34;courses&amp;#34;&amp;gt; &amp;lt;article&amp;gt; &amp;lt;figure&amp;gt; &amp;lt;img src=&amp;#34;images/bok-choi.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/68-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/68-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/</guid>
+      <description>存储数据 存储海量数据 数据持久化的首选方案应该是关系型数据库，关系型数据库的产品很多，包括：Oracle、MySQL、SQLServer、PostgreSQL等。如果要存储海量的低价值数据，文档数据库也是不错的选择，MongoDB是文档数据库中的佼佼者，之前我们已经讲解过MongDB的相关知识，在此不再进行赘述。
+数据缓存 通过《网络数据采集和解析》一文，我们已经知道了如何从指定的页面中抓取数据，以及如何保存抓取的结果，但是我们没有考虑过这么一种情况，就是我们可能需要从已经抓取过的页面中提取出更多的数据，重新去下载这些页面对于规模不大的网站倒是问题也不大，但是如果能够把这些页面缓存起来，对应用的性能会有明显的改善。可以使用Redis来提供高速缓存服务，关于Redis的知识，我们在《NoSQL入门》一文中已经做过简要的介绍。
+实例 - 缓存知乎发现上的链接和页面代码 from hashlib import sha1 from urllib.parse import urljoin import pickle import re import requests import zlib from bs4 import BeautifulSoup from redis import Redis def main(): # 指定种子页面 base_url = &amp;#39;https://www.zhihu.com/&amp;#39; seed_url = urljoin(base_url, &amp;#39;explore&amp;#39;) # 创建Redis客户端 client = Redis(host=&amp;#39;1.2.3.4&amp;#39;, port=6379, password=&amp;#39;1qaz2wsx&amp;#39;) # 设置用户代理(否则访问会被拒绝) headers = {&amp;#39;user-agent&amp;#39;: &amp;#39;Baiduspider&amp;#39;} # 通过requests模块发送GET请求并指定用户代理 resp = requests.get(seed_url, headers=headers) # 创建BeautifulSoup对象并指定使用lxml作为解析器 soup = BeautifulSoup(resp.text, &amp;#39;lxml&amp;#39;) href_regex = re.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/69-%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/69-%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD/</guid>
+      <description>并发下载 多线程和多进程回顾 在前面的《进程和线程》一文中，我们已经对在Python中使用多进程和多线程实现并发编程进行了简明的讲解，在此我们补充几个知识点。
+threading.local类 使用线程时最不愿意遇到的情况就是多个线程竞争资源，在这种情况下为了保证资源状态的正确性，我们可能需要对资源进行加锁保护的处理，这一方面会导致程序失去并发性，另外如果多个线程竞争多个资源时，还有可能因为加锁方式的不当导致死锁。要解决多个线程竞争资源的问题，其中一个方案就是让每个线程都持有资源的副本（拷贝），这样每个线程可以操作自己所持有的资源，从而规避对资源的竞争。
+要实现将资源和持有资源的线程进行绑定的操作，最简单的做法就是使用threading模块的local类，在网络爬虫开发中，就可以使用local类为每个线程绑定一个MySQL数据库连接或Redis客户端对象，这样通过线程可以直接获得这些资源，既解决了资源竞争的问题，又避免了在函数和方法调用时传递这些资源。具体的请参考本章多线程爬取“手机搜狐网”（Redis版）的实例代码。
+concurrent.futures模块 Python3.2带来了concurrent.futures 模块，这个模块包含了线程池和进程池、管理并行编程任务、处理非确定性的执行流程、进程/线程同步等功能。关于这部分的内容推荐大家阅读《Python并行编程》。
+分布式进程 使用多进程的时候，可以将进程部署在多个主机节点上，Python的multiprocessing模块不但支持多进程，其中managers子模块还支持把多进程部署到多个节点上。当然，要部署分布式进程，首先需要一个服务进程作为调度者，进程之间通过网络进行通信来实现对进程的控制和调度，由于managers模块已经对这些做出了很好的封装，因此在无需了解网络通信细节的前提下，就可以编写分布式多进程应用。具体的请参照本章分布式多进程爬取“手机搜狐网”的实例代码。
+协程和异步I/O 协程的概念 协程（coroutine）通常又称之为微线程或纤程，它是相互协作的一组子程序（函数）。所谓相互协作指的是在执行函数A时，可以随时中断去执行函数B，然后又中断继续执行函数A。注意，这一过程并不是函数调用（因为没有调用语句），整个过程看似像多线程，然而协程只有一个线程执行。协程通过yield关键字和 send()操作来转移执行权，协程之间不是调用者与被调用者的关系。
+协程的优势在于以下两点：
+ 执行效率极高，因为子程序（函数）切换不是线程切换，由程序自身控制，没有切换线程的开销。 不需要多线程的锁机制，因为只有一个线程，也不存在竞争资源的问题，当然也就不需要对资源加锁保护，因此执行效率高很多。   说明：协程适合处理的是I/O密集型任务，处理CPU密集型任务并不是它的长处，如果要提升CPU的利用率可以考虑“多进程+协程”的模式。
+ 历史回顾  Python 2.2：第一次提出了生成器（最初称之为迭代器）的概念（PEP 255）。 Python 2.5：引入了将对象发送回暂停了的生成器这一特性即生成器的send()方法（PEP 342）。 Python 3.3：添加了yield from特性，允许从迭代器中返回任何值（注意生成器本身也是迭代器），这样我们就可以串联生成器并且重构出更好的生成器。 Python 3.4：引入asyncio.coroutine装饰器用来标记作为协程的函数，协程函数和asyncio及其事件循环一起使用，来实现异步I/O操作。 Python 3.5：引入了async和await，可以使用async def来定义一个协程函数，这个函数中不能包含任何形式的yield语句，但是可以使用return或await从协程中返回值。  示例代码  生成器 - 数据的生产者。
+from time import sleep # 倒计数生成器 def countdown(n): while n &amp;gt; 0: yield n n -= 1 def main(): for num in countdown(5): print(f&amp;#39;Countdown: {num}&amp;#39;) sleep(1) print(&amp;#39;Countdown Over!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/70-%E8%A7%A3%E6%9E%90%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/70-%E8%A7%A3%E6%9E%90%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/</guid>
+      <description>解析动态内容 根据权威机构发布的全球互联网可访问性审计报告，全球约有四分之三的网站其内容或部分内容是通过JavaScript动态生成的，这就意味着在浏览器窗口中“查看网页源代码”时无法在HTML代码中找到这些内容，也就是说我们之前用的抓取数据的方式无法正常运转了。解决这样的问题基本上有两种方案，一是JavaScript逆向工程；另一种是渲染JavaScript获得渲染后的内容。
+JavaScript逆向工程 下面我们以“360图片”网站为例，说明什么是JavaScript逆向工程。其实所谓的JavaScript逆向工程就是找到通过Ajax技术动态获取数据的接口。在浏览器中输入http://image.so.com/z?ch=beauty就可以打开“360图片”的“美女”版块，如下图所示。
+但是当我们在浏览器中通过右键菜单“显示网页源代码”的时候，居然惊奇的发现页面的HTML代码中连一个&amp;lt;img&amp;gt;标签都没有，那么我们看到的图片是怎么显示出来的呢？原来所有的图片都是通过JavaScript动态加载的，而在浏览器的“开发人员工具”的“网络”中可以找到获取这些图片数据的网络API接口，如下图所示。
+那么结论就很简单了，只要我们找到了这些网络API接口，那么就能通过这些接口获取到数据，当然实际开发的时候可能还要对这些接口的参数以及接口返回的数据进行分析，了解每个参数的意义以及返回的JSON数据的格式，这样才能在我们的爬虫中使用这些数据。
+关于如何从网络API中获取JSON格式的数据并提取出我们需要的内容，在之前的《文件和异常》一文中已经讲解过了，这里不再进行赘述。
+使用Selenium 尽管很多网站对自己的网络API接口进行了保护，增加了获取数据的难度，但是只要经过足够的努力，绝大多数还是可以被逆向工程的，但是在实际开发中，我们可以通过浏览器渲染引擎来避免这些繁琐的工作，WebKit就是一个利用的渲染引擎。
+WebKit的代码始于1998年的KHTML项目，当时它是Konqueror浏览器的渲染引擎。2001年，苹果公司从这个项目的代码中衍生出了WebKit并应用于Safari浏览器，早期的Chrome浏览器也使用了该内核。在Python中，我们可以通过Qt框架获得WebKit引擎并使用它来渲染页面获得动态内容，关于这个内容请大家自行阅读《爬虫技术:动态页面抓取超级指南》一文。
+如果没有打算用上面所说的方式来渲染页面并获得动态内容，其实还有一种替代方案就是使用自动化测试工具Selenium，它提供了浏览器自动化的API接口，这样就可以通过操控浏览器来获取动态内容。首先可以使用pip来安装Selenium。
+pip3 install selenium 下面以“阿里V任务”的“直播服务”为例，来演示如何使用Selenium获取到动态内容并抓取主播图片。
+import requests from bs4 import BeautifulSoup def main(): resp = requests.get(&amp;#39;https://v.taobao.com/v/content/live?catetype=704&amp;amp;from=taonvlang&amp;#39;) soup = BeautifulSoup(resp.text, &amp;#39;lxml&amp;#39;) for img_tag in soup.select(&amp;#39;img[src]&amp;#39;): print(img_tag.attrs[&amp;#39;src&amp;#39;]) if __name__ == &amp;#39;__main__&amp;#39;: main() 运行上面的程序会发现没有任何的输出，因为页面的HTML代码上根本找不到&amp;lt;img&amp;gt;标签。接下来我们使用Selenium来获取到页面上的动态内容，再提取主播图片。
+from bs4 import BeautifulSoup from selenium import webdriver from selenium.webdriver.common.keys import Keys def main(): driver = webdriver.Chrome() driver.get(&amp;#39;https://v.taobao.com/v/content/live?catetype=704&amp;amp;from=taonvlang&amp;#39;) soup = BeautifulSoup(driver.page_source, &amp;#39;lxml&amp;#39;) for img_tag in soup.body.select(&amp;#39;img[src]&amp;#39;): print(img_tag.attrs[&amp;#39;src&amp;#39;]) if __name__ == &amp;#39;__main__&amp;#39;: main() 在上面的程序中，我们通过Selenium实现对Chrome浏览器的操控，如果要操控其他的浏览器，可以创对应的浏览器对象，例如Firefox、IE等。运行上面的程序，如果看到如下所示的错误提示，那是说明我们还没有将Chrome浏览器的驱动添加到PATH环境变量中，也没有在程序中指定Chrome浏览器驱动所在的位置。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/71-%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92%E5%92%8C%E9%AA%8C%E8%AF%81%E7%A0%81%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/71-%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92%E5%92%8C%E9%AA%8C%E8%AF%81%E7%A0%81%E5%A4%84%E7%90%86/</guid>
+      <description> 表单交互和验证码处理 提交表单 手动提交 自动提交 验证码处理 加载验证码 光学字符识别 光学字符识别（OCR）是从图像中抽取文本的工具，可以应用于公安、电信、物流、金融等诸多行业，例如识别车牌，身份证扫描识别、名片信息提取等。在爬虫开发中，如果遭遇了有文字验证码的表单，就可以利用OCR来进行验证码处理。Tesseract-OCR引擎最初是由惠普公司开发的光学字符识别系统，目前发布在Github上，由Google赞助开发。
+处理更复杂的验证码 很多网站为了分别出提供验证码的是人还是机器使用了更为复杂的验证码，例如拼图验证码、点触验证码、九宫格验证码等。关于这方面的知识，在崔庆才同学的《Python 3网络爬虫开发实战》有较为详细的讲解，有兴趣的可以购买阅读。
+验证码处理服务 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/72-Scrapy%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/72-Scrapy%E5%85%A5%E9%97%A8/</guid>
+      <description>Scrapy爬虫框架入门 Scrapy概述 Scrapy是Python开发的一个非常流行的网络爬虫框架，可以用来抓取Web站点并从页面中提取结构化的数据，被广泛的用于数据挖掘、数据监测和自动化测试等领域。下图展示了Scrapy的基本架构，其中包含了主要组件和系统的数据处理流程（图中带数字的红色箭头）。
+组件  Scrapy引擎（Engine）：Scrapy引擎是用来控制整个系统的数据处理流程。 调度器（Scheduler）：调度器从Scrapy引擎接受请求并排序列入队列，并在Scrapy引擎发出请求后返还给它们。 下载器（Downloader）：下载器的主要职责是抓取网页并将网页内容返还给蜘蛛（Spiders）。 蜘蛛（Spiders）：蜘蛛是有Scrapy用户自定义的用来解析网页并抓取特定URL返回的内容的类，每个蜘蛛都能处理一个域名或一组域名，简单的说就是用来定义特定网站的抓取和解析规则。 条目管道（Item Pipeline）：条目管道的主要责任是负责处理有蜘蛛从网页中抽取的数据条目，它的主要任务是清理、验证和存储数据。当页面被蜘蛛解析后，将被发送到条目管道，并经过几个特定的次序处理数据。每个条目管道组件都是一个Python类，它们获取了数据条目并执行对数据条目进行处理的方法，同时还需要确定是否需要在条目管道中继续执行下一步或是直接丢弃掉不处理。条目管道通常执行的任务有：清理HTML数据、验证解析到的数据（检查条目是否包含必要的字段）、检查是不是重复数据（如果重复就丢弃）、将解析到的数据存储到数据库（关系型数据库或NoSQL数据库）中。 中间件（Middlewares）：中间件是介于Scrapy引擎和其他组件之间的一个钩子框架，主要是为了提供自定义的代码来拓展Scrapy的功能，包括下载器中间件和蜘蛛中间件。  数据处理流程 Scrapy的整个数据处理流程由Scrapy引擎进行控制，通常的运转流程包括以下的步骤：
+ 引擎询问蜘蛛需要处理哪个网站，并让蜘蛛将第一个需要处理的URL交给它。
+ 引擎让调度器将需要处理的URL放在队列中。
+ 引擎从调度那获取接下来进行爬取的页面。
+ 调度将下一个爬取的URL返回给引擎，引擎将它通过下载中间件发送到下载器。
+ 当网页被下载器下载完成以后，响应内容通过下载中间件被发送到引擎；如果下载失败了，引擎会通知调度器记录这个URL，待会再重新下载。
+ 引擎收到下载器的响应并将它通过蜘蛛中间件发送到蜘蛛进行处理。
+ 蜘蛛处理响应并返回爬取到的数据条目，此外还要将需要跟进的新的URL发送给引擎。
+ 引擎将抓取到的数据条目送入条目管道，把新的URL发送给调度器放入队列中。
+  上述操作中的2-8步会一直重复直到调度器中没有需要请求的URL，爬虫停止工作。
+安装和使用Scrapy 可以先创建虚拟环境并在虚拟环境下使用pip安装scrapy。
+ 项目的目录结构如下图所示。
+(venv) $ tree . |____ scrapy.cfg |____ douban | |____ spiders | | |____ __init__.py | | |____ __pycache__ | |____ __init__.py | |____ __pycache__ | |____ middlewares.py | |____ settings.py | |____ items.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/73-Scrapy%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/73-Scrapy%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/</guid>
+      <description> Scrapy爬虫框架高级应用 Spider的用法 在Scrapy框架中，我们自定义的蜘蛛都继承自scrapy.spiders.Spider，这个类有一系列的属性和方法，具体如下所示：
+ name：爬虫的名字。 allowed_domains：允许爬取的域名，不在此范围的链接不会被跟进爬取。 start_urls：起始URL列表，当我们没有重写start_requests()方法时，就会从这个列表开始爬取。 custom_settings：用来存放蜘蛛专属配置的字典，这里的设置会覆盖全局的设置。 crawler：由from_crawler()方法设置的和蜘蛛对应的Crawler对象，Crawler对象包含了很多项目组件，利用它我们可以获取项目的配置信息，如调用crawler.settings.get()方法。 settings：用来获取爬虫全局设置的变量。 start_requests()：此方法用于生成初始请求，它返回一个可迭代对象。该方法默认是使用GET请求访问起始URL，如果起始URL需要使用POST请求来访问就必须重写这个方法。 parse()：当Response没有指定回调函数时，该方法就会被调用，它负责处理Response对象并返回结果，从中提取出需要的数据和后续的请求，该方法需要返回类型为Request或Item的可迭代对象（生成器当前也包含在其中，因此根据实际需要可以用return或yield来产生返回值）。 closed()：当蜘蛛关闭时，该方法会被调用，通常用来做一些释放资源的善后操作。  中间件的应用 下载中间件 蜘蛛中间件 Scrapy对接Selenium Scrapy部署到Docker </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/74-Scrapy%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/74-Scrapy%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E7%8E%B0/</guid>
+      <description> Scrapy爬虫框架分布式实现 分布式爬虫原理 Scrapy分布式实现  安装Scrapy-Redis。 配置Redis服务器。 修改配置文件。  SCHEDULER = &amp;lsquo;scrapy_redis.scheduler.Scheduler&amp;rsquo; DUPEFILTER_CLASS = &amp;lsquo;scrapy_redis.dupefilter.RFPDupeFilter&amp;rsquo; REDIS_HOST = &amp;lsquo;1.2.3.4&amp;rsquo; REDIS_PORT = 6379 REDIS_PASSWORD = &amp;lsquo;1qaz2wsx&amp;rsquo; SCHEDULER_QUEUE_CLASS = &amp;lsquo;scrapy_redis.queue.FifoQueue&amp;rsquo; SCHEDULER_PERSIST = True（通过持久化支持接续爬取） SCHEDULER_FLUSH_ON_START = True（每次启动时重新爬取）   Scrapyd分布式部署  安装Scrapyd 修改配置文件  mkdir /etc/scrapyd vim /etc/scrapyd/scrapyd.conf  安装Scrapyd-Client  将项目打包成Egg文件。 将打包的Egg文件通过addversion.json接口部署到Scrapyd上。   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day66-75/75-%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day66-75/75-%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</guid>
+      <description> 爬虫项目实战 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/76-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/76-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</guid>
+      <description> 机器学习基础 所谓“机器学习”就是利用计算机将纷繁复杂的数据处理成有用的信息，这样就可以发掘出数据带来的意义以及隐藏在数据背后的规律。现如今，“机器学习”和“大数据”可以说是IT行业中最热点的两个词汇，而无论是“机器学习”还是“大数据”最终要解决的问题本质上是一样的，用最为直白的话来说就是用现有的数据去预测将来的状况。
+按照问题的“输入”和“输出”，我们可以将用计算机解决的问题分为四大类：
+ 输入的信息是精确的，要求输出最优解。 输入的信息是精确的，无法找到最优解。 输入的信息是模糊的，要求输出最优解。 输入的信息是模糊的，无法找到最优解。  在上面的四大类问题中，第1类问题是计算机最擅长解决的，这类问题其实就是“数值计算”和“逻辑推理”方面的问题，而传统意义上的人工智能也就是利用逻辑推理来解决问题（如早期的“人机对弈”）。一直以来，我们都习惯于将计算机称为“电脑”，而基于“冯诺依曼”体系结构的“电脑”实际上只是实现了“人脑”理性思维这部分的功能，而且在这一点上“电脑”通常是优于“人脑”的，而“人脑”在处理输入模糊信息时表现出来的强大的处理能力，在今天看来也不是“电脑”可以完全企及的。所以我们研究人工智能也好，研究机器学习也好，是希望输入模糊信息时，计算机能够给出满意的甚至是最优的答案。
+至此，我们可以给“机器学习”下一个定义：机器学习是一门专门研究计算机怎样模拟或实现人类的学习行为，以获取新的知识或技能，重新组织已有的知识结构使之不断改善自身性能的学科。机器学习目前已经广泛的应用到生产生活的各个领域，以下列举了一些经典的场景：
+ 搜索引擎：根据搜索和使用习惯，优化下一次搜索的结果。 电商网站：自动推荐你可能感兴趣的商品。 贷款申请：通过你最近的金融活动信息进行综合评定。 图像识别：自动识别图片中有没有不和谐的内容。  机器学习可以分为监督学习和非监督学习。监督学习是从给定的训练数据集中学习得到一个函数，当新的数据到来时，可以根据这个函数预测结果，监督学习的训练集包括输入和输出，也可以说是特征和目标。监督学习的目标是由人来标注的，而非监督学习的数据没有类别信息，训练集也没有人为标注结果，通过无监督学习可以减少数据特征的维度，以便我们可以使用二维或三维图形更加直观地展示数据信息 。
+实现机器学习的一般步骤：
+ 数据收集 数据准备 数据分析 训练算法 测试算法 应用算法  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/77-Pandas%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/77-Pandas%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <description> Pandas的应用 1、Pandas入门 2、Pandas索引 3、Pandas数据清洗之空数据 4、Pandas多层索引 5、Pandas多层索引计算 6、Pandas数据集成concat 7、Pandas数据集成merge 8、Pandas分组聚合操作 9、Pandas数据集成实战 10、美国大选项目 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/78-NumPy%E5%92%8CSciPy%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/78-NumPy%E5%92%8CSciPy%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <description> NumPy和SciPy的应用 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/79-Matplotlib%E5%92%8C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/79-Matplotlib%E5%92%8C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+      <description>Matplotlib和数据可视化 数据的处理、分析和可视化已经成为Python近年来最为重要的应用领域之一，其中数据的可视化指的是将数据呈现为漂亮的统计图表，然后进一步发现数据中包含的规律以及隐藏的信息。数据可视化又跟数据挖掘和大数据分析紧密相关，而这些领域以及当下被热议的“深度学习”其最终的目标都是为了实现从过去的数据去对未来的状况进行预测。Python在实现数据可视化方面是非常棒的，即便是使用个人电脑也能够实现对百万级甚至更大体量的数据进行探索的工作，而这些工作都可以在现有的第三方库的基础上来完成（无需“重复的发明轮子”）。Matplotlib就是Python绘图库中的佼佼者，它包含了大量的工具，你可以使用这些工具创建各种图形（包括散点图、折线图、直方图、饼图、雷达图等），Python科学计算社区也经常使用它来完成数据可视化的工作。
+安装matplotlib 可以使用pip来安装matplotlib，命令如下所示。
+pip install matplotlib 绘制折线图 # coding: utf-8 import matplotlib.pyplot as plt def main(): # 保存x轴数据的列表 x_values = [x for x in range(1, 11)] # 保存y轴数据的列表 y_values = [x ** 2 for x in range(1, 11)] # 设置图表的标题以及x和y轴的说明 plt.title(&amp;#39;Square Numbers&amp;#39;) plt.xlabel(&amp;#39;Value&amp;#39;, fontsize=18) plt.ylabel(&amp;#39;Square&amp;#39;, fontsize=18) # 设置刻度标记的文字大小 plt.tick_params(axis=&amp;#39;both&amp;#39;, labelsize=16) # 绘制折线图 plt.plot(x_values, y_values) plt.show() if __name__ == &amp;#39;__main__&amp;#39;: main() 运行程序，效果如下图所示。
+如果使用jupyter的notebook，需要使用魔法指令%matplotlib inresline来设置在页面中显示图表，效果如下所示。
+绘制散点图 可以将上面代码中的的plot函数换成scatter函数来绘制散点图，效果如下图所示。
+当然，也可以直接通过plot函数设置绘图的颜色和线条的形状将折线图改造为散点图，对应的代码如下所示，其中参数&amp;rsquo;xr&amp;rsquo;表示每个点的记号是‘x’图形，颜色是红色（red）。
+plt.plot(x_values, y_values, &amp;#39;xr&amp;#39;) 重新运行程序，效果如下图所示。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/80-k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/80-k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB/</guid>
+      <description> k最近邻分类 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/81-%E5%86%B3%E7%AD%96%E6%A0%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/81-%E5%86%B3%E7%AD%96%E6%A0%91/</guid>
+      <description> 决策树 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/82-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/82-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/</guid>
+      <description> 贝叶斯分类 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/83-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/83-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/</guid>
+      <description> 支持向量机 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/84-K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/84-K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/</guid>
+      <description> K-均值聚类 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/85-%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/85-%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</guid>
+      <description> 回归分析 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/86-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/86-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8/</guid>
+      <description> 大数据分析入门 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/87-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/87-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%9B%E9%98%B6/</guid>
+      <description> 大数据分析进阶 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/88-Tensorflow%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/88-Tensorflow%E5%85%A5%E9%97%A8/</guid>
+      <description> Tensorflow入门 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/89-Tensorflow%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/89-Tensorflow%E5%AE%9E%E6%88%98/</guid>
+      <description> Tensorflow实战 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day76-90/90-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day76-90/90-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98/</guid>
+      <description> 推荐系统实战 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/100-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/100-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/</guid>
+      <description>英语面试 以下用I表示面试官（Interviewer），用C表示面试者（Candidate）。
+开场寒暄  I: Thanks for waiting. (Please follow me.)  C: It&amp;rsquo;s no problem.
+ I: How are you doing this morning?  C: I&amp;rsquo;m great. / I&amp;rsquo;m doing fine. Thank you. / How about you?
+ I: How did you get here?  C: I took the subway here. / I drove here.
+ I: Glad to meet you.  C: Glad to meet you. / It&amp;rsquo;s great to finally meet you in person.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/91-%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%87%86%E5%A4%87/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/91-%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%87%86%E5%A4%87/</guid>
+      <description>团队项目开发准备 我们经常听到个人开发和团队开发这两个词，所谓个人开发就是一个人把控产品的所有内容；而团队开发则是由多个人组成团队并完成产品的开发。要实施团队开发以下几点是必不可少的：
+ 必须对开发过程中的各种事件（例如：谁到什么时间完成了什么事情）进行管理和共享。 各类工作成果以及新的知识技巧等必须在团队内部共享。 管理工作成果的变更，既要防止成果被破坏，又要保证各个成员利用现有成果并行作业。 能够证明团队开发出的软件在任何时候都是可以正常运行的。 尽可能的使用自动化的工作流程，让团队成员能够正确的实施开发、测试和部署。  团队项目开发常见问题 问题1：传统的沟通方式无法确定处理的优先级 例如：使用邮件进行沟通可能出现邮件数量太多导致重要的邮件被埋没，无法管理状态，不知道哪些问题已经解决，哪些问题尚未处理，如果用全文检索邮件的方式来查询相关问题效率过于低下。
+解决方案：使用缺陷管理工具。
+问题2：没有能够用于验证的环境 例如：收到项目正式环境中发生的故障报告后，需要还原正式环境需要花费很长的时间。
+解决方法：实施持续交付。
+问题3：用别名目录管理项目分支 解决方法：实施版本控制。
+问题4：重新制作数据库非常困难 例如：正式环境和开发环境中数据库表结构不一致或者某个表列的顺序不一致。
+解决方法：实施版本控制。
+问题5：不运行系统就无法察觉问题 例如：解决一个bug可能引入其他的bug或者造成系统退化，不正确的使用版本系统覆盖了其他人的修改，修改的内容相互发生了干扰，如果问题不能尽早发现，那么等过去几个月后再想追溯问题就非常麻烦了。
+解决方法：实施持续集成，将团队成员的工作成果经常、持续的进行构建和测试。
+问题6：覆盖了其他成员修正的代码 解决方法：实施版本控制。
+问题7：无法实施代码重构 重构：在不影响代码产生的结果的前提下对代码内部的构造进行调整。
+例如：在实施代码重构时可能引发退化。
+解决方法：大量的可重用的测试并实施持续集成。
+问题8：不知道bug的修正日期无法追踪退化 解决方法：版本控制系统、缺陷管理系统和持续集成之间需要交互，最好能够和自动化部署工具集成到一起来使用。
+问题9：发布过程太复杂 解决方法：实施持续交付。
+基于对上述问题的阐述和分析，我们基本上可以得到以下的结论，在团队开发中版本控制、缺陷管理和持续集成都是非常重要且不可或缺的。
+版本控制 针对上面提到的一些问题，在团队开发的首要前提就是实施版本控制，对必要的信息进行管理，需要管理的内容包括：
+ 代码。 需求和设计的相关文档。 数据库模式和初始数据。 配置文件。 库的依赖关系定义。  Git简介 Git是诞生于2005年的一个开源分布式版本控制系统，最初是Linus Torvalds（Linux之父） 为了帮助管理Linux内核开发而开发的一个版本控制软件。Git与常用的版本控制工具Subversion等不同，它采用了分布式版本控制的方式，在没有中央服务器支持的环境下也能够实施版本控制。
+对于有使用Subversion（以下简称为SVN）经验的人来说，Git和SVN一样摒弃了基于锁定模式的版本控制方案（早期的CVS和VSS使用的就是锁定模式）采用了合并模式，而二者的区别在于： 1. Git是分布式的，SVN是集中式的，SVN需要中央服务器才能工作。 2. Git把内容按元数据方式存储，而SVN是按文件，即把文件的元信息隐藏在一个.svn文件夹里。 3. Git分支和SVN的分支不同。 4. Git没有一个全局版本号而SVN有。 5. Git的内容完整性要优于SVN，Git的内容存储使用的是SHA-1哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。
+安装Git 可以在Git官方网站找到适合自己系统的Git下载链接并进行安装，安装成功后可以在终端中键入下面的命令检查自己的Git版本。
+git --version 如果之前完全没有接触过Git，可以先阅读《git - 简易指南》来对Git有一个大致的了解。
+本地实施版本控制 可以使用下面的命令将目录创建为Git仓库。
+git init 当你完成了上述操作后，本地目录就变成了下面的样子，左边是你正在操作的工作目录，而右边是你的本地仓库，中间是工作目录和本地仓库之间的一个暂存区（也称为缓存区）。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/92-%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/92-%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</guid>
+      <description>使用Docker部署服务 Docker简介 软件开发中最为麻烦的事情可能就是配置环境了。由于用户使用的操作系统具有多样性，即便使用跨平台的开发语言（如Java和Python）都不能保证代码能够在各种平台下都可以正常的运转，而且在不同的环境下我们安装的软件需要依赖的软件包也是不一样的。
+那么问题来了，我们安装软件的时候可不可以把软件运行的环境一并安装？我们是不是可以把原始环境一模一样地复制过来呢？
+虚拟机（virtual machine）就是带环境安装的一种解决方案，它可以在一种操作系统里面运行另一种操作系统，比如在Windows系统里面运行Linux系统，在macOS上运行Windows，而应用程序对此毫无感知。使用过虚拟机的人都知道，虚拟机用起来跟真实系统一模一样，而对于虚拟机的宿主系统来说，虚拟机就是一个普通文件，不需要了就删掉，对宿主系统或者其他的程序并没有影响。但是虚拟机通常会占用较多的系统资源，启动和关闭也非常的缓慢，总之用户体验并没有想象中的那么好。
+Docker属于对Linux容器技术的一种封装（利用了Linux的namespace和cgroup技术），它提供了简单易用的容器使用接口，是目前最流行的 Linux 容器解决方案。Docker将应用程序与该程序的依赖打包在一个文件里面，运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样。下图是虚拟机和容器的对比，左边是传统的虚拟机，右边是Docker。
+目前，Docker主要用于几下几个方面：
+ 提供一次性的环境。 提供弹性的云服务（利用Docker很容易实现扩容和收缩）。 实践微服务架构（隔离真实环境在容器中运行多个服务）。  安装Docker 下面以CentOS为例讲解如何安装Docker，使用Ubuntu、macOS或Windows的用户可以通过点击对应的链接了解这些平台下如何进行安装。
+ 确定操作系统内核版本（CentOS 7要求64位，内核版本3.10+；CentOS 6要求64位，内核版本2.6+），可以通过下面的命令确定Linux系统内核版本。
+uname -r 在CentOS下使用yum安装Docker并启动。
+yum -y install docker systemctl start docker 查看Docker的信息和版本。
+docker version docker info  接下来可以通过下载镜像和创建容器来看看Docker是否可以运转起来。可以使用下面的命令从Docker的镜像仓库下载名为hello-world的镜像文件。
+docker pull hello-world 查看所有镜像文件。
+docker images REPOSITORY TAG IMAGE ID CREATED SIZE docker.io/hello-world latest fce289e99eb9 7 months ago 1.84 kB  通过镜像文件创建并运行容器。
+docker container run --name mycontainer hello-world  说明：其中mycontainer是我们给容器起的名字，跟在--name参数之后；hello-world就是我们刚才下载的镜像文件。
+ Hello from Docker!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/93-MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/93-MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
+      <description> MySQL性能优化 使用索引 在前面《关系型数据库MySQL》一文中，我们已经讲到过索引的相关知识，这里我们做一个简单的回顾。
+ B-Tree索引 HASH索引 R-Tree索引（空间索引） Full-text索引（全文索引）  使用过程 过程，通常也称之为存储过程。
+create procedure ... (params) begin ... end; call ...cursor.callproc(&amp;#39;...&amp;#39;) 数据分区 SQL优化  通过show status了解各种SQL的执行频率。
+show status like &amp;#39;com_%&amp;#39;; show status like &amp;#39;innodb_%&amp;#39;; show status like &amp;#39;connections&amp;#39;; show status like &amp;#39;slow_queries&amp;#39;; 定位低效率的SQL语句 - 慢查询日志。
+show processlist 通过explain了解SQL的执行计划。
+ select_type：查询类型（simple、primary、union、subquery） table：输出结果集的表 type：访问类型（ALL、index、range、ref、eq_ref、const、NULL） possible_keys：查询时可能用到的索引 key：实际使用的索引 key_len：索引字段的长度 rows：扫描的行数 extra：额外信息  通过show profiles和show profile for query分析SQL。
+ 优化CRUD操作。
+ 优化insert语句 优化order by语句 优化group by语句 优化嵌套查询 优化or条件 优化分页查询 使用SQL提示  USE INDEX IGNORE INDEX FORCE INDEX    配置优化  调整max_connections 调整back_log 调整table_open_cache 调整thread_cache_size 调整innodb_lock_wait_timeout  架构优化  通过拆分提高表的访问效率  垂直拆分 水平拆分  逆范式理论  数据表设计的规范程度称之为范式（Normal Form）  1NF：列不能再拆分 2NF：所有的属性都依赖于主键 3NF：所有的属性都直接依赖于主键（消除传递依赖） BCNF：消除非平凡多值依赖   使用中间表提高统计查询速度 主从复制和读写分离 配置MySQL集群  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/94-%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/94-%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/</guid>
+      <description>网络API接口设计 手机App以及使用了Ajax技术或做了前后端分离的页面都需要通过网络API（Application Programming Interface）和后台进行交互，所谓API，指的应用程序的编程接口；而网络API通畅指的是基于HTTP或HTTPS协议的一个URL（统一资源定位符），通过这个URL我们可以让服务器对某个资源进行操作并返回操作的结果。基于HTTP(S)协议最大的好处就在于访问起来非常的简单方便，而且没有编程语言和应用环境上的差别。
+设计原则 关键问题 为移动端或者PC端设计网络API接口一个非常重要的原则是：根据业务实体而不是用户界面或操作来设计。如果API接口的设计是根据用户的操作或者界面上的功能设置来设计，随着需求的变更，用户界面也会进行调整，需要的数据也在发生变化，那么后端开发者就要不停的调整API，或者给一个API设计出多个版本，这些都会使项目的开发和维护成本增加。
+下面是某个网站开放API的接口，可以看出API的设计是围绕业务实体来进行的，而且都做到了“见名知意”。
+   评论      comments/show 获取某条微博的评论列表   comments/by_me 自己的评论列表   comments/to_me 收到的评论列表   comments/mentions @了自己的评论列表   comments/create 创建一条评论   comments/destroy 删除一条评论   comments/reply 回复一条评论    注意：上面的API接口并不是REST风格的，关于REST的知识，可以阅读阮一峰老师的《理解RESTful架构》以及《RESTful API设计指南》。
+API接口返回的数据通常都是JSON或XML格式，我们这里不讨论后者。对于JSON格式的数据，我们需要做到不要返回null这的值，因为这样的值一旦处置失当，会给移动端的开发带来麻烦（移动端可能使用强类型语言）。要解决这个问题可以从源头入手，在设计数据库的时候，尽量给每个字段都加上“not null”约束或者设置合理的默认值约束。
+其他问题  更新提示问题：设计一个每次使用系统首先要访问的API，该API会向移动端返回系统更新的相关信息，这样就可以提升用户更新App了。 版本升级问题：API版本升级时应该考虑对低版本的兼容，同时要让新版本和旧版本都能够被访问，可以在URL中包含版本信息或者在将版本号放在HTTP(S)协议头部，关于这个问题有很多的争论，有兴趣的可以看看stack overflow上面对这个问题的讨论。 图片尺寸问题：移动端对于一张图片可能需要不同的尺寸，可以在获取图片时传入尺寸参数并获取对应的资源；更好的做法是直接使用云存储或CDN（直接提供了图片缩放的功能），这样可以加速对资源的访问。  文档撰写 下面以设计评论接口为例，简单说明接口文档应该如何撰写。
+评论接口 全局返回状态码
+   返回码 返回信息 说明     10000 获取评论成功    10001 创建评论成功    10002 无法创建评论 创建评论时因违反审核机制而无法创建   10003 评论已被删除 查看评论时评论因不和谐因素已被删除   10004 …… ……     GET /articles/{article-id}/comments/  开发者：王大锤</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/95-%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E5%95%86%E4%B8%9A%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/95-%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E5%95%86%E4%B8%9A%E9%A1%B9%E7%9B%AE/</guid>
+      <description>使用Django开发商业项目  说明：本文的部分插图来自于《Python项目开发实战》和《精通Django》，这两本书中都包含了对Django框架精彩的讲解，有兴趣的读者可以自行购买阅读。
+ Web应用 问题1：描述一个Web应用的工作流程。
+问题2：描述项目的物理架构。（上图中补充负载均衡（反向代理）服务器、数据库服务器、文件服务器、邮件服务器、缓存服务器、防火墙等，而且每个节点都有可能是多节点构成的集群，如下图所示，架构并不是一开始就是这样，而是逐步演进的）
+问题3：描述Django项目的工作流程。（如下图所示）
+MVC架构模式 问题1：为什么要使用MVC架构模式？（模型和视图解耦合）
+问题2：MVC架构中每个部分的作用？（如下图所示）
+HTTP请求和响应 HTTP请求 = 请求行+请求头+空行+[消息体] HTTP响应 = 响应行+响应头+空行+消息体  HTTPRequest对象的属性和方法：
+ method - 获取请求方法 path / get_full_path() - 获取请求路径/带查询字符串的路径 scheme / is_secure() / get_host() / get_port() - 获取请求的协议/主机/端口 META / COOKIES - 获取请求头/Cookie信息 GET / POST / FILES - 获取GET或POST请求参数/上传的文件 get_signed_cookie() - 获取带签名的Cookie is_ajax() - 是不是Ajax异步请求 body / content_type / encoding - 获取请求的消息体（bytes流）/MIME类型/编码  中间件添加的属性：
+ session / user / site  HttpResponse对象的属性和方法：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/96-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/96-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
+      <description>软件测试和自动化测试 软件测试概述 软件测试是一种用来促进鉴定软件的正确性、完整性、安全性和品质的过程，也就是在规定的条件下对程序进行操作以发现程序中的错误，衡量软件的品质并对其是否能满足设计要求进行评估的过程。
+测试的方法 黑盒测试：测试应用程序的功能，而不是其内部结构或运作。测试者不需具备应用程序的代码、内部结构和编程语言的专门知识。测试者只需知道什么是系统应该做的事，即当键入一个特定的输入，可得到一定的输出。测试案例是依应用系统应该做的功能，照规范、规格或要求等设计。测试者选择有效输入和无效输入来验证是否正确的输出。此测试方法可适合大部分的软件测试，例如集成测试和系统测试。
+白盒测试：测试应用程序的内部结构或运作，而不是测试应用程序的功能（即黑箱测试）。在白箱测试时，以编程语言的角度来设计测试案例。测试者输入数据验证数据流在程序中的流动路径，并确定适当的输出，类似测试电路中的节点。
+测试的种类（阶段） 单元测试：对软件组成单元进行测试，其目的是检验软件基本组成单位的正确性，测试的对象是软件设计的最小单位 - 函数。
+集成测试：将程序模块采用适当的集成策略组装起来，对系统的接口及集成后的功能进行正确性检测的测试工作。其主要目的是检查软件单位之间的接口是否正确，集成测试的对象是已经经过单元测试的模块。
+系统测试：系统测试主要包括功能测试、界面测试、可靠性测试、易用性测试、性能测试。 回归测试：为了检测代码修改而引入的错误所进行的测试活动。回归测试是软件维护阶段的重要工作，有研究表明，回归测试带来的耗费占软件生命周期的1/3总费用以上。
+测试驱动开发 测试驱动开发包括以下三个步骤：
+ 为未实现的新功能或者改进编写自动化测试。 提供通过所有定义的测试的最小代码量。 重构代码以满足所需的质量标准。  测试驱动开发的好处在于可以有效的防止软件回归以及提供更有质量的代码。
+Python的标准库里有为编写单元测试而准备的unittest模块，执行测试时建议使用pytest或nose2。pytest是一款能够自动搜索并执行测试的测试执行工具，并且会输出详细的错误报告。关于单元测试可以看看《Python必会的单元测试框架 - unittest》。
+可以安装testfixtures库来辅助单元测试，它整合了多种典型配置器，提供了生成目录、更改系统日期、生成mock对象的功能模块，这些模块能够帮助我们将单元测试与单元测试所依赖的环境分离开。mock 是将测试对象所依赖的对象替换为虚拟对象的库，在测试的时候，我们可以为虚拟对象指定其在被调用时的返回值以及是否发生异常等。
+WebTest是用于Web应用功能测试的库。它会对WSGI应用执行模拟请求并获取结果。基本上所有WSGI应用的测试都可以用它。
+tox能便捷地为我们准备好执行测试所需的环境。tox会在多个virtualenv环境中搭建测试 环境，然后在这些环境中执行测试并显示结果。它能够把测试工具的选项及环境变量等内容统 一起来，所以我们只需执行tox命令即能轻松完成所需的测试。
+Selenium/Robot Framework Selenium是实现Web应用程序的功能测试以及集成测试自动化的浏览器驱动测试工具群。和使用浏览器的用户相同，Selenium可以在浏览器进行的鼠标操作、在表单中输入文字、验证表单的值等，利用这一点就可以将手动操作变成自动化操作。
+Selenium优点  自动化测试用例制作简单。Selenium提供了Selenium IDE工具，该工具可以捕获鼠标、键盘的操作，然后通过重放功能来重复这些操作，这样就可以简单的制作测试用例。 支持多种浏览器和操作系统。  Selenium的组件  Selenium IDE。 Selenium Remote Control。 Selenium WebDriver。  与持续集成工具协作 持续集成指的是频繁的将代码集成到主干。它的好处主要有两个： 1. 快速发现错误。每完成一点更新，就集成到主干，可以快速发现错误，定位错误也比较容易。
+ 防止分支大幅偏离主干。如果不是经常集成，主干又在不断更新，会导致以后集成的难度变大，甚至难以集成。  持续集成的目的，就是让产品可以快速迭代，同时还能保持高质量。它的核心措施是代码集成到主干之前，必须通过自动化测试，只要有一个测试用例失败，就不能集成。编程大师Martin Fowler曾经说过：“持续集成并不能消除Bug，而是让它们非常容易发现和改正。”
+可以在Jenkins中安装“Seleniumhq Plugin”插件，这样就可以将Selenium IDE制作的测试用例保存为HTML格式并提供给Jenkins来使用，基本步骤是：
+ 在执行测试的机器上，从版本控制系统中下载测试套件和测试用例。 在执行测试的机器上下载Selenium Server。 从Jenkins的“系统管理”中选择“插件管理”来安装“Seleniumhq Plugin”。 在Jenkins的“系统管理”中选择“系统设置”并配置“Selenium Remote Control”下的“HTMLSuite Runner”。 新建测试用的Jenkins任务并进行配置，配置的内容包括：浏览器、起始URL、测试套件和测试结果输出文件。  配置完成后，就可以执行Jenkins的“立即构建”了。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/97-%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/97-%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90/</guid>
+      <description>电商网站技术要点剖析 商业模式  B2B - 商家对商家，交易双方都是企业（商家），最典型的案例就是阿里巴巴。 C2C - 个人对个人，例如：淘宝、人人车。 B2C - 商家对个人，例如：唯品会，聚美优品。 C2B - 个人对商家，先有消费者提出需求，后有商家按需求组织生产，例如： 尚品宅配。 O2O - 线上到线下，将线下的商务机会与互联网结合，让互联网成为线下交易的平台，例如：美团外卖、饿了么。 B2B2C - 商家对商家对个人，例如：天猫、京东。  需求要点  用户端
+ 首页（商品分类、广告轮播、滚动快讯、瀑布加载、推荐、折扣、热销、……）
+ 用户（登录（第三方登录）、注册、注销、自服务（个人信息、浏览历史、收货地址、……））
+ 商品（分类、列表、详情、搜索、热门搜索、搜索历史、添加到购物车、收藏、关注、……）
+ 购物车（查看、编辑（修改数量、删除商品、清空））
+ 订单（提交订单（支付）、历史订单、订单详情、订单评价、……）
+  管理端
+ 核心业务实体的CRUD 定时任务（周期性和非周期性） 报表功能（Excel、PDF、ECharts） 权限控制（RBAC） 业务流转（Activity、Airflow、Spiff、自定义） 三方服务（地图、短信、物流、支付、实名认证、天气、监控、……）    提示：可以通过思维导图来进行需求的整理，思维导图上的每个叶子节点都是不可再拆分的功能，而且都是动词。
+ 物理模型设计 两个概念：SPU（Standard Product Unit）和SKU（Stock Keeping Unit）。
+ SPU：iPhone 6s SKU：iPhone 6s 64G 土豪金  第三方登录 第三方登录是指利用第三方网站（通常是知名社交网站）的账号进行登录验证，比如国内的 QQ、微博，国外的Google、Facebook等，第三方登录大部分都是使用[OAuth]()，它是一个关于授权的开放网络标准，得到了广泛的应用，目前通常使用的是2.0版本。关于OAuth的基础知识，可以阅读阮一峰老师的《理解OAuth 2.0》。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/98-%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/98-%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/</guid>
+      <description>项目部署上线指南 准备上线  上线前的检查工作。
+python manage.py check --deploy 将DEBUG设置为False并配置ALLOWED_HOSTS。
+DEBUG = False ALLOWED_HOSTS = [&amp;#39;*&amp;#39;] 安全相关的配置。
+# 保持HTTPS连接的时间 SECURE_HSTS_SECONDS = 3600 SECURE_HSTS_INCLUDE_SUBDOMAINS = True SECURE_HSTS_PRELOAD = True # 自动重定向到安全连接 SECURE_SSL_REDIRECT = True # 避免浏览器自作聪明推断内容类型 SECURE_CONTENT_TYPE_NOSNIFF = True # 避免跨站脚本攻击 SECURE_BROWSER_XSS_FILTER = True # COOKIE只能通过HTTPS进行传输 SESSION_COOKIE_SECURE = True CSRF_COOKIE_SECURE = True # 防止点击劫持攻击手段 - 修改HTTP协议响应头 # 当前网站是不允许使用&amp;lt;iframe&amp;gt;标签进行加载的 X_FRAME_OPTIONS = &amp;#39;DENY&amp;#39; 敏感信息放到环境变量或文件中。
+SECRET_KEY = os.environ[&amp;#39;SECRET_KEY&amp;#39;] DB_USER = os.environ[&amp;#39;DB_USER&amp;#39;] DB_PASS = os.environ[&amp;#39;DB_PASS&amp;#39;] REDIS_AUTH = os.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ezzdoc.github.io/python100days/docs/Day91-100/99-%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/docs/Day91-100/99-%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98/</guid>
+      <description>面试中的公共问题 计算机基础  TCP/IP模型相关问题。   建议阅读阮一峰的《互联网协议入门（一）》和《互联网协议入门（二）》。
+  HTTP和HTTPS相关问题。   建议阅读阮一峰的《HTTP 协议入门》和《SSL/TLS协议运行机制的概述》。
+  Linux常用命令和服务。
+ 进程和线程之间的关系。什么时候用多线程？什么时候用多进程？。
+ 关系型数据库相关问题（ACID、事务隔离级别、锁、SQL优化）。
+ 非关系型数据库相关问题（CAP/BASE、应用场景）。
+  Python基础  开发中用过哪些标准库和三方库。   标准库：sys / os / re / math / random / logging / json / pickle / shelve / socket / datetime / hashlib / configparser / urllib / itertools / collections / functools / threading / multiprocess / timeit / atexit / abc / asyncio / base64 / concurrent.</description>
+    </item>
+    
+  </channel>
+</rss>

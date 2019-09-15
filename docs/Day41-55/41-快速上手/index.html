@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>41 快速上手 | Python-100天从新手到大师</title>
+
+
+<link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
+
+
+<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+
+
+
+<link rel="icon" href="/python100days/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://ezzdoc.github.io/python100days/"><span>Python-100天从新手到大师</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fpython100days\2f docs\2f Day41-55\2f 41-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="/python100days/posts/"><strong>相关文章</strong></a></li>
+<li><strong>Day01-15</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day01-15/01-%E5%88%9D%E8%AF%86Python/">01.初识Python</a></li>
+<li><a href="/python100days/docs/Day01-15/02-%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/">02.语言元素</a></li>
+<li><a href="/python100days/docs/Day01-15/03-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">03.分支结构</a></li>
+<li><a href="/python100days/docs/Day01-15/04-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">04.循环结构</a></li>
+<li><a href="/python100days/docs/Day01-15/05-%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/">05.构造程序逻辑</a></li>
+<li><a href="/python100days/docs/Day01-15/06-%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/">06.函数和模块的使用</a></li>
+<li><a href="/python100days/docs/Day01-15/07-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">07.字符串和常用数据结构</a></li>
+<li><a href="/python100days/docs/Day01-15/08-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">08.面向对象编程基础</a></li>
+<li><a href="/python100days/docs/Day01-15/09-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">09.面向对象进阶</a></li>
+<li><a href="/python100days/docs/Day01-15/10-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">10.图形用户界面和游戏开发</a></li>
+<li><a href="/python100days/docs/Day01-15/11-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">11.文件和异常</a></li>
+<li><a href="/python100days/docs/Day01-15/12-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">12.字符串和正则表达式</a></li>
+<li><a href="/python100days/docs/Day01-15/13-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">13.进程和线程</a></li>
+<li><a href="/python100days/docs/Day01-15/14-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">14.网络编程入门和网络应用开发</a></li>
+<li><a href="/python100days/docs/Day01-15/15-%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">15.图像和办公文档处理</a></li>
+</ul></li>
+<li><strong>Day16-20</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day16-20/16-20-Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">16-20.Python语言进阶</a></li>
+</ul></li>
+<li><strong>Day21-30</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day21-30/21-30-Web%E5%89%8D%E7%AB%AF%E6%A6%82%E8%BF%B0/">21-30.Web前端概述</a></li>
+</ul></li>
+<li><strong>Day31-35</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day31-35/31-35-%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">31-35.玩转Linux操作系统</a></li>
+</ul></li>
+<li><strong>Day36-40</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day36-40/36-38-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93MySQL/">36-38.关系型数据库MySQL</a></li>
+<li><a href="/python100days/docs/Day36-40/39-40-NoSQL%E5%85%A5%E9%97%A8/">39-40.NoSQL入门</a></li>
+</ul></li>
+<li><strong>Day41-55</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day41-55/41-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">41.快速上手</a></li>
+<li><a href="/python100days/docs/Day41-55/42-%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/">42.深入模型</a></li>
+<li><a href="/python100days/docs/Day41-55/43-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82/">43.静态资源和Ajax请求</a></li>
+<li><a href="/python100days/docs/Day41-55/44-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%BA%94%E7%94%A8/">44.表单的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/45-Cookie%E5%92%8CSession/">45.Cookie和Session</a></li>
+<li><a href="/python100days/docs/Day41-55/46-%E6%8A%A5%E8%A1%A8%E5%92%8C%E6%97%A5%E5%BF%97/">46.报表和日志</a></li>
+<li><a href="/python100days/docs/Day41-55/47-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/">47.中间件的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/48-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">48.前后端分离开发入门</a></li>
+<li><a href="/python100days/docs/Day41-55/49-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/">49.RESTful架构和DRF入门</a></li>
+<li><a href="/python100days/docs/Day41-55/50-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/">50.RESTful架构和DRF进阶</a></li>
+<li><a href="/python100days/docs/Day41-55/51-%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/">51.使用缓存</a></li>
+<li><a href="/python100days/docs/Day41-55/52-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">52.文件上传和富文本编辑</a></li>
+<li><a href="/python100days/docs/Day41-55/53-%E7%9F%AD%E4%BF%A1%E5%92%8C%E9%82%AE%E4%BB%B6/">53.短信和邮件</a></li>
+<li><a href="/python100days/docs/Day41-55/54-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">54.异步任务和定时任务</a></li>
+<li><a href="/python100days/docs/Day41-55/55-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%92%8C%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">55.单元测试和项目上线</a></li>
+</ul></li>
+<li><strong>Day56-60</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day56-60/56-Flask%E5%85%A5%E9%97%A8/">56.Flask入门</a></li>
+<li><a href="/python100days/docs/Day56-60/57-%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8/">57.模板的使用</a></li>
+<li><a href="/python100days/docs/Day56-60/58-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/">58.表单的处理</a></li>
+<li><a href="/python100days/docs/Day56-60/59-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/">59.数据库操作</a></li>
+<li><a href="/python100days/docs/Day56-60/60-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">60.项目实战</a></li>
+</ul></li>
+<li><strong>Day61-65</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day61-65/61-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/">61.预备知识</a></li>
+<li><a href="/python100days/docs/Day61-65/62-Tornado%E5%85%A5%E9%97%A8/">62.Tornado入门</a></li>
+<li><a href="/python100days/docs/Day61-65/63-%E5%BC%82%E6%AD%A5%E5%8C%96/">63.异步化</a></li>
+<li><a href="/python100days/docs/Day61-65/64-WebSocket%E7%9A%84%E5%BA%94%E7%94%A8/">64.WebSocket的应用</a></li>
+<li><a href="/python100days/docs/Day61-65/65-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">65.项目实战</a></li>
+</ul></li>
+<li><strong>Day66-75</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day66-75/66-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">66.网络爬虫和相关工具</a></li>
+<li><a href="/python100days/docs/Day66-75/67-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E8%A7%A3%E6%9E%90/">67.数据采集和解析</a></li>
+<li><a href="/python100days/docs/Day66-75/68-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/">68.存储数据</a></li>
+<li><a href="/python100days/docs/Day66-75/69-%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD/">69.并发下载</a></li>
+<li><a href="/python100days/docs/Day66-75/70-%E8%A7%A3%E6%9E%90%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/">70.解析动态内容</a></li>
+<li><a href="/python100days/docs/Day66-75/71-%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92%E5%92%8C%E9%AA%8C%E8%AF%81%E7%A0%81%E5%A4%84%E7%90%86/">71.表单交互和验证码处理</a></li>
+<li><a href="/python100days/docs/Day66-75/72-Scrapy%E5%85%A5%E9%97%A8/">72.Scrapy入门</a></li>
+<li><a href="/python100days/docs/Day66-75/73-Scrapy%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/">73.Scrapy高级应用</a></li>
+<li><a href="/python100days/docs/Day66-75/74-Scrapy%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E7%8E%B0/">74.Scrapy分布式实现</a></li>
+<li><a href="/python100days/docs/Day66-75/75-%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">75.爬虫项目实战</a></li>
+</ul></li>
+<li><strong>Day76-90</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day76-90/76-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">76.机器学习基础</a></li>
+<li><a href="/python100days/docs/Day76-90/77-Pandas%E7%9A%84%E5%BA%94%E7%94%A8/">77.Pandas的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/78-NumPy%E5%92%8CSciPy%E7%9A%84%E5%BA%94%E7%94%A8/">78.NumPy和SciPy的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/79-Matplotlib%E5%92%8C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">79.Matplotlib和数据可视化</a></li>
+<li><a href="/python100days/docs/Day76-90/80-k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB/">80.k最近邻分类</a></li>
+<li><a href="/python100days/docs/Day76-90/81-%E5%86%B3%E7%AD%96%E6%A0%91/">81.决策树</a></li>
+<li><a href="/python100days/docs/Day76-90/82-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">82.贝叶斯分类</a></li>
+<li><a href="/python100days/docs/Day76-90/83-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/">83.支持向量机</a></li>
+<li><a href="/python100days/docs/Day76-90/84-K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">84.K-均值聚类</a></li>
+<li><a href="/python100days/docs/Day76-90/85-%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/">85.回归分析</a></li>
+<li><a href="/python100days/docs/Day76-90/86-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8/">86.大数据分析入门</a></li>
+<li><a href="/python100days/docs/Day76-90/87-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%9B%E9%98%B6/">87.大数据分析进阶</a></li>
+<li><a href="/python100days/docs/Day76-90/88-Tensorflow%E5%85%A5%E9%97%A8/">88.Tensorflow入门</a></li>
+<li><a href="/python100days/docs/Day76-90/89-Tensorflow%E5%AE%9E%E6%88%98/">89.Tensorflow实战</a></li>
+<li><a href="/python100days/docs/Day76-90/90-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98/">90.推荐系统实战</a></li>
+</ul></li>
+<li><strong>Day91-100</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day91-100/91-%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%87%86%E5%A4%87/">91.团队项目开发准备</a></li>
+<li><a href="/python100days/docs/Day91-100/92-%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/">92.使用Docker部署服务</a></li>
+<li><a href="/python100days/docs/Day91-100/93-MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">93.MySQL性能优化</a></li>
+<li><a href="/python100days/docs/Day91-100/94-%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/">94.网络API接口设计</a></li>
+<li><a href="/python100days/docs/Day91-100/95-%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E5%95%86%E4%B8%9A%E9%A1%B9%E7%9B%AE/">95.使用Django开发商业项目</a></li>
+<li><a href="/python100days/docs/Day91-100/96-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">96.软件测试和自动化测试</a></li>
+<li><a href="/python100days/docs/Day91-100/97-%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90/">97.电商网站技术要点剖析</a></li>
+<li><a href="/python100days/docs/Day91-100/98-%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/">98.项目部署上线和性能调优</a></li>
+<li><a href="/python100days/docs/Day91-100/99-%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98/">99.面试中的公共问题</a></li>
+<li><a href="/python100days/docs/Day91-100/100-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/">100.英语面试</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/python100days/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>41 快速上手</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="快速上手">快速上手</h1>
+
+<p>Web开发的早期阶段，开发者需要手动编写每个页面，例如一个新闻门户网站，每天都要修改它的HTML页面，随着网站规模和体量的增大，这种方式就变得极度糟糕。为了解决这个问题，开发人员想到了用外部程序来为Web服务器生成动态内容，也就是说HTML页面以及页面中的动态内容不再通过手动编写而是通过程序自动生成。最早的时候，这项技术被称为CGI（公共网关接口），当然随着时间的推移，CGI暴露出的问题也越来越多，例如大量重复的样板代码，总体性能较为低下等，因此在时代呼唤新英雄的背景下，PHP、ASP、JSP这类Web应用开发技术在上世纪90年代中后期如雨后春笋般涌现。通常我们说的Web应用是指通过浏览器来访问网络资源的应用程序，因为浏览器的普及性以及易用性，Web应用使用起来方便简单，免除了安装和更新应用程序带来的麻烦，而且也不用关心用户到底用的是什么操作系统，甚至不用区分是PC端还是移动端。</p>
+
+<h2 id="web应用机制和术语">Web应用机制和术语</h2>
+
+<p>下图向我们展示了Web应用的工作流程，其中涉及到的术语如下表所示。</p>
+
+<p><img src="/Day41-55/res/web-application.png" alt="" /></p>
+
+<blockquote>
+<p>说明：相信有经验的读者会发现，这张图中其实还少了很多东西，例如反向代理服务器、数据库服务器、防火墙等，而且图中的每个节点在实际项目部署时可能是一组节点组成的集群。当然，如果你对这些没有什么概念也不要紧，继续下去就行了，后面会给大家一一讲解的。</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>解释</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>URL/URI</strong></td>
+<td>统一资源定位符/统一资源标识符，网络资源的唯一标识</td>
+</tr>
+
+<tr>
+<td><strong>域名</strong></td>
+<td>与Web服务器地址对应的一个易于记忆的字符串名字</td>
+</tr>
+
+<tr>
+<td><strong>DNS</strong></td>
+<td>域名解析服务，可以将域名转换成对应的IP地址</td>
+</tr>
+
+<tr>
+<td><strong>IP地址</strong></td>
+<td>网络上的主机的身份标识，通过IP地址可以区分不同的主机</td>
+</tr>
+
+<tr>
+<td><strong>HTTP</strong></td>
+<td>超文本传输协议，构建在TCP之上的应用级协议，万维网数据通信的基础</td>
+</tr>
+
+<tr>
+<td><strong>反向代理</strong></td>
+<td>代理客户端向服务器发出请求，然后将服务器返回的资源返回给客户端</td>
+</tr>
+
+<tr>
+<td><strong>Web服务器</strong></td>
+<td>接受HTTP请求，然后返回HTML文件、纯文本文件、图像等资源给请求者</td>
+</tr>
+
+<tr>
+<td><strong>Nginx</strong></td>
+<td>高性能的Web服务器，也可以用作<a href="https://zh.wikipedia.org/wiki/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86">反向代理</a>，<a href="https://zh.wikipedia.org/wiki/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1">负载均衡</a> 和 <a href="https://zh.wikipedia.org/wiki/HTTP%E7%BC%93%E5%AD%98">HTTP缓存</a></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="http协议">HTTP协议</h3>
+
+<p>这里我们稍微费一些笔墨来谈谈上面提到的HTTP。HTTP（超文本传输协议）是构建于TCP（传输控制协议）之上应用级协议，它利用了TCP提供的可靠的传输服务实现了Web应用中的数据交换。按照维基百科上的介绍，设计HTTP最初的目的是为了提供一种发布和接收<a href="https://zh.wikipedia.org/wiki/HTML">HTML</a>页面的方法，也就是说这个协议是浏览器和Web服务器之间传输的数据的载体。关于这个协议的详细信息以及目前的发展状况，大家可以阅读阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2016/08/http.html">《HTTP 协议入门》</a>、<a href="http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html">《互联网协议入门》</a>系列以及<a href="http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html">《图解HTTPS协议》</a>进行了解。下图是我在四川省网络通信技术重点实验室学习和工作期间使用开源协议分析工具Ethereal（抓包工具WireShark的前身）截取的访问百度首页时的HTTP请求和响应的报文（协议数据），由于Ethereal截取的是经过网络适配器的数据，因此可以清晰的看到从物理链路层到应用层的协议数据。</p>
+
+<p>HTTP请求（请求行+请求头+空行+[消息体]）：</p>
+
+<p><img src="/Day41-55/res/http-request.png" alt="" /></p>
+
+<p>HTTP响应（响应行+响应头+空行+消息体）：</p>
+
+<p><img src="/Day41-55/res/http-response.png" alt="" /></p>
+
+<blockquote>
+<p>说明：这两张图是在2009年9月10日截取的，但愿这两张如同泛黄的照片般的截图能帮助你了解HTTP到底是什么样子的。</p>
+</blockquote>
+
+<h2 id="django概述">Django概述</h2>
+
+<p>Python的Web框架有上百个，比它的关键字还要多。所谓Web框架，就是用于开发Web服务器端应用的基础设施（通常指封装好的模块和一系列的工具）。事实上，即便没有Web框架，我们仍然可以通过socket或<a href="https://zh.wikipedia.org/wiki/%E9%80%9A%E7%94%A8%E7%BD%91%E5%85%B3%E6%8E%A5%E5%8F%A3">CGI</a>来开发Web服务器端应用，但是这样做的成本和代价在实际开发中通常是不能接受的。通过Web框架，我们可以化繁为简，同时降低创建、更新、扩展应用程序的工作量。Python的Web框架中比较有名的有：Flask、Django、Tornado、Sanic、Pyramid、Bottle、Web2py、web.py等。</p>
+
+<p>在基于Python的Web框架中，Django是所有重量级选手中最有代表性的一位，开发者可以基于Django快速的开发可靠的Web应用程序，因为它减少了Web开发中不必要的开销，对常用的设计和开发模式进行了封装，并对MVC架构提供了支持（MTV）。许多成功的网站和App都是基于Django框架构建的，国内比较有代表性的网站包括：知乎、豆瓣网、果壳网、搜狐闪电邮箱、101围棋网、海报时尚网、背书吧、堆糖、手机搜狐网、咕咚、爱福窝、果库等。</p>
+
+<p><img src="/Day41-55/res/mvc.png" alt="" /></p>
+
+<p>Django诞生于2003年，它是一个在真正的应用中成长起来的项目，由劳伦斯出版集团旗下在线新闻网站的内容管理系统（CMS）研发团队编写（主要是Adrian Holovaty和Simon Willison），以比利时的吉普赛爵士吉他手Django Reinhardt来命名，在2005年夏天作为开源框架发布。使用Django能用很短的时间构建出功能完备的网站，因为它代替程序员完成了所有乏味和重复的劳动，剩下真正有意义的核心业务给程序员，这一点就是对DRY（Don&rsquo;t Repeat Yourself）理念的最好践行。</p>
+
+<h2 id="快速上手-1">快速上手</h2>
+
+<h3 id="准备工作">准备工作</h3>
+
+<ol>
+<li>检查Python环境：Django 1.11需要Python 2.7或Python 3.4以上的版本；Django 2.0需要Python 3.4以上的版本；Django 2.1需要Python 3.5以上的版本。</li>
+</ol>
+
+<blockquote>
+<p>说明：我自己平时使用macOS做开发，macOS和Linux平台使用的命令跟Windows平台有较大的区别，这一点在之前也有过类似的说明，如果使用Windows平台做开发，替换一下对应的命令即可。</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">   $ python3 --version</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">   $ python3
+   &gt;&gt;&gt; import sys
+   &gt;&gt;&gt; sys.version
+   &gt;&gt;&gt; sys.version_info</code></pre></div>
+<ol>
+<li><p>创建项目文件夹并切换到该目录，例如我们要实例一个OA（办公自动化）项目。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">$ mkdir oa
+$ cd oa</code></pre></div></li>
+
+<li><p>创建并激活虚拟环境。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">$ python3 -m venv venv
+$ source venv/bin/activate</code></pre></div></li>
+</ol>
+
+<blockquote>
+<p>说明：上面使用了Python自带的venv模块完成了虚拟环境的创建，当然也可以使用virtualenv或pipenv这样的工具。要激活虚拟环境，在Windows环境下可以通过&rdquo;venv/Scripts/activate&rdquo;执行批处理文件来实现。</p>
+</blockquote>
+
+<ol>
+<li><p>更新包管理工具pip。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ pip install -U pip</code></pre></div></li>
+</ol>
+
+<p>或</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">   <span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ python -m pip install -U pip</code></pre></div>
+<blockquote>
+<p>注意：请注意终端提示符发生的变化，前面的<code>(venv)</code>说明我们已经进入虚拟环境，而虚拟环境下的python和pip已经是Python 3的解释器和包管理工具了。</p>
+</blockquote>
+
+<ol>
+<li><p>安装Django。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ pip install django</code></pre></div></li>
+</ol>
+
+<p>或指定版本号来安装对应的Django的版本。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">   <span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ pip install django<span style="color:#f92672">==</span><span style="color:#ae81ff">2</span>.1.8</code></pre></div>
+<ol>
+<li><p>检查Django的版本。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ python -m django --version
+<span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ django-admin --version</code></pre></div></li>
+</ol>
+
+<p>或</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">   <span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ python
+   &gt;&gt;&gt; import django
+   &gt;&gt;&gt; django.get_version<span style="color:#f92672">()</span></code></pre></div>
+<p>当然，也可以通过pip来查看安装的依赖库及其版本，如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">   <span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ pip freeze
+   <span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ pip list</code></pre></div>
+<p>下图展示了Django版本和Python版本的对应关系，如果在安装时没有指定版本号，将自动选择最新的版本（在写作这段内容时，Django最新的版本是2.2）。</p>
+
+<p>| Django版本 | Python版本              |
+   | &mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; |
+   | 1.8        | 2.7、3.2、3.3、3.4、3.5 |
+   | 1.9、1.10  | 2.7、3.4、3.5           |
+   | 1.11       | 2.7、3.4、3.5、3.6、3.7 |
+   | 2.0        | 3.4、3.5、3.6、3.7      |
+   | 2.1、2.2   | 3.5、3.6、3.7           |</p>
+
+<ol>
+<li><p>使用<code>django-admin</code>创建项目，项目命名为oa。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ django-admin startproject oa .</code></pre></div></li>
+</ol>
+
+<blockquote>
+<p>注意：上面的命令最后的那个点，它表示在当前路径下创建项目。</p>
+</blockquote>
+
+<p>执行上面的命令后看看生成的文件和文件夹，它们的作用如下所示：</p>
+
+<ul>
+<li><code>manage.py</code>： 一个让你可以管理Django项目的工具程序。</li>
+<li><code>oa/__init__.py</code>：一个空文件，告诉Python解释器这个目录应该被视为一个Python的包。</li>
+<li><code>oa/settings.py</code>：Django项目的配置文件。</li>
+<li><code>oa/urls.py</code>：Django项目的URL声明（URL映射），就像是你的网站的“目录”。</li>
+<li><code>oa/wsgi.py</code>：项目运行在WSGI兼容Web服务器上的接口文件。</li>
+</ul>
+
+<blockquote>
+<p>说明：WSGI全称是Web服务器网关接口，维基百科上给出的解释是“为Python语言定义的<a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E4%BC%BA%E6%9C%8D%E5%99%A8">Web服务器</a>和<a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F">Web应用程序</a>或框架之间的一种简单而通用的接口”。</p>
+</blockquote>
+
+<ol>
+<li><p>启动服务器运行项目。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ python manage.py runserver</code></pre></div></li>
+</ol>
+
+<p>在浏览器中输入<a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>访问我们的服务器，效果如下图所示。</p>
+
+<p><img src="/Day41-55/res/django-index-1.png" alt="" /></p>
+
+<blockquote>
+<p>说明1：刚刚启动的是Django自带的用于开发和测试的服务器，它是一个用纯Python编写的轻量级Web服务器，但它并不是真正意义上的生产级别的服务器，千万不要将这个服务器用于和生产环境相关的任何地方。</p>
+
+<p>说明2：用于开发的服务器在需要的情况下会对每一次的访问请求重新载入一遍Python代码。所以你不需要为了让修改的代码生效而频繁的重新启动服务器。然而，一些动作，比如添加新文件，将不会触发自动重新加载，这时你得自己手动重启服务器。</p>
+
+<p>说明3：可以通过<code>python manage.py help</code>命令查看可用命令列表；在启动服务器时，也可以通过<code>python manage.py runserver 1.2.3.4:5678</code>来指定将服务器运行于哪个IP地址和端口。</p>
+
+<p>说明4：可以通过Ctrl+C来终止服务器的运行。</p>
+</blockquote>
+
+<ol>
+<li><p>接下来我们修改项目的配置文件settings.py，Django是一个支持国际化和本地化的框架，因此刚才我们看到的默认首页也是支持国际化的，我们将默认语言修改为中文，时区设置为东八区。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ vim oa/settings.py</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># 此处省略上面的内容</span>
+
+<span style="color:#75715e"># 设置语言代码</span>
+LANGUAGE_CODE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;zh-hans&#39;</span>
+<span style="color:#75715e"># 设置时区</span>
+TIME_ZONE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Asia/Chongqing&#39;</span>
+
+<span style="color:#75715e"># 此处省略下面的内容</span></code></pre></div></li>
+
+<li><p>刷新刚才的页面。</p></li>
+</ol>
+
+<p><img src="/Day41-55/res/django-index-2.png" alt="" /></p>
+
+<h3 id="动态页面">动态页面</h3>
+
+<ol>
+<li><p>创建名为hrs（人力资源系统）的应用，一个Django项目可以包含一个或多个应用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ python manage.py startapp hrs</code></pre></div></li>
+</ol>
+
+<p>执行上面的命令会在当前路径下创建hrs目录，其目录结构如下所示：</p>
+
+<ul>
+<li><code>__init__.py</code>：一个空文件，告诉Python解释器这个目录应该被视为一个Python的包。</li>
+<li><code>admin.py</code>：可以用来注册模型，用于在Django的管理界面管理模型。</li>
+<li><code>apps.py</code>：当前应用的配置文件。</li>
+<li><code>migrations</code>：存放与模型有关的数据库迁移信息。
+
+<ul>
+<li><code>__init__.py</code>：一个空文件，告诉Python解释器这个目录应该被视为一个Python的包。</li>
+</ul></li>
+<li><code>models.py</code>：存放应用的数据模型，即实体类及其之间的关系（MVC/MTV中的M）。</li>
+<li><code>tests.py</code>：包含测试应用各项功能的测试类和测试函数。</li>
+<li><code>views.py</code>：处理请求并返回响应的函数（MVC中的C，MTV中的V）。</li>
+</ul>
+
+<ol>
+<li><p>修改应用目录下的视图文件views.py。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ vim hrs/views.py</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+   <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#39;&lt;h1&gt;Hello, Django!&lt;/h1&gt;&#39;</span>)</code></pre></div></li>
+
+<li><p>在应用目录创建一个urls.py文件并映射URL。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ touch hrs/urls.py
+<span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ vim hrs/urls.py</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path
+
+<span style="color:#f92672">from</span> hrs <span style="color:#f92672">import</span> views
+
+urlpatterns <span style="color:#f92672">=</span> [
+   path(<span style="color:#e6db74">&#39;&#39;</span>, views<span style="color:#f92672">.</span>index, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;index&#39;</span>),
+]</code></pre></div></li>
+</ol>
+
+<blockquote>
+<p>说明：上面使用的<code>path</code>函数是Django 2.x中新添加的函数，除此之外还可以使用支持正则表达式的URL映射函数<code>re_path</code>函数；Django 1.x中是用名为<code>url</code>函数来设定URL映射。</p>
+</blockquote>
+
+<ol>
+<li><p>修改项目目录下的urls.py文件，对应用中设定的URL进行合并。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span> $ vim oa/urls.py</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> django.contrib <span style="color:#f92672">import</span> admin
+<span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path, include
+
+urlpatterns <span style="color:#f92672">=</span> [
+   path(<span style="color:#e6db74">&#39;admin/&#39;</span>, admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>urls),
+   path(<span style="color:#e6db74">&#39;hrs/&#39;</span>, include(<span style="color:#e6db74">&#39;hrs.urls&#39;</span>)),
+]</code></pre></div></li>
+</ol>
+
+<blockquote>
+<p>说明：上面的代码通过<code>include</code>函数将hrs应用中配置URL的文件包含到项目的URL配置中，并映射到<code>hrs/</code>路径下。</p>
+</blockquote>
+
+<ol>
+<li><p>重新运行项目，并打开浏览器中访问<a href="http://localhost:8000/hrs">http://localhost:8000/hrs</a>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ python manage.py runserver</code></pre></div></li>
+
+<li><p>修改views.py生成动态内容。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ vim hrs/views.py</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> io <span style="color:#f92672">import</span> StringIO
+
+<span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse
+
+depts_list <span style="color:#f92672">=</span> [
+   {<span style="color:#e6db74">&#39;no&#39;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;财务部&#39;</span>, <span style="color:#e6db74">&#39;location&#39;</span>: <span style="color:#e6db74">&#39;北京&#39;</span>},
+   {<span style="color:#e6db74">&#39;no&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;研发部&#39;</span>, <span style="color:#e6db74">&#39;location&#39;</span>: <span style="color:#e6db74">&#39;成都&#39;</span>},
+   {<span style="color:#e6db74">&#39;no&#39;</span>: <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;销售部&#39;</span>, <span style="color:#e6db74">&#39;location&#39;</span>: <span style="color:#e6db74">&#39;上海&#39;</span>},
+]
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+   output <span style="color:#f92672">=</span> StringIO()
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;&lt;html&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;&lt;head&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&lt;meta charset=&#34;utf-8&#34;&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&lt;title&gt;首页&lt;/title&gt;&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;&lt;/head&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;&lt;body&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&lt;h1&gt;部门信息&lt;/h1&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&lt;hr&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&lt;table&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t</span><span style="color:#e6db74">&lt;tr&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t\t</span><span style="color:#e6db74">&lt;th width=120&gt;部门编号&lt;/th&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t\t</span><span style="color:#e6db74">&lt;th width=180&gt;部门名称&lt;/th&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t\t</span><span style="color:#e6db74">&lt;th width=180&gt;所在地&lt;/th&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t</span><span style="color:#e6db74">&lt;/tr&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   <span style="color:#66d9ef">for</span> dept <span style="color:#f92672">in</span> depts_list:
+       output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t</span><span style="color:#e6db74">&lt;tr&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+       output<span style="color:#f92672">.</span>write(f<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t\t</span><span style="color:#e6db74">&lt;td align=center&gt;{dept[&#34;no&#34;]}&lt;/td&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+       output<span style="color:#f92672">.</span>write(f<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t\t</span><span style="color:#e6db74">&lt;td align=center&gt;{dept[&#34;name&#34;]}&lt;/td&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+       output<span style="color:#f92672">.</span>write(f<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t\t</span><span style="color:#e6db74">&lt;td align=center&gt;{dept[&#34;location&#34;]}&lt;/td&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+       output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t\t</span><span style="color:#e6db74">&lt;/tr&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">&lt;/table&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;&lt;/body&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   output<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#39;&lt;/html&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+   <span style="color:#66d9ef">return</span> HttpResponse(output<span style="color:#f92672">.</span>getvalue())</code></pre></div></li>
+
+<li><p>刷新页面查看程序的运行结果。</p>
+
+<p><img src="/Day41-55/res/show-depts.png" alt="" /></p></li>
+</ol>
+
+<h3 id="使用视图模板">使用视图模板</h3>
+
+<p>上面通过拼接HTML代码的方式生成动态视图的做法在实际开发中是无能接受的，这一点大家一定能够想到。为了解决这个问题，我们可以提前准备一个模板页，所谓模板页就是一个带占位符的HTML页面，当我们将程序中获得的数据替换掉页面中的占位符时，一个动态页面就产生了。</p>
+
+<p>我们可以用Django框架中template模块的Template类创建模板对象，通过模板对象的render方法实现对模板的渲染，在Django框架中还有一个名为<code>render</code>的便捷函数可以来完成渲染模板的操作。所谓的渲染就是用数据替换掉模板页中的占位符，当然这里的渲染称为后端渲染，即在服务器端完成页面的渲染再输出到浏览器中，这种做法的主要坏处是当并发访问量较大时，服务器会承受较大的负担，所以今天有很多的Web应用都使用了前端渲染，即服务器只提供所需的数据（通常是JSON格式），在浏览器中通过JavaScript获取这些数据并渲染到页面上，这个我们在后面的内容中会讲到。</p>
+
+<ol>
+<li><p>先回到manage.py文件所在的目录创建名为templates文件夹。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ mkdir templates</code></pre></div></li>
+
+<li><p>创建模板页index.html。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ touch templates/index.html
+<span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ vim templates/index.html</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+	&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+	&lt;<span style="color:#f92672">title</span>&gt;首页&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+	&lt;<span style="color:#f92672">h1</span>&gt;部门信息&lt;/<span style="color:#f92672">h1</span>&gt;
+	&lt;<span style="color:#f92672">hr</span>&gt;
+	&lt;<span style="color:#f92672">table</span>&gt;
+	    &lt;<span style="color:#f92672">tr</span>&gt;
+           &lt;<span style="color:#f92672">th</span>&gt;部门编号&lt;/<span style="color:#f92672">th</span>&gt;
+           &lt;<span style="color:#f92672">th</span>&gt;部门名称&lt;/<span style="color:#f92672">th</span>&gt;
+           &lt;<span style="color:#f92672">th</span>&gt;所在地&lt;/<span style="color:#f92672">th</span>&gt;
+       &lt;/<span style="color:#f92672">tr</span>&gt;
+       {% for dept in depts_list %}
+       &lt;<span style="color:#f92672">tr</span>&gt;
+           &lt;<span style="color:#f92672">td</span>&gt;{{ dept.no }}&lt;/<span style="color:#f92672">td</span>&gt;
+           &lt;<span style="color:#f92672">td</span>&gt;{{ dept.name }}&lt;/<span style="color:#f92672">td</span>&gt;
+           &lt;<span style="color:#f92672">td</span>&gt;{{ dept.location }}&lt;/<span style="color:#f92672">td</span>&gt;
+       &lt;<span style="color:#f92672">tr</span>&gt;
+       {% endfor %}
+   &lt;/<span style="color:#f92672">table</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div></li>
+</ol>
+
+<p>在上面的模板页中我们使用了<code>{{ greeting }}</code>这样的模板占位符语法，也使用了<code>{% for %}</code>这样的模板指令，这些都是Django模板语言（DTL）的一部分。如果对此不熟悉并不要紧，我们会在后续的内容中进一步的讲解，而且我们刚才也说到了，渲染页面还有更好的选择就是使用前端渲染，当然这是后话。</p>
+
+<ol>
+<li><p>回到应用目录，修改views.py文件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ vim hrs/views.py</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render
+
+depts_list <span style="color:#f92672">=</span> [
+   {<span style="color:#e6db74">&#39;no&#39;</span>: <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;财务部&#39;</span>, <span style="color:#e6db74">&#39;location&#39;</span>: <span style="color:#e6db74">&#39;北京&#39;</span>},
+   {<span style="color:#e6db74">&#39;no&#39;</span>: <span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;研发部&#39;</span>, <span style="color:#e6db74">&#39;location&#39;</span>: <span style="color:#e6db74">&#39;成都&#39;</span>},
+   {<span style="color:#e6db74">&#39;no&#39;</span>: <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;销售部&#39;</span>, <span style="color:#e6db74">&#39;location&#39;</span>: <span style="color:#e6db74">&#39;上海&#39;</span>},
+]
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+   <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;index.html&#39;</span>, {<span style="color:#e6db74">&#39;depts_list&#39;</span>: depts_list})</code></pre></div></li>
+</ol>
+
+<blockquote>
+<p>说明：Django框架通过shortcuts模块的便捷函数<code>render</code>简化了渲染模板的操作，有了这个函数，就不用先创建<code>Template</code>对象再去调用<code>render</code>方法。。</p>
+</blockquote>
+
+<p>到此为止，我们还没有办法让views.py中的<code>render</code>函数找到模板文件index.html，为此我们需要修改settings.py文件，配置模板文件所在的路径。</p>
+
+<ol>
+<li><p>切换到项目目录修改settings.py文件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ vim oa/settings.py</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># 此处省略上面的内容</span>
+
+TEMPLATES <span style="color:#f92672">=</span> [
+   {
+       <span style="color:#e6db74">&#39;BACKEND&#39;</span>: <span style="color:#e6db74">&#39;django.template.backends.django.DjangoTemplates&#39;</span>,
+       <span style="color:#e6db74">&#39;DIRS&#39;</span>: [os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(BASE_DIR, <span style="color:#e6db74">&#39;templates&#39;</span>)],
+       <span style="color:#e6db74">&#39;APP_DIRS&#39;</span>: True,
+       <span style="color:#e6db74">&#39;OPTIONS&#39;</span>: {
+           <span style="color:#e6db74">&#39;context_processors&#39;</span>: [
+               <span style="color:#e6db74">&#39;django.template.context_processors.debug&#39;</span>,
+               <span style="color:#e6db74">&#39;django.template.context_processors.request&#39;</span>,
+               <span style="color:#e6db74">&#39;django.contrib.auth.context_processors.auth&#39;</span>,
+               <span style="color:#e6db74">&#39;django.contrib.messages.context_processors.messages&#39;</span>,
+           ],
+       },
+   },
+]
+
+<span style="color:#75715e"># 此处省略下面的内容</span></code></pre></div></li>
+
+<li><p>重新运行项目或直接刷新页面查看结果。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#f92672">(</span>venv<span style="color:#f92672">)</span>$ python manage.py runserver</code></pre></div></li>
+</ol>
+
+<h2 id="总结">总结</h2>
+
+<p>至此，我们已经利用Django框架完成了一个非常小的Web应用，虽然它并没有任何的实际价值，但是可以通过这个项目对Django框架有一个感性的认识。当然，实际开发中我们可以用PyCharm来创建项目，如果使用专业版的PyCharm，可以直接创建Django项目。使用PyCharm的好处在于编写代码时可以获得代码提示、错误修复、自动导入等功能，从而提升开发效率，但是专业版的PyCharm需要按年支付相应的费用，社区版的PyCharm中并未包含对Django框架直接的支持，但是我们仍然可以使用它来创建Django项目，只是在使用上没有专业版的方便。关于PyCharm的使用，可以参考<a href="../../../posts/玩转PyCharm/">《玩转PyCharm》</a>一文。此外，Django最好的学习资料肯定是它的<a href="https://docs.djangoproject.com/zh-hans/2.0/">官方文档</a>，当然图灵社区出版的<a href="http://www.ituring.com.cn/book/2630">《Django基础教程》</a>也是非常适合初学者的入门级读物。</p>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#快速上手">快速上手</a>
+<ul>
+<li><a href="#web应用机制和术语">Web应用机制和术语</a>
+<ul>
+<li><a href="#http协议">HTTP协议</a></li>
+</ul></li>
+<li><a href="#django概述">Django概述</a></li>
+<li><a href="#快速上手-1">快速上手</a>
+<ul>
+<li><a href="#准备工作">准备工作</a></li>
+<li><a href="#动态页面">动态页面</a></li>
+<li><a href="#使用视图模板">使用视图模板</a></li>
+</ul></li>
+<li><a href="#总结">总结</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

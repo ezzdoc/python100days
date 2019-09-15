@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>45 Cookie和 Session | Python-100天从新手到大师</title>
+
+
+<link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
+
+
+<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+
+
+
+<link rel="icon" href="/python100days/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://ezzdoc.github.io/python100days/"><span>Python-100天从新手到大师</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fpython100days\2f docs\2f Day41-55\2f 45-Cookie%E5%92%8CSession\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="/python100days/posts/"><strong>相关文章</strong></a></li>
+<li><strong>Day01-15</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day01-15/01-%E5%88%9D%E8%AF%86Python/">01.初识Python</a></li>
+<li><a href="/python100days/docs/Day01-15/02-%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/">02.语言元素</a></li>
+<li><a href="/python100days/docs/Day01-15/03-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">03.分支结构</a></li>
+<li><a href="/python100days/docs/Day01-15/04-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">04.循环结构</a></li>
+<li><a href="/python100days/docs/Day01-15/05-%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/">05.构造程序逻辑</a></li>
+<li><a href="/python100days/docs/Day01-15/06-%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/">06.函数和模块的使用</a></li>
+<li><a href="/python100days/docs/Day01-15/07-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">07.字符串和常用数据结构</a></li>
+<li><a href="/python100days/docs/Day01-15/08-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">08.面向对象编程基础</a></li>
+<li><a href="/python100days/docs/Day01-15/09-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">09.面向对象进阶</a></li>
+<li><a href="/python100days/docs/Day01-15/10-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">10.图形用户界面和游戏开发</a></li>
+<li><a href="/python100days/docs/Day01-15/11-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">11.文件和异常</a></li>
+<li><a href="/python100days/docs/Day01-15/12-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">12.字符串和正则表达式</a></li>
+<li><a href="/python100days/docs/Day01-15/13-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">13.进程和线程</a></li>
+<li><a href="/python100days/docs/Day01-15/14-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">14.网络编程入门和网络应用开发</a></li>
+<li><a href="/python100days/docs/Day01-15/15-%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">15.图像和办公文档处理</a></li>
+</ul></li>
+<li><strong>Day16-20</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day16-20/16-20-Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">16-20.Python语言进阶</a></li>
+</ul></li>
+<li><strong>Day21-30</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day21-30/21-30-Web%E5%89%8D%E7%AB%AF%E6%A6%82%E8%BF%B0/">21-30.Web前端概述</a></li>
+</ul></li>
+<li><strong>Day31-35</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day31-35/31-35-%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">31-35.玩转Linux操作系统</a></li>
+</ul></li>
+<li><strong>Day36-40</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day36-40/36-38-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93MySQL/">36-38.关系型数据库MySQL</a></li>
+<li><a href="/python100days/docs/Day36-40/39-40-NoSQL%E5%85%A5%E9%97%A8/">39-40.NoSQL入门</a></li>
+</ul></li>
+<li><strong>Day41-55</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day41-55/41-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">41.快速上手</a></li>
+<li><a href="/python100days/docs/Day41-55/42-%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/">42.深入模型</a></li>
+<li><a href="/python100days/docs/Day41-55/43-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82/">43.静态资源和Ajax请求</a></li>
+<li><a href="/python100days/docs/Day41-55/44-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%BA%94%E7%94%A8/">44.表单的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/45-Cookie%E5%92%8CSession/">45.Cookie和Session</a></li>
+<li><a href="/python100days/docs/Day41-55/46-%E6%8A%A5%E8%A1%A8%E5%92%8C%E6%97%A5%E5%BF%97/">46.报表和日志</a></li>
+<li><a href="/python100days/docs/Day41-55/47-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/">47.中间件的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/48-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">48.前后端分离开发入门</a></li>
+<li><a href="/python100days/docs/Day41-55/49-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/">49.RESTful架构和DRF入门</a></li>
+<li><a href="/python100days/docs/Day41-55/50-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/">50.RESTful架构和DRF进阶</a></li>
+<li><a href="/python100days/docs/Day41-55/51-%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/">51.使用缓存</a></li>
+<li><a href="/python100days/docs/Day41-55/52-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">52.文件上传和富文本编辑</a></li>
+<li><a href="/python100days/docs/Day41-55/53-%E7%9F%AD%E4%BF%A1%E5%92%8C%E9%82%AE%E4%BB%B6/">53.短信和邮件</a></li>
+<li><a href="/python100days/docs/Day41-55/54-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">54.异步任务和定时任务</a></li>
+<li><a href="/python100days/docs/Day41-55/55-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%92%8C%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">55.单元测试和项目上线</a></li>
+</ul></li>
+<li><strong>Day56-60</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day56-60/56-Flask%E5%85%A5%E9%97%A8/">56.Flask入门</a></li>
+<li><a href="/python100days/docs/Day56-60/57-%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8/">57.模板的使用</a></li>
+<li><a href="/python100days/docs/Day56-60/58-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/">58.表单的处理</a></li>
+<li><a href="/python100days/docs/Day56-60/59-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/">59.数据库操作</a></li>
+<li><a href="/python100days/docs/Day56-60/60-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">60.项目实战</a></li>
+</ul></li>
+<li><strong>Day61-65</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day61-65/61-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/">61.预备知识</a></li>
+<li><a href="/python100days/docs/Day61-65/62-Tornado%E5%85%A5%E9%97%A8/">62.Tornado入门</a></li>
+<li><a href="/python100days/docs/Day61-65/63-%E5%BC%82%E6%AD%A5%E5%8C%96/">63.异步化</a></li>
+<li><a href="/python100days/docs/Day61-65/64-WebSocket%E7%9A%84%E5%BA%94%E7%94%A8/">64.WebSocket的应用</a></li>
+<li><a href="/python100days/docs/Day61-65/65-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">65.项目实战</a></li>
+</ul></li>
+<li><strong>Day66-75</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day66-75/66-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">66.网络爬虫和相关工具</a></li>
+<li><a href="/python100days/docs/Day66-75/67-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E8%A7%A3%E6%9E%90/">67.数据采集和解析</a></li>
+<li><a href="/python100days/docs/Day66-75/68-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/">68.存储数据</a></li>
+<li><a href="/python100days/docs/Day66-75/69-%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD/">69.并发下载</a></li>
+<li><a href="/python100days/docs/Day66-75/70-%E8%A7%A3%E6%9E%90%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/">70.解析动态内容</a></li>
+<li><a href="/python100days/docs/Day66-75/71-%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92%E5%92%8C%E9%AA%8C%E8%AF%81%E7%A0%81%E5%A4%84%E7%90%86/">71.表单交互和验证码处理</a></li>
+<li><a href="/python100days/docs/Day66-75/72-Scrapy%E5%85%A5%E9%97%A8/">72.Scrapy入门</a></li>
+<li><a href="/python100days/docs/Day66-75/73-Scrapy%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/">73.Scrapy高级应用</a></li>
+<li><a href="/python100days/docs/Day66-75/74-Scrapy%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E7%8E%B0/">74.Scrapy分布式实现</a></li>
+<li><a href="/python100days/docs/Day66-75/75-%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">75.爬虫项目实战</a></li>
+</ul></li>
+<li><strong>Day76-90</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day76-90/76-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">76.机器学习基础</a></li>
+<li><a href="/python100days/docs/Day76-90/77-Pandas%E7%9A%84%E5%BA%94%E7%94%A8/">77.Pandas的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/78-NumPy%E5%92%8CSciPy%E7%9A%84%E5%BA%94%E7%94%A8/">78.NumPy和SciPy的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/79-Matplotlib%E5%92%8C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">79.Matplotlib和数据可视化</a></li>
+<li><a href="/python100days/docs/Day76-90/80-k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB/">80.k最近邻分类</a></li>
+<li><a href="/python100days/docs/Day76-90/81-%E5%86%B3%E7%AD%96%E6%A0%91/">81.决策树</a></li>
+<li><a href="/python100days/docs/Day76-90/82-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">82.贝叶斯分类</a></li>
+<li><a href="/python100days/docs/Day76-90/83-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/">83.支持向量机</a></li>
+<li><a href="/python100days/docs/Day76-90/84-K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">84.K-均值聚类</a></li>
+<li><a href="/python100days/docs/Day76-90/85-%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/">85.回归分析</a></li>
+<li><a href="/python100days/docs/Day76-90/86-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8/">86.大数据分析入门</a></li>
+<li><a href="/python100days/docs/Day76-90/87-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%9B%E9%98%B6/">87.大数据分析进阶</a></li>
+<li><a href="/python100days/docs/Day76-90/88-Tensorflow%E5%85%A5%E9%97%A8/">88.Tensorflow入门</a></li>
+<li><a href="/python100days/docs/Day76-90/89-Tensorflow%E5%AE%9E%E6%88%98/">89.Tensorflow实战</a></li>
+<li><a href="/python100days/docs/Day76-90/90-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98/">90.推荐系统实战</a></li>
+</ul></li>
+<li><strong>Day91-100</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day91-100/91-%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%87%86%E5%A4%87/">91.团队项目开发准备</a></li>
+<li><a href="/python100days/docs/Day91-100/92-%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/">92.使用Docker部署服务</a></li>
+<li><a href="/python100days/docs/Day91-100/93-MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">93.MySQL性能优化</a></li>
+<li><a href="/python100days/docs/Day91-100/94-%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/">94.网络API接口设计</a></li>
+<li><a href="/python100days/docs/Day91-100/95-%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E5%95%86%E4%B8%9A%E9%A1%B9%E7%9B%AE/">95.使用Django开发商业项目</a></li>
+<li><a href="/python100days/docs/Day91-100/96-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">96.软件测试和自动化测试</a></li>
+<li><a href="/python100days/docs/Day91-100/97-%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90/">97.电商网站技术要点剖析</a></li>
+<li><a href="/python100days/docs/Day91-100/98-%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/">98.项目部署上线和性能调优</a></li>
+<li><a href="/python100days/docs/Day91-100/99-%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98/">99.面试中的公共问题</a></li>
+<li><a href="/python100days/docs/Day91-100/100-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/">100.英语面试</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/python100days/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>45 Cookie和 Session</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="cookie和session">Cookie和Session</h1>
+
+<h2 id="实现用户跟踪">实现用户跟踪</h2>
+
+<p>如今，一个网站如果不通过某种方式记住你是谁以及你之前在网站的活动情况，失去的就是网站的可用性和便利性，继而很有可能导致网站用户的流式，所以记住一个用户（更专业的说法叫<strong>用户跟踪</strong>）对绝大多数Web应用来说都是必需的功能。</p>
+
+<p>在服务器端，我们想记住一个用户最简单的办法就是创建一个对象，通过这个对象就可以把用户相关的信息都保存起来，这个对象就是我们常说的session（用户会话对象）。那么问题来了，HTTP本身是一个无连接（每次请求和响应的过程中，服务器一旦完成对客户端请求的响应之后就断开连接）、无状态（客户端再次发起对服务器的请求时，服务器无法得知这个客户端之前的任何信息）的协议，即便服务器通过session对象保留了用户数据，还得通过某种方式来确定当前的请求与之前保存过的哪一个session是有关联的。相信很多人都能想到，我们可以给每个session对象分配一个全局唯一的标识符来识别session对象，我们姑且称之为sessionid，每次客户端发起请求时，只要携带上这个sessionid，就有办法找到与之对应的session对象，从而实现在两次请求之间记住该用户的信息，也就是我们之前说的用户跟踪。</p>
+
+<p>要让客户端记住并在每次请求时带上sessionid又有以下几种做法：</p>
+
+<ol>
+<li><p>URL重写。所谓URL重写就是在URL中携带sessionid，例如：<code>http://www.example.com/index.html?sessionid=123456</code>，服务器通过获取sessionid参数的值来取到与之对应的session对象。</p></li>
+
+<li><p>隐藏域（隐式表单域）。在提交表单的时候，可以通过在表单中设置隐藏域向服务器发送额外的数据。例如：<code>&lt;input type=&quot;hidden&quot; name=&quot;sessionid&quot; value=&quot;123456&quot;&gt;</code>。</p></li>
+
+<li><p>本地存储。现在的浏览器都支持多种本地存储方案，包括：cookie、localStorage、sessionStorage、IndexedDB等。在这些方案中，cookie是历史最为悠久也是被诟病得最多的一种方案，也是我们接下来首先为大家讲解的一种方案。简单的说，cookie是一种以键值对方式保存在浏览器临时文件中的数据，每次请求时，请求头中会携带本站点的cookie到服务器，那么只要将sessionid写入cookie，下次请求时服务器只要读取请求头中的cookie就能够获得这个sessionid，如下图所示。</p></li>
+</ol>
+
+<p><img src="/Day41-55/res/sessionid_from_cookie.png" alt="" /></p>
+
+<p>在HTML5时代要，除了cookie，还可以使用新的本地存储API来保存数据，就是刚才提到的localStorage、sessionStorage、IndexedDB等技术，如下图所示。</p>
+
+<p><img src="/Day41-55/res/cookie_xstorage_indexeddb.png" alt="" /></p>
+
+<h2 id="django框架对session的支持">Django框架对session的支持</h2>
+
+<p>在创建Django项目时，默认的配置文件<code>settings.py</code>文件中已经激活了一个名为<code>SessionMiddleware</code>的中间件（关于中间件的知识我们在下一个章节做详细的讲解，这里只需要知道它的存在即可），因为这个中间件的存在，我们可以直接通过请求对象的<code>session</code>属性来操作会话对象。<code>session</code>属性是一个像字典一样可以读写数据的容器对象，因此我们可以使用“键值对”的方式来保留用户数据。与此同时，<code>SessionMiddleware</code>中间件还封装了对cookie的操作，在cookie中保存了sessionid，就如同我们之前描述的那样。</p>
+
+<p>在默认情况下，Django将session的数据序列化后保存在关系型数据库中，在Django 1.6以后的版本中，默认的序列化数据的方式是JSON序列化，而在此之前一直使用Pickle序列化。JSON序列化和Pickle序列化的差别在于前者将对象序列化为字符串（字符形式），而后者将对象序列化为字节串（二进制形式），因为安全方面的原因，JSON序列化成为了目前Django框架默认序列化数据的方式，这就要求在我们保存在session中的数据必须是能够JSON序列化的，否则就会引发异常。还有一点需要说明的是，使用关系型数据库保存session中的数据在大多数时候并不是最好的选择，因为数据库可能会承受巨大的压力而成为系统性能的瓶颈，在后面的章节中我们会告诉大家如何将session的数据保存到缓存服务中。</p>
+
+<p>我们继续完善之前的投票应用，前一个章节中我们实现了用户的登录和注册，下面我们首先完善登录时对验证码的检查。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_captcha</span>(request):
+    <span style="color:#e6db74">&#34;&#34;&#34;验证码&#34;&#34;&#34;</span>
+    captcha_text <span style="color:#f92672">=</span> random_captcha_text()
+    request<span style="color:#f92672">.</span>session[<span style="color:#e6db74">&#39;captcha&#39;</span>] <span style="color:#f92672">=</span> captcha_text
+    image_data <span style="color:#f92672">=</span> Captcha<span style="color:#f92672">.</span>instance()<span style="color:#f92672">.</span>generate(captcha_text)
+    <span style="color:#66d9ef">return</span> HttpResponse(image_data, content_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;image/png&#39;</span>)</code></pre></div>
+<p>注意上面代码中的第4行，我们将随机生成的验证码字符串保存到session中，稍后用户登录时，我们要将保存在session中的验证码字符串和用户输入的验证码字符串进行比对，如果用户输入了正确的验证码才能够执行后续的登录流程，代码如下所示。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">login</span>(request: HttpRequest):
+    <span style="color:#e6db74">&#34;&#34;&#34;登录&#34;&#34;&#34;</span>
+    hint <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;POST&#39;</span>:
+        form <span style="color:#f92672">=</span> LoginForm(request<span style="color:#f92672">.</span>POST)
+        <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>is_valid():
+            <span style="color:#75715e"># 对验证码的正确性进行验证</span>
+            captcha_from_user <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;captcha&#39;</span>]
+            captcha_from_sess <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;captcha&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)
+            <span style="color:#66d9ef">if</span> captcha_from_sess<span style="color:#f92672">.</span>lower() <span style="color:#f92672">!=</span> captcha_from_user<span style="color:#f92672">.</span>lower():
+                hint <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;请输入正确的验证码&#39;</span>
+            <span style="color:#66d9ef">else</span>:
+                username <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;username&#39;</span>]
+                password <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>cleaned_data[<span style="color:#e6db74">&#39;password&#39;</span>]
+                user <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(username<span style="color:#f92672">=</span>username, password<span style="color:#f92672">=</span>password)<span style="color:#f92672">.</span>first()
+                <span style="color:#66d9ef">if</span> user:
+                    <span style="color:#75715e"># 登录成功后将用户编号和用户名保存在session中</span>
+                    request<span style="color:#f92672">.</span>session[<span style="color:#e6db74">&#39;userid&#39;</span>] <span style="color:#f92672">=</span> user<span style="color:#f92672">.</span>no
+                    request<span style="color:#f92672">.</span>session[<span style="color:#e6db74">&#39;username&#39;</span>] <span style="color:#f92672">=</span> user<span style="color:#f92672">.</span>username
+                    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;/&#39;</span>)
+                <span style="color:#66d9ef">else</span>:
+                    hint <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;用户名或密码错误&#39;</span>
+        <span style="color:#66d9ef">else</span>:
+            hint <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;请输入有效的登录信息&#39;</span>
+    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#39;login.html&#39;</span>, {<span style="color:#e6db74">&#39;hint&#39;</span>: hint})</code></pre></div>
+<p>上面的代码中，我们设定了登录成功后会在session中保存用户的编号（<code>userid</code>）和用户名（<code>username</code>），页面会重定向到首页。接下来我们可以稍微对首页的代码进行调整，在页面的右上角显示出登录用户的用户名。我们将这段代码单独写成了一个名为header.html的HTML文件，首页中可以通过在<code>&lt;body&gt;</code>标签中添加<code>{% include 'header.html' %}</code>来包含这个页面，代码如下所示。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user&#34;</span>&gt;
+    {% if request.session.userid %}
+    &lt;<span style="color:#f92672">span</span>&gt;{{ request.session.username }}&lt;/<span style="color:#f92672">span</span>&gt;
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/logout&#34;</span>&gt;注销&lt;/<span style="color:#f92672">a</span>&gt;
+    {% else %}
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/login&#34;</span>&gt;登录&lt;/<span style="color:#f92672">a</span>&gt;&amp;nbsp;&amp;nbsp;
+    {% endif %}
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/register&#34;</span>&gt;注册&lt;/<span style="color:#f92672">a</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+<p>如果用户没有登录，页面会显示登录和注册的超链接；而用户登录成功后，页面上会显示用户名和注销的链接，注销链接对应的视图函数如下所示，URL的映射与之前讲过的类似，不再赘述。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">logout</span>(request):
+    <span style="color:#e6db74">&#34;&#34;&#34;注销&#34;&#34;&#34;</span>
+    request<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>flush()
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;/&#39;</span>)</code></pre></div>
+<p>上面的代码通过session对象<code>flush</code>方法来销毁session，一方面清除了服务器上session对象保存的用户数据，一方面将保存在浏览器cookie中的sessionid删除掉，稍后我们会对如何读写cookie的操作加以说明。</p>
+
+<p>我们可以通过项目使用的数据库中名为<code>django_session</code> 的表来找到所有的session，该表的结构如下所示：</p>
+
+<table>
+<thead>
+<tr>
+<th>session_key</th>
+<th>session_data</th>
+<th>expire_date</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>c9g2gt5cxo0k2evykgpejhic5ae7bfpl</td>
+<td>MmI4YzViYjJhOGMyMDJkY2M5Yzg3&hellip;</td>
+<td>2019-05-25 23:16:13.898522</td>
+</tr>
+</tbody>
+</table>
+
+<p>其中，第1列就是浏览器cookie中保存的sessionid；第2列是经过BASE64编码后的session中的数据，如果使用Python的<code>base64</code>对其进行解码，解码的过程和结果如下所示。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> base64
+<span style="color:#f92672">&gt;&gt;&gt;</span> base64<span style="color:#f92672">.</span>b64decode(<span style="color:#e6db74">&#39;MmI4YzViYjJhOGMyMDJkY2M5Yzg3ZWIyZGViZmUzYmYxNzdlNDdmZjp7ImNhcHRjaGEiOiJzS3d0Iiwibm8iOjEsInVzZXJuYW1lIjoiamFja2ZydWVkIn0=&#39;</span>)    
+<span style="color:#e6db74">&#39;2b8c5bb2a8c202dcc9c87eb2debfe3bf177e47ff:{&#34;captcha&#34;:&#34;sKwt&#34;,&#34;no&#34;:1,&#34;username&#34;:&#34;jackfrued&#34;}&#39;</span></code></pre></div>
+<p>第3列是session的过期时间，session过期后浏览器保存的cookie中的sessionid就会失效，但是数据库中的这条对应的记录仍然会存在，如果想清除过期的数据，可以使用下面的命令。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">python manage.py clearsessions</code></pre></div>
+<p>Django框架默认的session过期时间为两周（1209600秒），如果想修改这个时间，可以在项目的配置文件中添加如下所示的代码。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># 配置会话的超时时间为1天（86400秒）</span>
+SESSION_COOKIE_AGE <span style="color:#f92672">=</span> <span style="color:#ae81ff">86400</span></code></pre></div>
+<p>有很多对安全性要求较高的应用都必须在关闭浏览器窗口时让会话过期，不再保留用户的任何信息，如果希望在关闭浏览器窗口时就让会话过期（cookie中的sessionid失效），可以加入如下所示的配置。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># 设置为True在关闭浏览器窗口时session就过期</span>
+SESSION_EXPIRE_AT_BROWSER_CLOSE <span style="color:#f92672">=</span> True</code></pre></div>
+<p>如果不希望将session的数据保存在数据库中，可以将其放入缓存中，对应的配置如下所示，缓存的配置和使用我们在后面讲解。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># 配置将会话对象放到缓存中存储</span>
+SESSION_ENGINE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;django.contrib.sessions.backends.cache&#39;</span>
+<span style="color:#75715e"># 配置使用哪一组缓存来保存会话</span>
+SESSION_CACHE_ALIAS <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;default&#39;</span></code></pre></div>
+<p>如果要修改session数据默认的序列化方式，可以将默认的<code>JSONSerializer</code>修改为<code>PickleSerializer</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">SESSION_SERIALIZER <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;django.contrib.sessions.serializers.PickleSerializer&#39;</span></code></pre></div>
+<h2 id="在视图函数中读写cookie">在视图函数中读写cookie</h2>
+
+<p>Django封装的<code>HttpRequest</code>和<code>HttpResponse</code>对象分别提供了读写cookie的操作。</p>
+
+<p>HttpRequest封装的属性和方法：</p>
+
+<ol>
+<li><code>COOKIES</code>属性 - 该属性包含了HTTP请求携带的所有cookie。</li>
+<li><code>get_signed_cookie</code>方法 - 获取带签名的cookie，如果签名验证失败，会产生<code>BadSignature</code>异常。</li>
+</ol>
+
+<p>HttpResponse封装的方法：</p>
+
+<ol>
+<li><code>set_cookie</code>方法 - 该方法可以设置一组键值对并将其最终将写入浏览器。</li>
+<li><code>set_signed_cookie</code>方法 - 跟上面的方法作用相似，但是会对cookie进行签名来达到防篡改的作用。因为如果篡改了cookie中的数据，在不知道<a href="https://zh.wikipedia.org/wiki/%E5%AF%86%E9%92%A5">密钥</a>和<a href="https://zh.wikipedia.org/wiki/%E7%9B%90_(%E5%AF%86%E7%A0%81%E5%AD%A6)">盐</a>的情况下是无法生成有效的签名，这样服务器在读取cookie时会发现数据与签名不一致从而产生<code>BadSignature</code>异常。需要说明的是，这里所说的密钥就是我们在Django项目配置文件中指定的<code>SECRET_KEY</code>，而盐是程序中设定的一个字符串，你愿意设定为什么都可以，只要是一个有效的字符串。</li>
+</ol>
+
+<p>上面提到的方法，如果不清楚它们的具体用法，可以自己查阅一下Django的<a href="https://docs.djangoproject.com/en/2.1/ref/request-response/">官方文档</a>，没有什么资料比官方文档能够更清楚的告诉你这些方法到底如何使用。</p>
+
+<p>刚才我们说过了，激活<code>SessionMiddleware</code>之后，每个<code>HttpRequest</code>对象都会绑定一个session属性，它是一个类似字典的对象，除了保存用户数据之外还提供了检测浏览器是否支持cookie的方法，包括：</p>
+
+<ol>
+<li><code>set_test_cookie</code>方法 - 设置用于测试的cookie。</li>
+<li><code>test_cookie_worked</code>方法 - 检测测试cookie是否工作。</li>
+<li><code>delete_test_cookie</code>方法 - 删除用于测试的cookie。</li>
+<li><code>set_expiry</code>方法 - 设置会话的过期时间。</li>
+<li><code>get_expire_age</code>/<code>get_expire_date</code>方法 - 获取会话的过期时间。</li>
+<li><code>clear_expired</code>方法 - 清理过期的会话。</li>
+</ol>
+
+<p>下面是在执行登录之前检查浏览器是否支持cookie的代码。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">login</span>(request):
+    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;POST&#39;</span>:
+        <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>test_cookie_worked():
+            request<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>delete_test_cookie()
+            <span style="color:#75715e"># Add your code to perform login process here</span>
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;Please enable cookies and try again.&#34;</span>)
+    request<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>set_test_cookie()
+    <span style="color:#66d9ef">return</span> render_to_response(<span style="color:#e6db74">&#39;login.html&#39;</span>)</code></pre></div>
+<h2 id="cookie的替代品">Cookie的替代品</h2>
+
+<p>之前我们说过了，cookie的名声一直都不怎么好，当然我们在实际开发中是不会在cookie中保存用户的敏感信息（如用户的密码、信用卡的账号等）的，而且保存在cookie中的数据一般也会做好编码和签名的工作。即便如此，HTML5中还是给出了用于替代cookie的技术方案，其中使用得最为广泛的就是localStorage和sessionStorage，相信从名字上你就能听出二者的差别，存储在<code>localStorage</code>的数据可以长期保留；而存储在<code>sessionStorage</code>的数据会在浏览器关闭时会被清除 。关于这些cookie替代品的用法，建议大家查阅<a href="https://developer.mozilla.org/zh-CN/docs/Web">MDN</a>来进行了解。</p>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#cookie和session">Cookie和Session</a>
+<ul>
+<li><a href="#实现用户跟踪">实现用户跟踪</a></li>
+<li><a href="#django框架对session的支持">Django框架对session的支持</a></li>
+<li><a href="#在视图函数中读写cookie">在视图函数中读写cookie</a></li>
+<li><a href="#cookie的替代品">Cookie的替代品</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

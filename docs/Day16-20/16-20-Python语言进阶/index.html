@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16 20 Python语言进阶 | Python-100天从新手到大师</title>
+
+
+<link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
+
+
+<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+
+
+
+<link rel="icon" href="/python100days/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://ezzdoc.github.io/python100days/"><span>Python-100天从新手到大师</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fpython100days\2f docs\2f Day16-20\2f 16-20-Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="/python100days/posts/"><strong>相关文章</strong></a></li>
+<li><strong>Day01-15</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day01-15/01-%E5%88%9D%E8%AF%86Python/">01.初识Python</a></li>
+<li><a href="/python100days/docs/Day01-15/02-%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/">02.语言元素</a></li>
+<li><a href="/python100days/docs/Day01-15/03-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">03.分支结构</a></li>
+<li><a href="/python100days/docs/Day01-15/04-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">04.循环结构</a></li>
+<li><a href="/python100days/docs/Day01-15/05-%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/">05.构造程序逻辑</a></li>
+<li><a href="/python100days/docs/Day01-15/06-%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/">06.函数和模块的使用</a></li>
+<li><a href="/python100days/docs/Day01-15/07-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">07.字符串和常用数据结构</a></li>
+<li><a href="/python100days/docs/Day01-15/08-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">08.面向对象编程基础</a></li>
+<li><a href="/python100days/docs/Day01-15/09-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">09.面向对象进阶</a></li>
+<li><a href="/python100days/docs/Day01-15/10-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">10.图形用户界面和游戏开发</a></li>
+<li><a href="/python100days/docs/Day01-15/11-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">11.文件和异常</a></li>
+<li><a href="/python100days/docs/Day01-15/12-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">12.字符串和正则表达式</a></li>
+<li><a href="/python100days/docs/Day01-15/13-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">13.进程和线程</a></li>
+<li><a href="/python100days/docs/Day01-15/14-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">14.网络编程入门和网络应用开发</a></li>
+<li><a href="/python100days/docs/Day01-15/15-%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">15.图像和办公文档处理</a></li>
+</ul></li>
+<li><strong>Day16-20</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day16-20/16-20-Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">16-20.Python语言进阶</a></li>
+</ul></li>
+<li><strong>Day21-30</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day21-30/21-30-Web%E5%89%8D%E7%AB%AF%E6%A6%82%E8%BF%B0/">21-30.Web前端概述</a></li>
+</ul></li>
+<li><strong>Day31-35</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day31-35/31-35-%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">31-35.玩转Linux操作系统</a></li>
+</ul></li>
+<li><strong>Day36-40</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day36-40/36-38-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93MySQL/">36-38.关系型数据库MySQL</a></li>
+<li><a href="/python100days/docs/Day36-40/39-40-NoSQL%E5%85%A5%E9%97%A8/">39-40.NoSQL入门</a></li>
+</ul></li>
+<li><strong>Day41-55</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day41-55/41-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">41.快速上手</a></li>
+<li><a href="/python100days/docs/Day41-55/42-%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/">42.深入模型</a></li>
+<li><a href="/python100days/docs/Day41-55/43-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82/">43.静态资源和Ajax请求</a></li>
+<li><a href="/python100days/docs/Day41-55/44-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%BA%94%E7%94%A8/">44.表单的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/45-Cookie%E5%92%8CSession/">45.Cookie和Session</a></li>
+<li><a href="/python100days/docs/Day41-55/46-%E6%8A%A5%E8%A1%A8%E5%92%8C%E6%97%A5%E5%BF%97/">46.报表和日志</a></li>
+<li><a href="/python100days/docs/Day41-55/47-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/">47.中间件的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/48-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">48.前后端分离开发入门</a></li>
+<li><a href="/python100days/docs/Day41-55/49-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/">49.RESTful架构和DRF入门</a></li>
+<li><a href="/python100days/docs/Day41-55/50-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/">50.RESTful架构和DRF进阶</a></li>
+<li><a href="/python100days/docs/Day41-55/51-%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/">51.使用缓存</a></li>
+<li><a href="/python100days/docs/Day41-55/52-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">52.文件上传和富文本编辑</a></li>
+<li><a href="/python100days/docs/Day41-55/53-%E7%9F%AD%E4%BF%A1%E5%92%8C%E9%82%AE%E4%BB%B6/">53.短信和邮件</a></li>
+<li><a href="/python100days/docs/Day41-55/54-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">54.异步任务和定时任务</a></li>
+<li><a href="/python100days/docs/Day41-55/55-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%92%8C%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">55.单元测试和项目上线</a></li>
+</ul></li>
+<li><strong>Day56-60</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day56-60/56-Flask%E5%85%A5%E9%97%A8/">56.Flask入门</a></li>
+<li><a href="/python100days/docs/Day56-60/57-%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8/">57.模板的使用</a></li>
+<li><a href="/python100days/docs/Day56-60/58-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/">58.表单的处理</a></li>
+<li><a href="/python100days/docs/Day56-60/59-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/">59.数据库操作</a></li>
+<li><a href="/python100days/docs/Day56-60/60-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">60.项目实战</a></li>
+</ul></li>
+<li><strong>Day61-65</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day61-65/61-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/">61.预备知识</a></li>
+<li><a href="/python100days/docs/Day61-65/62-Tornado%E5%85%A5%E9%97%A8/">62.Tornado入门</a></li>
+<li><a href="/python100days/docs/Day61-65/63-%E5%BC%82%E6%AD%A5%E5%8C%96/">63.异步化</a></li>
+<li><a href="/python100days/docs/Day61-65/64-WebSocket%E7%9A%84%E5%BA%94%E7%94%A8/">64.WebSocket的应用</a></li>
+<li><a href="/python100days/docs/Day61-65/65-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">65.项目实战</a></li>
+</ul></li>
+<li><strong>Day66-75</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day66-75/66-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">66.网络爬虫和相关工具</a></li>
+<li><a href="/python100days/docs/Day66-75/67-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E8%A7%A3%E6%9E%90/">67.数据采集和解析</a></li>
+<li><a href="/python100days/docs/Day66-75/68-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/">68.存储数据</a></li>
+<li><a href="/python100days/docs/Day66-75/69-%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD/">69.并发下载</a></li>
+<li><a href="/python100days/docs/Day66-75/70-%E8%A7%A3%E6%9E%90%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/">70.解析动态内容</a></li>
+<li><a href="/python100days/docs/Day66-75/71-%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92%E5%92%8C%E9%AA%8C%E8%AF%81%E7%A0%81%E5%A4%84%E7%90%86/">71.表单交互和验证码处理</a></li>
+<li><a href="/python100days/docs/Day66-75/72-Scrapy%E5%85%A5%E9%97%A8/">72.Scrapy入门</a></li>
+<li><a href="/python100days/docs/Day66-75/73-Scrapy%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/">73.Scrapy高级应用</a></li>
+<li><a href="/python100days/docs/Day66-75/74-Scrapy%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E7%8E%B0/">74.Scrapy分布式实现</a></li>
+<li><a href="/python100days/docs/Day66-75/75-%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">75.爬虫项目实战</a></li>
+</ul></li>
+<li><strong>Day76-90</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day76-90/76-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">76.机器学习基础</a></li>
+<li><a href="/python100days/docs/Day76-90/77-Pandas%E7%9A%84%E5%BA%94%E7%94%A8/">77.Pandas的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/78-NumPy%E5%92%8CSciPy%E7%9A%84%E5%BA%94%E7%94%A8/">78.NumPy和SciPy的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/79-Matplotlib%E5%92%8C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">79.Matplotlib和数据可视化</a></li>
+<li><a href="/python100days/docs/Day76-90/80-k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB/">80.k最近邻分类</a></li>
+<li><a href="/python100days/docs/Day76-90/81-%E5%86%B3%E7%AD%96%E6%A0%91/">81.决策树</a></li>
+<li><a href="/python100days/docs/Day76-90/82-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">82.贝叶斯分类</a></li>
+<li><a href="/python100days/docs/Day76-90/83-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/">83.支持向量机</a></li>
+<li><a href="/python100days/docs/Day76-90/84-K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">84.K-均值聚类</a></li>
+<li><a href="/python100days/docs/Day76-90/85-%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/">85.回归分析</a></li>
+<li><a href="/python100days/docs/Day76-90/86-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8/">86.大数据分析入门</a></li>
+<li><a href="/python100days/docs/Day76-90/87-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%9B%E9%98%B6/">87.大数据分析进阶</a></li>
+<li><a href="/python100days/docs/Day76-90/88-Tensorflow%E5%85%A5%E9%97%A8/">88.Tensorflow入门</a></li>
+<li><a href="/python100days/docs/Day76-90/89-Tensorflow%E5%AE%9E%E6%88%98/">89.Tensorflow实战</a></li>
+<li><a href="/python100days/docs/Day76-90/90-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98/">90.推荐系统实战</a></li>
+</ul></li>
+<li><strong>Day91-100</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day91-100/91-%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%87%86%E5%A4%87/">91.团队项目开发准备</a></li>
+<li><a href="/python100days/docs/Day91-100/92-%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/">92.使用Docker部署服务</a></li>
+<li><a href="/python100days/docs/Day91-100/93-MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">93.MySQL性能优化</a></li>
+<li><a href="/python100days/docs/Day91-100/94-%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/">94.网络API接口设计</a></li>
+<li><a href="/python100days/docs/Day91-100/95-%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E5%95%86%E4%B8%9A%E9%A1%B9%E7%9B%AE/">95.使用Django开发商业项目</a></li>
+<li><a href="/python100days/docs/Day91-100/96-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">96.软件测试和自动化测试</a></li>
+<li><a href="/python100days/docs/Day91-100/97-%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90/">97.电商网站技术要点剖析</a></li>
+<li><a href="/python100days/docs/Day91-100/98-%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/">98.项目部署上线和性能调优</a></li>
+<li><a href="/python100days/docs/Day91-100/99-%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98/">99.面试中的公共问题</a></li>
+<li><a href="/python100days/docs/Day91-100/100-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/">100.英语面试</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/python100days/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>16 20 Python语言进阶</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="python语言进阶">Python语言进阶</h1>
+
+<ol>
+<li><p>数据结构和算法</p>
+
+<ul>
+<li><p>算法：解决问题的方法和步骤</p></li>
+
+<li><p>评价算法的好坏：渐近时间复杂度和渐近空间复杂度。</p></li>
+
+<li><p>渐近时间复杂度的大O标记：</p>
+
+<ul>
+<li><img src="http://latex.codecogs.com/gif.latex?O(c)" /> - 常量时间复杂度 - 布隆过滤器 / 哈希存储</li>
+<li><img src="http://latex.codecogs.com/gif.latex?O(log_2n)" /> - 对数时间复杂度 - 折半查找（二分查找）</li>
+<li><img src="http://latex.codecogs.com/gif.latex?O(n)" /> - 线性时间复杂度 - 顺序查找 / 桶排序</li>
+<li><img src="http://latex.codecogs.com/gif.latex?O(n*log_2n)" /> - 对数线性时间复杂度 - 高级排序算法（归并排序、快速排序）</li>
+<li><img src="http://latex.codecogs.com/gif.latex?O(n^2)" /> - 平方时间复杂度 - 简单排序算法（选择排序、插入排序、冒泡排序）</li>
+<li><img src="http://latex.codecogs.com/gif.latex?O(n^3)" /> - 立方时间复杂度 - Floyd算法 / 矩阵乘法运算</li>
+<li><img src="http://latex.codecogs.com/gif.latex?O(2^n)" /> - 几何级数时间复杂度 - 汉诺塔</li>
+<li><img src="http://latex.codecogs.com/gif.latex?O(n!)" /> - 阶乘时间复杂度 - 旅行经销商问题 - NP</li>
+</ul></li>
+</ul>
+
+<p><img src="/Day16-20/res/algorithm_complexity_1.png" alt="" /></p>
+
+<p><img src="/Day16-20/res/algorithm_complexity_2.png" alt="" /></p>
+
+<ul>
+<li><p>排序算法（选择、冒泡和归并）和查找算法（顺序和折半）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">select_sort</span>(origin_items, comp<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">&lt;</span> y):
+ <span style="color:#e6db74">&#34;&#34;&#34;简单选择排序&#34;&#34;&#34;</span>
+ items <span style="color:#f92672">=</span> origin_items[:]
+ <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(items) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+     min_index <span style="color:#f92672">=</span> i
+     <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, len(items)):
+         <span style="color:#66d9ef">if</span> comp(items[j], items[min_index]):
+             min_index <span style="color:#f92672">=</span> j
+     items[i], items[min_index] <span style="color:#f92672">=</span> items[min_index], items[i]
+ <span style="color:#66d9ef">return</span> items</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bubble_sort</span>(origin_items, comp<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">&gt;</span> y):
+ <span style="color:#e6db74">&#34;&#34;&#34;高质量冒泡排序(搅拌排序)&#34;&#34;&#34;</span>
+ items <span style="color:#f92672">=</span> origin_items[:]
+ <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(items) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+     swapped <span style="color:#f92672">=</span> False
+     <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i, len(items) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> i):
+         <span style="color:#66d9ef">if</span> comp(items[j], items[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]):
+             items[j], items[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> items[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>], items[j]
+             swapped <span style="color:#f92672">=</span> True
+     <span style="color:#66d9ef">if</span> swapped:
+         swapped <span style="color:#f92672">=</span> False
+         <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(items) <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> i, i, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+             <span style="color:#66d9ef">if</span> comp(items[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>], items[j]):
+                 items[j], items[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> items[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>], items[j]
+                 swapped <span style="color:#f92672">=</span> True
+     <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> swapped:
+         <span style="color:#66d9ef">break</span>
+ <span style="color:#66d9ef">return</span> items</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge_sort</span>(items, comp<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">&lt;=</span> y):
+ <span style="color:#e6db74">&#34;&#34;&#34;归并排序(分治法)&#34;&#34;&#34;</span>
+ <span style="color:#66d9ef">if</span> len(items) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>:
+     <span style="color:#66d9ef">return</span> items[:]
+ mid <span style="color:#f92672">=</span> len(items) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+ left <span style="color:#f92672">=</span> merge_sort(items[:mid], comp)
+ right <span style="color:#f92672">=</span> merge_sort(items[mid:], comp)
+ <span style="color:#66d9ef">return</span> merge(left, right, comp)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge</span>(items1, items2, comp):
+ <span style="color:#e6db74">&#34;&#34;&#34;合并(将两个有序的列表合并成一个有序的列表)&#34;&#34;&#34;</span>
+ items <span style="color:#f92672">=</span> []
+ index1, index2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+ <span style="color:#66d9ef">while</span> index1 <span style="color:#f92672">&lt;</span> len(items1) <span style="color:#f92672">and</span> index2 <span style="color:#f92672">&lt;</span> len(items2):
+     <span style="color:#66d9ef">if</span> comp(items1[index1], items2[index2]):
+         items<span style="color:#f92672">.</span>append(items1[index1])
+         index1 <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+     <span style="color:#66d9ef">else</span>:
+         items<span style="color:#f92672">.</span>append(items2[index2])
+         index2 <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+ items <span style="color:#f92672">+=</span> items1[index1:]
+ items <span style="color:#f92672">+=</span> items2[index2:]
+ <span style="color:#66d9ef">return</span> items</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">seq_search</span>(items, key):
+ <span style="color:#e6db74">&#34;&#34;&#34;顺序查找&#34;&#34;&#34;</span>
+ <span style="color:#66d9ef">for</span> index, item <span style="color:#f92672">in</span> enumerate(items):
+     <span style="color:#66d9ef">if</span> item <span style="color:#f92672">==</span> key:
+         <span style="color:#66d9ef">return</span> index
+ <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bin_search</span>(items, key):
+ <span style="color:#e6db74">&#34;&#34;&#34;折半查找&#34;&#34;&#34;</span>
+ start, end <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(items) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+ <span style="color:#66d9ef">while</span> start <span style="color:#f92672">&lt;=</span> end:
+     mid <span style="color:#f92672">=</span> (start <span style="color:#f92672">+</span> end) <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>
+     <span style="color:#66d9ef">if</span> key <span style="color:#f92672">&gt;</span> items[mid]:
+         start <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+     <span style="color:#66d9ef">elif</span> key <span style="color:#f92672">&lt;</span> items[mid]:
+         end <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+     <span style="color:#66d9ef">else</span>:
+         <span style="color:#66d9ef">return</span> mid
+ <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span></code></pre></div></li>
+
+<li><p>使用生成式（推导式）语法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">prices <span style="color:#f92672">=</span> {
+ <span style="color:#e6db74">&#39;AAPL&#39;</span>: <span style="color:#ae81ff">191.88</span>,
+ <span style="color:#e6db74">&#39;GOOG&#39;</span>: <span style="color:#ae81ff">1186.96</span>,
+ <span style="color:#e6db74">&#39;IBM&#39;</span>: <span style="color:#ae81ff">149.24</span>,
+ <span style="color:#e6db74">&#39;ORCL&#39;</span>: <span style="color:#ae81ff">48.44</span>,
+ <span style="color:#e6db74">&#39;ACN&#39;</span>: <span style="color:#ae81ff">166.89</span>,
+ <span style="color:#e6db74">&#39;FB&#39;</span>: <span style="color:#ae81ff">208.09</span>,
+ <span style="color:#e6db74">&#39;SYMC&#39;</span>: <span style="color:#ae81ff">21.29</span>
+}
+<span style="color:#75715e"># 用股票价格大于100元的股票构造一个新的字典</span>
+prices2 <span style="color:#f92672">=</span> {key: value <span style="color:#66d9ef">for</span> key, value <span style="color:#f92672">in</span> prices<span style="color:#f92672">.</span>items() <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span>}
+<span style="color:#66d9ef">print</span>(prices2)</code></pre></div></li>
+</ul>
+
+<blockquote>
+<p>说明：生成式（推导式）可以用来生成列表、集合和字典。</p>
+</blockquote>
+
+<ul>
+<li><p>嵌套的列表</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;关羽&#39;</span>, <span style="color:#e6db74">&#39;张飞&#39;</span>, <span style="color:#e6db74">&#39;赵云&#39;</span>, <span style="color:#e6db74">&#39;马超&#39;</span>, <span style="color:#e6db74">&#39;黄忠&#39;</span>]
+courses <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;语文&#39;</span>, <span style="color:#e6db74">&#39;数学&#39;</span>, <span style="color:#e6db74">&#39;英语&#39;</span>]
+<span style="color:#75715e"># 录入五个学生三门课程的成绩</span>
+<span style="color:#75715e"># 错误 - 参考http://pythontutor.com/visualize.html#mode=edit</span>
+<span style="color:#75715e"># scores = [[None] * len(courses)] * len(names)</span>
+scores <span style="color:#f92672">=</span> [[None] <span style="color:#f92672">*</span> len(courses) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(len(names))]
+<span style="color:#66d9ef">for</span> row, name <span style="color:#f92672">in</span> enumerate(names):
+ <span style="color:#66d9ef">for</span> col, course <span style="color:#f92672">in</span> enumerate(courses):
+     scores[row][col] <span style="color:#f92672">=</span> float(input(f<span style="color:#e6db74">&#39;请输入{name}的{course}成绩: &#39;</span>))
+     <span style="color:#66d9ef">print</span>(scores)</code></pre></div></li>
+</ul>
+
+<p><a href="http://pythontutor.com/">Python Tutor</a> - VISUALIZE CODE AND GET LIVE HELP</p>
+
+<ul>
+<li><p>heapq、itertools等的用法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">从列表中找出最大的或最小的N个元素
+</span><span style="color:#e6db74">堆结构(大根堆/小根堆)
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+<span style="color:#f92672">import</span> heapq
+
+list1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">99</span>, <span style="color:#ae81ff">87</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">58</span>, <span style="color:#ae81ff">78</span>, <span style="color:#ae81ff">88</span>, <span style="color:#ae81ff">92</span>]
+list2 <span style="color:#f92672">=</span> [
+ {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;IBM&#39;</span>, <span style="color:#e6db74">&#39;shares&#39;</span>: <span style="color:#ae81ff">100</span>, <span style="color:#e6db74">&#39;price&#39;</span>: <span style="color:#ae81ff">91.1</span>},
+ {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;AAPL&#39;</span>, <span style="color:#e6db74">&#39;shares&#39;</span>: <span style="color:#ae81ff">50</span>, <span style="color:#e6db74">&#39;price&#39;</span>: <span style="color:#ae81ff">543.22</span>},
+ {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;FB&#39;</span>, <span style="color:#e6db74">&#39;shares&#39;</span>: <span style="color:#ae81ff">200</span>, <span style="color:#e6db74">&#39;price&#39;</span>: <span style="color:#ae81ff">21.09</span>},
+ {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;HPQ&#39;</span>, <span style="color:#e6db74">&#39;shares&#39;</span>: <span style="color:#ae81ff">35</span>, <span style="color:#e6db74">&#39;price&#39;</span>: <span style="color:#ae81ff">31.75</span>},
+ {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;YHOO&#39;</span>, <span style="color:#e6db74">&#39;shares&#39;</span>: <span style="color:#ae81ff">45</span>, <span style="color:#e6db74">&#39;price&#39;</span>: <span style="color:#ae81ff">16.35</span>},
+ {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;ACME&#39;</span>, <span style="color:#e6db74">&#39;shares&#39;</span>: <span style="color:#ae81ff">75</span>, <span style="color:#e6db74">&#39;price&#39;</span>: <span style="color:#ae81ff">115.65</span>}
+]
+<span style="color:#66d9ef">print</span>(heapq<span style="color:#f92672">.</span>nlargest(<span style="color:#ae81ff">3</span>, list1))
+<span style="color:#66d9ef">print</span>(heapq<span style="color:#f92672">.</span>nsmallest(<span style="color:#ae81ff">3</span>, list1))
+<span style="color:#66d9ef">print</span>(heapq<span style="color:#f92672">.</span>nlargest(<span style="color:#ae81ff">2</span>, list2, key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: x[<span style="color:#e6db74">&#39;price&#39;</span>]))
+<span style="color:#66d9ef">print</span>(heapq<span style="color:#f92672">.</span>nlargest(<span style="color:#ae81ff">2</span>, list2, key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: x[<span style="color:#e6db74">&#39;shares&#39;</span>]))</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">迭代工具 - 排列 / 组合 / 笛卡尔积
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+<span style="color:#f92672">import</span> itertools
+
+itertools<span style="color:#f92672">.</span>permutations(<span style="color:#e6db74">&#39;ABCD&#39;</span>)
+itertools<span style="color:#f92672">.</span>combinations(<span style="color:#e6db74">&#39;ABCDE&#39;</span>, <span style="color:#ae81ff">3</span>)
+itertools<span style="color:#f92672">.</span>product(<span style="color:#e6db74">&#39;ABCD&#39;</span>, <span style="color:#e6db74">&#39;123&#39;</span>)</code></pre></div></li>
+
+<li><p>collections模块下的工具类</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">找出序列中出现次数最多的元素
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+<span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+
+words <span style="color:#f92672">=</span> [
+ <span style="color:#e6db74">&#39;look&#39;</span>, <span style="color:#e6db74">&#39;into&#39;</span>, <span style="color:#e6db74">&#39;my&#39;</span>, <span style="color:#e6db74">&#39;eyes&#39;</span>, <span style="color:#e6db74">&#39;look&#39;</span>, <span style="color:#e6db74">&#39;into&#39;</span>, <span style="color:#e6db74">&#39;my&#39;</span>, <span style="color:#e6db74">&#39;eyes&#39;</span>,
+ <span style="color:#e6db74">&#39;the&#39;</span>, <span style="color:#e6db74">&#39;eyes&#39;</span>, <span style="color:#e6db74">&#39;the&#39;</span>, <span style="color:#e6db74">&#39;eyes&#39;</span>, <span style="color:#e6db74">&#39;the&#39;</span>, <span style="color:#e6db74">&#39;eyes&#39;</span>, <span style="color:#e6db74">&#39;not&#39;</span>, <span style="color:#e6db74">&#39;around&#39;</span>,
+ <span style="color:#e6db74">&#39;the&#39;</span>, <span style="color:#e6db74">&#39;eyes&#39;</span>, <span style="color:#e6db74">&#34;don&#39;t&#34;</span>, <span style="color:#e6db74">&#39;look&#39;</span>, <span style="color:#e6db74">&#39;around&#39;</span>, <span style="color:#e6db74">&#39;the&#39;</span>, <span style="color:#e6db74">&#39;eyes&#39;</span>,
+ <span style="color:#e6db74">&#39;look&#39;</span>, <span style="color:#e6db74">&#39;into&#39;</span>, <span style="color:#e6db74">&#39;my&#39;</span>, <span style="color:#e6db74">&#39;eyes&#39;</span>, <span style="color:#e6db74">&#34;you&#39;re&#34;</span>, <span style="color:#e6db74">&#39;under&#39;</span>
+]
+counter <span style="color:#f92672">=</span> Counter(words)
+<span style="color:#66d9ef">print</span>(counter<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">3</span>))</code></pre></div></li>
+
+<li><p>常用算法：</p>
+
+<ul>
+<li>穷举法 - 又称为暴力破解法，对所有的可能性进行验证，直到找到正确答案。</li>
+<li>贪婪法 - 在对问题求解时，总是做出在当前看来</li>
+<li>最好的选择，不追求最优解，快速找到满意解。</li>
+<li>分治法 - 把一个复杂的问题分成两个或更多的相同或相似的子问题，再把子问题分成更小的子问题，直到可以直接求解的程度，最后将子问题的解进行合并得到原问题的解。</li>
+<li>回溯法 - 回溯法又称为试探法，按选优条件向前搜索，当搜索到某一步发现原先选择并不优或达不到目标时，就退回一步重新选择。</li>
+<li>动态规划 - 基本思想也是将待求解问题分解成若干个子问题，先求解并保存这些子问题的解，避免产生大量的重复运算。</li>
+</ul></li>
+</ul>
+
+<p>穷举法例子：百钱百鸡和五人分鱼。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#75715e"># 公鸡5元一只 母鸡3元一只 小鸡1元三只</span>
+ <span style="color:#75715e"># 用100元买100只鸡 问公鸡/母鸡/小鸡各多少只</span>
+ <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">20</span>):
+     <span style="color:#66d9ef">for</span> y <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">33</span>):
+         z <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">-</span> x <span style="color:#f92672">-</span> y
+         <span style="color:#66d9ef">if</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> y <span style="color:#f92672">+</span> z <span style="color:#f92672">//</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">and</span> z <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+             <span style="color:#66d9ef">print</span>(x, y, z)
+
+ <span style="color:#75715e"># A、B、C、D、E五人在某天夜里合伙捕鱼 最后疲惫不堪各自睡觉</span>
+ <span style="color:#75715e"># 第二天A第一个醒来 他将鱼分为5份 扔掉多余的1条 拿走自己的一份</span>
+ <span style="color:#75715e"># B第二个醒来 也将鱼分为5份 扔掉多余的1条 拿走自己的一份</span>
+ <span style="color:#75715e"># 然后C、D、E依次醒来也按同样的方式分鱼 问他们至少捕了多少条鱼</span>
+ fish <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>
+ <span style="color:#66d9ef">while</span> True:
+     total <span style="color:#f92672">=</span> fish
+     enough <span style="color:#f92672">=</span> True
+     <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+         <span style="color:#66d9ef">if</span> (total <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+             total <span style="color:#f92672">=</span> (total <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">//</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>
+         <span style="color:#66d9ef">else</span>:
+             enough <span style="color:#f92672">=</span> False
+             <span style="color:#66d9ef">break</span>
+     <span style="color:#66d9ef">if</span> enough:
+         <span style="color:#66d9ef">print</span>(fish)
+         <span style="color:#66d9ef">break</span>
+     fish <span style="color:#f92672">+=</span> <span style="color:#ae81ff">5</span></code></pre></div>
+<p>贪婪法例子：假设小偷有一个背包，最多能装20公斤赃物，他闯入一户人家，发现如下表所示的物品。很显然，他不能把所有物品都装进背包，所以必须确定拿走哪些物品，留下哪些物品。</p>
+
+<p>|  名称  | 价格（美元） | 重量（kg） |
+ | :&mdash;-: | :&mdash;&mdash;&mdash;-: | :&mdash;&mdash;&ndash;: |
+ |  电脑  |     200      |     20     |
+ | 收音机 |      20      |     4      |
+ |   钟   |     175      |     10     |
+ |  花瓶  |      50      |     2      |
+ |   书   |      10      |     1      |
+ |  油画  |      90      |     9      |</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 贪婪法：在对问题求解时，总是做出在当前看来是最好的选择，不追求最优解，快速找到满意解。
+</span><span style="color:#e6db74"> 输入：
+</span><span style="color:#e6db74"> 20 6
+</span><span style="color:#e6db74"> 电脑 200 20
+</span><span style="color:#e6db74"> 收音机 20 4
+</span><span style="color:#e6db74"> 钟 175 10
+</span><span style="color:#e6db74"> 花瓶 50 2
+</span><span style="color:#e6db74"> 书 10 1
+</span><span style="color:#e6db74"> 油画 90 9
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Thing</span>(object):
+     <span style="color:#e6db74">&#34;&#34;&#34;物品&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, name, price, weight):
+         self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+         self<span style="color:#f92672">.</span>price <span style="color:#f92672">=</span> price
+         self<span style="color:#f92672">.</span>weight <span style="color:#f92672">=</span> weight
+
+     <span style="color:#a6e22e">@property</span>
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">value</span>(self):
+         <span style="color:#e6db74">&#34;&#34;&#34;价格重量比&#34;&#34;&#34;</span>
+         <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>price <span style="color:#f92672">/</span> self<span style="color:#f92672">.</span>weight
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">input_thing</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;输入物品信息&#34;&#34;&#34;</span>
+     name_str, price_str, weight_str <span style="color:#f92672">=</span> input()<span style="color:#f92672">.</span>split()
+     <span style="color:#66d9ef">return</span> name_str, int(price_str), int(weight_str)
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;主函数&#34;&#34;&#34;</span>
+     max_weight, num_of_things <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+     all_things <span style="color:#f92672">=</span> []
+     <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(num_of_things):
+         all_things<span style="color:#f92672">.</span>append(Thing(<span style="color:#f92672">*</span>input_thing()))
+     all_things<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: x<span style="color:#f92672">.</span>value, reverse<span style="color:#f92672">=</span>True)
+     total_weight <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+     total_price <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+     <span style="color:#66d9ef">for</span> thing <span style="color:#f92672">in</span> all_things:
+         <span style="color:#66d9ef">if</span> total_weight <span style="color:#f92672">+</span> thing<span style="color:#f92672">.</span>weight <span style="color:#f92672">&lt;=</span> max_weight:
+             <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;小偷拿走了{thing.name}&#39;</span>)
+             total_weight <span style="color:#f92672">+=</span> thing<span style="color:#f92672">.</span>weight
+             total_price <span style="color:#f92672">+=</span> thing<span style="color:#f92672">.</span>price
+     <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;总价值: {total_price}美元&#39;</span>)
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div>
+<p>分治法例子：<a href="https://zh.wikipedia.org/zh/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F">快速排序</a>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 快速排序 - 选择枢轴对元素进行划分，左边都比枢轴小右边都比枢轴大
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quick_sort</span>(origin_items, comp<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">&lt;=</span> y):
+     items <span style="color:#f92672">=</span> origin_items[:]
+     _quick_sort(items, <span style="color:#ae81ff">0</span>, len(items) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, comp)
+     <span style="color:#66d9ef">return</span> items
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_quick_sort</span>(items, start, end, comp):
+     <span style="color:#66d9ef">if</span> start <span style="color:#f92672">&lt;</span> end:
+         pos <span style="color:#f92672">=</span> _partition(items, start, end, comp)
+         _quick_sort(items, start, pos <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, comp)
+         _quick_sort(items, pos <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, end, comp)
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_partition</span>(items, start, end, comp):
+     pivot <span style="color:#f92672">=</span> items[end]
+     i <span style="color:#f92672">=</span> start <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+     <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(start, end):
+         <span style="color:#66d9ef">if</span> comp(items[j], pivot):
+             i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+             items[i], items[j] <span style="color:#f92672">=</span> items[j], items[i]
+     items[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>], items[end] <span style="color:#f92672">=</span> items[end], items[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]
+     <span style="color:#66d9ef">return</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span></code></pre></div>
+<p>回溯法例子：<a href="https://zh.wikipedia.org/zh/%E9%AA%91%E5%A3%AB%E5%B7%A1%E9%80%BB">骑士巡逻</a>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 递归回溯法：叫称为试探法，按选优条件向前搜索，当搜索到某一步，发现原先选择并不优或达不到目标时，就退回一步重新选择，比较经典的问题包括骑士巡逻、八皇后和迷宫寻路等。
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#f92672">import</span> sys
+ <span style="color:#f92672">import</span> time
+
+ SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+ total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_board</span>(board):
+     <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> board:
+         <span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> row:
+             <span style="color:#66d9ef">print</span>(str(col)<span style="color:#f92672">.</span>center(<span style="color:#ae81ff">4</span>), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+         <span style="color:#66d9ef">print</span>()
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">patrol</span>(board, row, col, step<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+     <span style="color:#66d9ef">if</span> row <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> row <span style="color:#f92672">&lt;</span> SIZE <span style="color:#f92672">and</span> \
+         col <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> col <span style="color:#f92672">&lt;</span> SIZE <span style="color:#f92672">and</span> \
+         board[row][col] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+         board[row][col] <span style="color:#f92672">=</span> step
+         <span style="color:#66d9ef">if</span> step <span style="color:#f92672">==</span> SIZE <span style="color:#f92672">*</span> SIZE:
+             <span style="color:#66d9ef">global</span> total
+             total <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+             <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;第{total}种走法: &#39;</span>)
+             print_board(board)
+         patrol(board, row <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>, col <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+         patrol(board, row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>, step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+         patrol(board, row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>, step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+         patrol(board, row <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>, col <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+         patrol(board, row <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>, col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+         patrol(board, row <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>, step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+         patrol(board, row <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, col <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>, step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+         patrol(board, row <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>, col <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, step <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+         board[row][col] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     board <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> SIZE <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(SIZE)]
+     patrol(board, SIZE <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, SIZE <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div>
+<p>动态规划例子1：[斐波拉切数列]()。（不使用动态规划将会是几何级数复杂度）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 动态规划 - 适用于有重叠子问题和最优子结构性质的问题
+</span><span style="color:#e6db74"> 使用动态规划方法所耗时间往往远少于朴素解法(用空间换取时间)
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fib</span>(num, temp<span style="color:#f92672">=</span>{}):
+     <span style="color:#e6db74">&#34;&#34;&#34;用递归计算Fibonacci数&#34;&#34;&#34;</span>
+     <span style="color:#66d9ef">if</span> num <span style="color:#f92672">in</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>):
+         <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+     <span style="color:#66d9ef">try</span>:
+         <span style="color:#66d9ef">return</span> temp[num]
+     <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span>:
+         temp[num] <span style="color:#f92672">=</span> fib(num <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> fib(num <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>)
+         <span style="color:#66d9ef">return</span> temp[num]</code></pre></div>
+<p>动态规划例子2：子列表元素之和的最大值。（使用动态规划可以避免二重循环）</p>
+
+<blockquote>
+<p>说明：子列表指的是列表中索引（下标）连续的元素构成的列表；列表中的元素是int类型，可能包含正整数、0、负整数；程序输入列表中的元素，输出子列表元素求和的最大值，例如：</p>
+
+<p>输入：1 -2 3 5 -3 2</p>
+
+<p>输出：8</p>
+
+<p>输入：0 -2 3 5 -1 2</p>
+
+<p>输出：9</p>
+
+<p>输入：-9 -2 -3 -5 -3</p>
+
+<p>输出：-2</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     items <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
+     size <span style="color:#f92672">=</span> len(items)
+     overall, partial <span style="color:#f92672">=</span> {}, {}
+     overall[size <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> partial[size <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> items[size <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
+     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(size <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+         partial[i] <span style="color:#f92672">=</span> max(items[i], partial[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> items[i])
+         overall[i] <span style="color:#f92672">=</span> max(partial[i], overall[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>])
+     <span style="color:#66d9ef">print</span>(overall[<span style="color:#ae81ff">0</span>])
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div></li>
+
+<li><p>函数的使用方式</p>
+
+<ul>
+<li><p>将函数视为“一等公民”</p>
+
+<ul>
+<li>函数可以赋值给变量</li>
+<li>函数可以作为函数的参数</li>
+<li>函数可以作为函数的返回值</li>
+</ul></li>
+
+<li><p>高阶函数的用法（<code>filter</code>、<code>map</code>以及它们的替代品）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">items1 <span style="color:#f92672">=</span> list(map(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>, filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>, range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>))))
+items2 <span style="color:#f92672">=</span> [x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">if</span> x <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span>]</code></pre></div></li>
+
+<li><p>位置参数、可变参数、关键字参数、命名关键字参数</p></li>
+
+<li><p>参数的元信息（代码可读性问题）</p></li>
+
+<li><p>匿名函数和内联函数的用法（<code>lambda</code>函数）</p></li>
+
+<li><p>闭包和作用域问题</p>
+
+<ul>
+<li><p>Python搜索变量的LEGB顺序（Local &ndash;&gt; Embedded &ndash;&gt; Global &ndash;&gt; Built-in）</p></li>
+
+<li><p><code>global</code>和<code>nonlocal</code>关键字的作用</p></li>
+</ul></li>
+</ul>
+
+<p><code>global</code>：声明或定义全局变量（要么直接使用现有的全局作用域的变量，要么定义一个变量放到全局作用域）。</p>
+
+<p><code>nonlocal</code>：声明使用嵌套作用域的变量（嵌套作用域必须存在该变量，否则报错）。</p>
+
+<ul>
+<li>装饰器函数（使用装饰器和取消装饰器）</li>
+</ul>
+
+<p>例子：输出函数执行时间的装饰器。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">record_time</span>(func):
+     <span style="color:#e6db74">&#34;&#34;&#34;自定义装饰函数的装饰器&#34;&#34;&#34;</span>
+
+     <span style="color:#a6e22e">@wraps</span>(func)
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+         start <span style="color:#f92672">=</span> time()
+         result <span style="color:#f92672">=</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+         <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#39;{func.__name__}: {time() - start}秒&#39;</span>)
+         <span style="color:#66d9ef">return</span> result
+
+     <span style="color:#66d9ef">return</span> wrapper</code></pre></div>
+<p>如果装饰器不希望跟<code>print</code>函数耦合，可以编写带参数的装饰器。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> wraps
+ <span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> time
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">record</span>(output):
+     <span style="color:#e6db74">&#34;&#34;&#34;自定义带参数的装饰器&#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decorate</span>(func):
+
+        <span style="color:#a6e22e">@wraps</span>(func)
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+            start <span style="color:#f92672">=</span> time()
+            result <span style="color:#f92672">=</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+            output(func<span style="color:#f92672">.</span>__name__, time() <span style="color:#f92672">-</span> start)
+            <span style="color:#66d9ef">return</span> result
+
+        <span style="color:#66d9ef">return</span> wrapper
+
+    <span style="color:#66d9ef">return</span> decorate</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> wraps
+ <span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> time
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Record</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;自定义装饰器类(通过__call__魔术方法使得对象可以当成函数调用)&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, output):
+         self<span style="color:#f92672">.</span>output <span style="color:#f92672">=</span> output
+
+     <span style="color:#66d9ef">def</span> __call__(self, func):
+
+         <span style="color:#a6e22e">@wraps</span>(func)
+         <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+             start <span style="color:#f92672">=</span> time()
+             result <span style="color:#f92672">=</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+             self<span style="color:#f92672">.</span>output(func<span style="color:#f92672">.</span>__name__, time() <span style="color:#f92672">-</span> start)
+             <span style="color:#66d9ef">return</span> result
+
+         <span style="color:#66d9ef">return</span> wrapper</code></pre></div>
+<blockquote>
+<p>说明：由于对带装饰功能的函数添加了@wraps装饰器，可以通过<code>func.__wrapped__</code>方式获得被装饰之前的函数或类来取消装饰器的作用。</p>
+</blockquote>
+
+<p>例子：用装饰器来实现单例模式。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> wraps
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">singleton</span>(cls):
+     <span style="color:#e6db74">&#34;&#34;&#34;装饰类的装饰器&#34;&#34;&#34;</span>
+     instances <span style="color:#f92672">=</span> {}
+
+     <span style="color:#a6e22e">@wraps</span>(cls)
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+         <span style="color:#66d9ef">if</span> cls <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> instances:
+             instances[cls] <span style="color:#f92672">=</span> cls(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+         <span style="color:#66d9ef">return</span> instances[cls]
+
+     <span style="color:#66d9ef">return</span> wrapper
+
+
+ <span style="color:#a6e22e">@singleton</span>
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">President</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;总统(单例类)&#34;&#34;&#34;</span>
+     <span style="color:#66d9ef">pass</span></code></pre></div>
+<blockquote>
+<p>说明：上面的代码中用到了闭包（closure），不知道你是否已经意识到了。还没有一个小问题就是，上面的代码并没有实现线程安全的单例，如果要实现线程安全的单例应该怎么做呢？</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> wraps
+ <span style="color:#f92672">from</span> threading <span style="color:#f92672">import</span> Lock
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">singleton</span>(cls):
+     <span style="color:#e6db74">&#34;&#34;&#34;线程安全的单例装饰器&#34;&#34;&#34;</span>
+     instances <span style="color:#f92672">=</span> {}
+     locker <span style="color:#f92672">=</span> Lock()
+
+     <span style="color:#a6e22e">@wraps</span>(cls)
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+         <span style="color:#66d9ef">if</span> cls <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> instances:
+             <span style="color:#66d9ef">with</span> locker:
+                 <span style="color:#66d9ef">if</span> cls <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> instances:
+                     instances[cls] <span style="color:#f92672">=</span> cls(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+         <span style="color:#66d9ef">return</span> instances[cls]
+
+     <span style="color:#66d9ef">return</span> wrapper</code></pre></div></li>
+
+<li><p>面向对象相关知识</p>
+
+<ul>
+<li>三大支柱：封装、继承、多态</li>
+</ul>
+
+<p>例子：工资结算系统。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 月薪结算系统 - 部门经理每月15000 程序员每小时200 销售员1800底薪加销售额5%提成
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#f92672">from</span> abc <span style="color:#f92672">import</span> ABCMeta, abstractmethod
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span>(metaclass<span style="color:#f92672">=</span>ABCMeta):
+     <span style="color:#e6db74">&#34;&#34;&#34;员工(抽象类)&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, name):
+         self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+
+     <span style="color:#a6e22e">@abstractmethod</span>
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_salary</span>(self):
+         <span style="color:#e6db74">&#34;&#34;&#34;结算月薪(抽象方法)&#34;&#34;&#34;</span>
+         <span style="color:#66d9ef">pass</span>
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Manager</span>(Employee):
+     <span style="color:#e6db74">&#34;&#34;&#34;部门经理&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_salary</span>(self):
+         <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">15000.0</span>
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Programmer</span>(Employee):
+     <span style="color:#e6db74">&#34;&#34;&#34;程序员&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, name, working_hour<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
+         self<span style="color:#f92672">.</span>working_hour <span style="color:#f92672">=</span> working_hour
+         super()<span style="color:#f92672">.</span>__init__(name)
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_salary</span>(self):
+         <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">200.0</span> <span style="color:#f92672">*</span> self<span style="color:#f92672">.</span>working_hour
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Salesman</span>(Employee):
+     <span style="color:#e6db74">&#34;&#34;&#34;销售员&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, name, sales<span style="color:#f92672">=</span><span style="color:#ae81ff">0.0</span>):
+         self<span style="color:#f92672">.</span>sales <span style="color:#f92672">=</span> sales
+         super()<span style="color:#f92672">.</span>__init__(name)
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_salary</span>(self):
+         <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1800.0</span> <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>sales <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.05</span>
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EmployeeFactory</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;创建员工的工厂（工厂模式 - 通过工厂实现对象使用者和对象之间的解耦合）&#34;&#34;&#34;</span>
+
+     <span style="color:#a6e22e">@staticmethod</span>
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create</span>(emp_type, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+         <span style="color:#e6db74">&#34;&#34;&#34;创建员工&#34;&#34;&#34;</span>
+         emp_type <span style="color:#f92672">=</span> emp_type<span style="color:#f92672">.</span>upper()
+         emp <span style="color:#f92672">=</span> None
+         <span style="color:#66d9ef">if</span> emp_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;M&#39;</span>:
+             emp <span style="color:#f92672">=</span> Manager(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+         <span style="color:#66d9ef">elif</span> emp_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;P&#39;</span>:
+             emp <span style="color:#f92672">=</span> Programmer(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+         <span style="color:#66d9ef">elif</span> emp_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;S&#39;</span>:
+             emp <span style="color:#f92672">=</span> Salesman(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+         <span style="color:#66d9ef">return</span> emp
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;主函数&#34;&#34;&#34;</span>
+     emps <span style="color:#f92672">=</span> [
+         EmployeeFactory<span style="color:#f92672">.</span>create(<span style="color:#e6db74">&#39;M&#39;</span>, <span style="color:#e6db74">&#39;曹操&#39;</span>),
+         EmployeeFactory<span style="color:#f92672">.</span>create(<span style="color:#e6db74">&#39;P&#39;</span>, <span style="color:#e6db74">&#39;荀彧&#39;</span>, <span style="color:#ae81ff">120</span>),
+         EmployeeFactory<span style="color:#f92672">.</span>create(<span style="color:#e6db74">&#39;P&#39;</span>, <span style="color:#e6db74">&#39;郭嘉&#39;</span>, <span style="color:#ae81ff">85</span>),
+         EmployeeFactory<span style="color:#f92672">.</span>create(<span style="color:#e6db74">&#39;S&#39;</span>, <span style="color:#e6db74">&#39;典韦&#39;</span>, <span style="color:#ae81ff">123000</span>),
+     ]
+     <span style="color:#66d9ef">for</span> emp <span style="color:#f92672">in</span> emps:
+         <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">: </span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">元&#39;</span> <span style="color:#f92672">%</span> (emp<span style="color:#f92672">.</span>name, emp<span style="color:#f92672">.</span>get_salary()))
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div>
+<ul>
+<li><p>类与类之间的关系</p>
+
+<ul>
+<li>is-a关系：继承</li>
+<li>has-a关系：关联 / 聚合 / 合成</li>
+<li>use-a关系：依赖</li>
+</ul></li>
+</ul>
+
+<p>例子：扑克游戏。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 经验：符号常量总是优于字面常量，枚举类型是定义符号常量的最佳选择
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#f92672">from</span> enum <span style="color:#f92672">import</span> Enum, unique
+
+ <span style="color:#f92672">import</span> random
+
+
+ <span style="color:#a6e22e">@unique</span>
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Suite</span>(Enum):
+     <span style="color:#e6db74">&#34;&#34;&#34;花色&#34;&#34;&#34;</span>
+
+     SPADE, HEART, CLUB, DIAMOND <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">4</span>)
+
+     <span style="color:#66d9ef">def</span> __lt__(self, other):
+         <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>value <span style="color:#f92672">&lt;</span> other<span style="color:#f92672">.</span>value
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Card</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;牌&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, suite, face):
+         <span style="color:#e6db74">&#34;&#34;&#34;初始化方法&#34;&#34;&#34;</span>
+         self<span style="color:#f92672">.</span>suite <span style="color:#f92672">=</span> suite
+         self<span style="color:#f92672">.</span>face <span style="color:#f92672">=</span> face
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">show</span>(self):
+         <span style="color:#e6db74">&#34;&#34;&#34;显示牌面&#34;&#34;&#34;</span>
+         suites <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;♠️&#39;</span>, <span style="color:#e6db74">&#39;♥️&#39;</span>, <span style="color:#e6db74">&#39;♣️&#39;</span>, <span style="color:#e6db74">&#39;♦️&#39;</span>]
+         faces <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;2&#39;</span>, <span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#e6db74">&#39;4&#39;</span>, <span style="color:#e6db74">&#39;5&#39;</span>, <span style="color:#e6db74">&#39;6&#39;</span>, <span style="color:#e6db74">&#39;7&#39;</span>, <span style="color:#e6db74">&#39;8&#39;</span>, <span style="color:#e6db74">&#39;9&#39;</span>, <span style="color:#e6db74">&#39;10&#39;</span>, <span style="color:#e6db74">&#39;J&#39;</span>, <span style="color:#e6db74">&#39;Q&#39;</span>, <span style="color:#e6db74">&#39;K&#39;</span>]
+         <span style="color:#66d9ef">return</span> f<span style="color:#e6db74">&#39;{suites[self.suite.value]} {faces[self.face]}&#39;</span>
+
+     <span style="color:#66d9ef">def</span> __str__(self):
+         <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>show()
+
+     <span style="color:#66d9ef">def</span> __repr__(self):
+         <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>show()
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Poker</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;扑克&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self):
+         self<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+         self<span style="color:#f92672">.</span>cards <span style="color:#f92672">=</span> [Card(suite, face)
+                       <span style="color:#66d9ef">for</span> suite <span style="color:#f92672">in</span> Suite
+                       <span style="color:#66d9ef">for</span> face <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">14</span>)]
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">shuffle</span>(self):
+         <span style="color:#e6db74">&#34;&#34;&#34;洗牌（随机乱序）&#34;&#34;&#34;</span>
+         random<span style="color:#f92672">.</span>shuffle(self<span style="color:#f92672">.</span>cards)
+         self<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">deal</span>(self):
+         <span style="color:#e6db74">&#34;&#34;&#34;发牌&#34;&#34;&#34;</span>
+         card <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>cards[self<span style="color:#f92672">.</span>index]
+         self<span style="color:#f92672">.</span>index <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+         <span style="color:#66d9ef">return</span> card
+
+     <span style="color:#a6e22e">@property</span>
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">has_more</span>(self):
+         <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>index <span style="color:#f92672">&lt;</span> len(self<span style="color:#f92672">.</span>cards)
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Player</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;玩家&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, name):
+         self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+         self<span style="color:#f92672">.</span>cards <span style="color:#f92672">=</span> []
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_one</span>(self, card):
+         <span style="color:#e6db74">&#34;&#34;&#34;摸一张牌&#34;&#34;&#34;</span>
+         self<span style="color:#f92672">.</span>cards<span style="color:#f92672">.</span>append(card)
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sort</span>(self, comp<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> card: (card<span style="color:#f92672">.</span>suite, card<span style="color:#f92672">.</span>face)):
+         <span style="color:#e6db74">&#34;&#34;&#34;整理手上的牌&#34;&#34;&#34;</span>
+         self<span style="color:#f92672">.</span>cards<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span>comp)
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;主函数&#34;&#34;&#34;</span>
+     poker <span style="color:#f92672">=</span> Poker()
+     poker<span style="color:#f92672">.</span>shuffle()
+     players <span style="color:#f92672">=</span> [Player(<span style="color:#e6db74">&#39;东邪&#39;</span>), Player(<span style="color:#e6db74">&#39;西毒&#39;</span>), Player(<span style="color:#e6db74">&#39;南帝&#39;</span>), Player(<span style="color:#e6db74">&#39;北丐&#39;</span>)]
+     <span style="color:#66d9ef">while</span> poker<span style="color:#f92672">.</span>has_more:
+         <span style="color:#66d9ef">for</span> player <span style="color:#f92672">in</span> players:
+                 player<span style="color:#f92672">.</span>get_one(poker<span style="color:#f92672">.</span>deal())
+     <span style="color:#66d9ef">for</span> player <span style="color:#f92672">in</span> players:
+         player<span style="color:#f92672">.</span>sort()
+         <span style="color:#66d9ef">print</span>(player<span style="color:#f92672">.</span>name, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;: &#39;</span>)
+         <span style="color:#66d9ef">print</span>(player<span style="color:#f92672">.</span>cards)
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div>
+<blockquote>
+<p>说明：上面的代码中使用了Emoji字符来表示扑克牌的四种花色，在某些不支持Emoji字符的系统上可能无法显示。</p>
+</blockquote>
+
+<ul>
+<li><p>对象的复制（深复制/深拷贝/深度克隆和浅复制/浅拷贝/影子克隆）</p></li>
+
+<li><p>垃圾回收、循环引用和弱引用</p></li>
+</ul>
+
+<p>Python使用了自动化内存管理，这种管理机制以<strong>引用计数</strong>为基础，同时也引入了<strong>标记-清除</strong>和<strong>分代收集</strong>两种机制为辅的策略。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"> <span style="color:#66d9ef">typedef</span> struct_object {
+     <span style="color:#75715e">/* 引用计数 */</span>
+     <span style="color:#66d9ef">int</span> ob_refcnt;
+     <span style="color:#75715e">/* 对象指针 */</span>
+     struct_typeobject <span style="color:#f92672">*</span>ob_type;
+ } PyObject;</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"> <span style="color:#75715e">/* 增加引用计数的宏定义 */</span>
+ <span style="color:#75715e">#define Py_INCREF(op)   ((op)-&gt;ob_refcnt++)
+</span><span style="color:#75715e"></span> <span style="color:#75715e">/* 减少引用计数的宏定义 */</span>
+ <span style="color:#75715e">#define Py_DECREF(op) \ </span><span style="color:#75715e">//减少计数
+</span><span style="color:#75715e"></span>     <span style="color:#66d9ef">if</span> (<span style="color:#f92672">--</span>(op)<span style="color:#f92672">-&gt;</span>ob_refcnt <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) \
+         ; \
+     <span style="color:#66d9ef">else</span> \
+         __Py_Dealloc((PyObject <span style="color:#f92672">*</span>)(op))</code></pre></div>
+<p>导致引用计数+1的情况：</p>
+
+<ul>
+<li>对象被创建，例如<code>a = 23</code></li>
+<li>对象被引用，例如<code>b = a</code></li>
+<li>对象被作为参数，传入到一个函数中，例如<code>f(a)</code></li>
+<li>对象作为一个元素，存储在容器中，例如<code>list1 = [a, a]</code></li>
+</ul>
+
+<p>导致引用计数-1的情况：</p>
+
+<ul>
+<li>对象的别名被显式销毁，例如<code>del a</code></li>
+<li>对象的别名被赋予新的对象，例如<code>a = 24</code></li>
+<li>一个对象离开它的作用域，例如f函数执行完毕时，f函数中的局部变量（全局变量不会）</li>
+<li>对象所在的容器被销毁，或从容器中删除对象</li>
+</ul>
+
+<p>引用计数可能会导致循环引用问题，而循环引用会导致内存泄露，如下面的代码所示。为了解决这个问题，Python中引入了“标记-清除”和“分代收集”。在创建一个对象的时候，对象被放在第一代中，如果在第一代的垃圾检查中对象存活了下来，该对象就会被放到第二代中，同理在第二代的垃圾检查中对象存活下来，该对象就会被放到第三代中。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#75715e"># 循环引用会导致内存泄露 - Python除了引用技术还引入了标记清理和分代回收</span>
+ <span style="color:#75715e"># 在Python 3.6以前如果重写__del__魔术方法会导致循环引用处理失效</span>
+ <span style="color:#75715e"># 如果不想造成循环引用可以使用弱引用</span>
+ list1 <span style="color:#f92672">=</span> []
+ list2 <span style="color:#f92672">=</span> []
+ list1<span style="color:#f92672">.</span>append(list2)
+ list2<span style="color:#f92672">.</span>append(list1)</code></pre></div>
+<p>以下情况会导致垃圾回收：</p>
+
+<ul>
+<li>调用<code>gc.collect()</code></li>
+<li>gc模块的计数器达到阀值</li>
+<li>程序退出</li>
+</ul>
+
+<p>如果循环引用中两个对象都定义了<code>__del__</code>方法，gc模块不会销毁这些不可达对象，因为gc模块不知道应该先调用哪个对象的<code>__del__</code>方法，这个问题在Python 3.6中得到了解决。</p>
+
+<p>也可以通过<code>weakref</code>模块构造弱引用的方式来解决循环引用的问题。</p>
+
+<ul>
+<li>魔法属性和方法（请参考《Python魔法方法指南》）</li>
+</ul>
+
+<p>有几个小问题请大家思考：</p>
+
+<ul>
+<li>自定义的对象能不能使用运算符做运算？</li>
+<li>自定义的对象能不能放到set中？能去重吗？</li>
+<li>自定义的对象能不能作为dict的键？</li>
+
+<li><p>自定义的对象能不能使用上下文语法？</p></li>
+
+<li><p>混入（Mixin）</p></li>
+</ul>
+
+<p>例子：自定义字典限制只有在指定的key不存在时才能在字典中设置键值对。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SetOnceMappingMixin</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;自定义混入类&#34;&#34;&#34;</span>
+     __slots__ <span style="color:#f92672">=</span> ()
+
+     <span style="color:#66d9ef">def</span> __setitem__(self, key, value):
+         <span style="color:#66d9ef">if</span> key <span style="color:#f92672">in</span> self:
+             <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">KeyError</span>(str(key) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; already set&#39;</span>)
+         <span style="color:#66d9ef">return</span> super()<span style="color:#f92672">.</span>__setitem__(key, value)
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SetOnceDict</span>(SetOnceMappingMixin, dict):
+     <span style="color:#e6db74">&#34;&#34;&#34;自定义字典&#34;&#34;&#34;</span>
+     <span style="color:#66d9ef">pass</span>
+
+
+ my_dict<span style="color:#f92672">=</span> SetOnceDict()
+ <span style="color:#66d9ef">try</span>:
+     my_dict[<span style="color:#e6db74">&#39;username&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;jackfrued&#39;</span>
+     my_dict[<span style="color:#e6db74">&#39;username&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;hellokitty&#39;</span>
+ <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyError</span>:
+     <span style="color:#66d9ef">pass</span>
+ <span style="color:#66d9ef">print</span>(my_dict)</code></pre></div>
+<ul>
+<li>元编程和元类</li>
+</ul>
+
+<p>例子：用元类实现单例模式。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#f92672">import</span> threading
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SingletonMeta</span>(type):
+     <span style="color:#e6db74">&#34;&#34;&#34;自定义元类&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(cls, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+         cls<span style="color:#f92672">.</span>__instance <span style="color:#f92672">=</span> None
+         cls<span style="color:#f92672">.</span>__lock <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Lock()
+         super()<span style="color:#f92672">.</span>__init__(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+
+     <span style="color:#66d9ef">def</span> __call__(cls, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+         <span style="color:#66d9ef">if</span> cls<span style="color:#f92672">.</span>__instance <span style="color:#f92672">is</span> None:
+             <span style="color:#66d9ef">with</span> cls<span style="color:#f92672">.</span>__lock:
+                 <span style="color:#66d9ef">if</span> cls<span style="color:#f92672">.</span>__instance <span style="color:#f92672">is</span> None:
+                     cls<span style="color:#f92672">.</span>__instance <span style="color:#f92672">=</span> super()<span style="color:#f92672">.</span>__call__(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+         <span style="color:#66d9ef">return</span> cls<span style="color:#f92672">.</span>__instance
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">President</span>(metaclass<span style="color:#f92672">=</span>SingletonMeta):
+     <span style="color:#e6db74">&#34;&#34;&#34;总统(单例类)&#34;&#34;&#34;</span>
+     <span style="color:#66d9ef">pass</span></code></pre></div>
+<ul>
+<li><p>面向对象设计原则</p>
+
+<ul>
+<li>单一职责原则 （<strong>S</strong>RP）- 一个类只做该做的事情（类的设计要高内聚）</li>
+<li>开闭原则 （<strong>O</strong>CP）- 软件实体应该对扩展开发对修改关闭</li>
+<li>依赖倒转原则（DIP）- 面向抽象编程（在弱类型语言中已经被弱化）</li>
+<li>里氏替换原则（<strong>L</strong>SP） - 任何时候可以用子类对象替换掉父类对象</li>
+<li>接口隔离原则（<strong>I</strong>SP）- 接口要小而专不要大而全（Python中没有接口的概念）</li>
+<li>合成聚合复用原则（CARP） - 优先使用强关联关系而不是继承关系复用代码</li>
+<li>最少知识原则（迪米特法则，Lo<strong>D</strong>）- 不要给没有必然联系的对象发消息</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>说明：上面加粗的字母放在一起称为面向对象的<strong>SOLID</strong>原则。</p>
+</blockquote>
+
+<ul>
+<li><p>GoF设计模式</p>
+
+<ul>
+<li>创建型模式：单例、工厂、建造者、原型</li>
+<li>结构型模式：适配器、门面（外观）、代理</li>
+<li>行为型模式：迭代器、观察者、状态、策略</li>
+</ul></li>
+</ul>
+
+<p>例子：可插拔的哈希算法。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StreamHasher</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;哈希摘要生成器(策略模式)&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, alg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;md5&#39;</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">4096</span>):
+         self<span style="color:#f92672">.</span>size <span style="color:#f92672">=</span> size
+         alg <span style="color:#f92672">=</span> alg<span style="color:#f92672">.</span>lower()
+         self<span style="color:#f92672">.</span>hasher <span style="color:#f92672">=</span> getattr(__import__(<span style="color:#e6db74">&#39;hashlib&#39;</span>), alg<span style="color:#f92672">.</span>lower())()
+
+     <span style="color:#66d9ef">def</span> __call__(self, stream):
+         <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>to_digest(stream)
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_digest</span>(self, stream):
+         <span style="color:#e6db74">&#34;&#34;&#34;生成十六进制形式的摘要&#34;&#34;&#34;</span>
+         <span style="color:#66d9ef">for</span> buf <span style="color:#f92672">in</span> iter(<span style="color:#66d9ef">lambda</span>: stream<span style="color:#f92672">.</span>read(self<span style="color:#f92672">.</span>size), <span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;&#39;</span>):
+             self<span style="color:#f92672">.</span>hasher<span style="color:#f92672">.</span>update(buf)
+         <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>hasher<span style="color:#f92672">.</span>hexdigest()
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;主函数&#34;&#34;&#34;</span>
+     hasher1 <span style="color:#f92672">=</span> StreamHasher()
+     <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;Python-3.7.1.tgz&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>) <span style="color:#66d9ef">as</span> stream:
+         <span style="color:#66d9ef">print</span>(hasher1<span style="color:#f92672">.</span>to_digest(stream))
+     hasher2 <span style="color:#f92672">=</span> StreamHasher(<span style="color:#e6db74">&#39;sha1&#39;</span>)
+     <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;Python-3.7.1.tgz&#39;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>) <span style="color:#66d9ef">as</span> stream:
+         <span style="color:#66d9ef">print</span>(hasher2(stream))
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div></li>
+
+<li><p>迭代器和生成器</p>
+
+<ul>
+<li><p>和迭代器相关的魔术方法（<code>__iter__</code>和<code>__next__</code>）</p></li>
+
+<li><p>两种创建生成器的方式（生成器表达式和<code>yield</code>关键字）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fib</span>(num):
+ <span style="color:#e6db74">&#34;&#34;&#34;生成器&#34;&#34;&#34;</span>
+ a, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>
+ <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(num):
+     a, b <span style="color:#f92672">=</span> b, a <span style="color:#f92672">+</span> b
+     <span style="color:#66d9ef">yield</span> a
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Fib</span>(object):
+ <span style="color:#e6db74">&#34;&#34;&#34;迭代器&#34;&#34;&#34;</span>
+
+ <span style="color:#66d9ef">def</span> __init__(self, num):
+     self<span style="color:#f92672">.</span>num <span style="color:#f92672">=</span> num
+     self<span style="color:#f92672">.</span>a, self<span style="color:#f92672">.</span>b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>
+     self<span style="color:#f92672">.</span>idx <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+ <span style="color:#66d9ef">def</span> __iter__(self):
+     <span style="color:#66d9ef">return</span> self
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__next__</span>(self):
+     <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>idx <span style="color:#f92672">&lt;</span> self<span style="color:#f92672">.</span>num:
+         self<span style="color:#f92672">.</span>a, self<span style="color:#f92672">.</span>b <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>b, self<span style="color:#f92672">.</span>a <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>b
+         self<span style="color:#f92672">.</span>idx <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+         <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>a
+     <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">StopIteration</span>()</code></pre></div></li>
+</ul></li>
+
+<li><p>并发编程</p></li>
+</ol>
+
+<p>Python中实现并发编程的三种方案：多线程、多进程和异步I/O。并发编程的好处在于可以提升程序的执行效率以及改善用户体验；坏处在于并发的程序不容易开发和调试，同时对其他程序来说它并不友好。</p>
+
+<ul>
+<li><p>多线程：Python中提供了Thread类并辅以Lock、Condition、Event、Semaphore和Barrier。Python中有GIL来防止多个线程同时执行本地字节码，这个锁对于CPython是必须的，因为CPython的内存管理并不是线程安全的，因为GIL的存在多线程并不能发挥CPU的多核特性。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 面试题：进程和线程的区别和联系？
+</span><span style="color:#e6db74"> 进程 - 操作系统分配内存的基本单位 - 一个进程可以包含一个或多个线程
+</span><span style="color:#e6db74"> 线程 - 操作系统分配CPU的基本单位
+</span><span style="color:#e6db74"> 并发编程（concurrent programming）
+</span><span style="color:#e6db74"> 1. 提升执行性能 - 让程序中没有因果关系的部分可以并发的执行
+</span><span style="color:#e6db74"> 2. 改善用户体验 - 让耗时间的操作不会造成程序的假死
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#f92672">import</span> glob
+ <span style="color:#f92672">import</span> os
+ <span style="color:#f92672">import</span> threading
+
+ <span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image
+
+ PREFIX <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;thumbnails&#39;</span>
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_thumbnail</span>(infile, size, format<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;PNG&#39;</span>):
+     <span style="color:#e6db74">&#34;&#34;&#34;生成指定图片文件的缩略图&#34;&#34;&#34;</span>
+    file, ext <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>splitext(infile)
+    file <span style="color:#f92672">=</span> file[file<span style="color:#f92672">.</span>rfind(<span style="color:#e6db74">&#39;/&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:]
+    outfile <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#39;{PREFIX}/{file}_{size[0]}_{size[1]}.{ext}&#39;</span>
+    img <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(infile)
+    img<span style="color:#f92672">.</span>thumbnail(size, Image<span style="color:#f92672">.</span>ANTIALIAS)
+    img<span style="color:#f92672">.</span>save(outfile, format)
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;主函数&#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(PREFIX):
+        os<span style="color:#f92672">.</span>mkdir(PREFIX)
+    <span style="color:#66d9ef">for</span> infile <span style="color:#f92672">in</span> glob<span style="color:#f92672">.</span>glob(<span style="color:#e6db74">&#39;images/*.png&#39;</span>):
+        <span style="color:#66d9ef">for</span> size <span style="color:#f92672">in</span> (<span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">128</span>):
+             <span style="color:#75715e"># 创建并启动线程</span>
+            threading<span style="color:#f92672">.</span>Thread(
+                target<span style="color:#f92672">=</span>generate_thumbnail,
+                args<span style="color:#f92672">=</span>(infile, (size, size))
+            )<span style="color:#f92672">.</span>start()
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    main()</code></pre></div>
+<p>多个线程竞争资源的情况</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 多线程程序如果没有竞争资源处理起来通常也比较简单
+</span><span style="color:#e6db74"> 当多个线程竞争临界资源的时候如果缺乏必要的保护措施就会导致数据错乱
+</span><span style="color:#e6db74"> 说明：临界资源就是被多个线程竞争的资源
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#f92672">import</span> time
+ <span style="color:#f92672">import</span> threading
+
+ <span style="color:#f92672">from</span> concurrent.futures <span style="color:#f92672">import</span> ThreadPoolExecutor
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Account</span>(object):
+     <span style="color:#e6db74">&#34;&#34;&#34;银行账户&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self):
+         self<span style="color:#f92672">.</span>balance <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>
+         self<span style="color:#f92672">.</span>lock <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Lock()
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">deposit</span>(self, money):
+         <span style="color:#75715e"># 通过锁保护临界资源</span>
+         <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>lock:
+             new_balance <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>balance <span style="color:#f92672">+</span> money
+             time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.001</span>)
+             self<span style="color:#f92672">.</span>balance <span style="color:#f92672">=</span> new_balance
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AddMoneyThread</span>(threading<span style="color:#f92672">.</span>Thread):
+     <span style="color:#e6db74">&#34;&#34;&#34;自定义线程类&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, account, money):
+         self<span style="color:#f92672">.</span>account <span style="color:#f92672">=</span> account
+         self<span style="color:#f92672">.</span>money <span style="color:#f92672">=</span> money
+         <span style="color:#75715e"># 自定义线程的初始化方法中必须调用父类的初始化方法</span>
+         super()<span style="color:#f92672">.</span>__init__()
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(self):
+         <span style="color:#75715e"># 线程启动之后要执行的操作</span>
+         self<span style="color:#f92672">.</span>account<span style="color:#f92672">.</span>deposit(self<span style="color:#f92672">.</span>money)
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;主函数&#34;&#34;&#34;</span>
+     account <span style="color:#f92672">=</span> Account()
+     <span style="color:#75715e"># 创建线程池</span>
+     pool <span style="color:#f92672">=</span> ThreadPoolExecutor(max_workers<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+     futures <span style="color:#f92672">=</span> []
+     <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100</span>):
+         <span style="color:#75715e"># 创建线程的第1种方式</span>
+         <span style="color:#75715e"># threading.Thread(</span>
+         <span style="color:#75715e">#     target=account.deposit, args=(1, )</span>
+         <span style="color:#75715e"># ).start()</span>
+         <span style="color:#75715e"># 创建线程的第2种方式</span>
+         <span style="color:#75715e"># AddMoneyThread(account, 1).start()</span>
+         <span style="color:#75715e"># 创建线程的第3种方式</span>
+         <span style="color:#75715e"># 调用线程池中的线程来执行特定的任务</span>
+         future <span style="color:#f92672">=</span> pool<span style="color:#f92672">.</span>submit(account<span style="color:#f92672">.</span>deposit, <span style="color:#ae81ff">1</span>)
+         futures<span style="color:#f92672">.</span>append(future)
+     <span style="color:#75715e"># 关闭线程池</span>
+     pool<span style="color:#f92672">.</span>shutdown()
+     <span style="color:#66d9ef">for</span> future <span style="color:#f92672">in</span> futures:
+         future<span style="color:#f92672">.</span>result()
+     <span style="color:#66d9ef">print</span>(account<span style="color:#f92672">.</span>balance)
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div>
+<p>修改上面的程序，启动5个线程向账户中存钱，5个线程从账户中取钱，取钱时如果余额不足就暂停线程进行等待。为了达到上述目标，需要对存钱和取钱的线程进行调度，在余额不足时取钱的线程暂停并释放锁，而存钱的线程将钱存入后要通知取钱的线程，使其从暂停状态被唤醒。可以使用<code>threading</code>模块的Condition来实现线程调度，该对象也是基于锁来创建的，代码如下所示：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 多个线程竞争一个资源 - 保护临界资源 - 锁（Lock/RLock）
+</span><span style="color:#e6db74"> 多个线程竞争多个资源（线程数&gt;资源数） - 信号量（Semaphore）
+</span><span style="color:#e6db74"> 多个线程的调度 - 暂停线程执行/唤醒等待中的线程 - Condition
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#f92672">from</span> concurrent.futures <span style="color:#f92672">import</span> ThreadPoolExecutor
+ <span style="color:#f92672">from</span> random <span style="color:#f92672">import</span> randint
+ <span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> sleep
+
+ <span style="color:#f92672">import</span> threading
+
+
+ <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Account</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;银行账户&#34;&#34;&#34;</span>
+
+     <span style="color:#66d9ef">def</span> __init__(self, balance<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
+         self<span style="color:#f92672">.</span>balance <span style="color:#f92672">=</span> balance
+         lock <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Lock()
+         self<span style="color:#f92672">.</span>condition <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Condition(lock)
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">withdraw</span>(self, money):
+         <span style="color:#e6db74">&#34;&#34;&#34;取钱&#34;&#34;&#34;</span>
+         <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>condition:
+             <span style="color:#66d9ef">while</span> money <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>balance:
+                 self<span style="color:#f92672">.</span>condition<span style="color:#f92672">.</span>wait()
+             new_balance <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>balance <span style="color:#f92672">-</span> money
+             sleep(<span style="color:#ae81ff">0.001</span>)
+             self<span style="color:#f92672">.</span>balance <span style="color:#f92672">=</span> new_balance
+
+     <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">deposit</span>(self, money):
+         <span style="color:#e6db74">&#34;&#34;&#34;存钱&#34;&#34;&#34;</span>
+         <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>condition:
+             new_balance <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>balance <span style="color:#f92672">+</span> money
+             sleep(<span style="color:#ae81ff">0.001</span>)
+             self<span style="color:#f92672">.</span>balance <span style="color:#f92672">=</span> new_balance
+             self<span style="color:#f92672">.</span>condition<span style="color:#f92672">.</span>notify_all()
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_money</span>(account):
+     <span style="color:#66d9ef">while</span> True:
+         money <span style="color:#f92672">=</span> randint(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>)
+         account<span style="color:#f92672">.</span>deposit(money)
+         <span style="color:#66d9ef">print</span>(threading<span style="color:#f92672">.</span>current_thread()<span style="color:#f92672">.</span>name,
+               <span style="color:#e6db74">&#39;:&#39;</span>, money, <span style="color:#e6db74">&#39;====&gt;&#39;</span>, account<span style="color:#f92672">.</span>balance)
+         sleep(<span style="color:#ae81ff">0.5</span>)
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sub_money</span>(account):
+     <span style="color:#66d9ef">while</span> True:
+         money <span style="color:#f92672">=</span> randint(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">30</span>)
+         account<span style="color:#f92672">.</span>withdraw(money)
+         <span style="color:#66d9ef">print</span>(threading<span style="color:#f92672">.</span>current_thread()<span style="color:#f92672">.</span>name,
+               <span style="color:#e6db74">&#39;:&#39;</span>, money, <span style="color:#e6db74">&#39;&lt;====&#39;</span>, account<span style="color:#f92672">.</span>balance)
+         sleep(<span style="color:#ae81ff">1</span>)
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     account <span style="color:#f92672">=</span> Account()
+     <span style="color:#66d9ef">with</span> ThreadPoolExecutor(max_workers<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">as</span> pool:
+         <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+             pool<span style="color:#f92672">.</span>submit(add_money, account)
+             pool<span style="color:#f92672">.</span>submit(sub_money, account)
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div></li>
+
+<li><p>多进程：多进程可以有效的解决GIL的问题，实现多进程主要的类是Process，其他辅助的类跟threading模块中的类似，进程间共享数据可以使用管道、套接字等，在multiprocessing模块中有一个Queue类，它基于管道和锁机制提供了多个进程共享的队列。下面是官方文档上关于多进程和进程池的一个示例。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 多进程和进程池的使用
+</span><span style="color:#e6db74"> 多线程因为GIL的存在不能够发挥CPU的多核特性
+</span><span style="color:#e6db74"> 对于计算密集型任务应该考虑使用多进程
+</span><span style="color:#e6db74"> time python3 example22.py
+</span><span style="color:#e6db74"> real    0m11.512s
+</span><span style="color:#e6db74"> user    0m39.319s
+</span><span style="color:#e6db74"> sys     0m0.169s
+</span><span style="color:#e6db74"> 使用多进程后实际执行时间为11.512秒，而用户时间39.319秒约为实际执行时间的4倍
+</span><span style="color:#e6db74"> 这就证明我们的程序通过多进程使用了CPU的多核特性，而且这台计算机配置了4核的CPU
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#f92672">import</span> concurrent.futures
+ <span style="color:#f92672">import</span> math
+
+ PRIMES <span style="color:#f92672">=</span> [
+     <span style="color:#ae81ff">1116281</span>,
+     <span style="color:#ae81ff">1297337</span>,
+     <span style="color:#ae81ff">104395303</span>,
+     <span style="color:#ae81ff">472882027</span>,
+     <span style="color:#ae81ff">533000389</span>,
+     <span style="color:#ae81ff">817504243</span>,
+     <span style="color:#ae81ff">982451653</span>,
+     <span style="color:#ae81ff">112272535095293</span>,
+     <span style="color:#ae81ff">112582705942171</span>,
+     <span style="color:#ae81ff">112272535095293</span>,
+     <span style="color:#ae81ff">115280095190773</span>,
+     <span style="color:#ae81ff">115797848077099</span>,
+     <span style="color:#ae81ff">1099726899285419</span>
+ ] <span style="color:#f92672">*</span> <span style="color:#ae81ff">5</span>
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_prime</span>(n):
+     <span style="color:#e6db74">&#34;&#34;&#34;判断素数&#34;&#34;&#34;</span>
+     <span style="color:#66d9ef">if</span> n <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+         <span style="color:#66d9ef">return</span> False
+
+     sqrt_n <span style="color:#f92672">=</span> int(math<span style="color:#f92672">.</span>floor(math<span style="color:#f92672">.</span>sqrt(n)))
+     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>, sqrt_n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>):
+         <span style="color:#66d9ef">if</span> n <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+             <span style="color:#66d9ef">return</span> False
+     <span style="color:#66d9ef">return</span> True
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;主函数&#34;&#34;&#34;</span>
+     <span style="color:#66d9ef">with</span> concurrent<span style="color:#f92672">.</span>futures<span style="color:#f92672">.</span>ProcessPoolExecutor() <span style="color:#66d9ef">as</span> executor:
+         <span style="color:#66d9ef">for</span> number, prime <span style="color:#f92672">in</span> zip(PRIMES, executor<span style="color:#f92672">.</span>map(is_prime, PRIMES)):
+             <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> is prime: </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (number, prime))
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div>
+<blockquote>
+<p>说明：<strong>多线程和多进程的比较</strong>。</p>
+
+<p>以下情况需要使用多线程：</p>
+
+<ol>
+<li>程序需要维护许多共享的状态（尤其是可变状态），Python中的列表、字典、集合都是线程安全的，所以使用线程而不是进程维护共享状态的代价相对较小。</li>
+<li>程序会花费大量时间在I/O操作上，没有太多并行计算的需求且不需占用太多的内存。</li>
+</ol>
+
+<p>以下情况需要使用多进程：</p>
+
+<ol>
+<li>程序执行计算密集型任务（如：字节码操作、数据处理、科学计算）。</li>
+<li>程序的输入可以并行的分成块，并且可以将运算结果合并。</li>
+<li>程序在内存使用方面没有任何限制且不强依赖于I/O操作（如：读写文件、套接字等）。</li>
+</ol>
+</blockquote></li>
+
+<li><p>异步处理：从调度程序的任务队列中挑选任务，该调度程序以交叉的形式执行这些任务，我们并不能保证任务将以某种顺序去执行，因为执行顺序取决于队列中的一项任务是否愿意将CPU处理时间让位给另一项任务。异步任务通常通过多任务协作处理的方式来实现，由于执行时间和顺序的不确定，因此需要通过回调式编程或者<code>future</code>对象来获取任务执行的结果。Python 3通过<code>asyncio</code>模块和<code>await</code>和<code>async</code>关键字（在Python 3.7中正式被列为关键字）来支持异步处理。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"> 异步I/O - async / await
+</span><span style="color:#e6db74"> &#34;&#34;&#34;</span>
+ <span style="color:#f92672">import</span> asyncio
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">num_generator</span>(m, n):
+     <span style="color:#e6db74">&#34;&#34;&#34;指定范围的数字生成器&#34;&#34;&#34;</span>
+     <span style="color:#66d9ef">yield</span> <span style="color:#f92672">from</span> range(m, n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+
+
+ async <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prime_filter</span>(m, n):
+     <span style="color:#e6db74">&#34;&#34;&#34;素数过滤器&#34;&#34;&#34;</span>
+     primes <span style="color:#f92672">=</span> []
+     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> num_generator(m, n):
+         flag <span style="color:#f92672">=</span> True
+         <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">2</span>, int(i <span style="color:#f92672">**</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)):
+             <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> j <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                 flag <span style="color:#f92672">=</span> False
+                 <span style="color:#66d9ef">break</span>
+         <span style="color:#66d9ef">if</span> flag:
+             <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Prime =&gt;&#39;</span>, i)
+             primes<span style="color:#f92672">.</span>append(i)
+
+         await asyncio<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.001</span>)
+     <span style="color:#66d9ef">return</span> tuple(primes)
+
+
+ async <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">square_mapper</span>(m, n):
+     <span style="color:#e6db74">&#34;&#34;&#34;平方映射器&#34;&#34;&#34;</span>
+     squares <span style="color:#f92672">=</span> []
+     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> num_generator(m, n):
+         <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Square =&gt;&#39;</span>, i <span style="color:#f92672">*</span> i)
+         squares<span style="color:#f92672">.</span>append(i <span style="color:#f92672">*</span> i)
+
+         await asyncio<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.001</span>)
+     <span style="color:#66d9ef">return</span> squares
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     <span style="color:#e6db74">&#34;&#34;&#34;主函数&#34;&#34;&#34;</span>
+     loop <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>get_event_loop()
+     future <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>gather(prime_filter(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">100</span>), square_mapper(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>))
+     future<span style="color:#f92672">.</span>add_done_callback(<span style="color:#66d9ef">lambda</span> x: <span style="color:#66d9ef">print</span>(x<span style="color:#f92672">.</span>result()))
+     loop<span style="color:#f92672">.</span>run_until_complete(future)
+     loop<span style="color:#f92672">.</span>close()
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div>
+<blockquote>
+<p>说明：上面的代码使用<code>get_event_loop</code>函数获得系统默认的事件循环，通过<code>gather</code>函数可以获得一个<code>future</code>对象，<code>future</code>对象的<code>add_done_callback</code>可以添加执行完成时的回调函数，<code>loop</code>对象的<code>run_until_complete</code>方法可以等待通过<code>future</code>对象获得协程执行结果。</p>
+</blockquote>
+
+<p>Python中有一个名为<code>aiohttp</code>的三方库，它提供了异步的HTTP客户端和服务器，这个三方库可以跟<code>asyncio</code>模块一起工作，并提供了对<code>Future</code>对象的支持。Python 3.6中引入了async和await来定义异步执行的函数以及创建异步上下文，在Python 3.7中它们正式成为了关键字。下面的代码异步的从5个URL中获取页面并通过正则表达式的命名捕获组提取了网站的标题。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"> <span style="color:#f92672">import</span> asyncio
+ <span style="color:#f92672">import</span> re
+
+ <span style="color:#f92672">import</span> aiohttp
+
+ PATTERN <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\&lt;title\&gt;(?P&lt;title&gt;.*)\&lt;\/title\&gt;&#39;</span>)
+
+
+ async <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fetch_page</span>(session, url):
+     async <span style="color:#66d9ef">with</span> session<span style="color:#f92672">.</span>get(url, ssl<span style="color:#f92672">=</span>False) <span style="color:#66d9ef">as</span> resp:
+         <span style="color:#66d9ef">return</span> await resp<span style="color:#f92672">.</span>text()
+
+
+ async <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">show_title</span>(url):
+     async <span style="color:#66d9ef">with</span> aiohttp<span style="color:#f92672">.</span>ClientSession() <span style="color:#66d9ef">as</span> session:
+         html <span style="color:#f92672">=</span> await fetch_page(session, url)
+         <span style="color:#66d9ef">print</span>(PATTERN<span style="color:#f92672">.</span>search(html)<span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#39;title&#39;</span>))
+
+
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+     urls <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;https://www.python.org/&#39;</span>,
+             <span style="color:#e6db74">&#39;https://git-scm.com/&#39;</span>,
+             <span style="color:#e6db74">&#39;https://www.jd.com/&#39;</span>,
+             <span style="color:#e6db74">&#39;https://www.taobao.com/&#39;</span>,
+             <span style="color:#e6db74">&#39;https://www.douban.com/&#39;</span>)
+     loop <span style="color:#f92672">=</span> asyncio<span style="color:#f92672">.</span>get_event_loop()
+     tasks <span style="color:#f92672">=</span> [show_title(url) <span style="color:#66d9ef">for</span> url <span style="color:#f92672">in</span> urls]
+     loop<span style="color:#f92672">.</span>run_until_complete(asyncio<span style="color:#f92672">.</span>wait(tasks))
+     loop<span style="color:#f92672">.</span>close()
+
+
+ <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+     main()</code></pre></div>
+<blockquote>
+<p>说明：<strong>异步I/O与多进程的比较</strong>。</p>
+
+<p>当程序不需要真正的并发性或并行性，而是更多的依赖于异步处理和回调时，asyncio就是一种很好的选择。如果程序中有大量的等待与休眠时，也应该考虑asyncio，它很适合编写没有实时数据处理需求的Web应用服务器。</p>
+</blockquote>
+
+<p>Python还有很多用于处理并行任务的三方库，例如：joblib、PyMP等。实际开发中，要提升系统的可扩展性和并发性通常有垂直扩展（增加单个节点的处理能力）和水平扩展（将单个节点变成多个节点）两种做法。可以通过消息队列来实现应用程序的解耦合，消息队列相当于是多线程同步队列的扩展版本，不同机器上的应用程序相当于就是线程，而共享的分布式消息队列就是原来程序中的Queue。消息队列（面向消息的中间件）的最流行和最标准化的实现是AMQP（高级消息队列协议），AMQP源于金融行业，提供了排队、路由、可靠传输、安全等功能，最著名的实现包括：Apache的ActiveMQ、RabbitMQ等。</p>
+
+<p>要实现任务的异步化，可以使用名为Celery的三方库。Celery是Python编写的分布式任务队列，它使用分布式消息进行工作，可以基于RabbitMQ或Redis来作为后端的消息代理。</p></li>
+</ul>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#python语言进阶">Python语言进阶</a></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

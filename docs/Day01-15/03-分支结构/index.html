@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03 分支结构 | Python-100天从新手到大师</title>
+
+
+<link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
+
+
+<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+
+
+
+<link rel="icon" href="/python100days/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://ezzdoc.github.io/python100days/"><span>Python-100天从新手到大师</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fpython100days\2f docs\2f Day01-15\2f 03-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="/python100days/posts/"><strong>相关文章</strong></a></li>
+<li><strong>Day01-15</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day01-15/01-%E5%88%9D%E8%AF%86Python/">01.初识Python</a></li>
+<li><a href="/python100days/docs/Day01-15/02-%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/">02.语言元素</a></li>
+<li><a href="/python100days/docs/Day01-15/03-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">03.分支结构</a></li>
+<li><a href="/python100days/docs/Day01-15/04-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">04.循环结构</a></li>
+<li><a href="/python100days/docs/Day01-15/05-%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/">05.构造程序逻辑</a></li>
+<li><a href="/python100days/docs/Day01-15/06-%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/">06.函数和模块的使用</a></li>
+<li><a href="/python100days/docs/Day01-15/07-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">07.字符串和常用数据结构</a></li>
+<li><a href="/python100days/docs/Day01-15/08-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">08.面向对象编程基础</a></li>
+<li><a href="/python100days/docs/Day01-15/09-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">09.面向对象进阶</a></li>
+<li><a href="/python100days/docs/Day01-15/10-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">10.图形用户界面和游戏开发</a></li>
+<li><a href="/python100days/docs/Day01-15/11-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">11.文件和异常</a></li>
+<li><a href="/python100days/docs/Day01-15/12-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">12.字符串和正则表达式</a></li>
+<li><a href="/python100days/docs/Day01-15/13-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">13.进程和线程</a></li>
+<li><a href="/python100days/docs/Day01-15/14-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">14.网络编程入门和网络应用开发</a></li>
+<li><a href="/python100days/docs/Day01-15/15-%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">15.图像和办公文档处理</a></li>
+</ul></li>
+<li><strong>Day16-20</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day16-20/16-20-Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">16-20.Python语言进阶</a></li>
+</ul></li>
+<li><strong>Day21-30</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day21-30/21-30-Web%E5%89%8D%E7%AB%AF%E6%A6%82%E8%BF%B0/">21-30.Web前端概述</a></li>
+</ul></li>
+<li><strong>Day31-35</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day31-35/31-35-%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">31-35.玩转Linux操作系统</a></li>
+</ul></li>
+<li><strong>Day36-40</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day36-40/36-38-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93MySQL/">36-38.关系型数据库MySQL</a></li>
+<li><a href="/python100days/docs/Day36-40/39-40-NoSQL%E5%85%A5%E9%97%A8/">39-40.NoSQL入门</a></li>
+</ul></li>
+<li><strong>Day41-55</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day41-55/41-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">41.快速上手</a></li>
+<li><a href="/python100days/docs/Day41-55/42-%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/">42.深入模型</a></li>
+<li><a href="/python100days/docs/Day41-55/43-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82/">43.静态资源和Ajax请求</a></li>
+<li><a href="/python100days/docs/Day41-55/44-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%BA%94%E7%94%A8/">44.表单的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/45-Cookie%E5%92%8CSession/">45.Cookie和Session</a></li>
+<li><a href="/python100days/docs/Day41-55/46-%E6%8A%A5%E8%A1%A8%E5%92%8C%E6%97%A5%E5%BF%97/">46.报表和日志</a></li>
+<li><a href="/python100days/docs/Day41-55/47-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/">47.中间件的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/48-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">48.前后端分离开发入门</a></li>
+<li><a href="/python100days/docs/Day41-55/49-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/">49.RESTful架构和DRF入门</a></li>
+<li><a href="/python100days/docs/Day41-55/50-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/">50.RESTful架构和DRF进阶</a></li>
+<li><a href="/python100days/docs/Day41-55/51-%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/">51.使用缓存</a></li>
+<li><a href="/python100days/docs/Day41-55/52-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">52.文件上传和富文本编辑</a></li>
+<li><a href="/python100days/docs/Day41-55/53-%E7%9F%AD%E4%BF%A1%E5%92%8C%E9%82%AE%E4%BB%B6/">53.短信和邮件</a></li>
+<li><a href="/python100days/docs/Day41-55/54-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">54.异步任务和定时任务</a></li>
+<li><a href="/python100days/docs/Day41-55/55-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%92%8C%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">55.单元测试和项目上线</a></li>
+</ul></li>
+<li><strong>Day56-60</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day56-60/56-Flask%E5%85%A5%E9%97%A8/">56.Flask入门</a></li>
+<li><a href="/python100days/docs/Day56-60/57-%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8/">57.模板的使用</a></li>
+<li><a href="/python100days/docs/Day56-60/58-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/">58.表单的处理</a></li>
+<li><a href="/python100days/docs/Day56-60/59-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/">59.数据库操作</a></li>
+<li><a href="/python100days/docs/Day56-60/60-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">60.项目实战</a></li>
+</ul></li>
+<li><strong>Day61-65</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day61-65/61-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/">61.预备知识</a></li>
+<li><a href="/python100days/docs/Day61-65/62-Tornado%E5%85%A5%E9%97%A8/">62.Tornado入门</a></li>
+<li><a href="/python100days/docs/Day61-65/63-%E5%BC%82%E6%AD%A5%E5%8C%96/">63.异步化</a></li>
+<li><a href="/python100days/docs/Day61-65/64-WebSocket%E7%9A%84%E5%BA%94%E7%94%A8/">64.WebSocket的应用</a></li>
+<li><a href="/python100days/docs/Day61-65/65-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">65.项目实战</a></li>
+</ul></li>
+<li><strong>Day66-75</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day66-75/66-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">66.网络爬虫和相关工具</a></li>
+<li><a href="/python100days/docs/Day66-75/67-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E8%A7%A3%E6%9E%90/">67.数据采集和解析</a></li>
+<li><a href="/python100days/docs/Day66-75/68-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/">68.存储数据</a></li>
+<li><a href="/python100days/docs/Day66-75/69-%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD/">69.并发下载</a></li>
+<li><a href="/python100days/docs/Day66-75/70-%E8%A7%A3%E6%9E%90%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/">70.解析动态内容</a></li>
+<li><a href="/python100days/docs/Day66-75/71-%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92%E5%92%8C%E9%AA%8C%E8%AF%81%E7%A0%81%E5%A4%84%E7%90%86/">71.表单交互和验证码处理</a></li>
+<li><a href="/python100days/docs/Day66-75/72-Scrapy%E5%85%A5%E9%97%A8/">72.Scrapy入门</a></li>
+<li><a href="/python100days/docs/Day66-75/73-Scrapy%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/">73.Scrapy高级应用</a></li>
+<li><a href="/python100days/docs/Day66-75/74-Scrapy%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E7%8E%B0/">74.Scrapy分布式实现</a></li>
+<li><a href="/python100days/docs/Day66-75/75-%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">75.爬虫项目实战</a></li>
+</ul></li>
+<li><strong>Day76-90</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day76-90/76-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">76.机器学习基础</a></li>
+<li><a href="/python100days/docs/Day76-90/77-Pandas%E7%9A%84%E5%BA%94%E7%94%A8/">77.Pandas的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/78-NumPy%E5%92%8CSciPy%E7%9A%84%E5%BA%94%E7%94%A8/">78.NumPy和SciPy的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/79-Matplotlib%E5%92%8C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">79.Matplotlib和数据可视化</a></li>
+<li><a href="/python100days/docs/Day76-90/80-k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB/">80.k最近邻分类</a></li>
+<li><a href="/python100days/docs/Day76-90/81-%E5%86%B3%E7%AD%96%E6%A0%91/">81.决策树</a></li>
+<li><a href="/python100days/docs/Day76-90/82-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">82.贝叶斯分类</a></li>
+<li><a href="/python100days/docs/Day76-90/83-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/">83.支持向量机</a></li>
+<li><a href="/python100days/docs/Day76-90/84-K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">84.K-均值聚类</a></li>
+<li><a href="/python100days/docs/Day76-90/85-%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/">85.回归分析</a></li>
+<li><a href="/python100days/docs/Day76-90/86-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8/">86.大数据分析入门</a></li>
+<li><a href="/python100days/docs/Day76-90/87-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%9B%E9%98%B6/">87.大数据分析进阶</a></li>
+<li><a href="/python100days/docs/Day76-90/88-Tensorflow%E5%85%A5%E9%97%A8/">88.Tensorflow入门</a></li>
+<li><a href="/python100days/docs/Day76-90/89-Tensorflow%E5%AE%9E%E6%88%98/">89.Tensorflow实战</a></li>
+<li><a href="/python100days/docs/Day76-90/90-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98/">90.推荐系统实战</a></li>
+</ul></li>
+<li><strong>Day91-100</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day91-100/91-%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%87%86%E5%A4%87/">91.团队项目开发准备</a></li>
+<li><a href="/python100days/docs/Day91-100/92-%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/">92.使用Docker部署服务</a></li>
+<li><a href="/python100days/docs/Day91-100/93-MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">93.MySQL性能优化</a></li>
+<li><a href="/python100days/docs/Day91-100/94-%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/">94.网络API接口设计</a></li>
+<li><a href="/python100days/docs/Day91-100/95-%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E5%95%86%E4%B8%9A%E9%A1%B9%E7%9B%AE/">95.使用Django开发商业项目</a></li>
+<li><a href="/python100days/docs/Day91-100/96-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">96.软件测试和自动化测试</a></li>
+<li><a href="/python100days/docs/Day91-100/97-%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90/">97.电商网站技术要点剖析</a></li>
+<li><a href="/python100days/docs/Day91-100/98-%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/">98.项目部署上线和性能调优</a></li>
+<li><a href="/python100days/docs/Day91-100/99-%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98/">99.面试中的公共问题</a></li>
+<li><a href="/python100days/docs/Day91-100/100-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/">100.英语面试</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/python100days/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>03 分支结构</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="分支结构">分支结构</h1>
+
+<h2 id="应用场景">应用场景</h2>
+
+<p>迄今为止，我们写的Python代码都是一条一条语句顺序执行，这种代码结构通常称之为顺序结构。然而仅有顺序结构并不能解决所有的问题，比如我们设计一个游戏，游戏第一关的通关条件是玩家获得1000分，那么在完成本局游戏后，我们要根据玩家得到分数来决定究竟是进入第二关，还是告诉玩家“Game Over”，这里就会产生两个分支，而且这两个分支只有一个会被执行。类似的场景还有很多，我们将这种结构称之为“分支结构”或“选择结构”。给大家一分钟的时间，你应该可以想到至少5个以上这样的例子，赶紧试一试。</p>
+
+<h2 id="if语句的使用">if语句的使用</h2>
+
+<p>在Python中，要构造分支结构可以使用<code>if</code>、<code>elif</code>和<code>else</code>关键字。所谓<strong>关键字</strong>就是有特殊含义的单词，像<code>if</code>和<code>else</code>就是专门用于构造分支结构的关键字，很显然你不能够使用它作为变量名（事实上，用作其他的标识符也是不可以）。下面的例子中演示了如何构造一个分支结构。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">用户身份验证
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Version: 0.1
+</span><span style="color:#e6db74">Author: 骆昊
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+
+username <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;请输入用户名: &#39;</span>)
+password <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;请输入口令: &#39;</span>)
+<span style="color:#75715e"># 如果希望输入口令时 终端中没有回显 可以使用getpass模块的getpass函数</span>
+<span style="color:#75715e"># import getpass</span>
+<span style="color:#75715e"># password = getpass.getpass(&#39;请输入口令: &#39;)</span>
+<span style="color:#66d9ef">if</span> username <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;admin&#39;</span> <span style="color:#f92672">and</span> password <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;123456&#39;</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;身份验证成功!&#39;</span>)
+<span style="color:#66d9ef">else</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;身份验证失败!&#39;</span>)</code></pre></div>
+<p>唯一需要说明的是和C/C++、Java等语言不同，Python中没有用花括号来构造代码块而是使用了缩进的方式来设置代码的层次结构，如果<code>if</code>条件成立的情况下需要执行多条语句，只要保持多条语句具有相同的缩进就可以了，换句话说连续的代码如果又保持了相同的缩进那么它们属于同一个代码块，相当于是一个执行的整体。</p>
+
+<p>当然如果要构造出更多的分支，可以使用<code>if…elif…else…</code>结构，例如下面的分段函数求值。</p>
+
+<p><img src="/Day01-15/res/formula_1.png" alt="$$f(x)=\begin{cases} 3x-5&amp;\text{(x&gt;1)}\\x+2&amp;\text{(-1}\leq\text{x}\leq\text{1)}\\5x+3&amp;\text {(x&lt;-1)}\end{cases}$$" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">分段函数求值
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">        3x - 5  (x &gt; 1)
+</span><span style="color:#e6db74">f(x) =  x + 2   (-1 &lt;= x &lt;= 1)
+</span><span style="color:#e6db74">        5x + 3  (x &lt; -1)
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Version: 0.1
+</span><span style="color:#e6db74">Author: 骆昊
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+
+x <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#39;x = &#39;</span>))
+<span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
+    y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> x <span style="color:#f92672">-</span> <span style="color:#ae81ff">5</span>
+<span style="color:#66d9ef">elif</span> x <span style="color:#f92672">&gt;=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+    y <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
+<span style="color:#66d9ef">else</span>:
+    y <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;f(</span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">) = </span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (x, y))</code></pre></div>
+<p>当然根据实际开发的需要，分支结构是可以嵌套的，例如判断是否通关以后还要根据你获得的宝物或者道具的数量对你的表现给出等级（比如点亮两颗或三颗星星），那么我们就需要在<code>if</code>的内部构造出一个新的分支结构，同理<code>elif</code>和<code>else</code>中也可以再构造新的分支，我们称之为嵌套的分支结构，也就是说上面的代码也可以写成下面的样子。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">分段函数求值
+</span><span style="color:#e6db74">		3x - 5	(x &gt; 1)
+</span><span style="color:#e6db74">f(x) =	x + 2	(-1 &lt;= x &lt;= 1)
+</span><span style="color:#e6db74">		5x + 3	(x &lt; -1)
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Version: 0.1
+</span><span style="color:#e6db74">Author: 骆昊
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+
+x <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#39;x = &#39;</span>))
+<span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
+    y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> x <span style="color:#f92672">-</span> <span style="color:#ae81ff">5</span>
+<span style="color:#66d9ef">else</span>:
+    <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        y <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
+    <span style="color:#66d9ef">else</span>:
+        y <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;f(</span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">) = </span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (x, y))</code></pre></div>
+<blockquote>
+<p><strong>说明：</strong> 大家可以自己感受一下这两种写法到底是哪一种更好。在之前我们提到的Python之禅中有这么一句话“Flat is better than nested.”，之所以提倡代码“扁平化”是因为嵌套结构的嵌套层次多了之后会严重的影响代码的可读性，所以能使用扁平化的结构时就不要使用嵌套。</p>
+</blockquote>
+
+<h2 id="练习">练习</h2>
+
+<h3 id="练习1-英制单位与公制单位互换">练习1：英制单位与公制单位互换</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">英制单位英寸和公制单位厘米互换
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Version: 0.1
+</span><span style="color:#e6db74">Author: 骆昊
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+
+value <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#39;请输入长度: &#39;</span>))
+unit <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#39;请输入单位: &#39;</span>)
+<span style="color:#66d9ef">if</span> unit <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;in&#39;</span> <span style="color:#f92672">or</span> unit <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;英寸&#39;</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%f</span><span style="color:#e6db74">英寸 = </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">厘米&#39;</span> <span style="color:#f92672">%</span> (value, value <span style="color:#f92672">*</span> <span style="color:#ae81ff">2.54</span>))
+<span style="color:#66d9ef">elif</span> unit <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;cm&#39;</span> <span style="color:#f92672">or</span> unit <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;厘米&#39;</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%f</span><span style="color:#e6db74">厘米 = </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">英寸&#39;</span> <span style="color:#f92672">%</span> (value, value <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.54</span>))
+<span style="color:#66d9ef">else</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;请输入有效的单位&#39;</span>)</code></pre></div>
+<h3 id="练习2-掷骰子决定做什么">练习2：掷骰子决定做什么</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">掷骰子决定做什么事情
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Version: 0.1
+</span><span style="color:#e6db74">Author: 骆昊
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+
+<span style="color:#f92672">from</span> random <span style="color:#f92672">import</span> randint
+
+face <span style="color:#f92672">=</span> randint(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">6</span>)
+<span style="color:#66d9ef">if</span> face <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;唱首歌&#39;</span>
+<span style="color:#66d9ef">elif</span> face <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>:
+    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;跳个舞&#39;</span>
+<span style="color:#66d9ef">elif</span> face <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>:
+    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;学狗叫&#39;</span>
+<span style="color:#66d9ef">elif</span> face <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>:
+    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;做俯卧撑&#39;</span>
+<span style="color:#66d9ef">elif</span> face <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>:
+    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;念绕口令&#39;</span>
+<span style="color:#66d9ef">else</span>:
+    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;讲冷笑话&#39;</span>
+<span style="color:#66d9ef">print</span>(result)</code></pre></div>
+<blockquote>
+<p><strong>说明：</strong> 上面的代码中使用了random模块的randint函数生成指定范围的随机数来模拟掷骰子。</p>
+</blockquote>
+
+<h3 id="练习3-百分制成绩转等级制">练习3：百分制成绩转等级制</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">百分制成绩转等级制成绩
+</span><span style="color:#e6db74">90分以上    --&gt; A
+</span><span style="color:#e6db74">80分~89分    --&gt; B
+</span><span style="color:#e6db74">70分~79分	   --&gt; C
+</span><span style="color:#e6db74">60分~69分    --&gt; D
+</span><span style="color:#e6db74">60分以下    --&gt; E
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Version: 0.1
+</span><span style="color:#e6db74">Author: 骆昊
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+
+score <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#39;请输入成绩: &#39;</span>))
+<span style="color:#66d9ef">if</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span>:
+    grade <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>
+<span style="color:#66d9ef">elif</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span>:
+    grade <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;B&#39;</span>
+<span style="color:#66d9ef">elif</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">70</span>:
+    grade <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C&#39;</span>
+<span style="color:#66d9ef">elif</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>:
+    grade <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;D&#39;</span>
+<span style="color:#66d9ef">else</span>:
+    grade <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;E&#39;</span>
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;对应的等级是:&#39;</span>, grade)</code></pre></div>
+<h3 id="练习4-输入三条边长如果能构成三角形就计算周长和面积">练习4：输入三条边长如果能构成三角形就计算周长和面积</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">判断输入的边长能否构成三角形
+</span><span style="color:#e6db74">如果能则计算出三角形的周长和面积
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Version: 0.1
+</span><span style="color:#e6db74">Author: 骆昊
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+
+<span style="color:#f92672">import</span> math
+
+a <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#39;a = &#39;</span>))
+b <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#39;b = &#39;</span>))
+c <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#39;c = &#39;</span>))
+<span style="color:#66d9ef">if</span> a <span style="color:#f92672">+</span> b <span style="color:#f92672">&gt;</span> c <span style="color:#f92672">and</span> a <span style="color:#f92672">+</span> c <span style="color:#f92672">&gt;</span> b <span style="color:#f92672">and</span> b <span style="color:#f92672">+</span> c <span style="color:#f92672">&gt;</span> a:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;周长: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (a <span style="color:#f92672">+</span> b <span style="color:#f92672">+</span> c))
+    p <span style="color:#f92672">=</span> (a <span style="color:#f92672">+</span> b <span style="color:#f92672">+</span> c) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+    area <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>sqrt(p <span style="color:#f92672">*</span> (p <span style="color:#f92672">-</span> a) <span style="color:#f92672">*</span> (p <span style="color:#f92672">-</span> b) <span style="color:#f92672">*</span> (p <span style="color:#f92672">-</span> c))
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;面积: </span><span style="color:#e6db74">%f</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (area))
+<span style="color:#66d9ef">else</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;不能构成三角形&#39;</span>)</code></pre></div>
+<blockquote>
+<p><strong>说明：</strong> 上面的代码中使用了<code>math</code>模块的<code>sqrt</code>函数来计算平方根。用边长计算三角形面积的公式叫做<a href="https://zh.wikipedia.org/zh-hans/海伦公式">海伦公式</a>。</p>
+</blockquote>
+
+<h3 id="练习5-个人所得税计算器">练习5：个人所得税计算器。</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">输入月收入和五险一金计算个人所得税
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Version: 0.1
+</span><span style="color:#e6db74">Author: 骆昊
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+
+salary <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#39;本月收入: &#39;</span>))
+insurance <span style="color:#f92672">=</span> float(input(<span style="color:#e6db74">&#39;五险一金: &#39;</span>))
+diff <span style="color:#f92672">=</span> salary <span style="color:#f92672">-</span> insurance <span style="color:#f92672">-</span> <span style="color:#ae81ff">3500</span>
+<span style="color:#66d9ef">if</span> diff <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>:
+    rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    deduction <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">elif</span> diff <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1500</span>:
+    rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.03</span>
+    deduction <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">elif</span> diff <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4500</span>:
+    rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span>
+    deduction <span style="color:#f92672">=</span> <span style="color:#ae81ff">105</span>
+<span style="color:#66d9ef">elif</span> diff <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">9000</span>:
+    rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>
+    deduction <span style="color:#f92672">=</span> <span style="color:#ae81ff">555</span>
+<span style="color:#66d9ef">elif</span> diff <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">35000</span>:
+    rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.25</span>
+    deduction <span style="color:#f92672">=</span> <span style="color:#ae81ff">1005</span>
+<span style="color:#66d9ef">elif</span> diff <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">55000</span>:
+    rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.3</span>
+    deduction <span style="color:#f92672">=</span> <span style="color:#ae81ff">2755</span>
+<span style="color:#66d9ef">elif</span> diff <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80000</span>:
+    rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.35</span>
+    deduction <span style="color:#f92672">=</span> <span style="color:#ae81ff">5505</span>
+<span style="color:#66d9ef">else</span>:
+    rate <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.45</span>
+    deduction <span style="color:#f92672">=</span> <span style="color:#ae81ff">13505</span>
+tax <span style="color:#f92672">=</span> abs(diff <span style="color:#f92672">*</span> rate <span style="color:#f92672">-</span> deduction)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;个人所得税: ￥</span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">元&#39;</span> <span style="color:#f92672">%</span> tax)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;实际到手收入: ￥</span><span style="color:#e6db74">%.2f</span><span style="color:#e6db74">元&#39;</span> <span style="color:#f92672">%</span> (diff <span style="color:#f92672">+</span> <span style="color:#ae81ff">3500</span> <span style="color:#f92672">-</span> tax))</code></pre></div>
+<blockquote>
+<p><strong>说明：</strong> 上面的代码中使用了Python内置的<code>abs()</code>函数取绝对值来处理<code>-0</code>的问题。</p>
+</blockquote>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#分支结构">分支结构</a>
+<ul>
+<li><a href="#应用场景">应用场景</a></li>
+<li><a href="#if语句的使用">if语句的使用</a></li>
+<li><a href="#练习">练习</a>
+<ul>
+<li><a href="#练习1-英制单位与公制单位互换">练习1：英制单位与公制单位互换</a></li>
+<li><a href="#练习2-掷骰子决定做什么">练习2：掷骰子决定做什么</a></li>
+<li><a href="#练习3-百分制成绩转等级制">练习3：百分制成绩转等级制</a></li>
+<li><a href="#练习4-输入三条边长如果能构成三角形就计算周长和面积">练习4：输入三条边长如果能构成三角形就计算周长和面积</a></li>
+<li><a href="#练习5-个人所得税计算器">练习5：个人所得税计算器。</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

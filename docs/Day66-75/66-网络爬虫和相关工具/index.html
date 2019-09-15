@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>66 网络爬虫和相关工具 | Python-100天从新手到大师</title>
+
+
+<link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
+
+
+<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+
+
+
+<link rel="icon" href="/python100days/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://ezzdoc.github.io/python100days/"><span>Python-100天从新手到大师</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fpython100days\2f docs\2f Day66-75\2f 66-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="/python100days/posts/"><strong>相关文章</strong></a></li>
+<li><strong>Day01-15</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day01-15/01-%E5%88%9D%E8%AF%86Python/">01.初识Python</a></li>
+<li><a href="/python100days/docs/Day01-15/02-%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/">02.语言元素</a></li>
+<li><a href="/python100days/docs/Day01-15/03-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">03.分支结构</a></li>
+<li><a href="/python100days/docs/Day01-15/04-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">04.循环结构</a></li>
+<li><a href="/python100days/docs/Day01-15/05-%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/">05.构造程序逻辑</a></li>
+<li><a href="/python100days/docs/Day01-15/06-%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/">06.函数和模块的使用</a></li>
+<li><a href="/python100days/docs/Day01-15/07-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">07.字符串和常用数据结构</a></li>
+<li><a href="/python100days/docs/Day01-15/08-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">08.面向对象编程基础</a></li>
+<li><a href="/python100days/docs/Day01-15/09-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">09.面向对象进阶</a></li>
+<li><a href="/python100days/docs/Day01-15/10-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">10.图形用户界面和游戏开发</a></li>
+<li><a href="/python100days/docs/Day01-15/11-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">11.文件和异常</a></li>
+<li><a href="/python100days/docs/Day01-15/12-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">12.字符串和正则表达式</a></li>
+<li><a href="/python100days/docs/Day01-15/13-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">13.进程和线程</a></li>
+<li><a href="/python100days/docs/Day01-15/14-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">14.网络编程入门和网络应用开发</a></li>
+<li><a href="/python100days/docs/Day01-15/15-%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">15.图像和办公文档处理</a></li>
+</ul></li>
+<li><strong>Day16-20</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day16-20/16-20-Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">16-20.Python语言进阶</a></li>
+</ul></li>
+<li><strong>Day21-30</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day21-30/21-30-Web%E5%89%8D%E7%AB%AF%E6%A6%82%E8%BF%B0/">21-30.Web前端概述</a></li>
+</ul></li>
+<li><strong>Day31-35</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day31-35/31-35-%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">31-35.玩转Linux操作系统</a></li>
+</ul></li>
+<li><strong>Day36-40</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day36-40/36-38-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93MySQL/">36-38.关系型数据库MySQL</a></li>
+<li><a href="/python100days/docs/Day36-40/39-40-NoSQL%E5%85%A5%E9%97%A8/">39-40.NoSQL入门</a></li>
+</ul></li>
+<li><strong>Day41-55</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day41-55/41-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">41.快速上手</a></li>
+<li><a href="/python100days/docs/Day41-55/42-%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/">42.深入模型</a></li>
+<li><a href="/python100days/docs/Day41-55/43-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82/">43.静态资源和Ajax请求</a></li>
+<li><a href="/python100days/docs/Day41-55/44-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%BA%94%E7%94%A8/">44.表单的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/45-Cookie%E5%92%8CSession/">45.Cookie和Session</a></li>
+<li><a href="/python100days/docs/Day41-55/46-%E6%8A%A5%E8%A1%A8%E5%92%8C%E6%97%A5%E5%BF%97/">46.报表和日志</a></li>
+<li><a href="/python100days/docs/Day41-55/47-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/">47.中间件的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/48-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">48.前后端分离开发入门</a></li>
+<li><a href="/python100days/docs/Day41-55/49-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/">49.RESTful架构和DRF入门</a></li>
+<li><a href="/python100days/docs/Day41-55/50-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/">50.RESTful架构和DRF进阶</a></li>
+<li><a href="/python100days/docs/Day41-55/51-%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/">51.使用缓存</a></li>
+<li><a href="/python100days/docs/Day41-55/52-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">52.文件上传和富文本编辑</a></li>
+<li><a href="/python100days/docs/Day41-55/53-%E7%9F%AD%E4%BF%A1%E5%92%8C%E9%82%AE%E4%BB%B6/">53.短信和邮件</a></li>
+<li><a href="/python100days/docs/Day41-55/54-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">54.异步任务和定时任务</a></li>
+<li><a href="/python100days/docs/Day41-55/55-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%92%8C%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">55.单元测试和项目上线</a></li>
+</ul></li>
+<li><strong>Day56-60</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day56-60/56-Flask%E5%85%A5%E9%97%A8/">56.Flask入门</a></li>
+<li><a href="/python100days/docs/Day56-60/57-%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8/">57.模板的使用</a></li>
+<li><a href="/python100days/docs/Day56-60/58-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/">58.表单的处理</a></li>
+<li><a href="/python100days/docs/Day56-60/59-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/">59.数据库操作</a></li>
+<li><a href="/python100days/docs/Day56-60/60-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">60.项目实战</a></li>
+</ul></li>
+<li><strong>Day61-65</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day61-65/61-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/">61.预备知识</a></li>
+<li><a href="/python100days/docs/Day61-65/62-Tornado%E5%85%A5%E9%97%A8/">62.Tornado入门</a></li>
+<li><a href="/python100days/docs/Day61-65/63-%E5%BC%82%E6%AD%A5%E5%8C%96/">63.异步化</a></li>
+<li><a href="/python100days/docs/Day61-65/64-WebSocket%E7%9A%84%E5%BA%94%E7%94%A8/">64.WebSocket的应用</a></li>
+<li><a href="/python100days/docs/Day61-65/65-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">65.项目实战</a></li>
+</ul></li>
+<li><strong>Day66-75</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day66-75/66-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">66.网络爬虫和相关工具</a></li>
+<li><a href="/python100days/docs/Day66-75/67-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E8%A7%A3%E6%9E%90/">67.数据采集和解析</a></li>
+<li><a href="/python100days/docs/Day66-75/68-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/">68.存储数据</a></li>
+<li><a href="/python100days/docs/Day66-75/69-%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD/">69.并发下载</a></li>
+<li><a href="/python100days/docs/Day66-75/70-%E8%A7%A3%E6%9E%90%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/">70.解析动态内容</a></li>
+<li><a href="/python100days/docs/Day66-75/71-%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92%E5%92%8C%E9%AA%8C%E8%AF%81%E7%A0%81%E5%A4%84%E7%90%86/">71.表单交互和验证码处理</a></li>
+<li><a href="/python100days/docs/Day66-75/72-Scrapy%E5%85%A5%E9%97%A8/">72.Scrapy入门</a></li>
+<li><a href="/python100days/docs/Day66-75/73-Scrapy%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/">73.Scrapy高级应用</a></li>
+<li><a href="/python100days/docs/Day66-75/74-Scrapy%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E7%8E%B0/">74.Scrapy分布式实现</a></li>
+<li><a href="/python100days/docs/Day66-75/75-%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">75.爬虫项目实战</a></li>
+</ul></li>
+<li><strong>Day76-90</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day76-90/76-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">76.机器学习基础</a></li>
+<li><a href="/python100days/docs/Day76-90/77-Pandas%E7%9A%84%E5%BA%94%E7%94%A8/">77.Pandas的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/78-NumPy%E5%92%8CSciPy%E7%9A%84%E5%BA%94%E7%94%A8/">78.NumPy和SciPy的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/79-Matplotlib%E5%92%8C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">79.Matplotlib和数据可视化</a></li>
+<li><a href="/python100days/docs/Day76-90/80-k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB/">80.k最近邻分类</a></li>
+<li><a href="/python100days/docs/Day76-90/81-%E5%86%B3%E7%AD%96%E6%A0%91/">81.决策树</a></li>
+<li><a href="/python100days/docs/Day76-90/82-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">82.贝叶斯分类</a></li>
+<li><a href="/python100days/docs/Day76-90/83-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/">83.支持向量机</a></li>
+<li><a href="/python100days/docs/Day76-90/84-K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">84.K-均值聚类</a></li>
+<li><a href="/python100days/docs/Day76-90/85-%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/">85.回归分析</a></li>
+<li><a href="/python100days/docs/Day76-90/86-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8/">86.大数据分析入门</a></li>
+<li><a href="/python100days/docs/Day76-90/87-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%9B%E9%98%B6/">87.大数据分析进阶</a></li>
+<li><a href="/python100days/docs/Day76-90/88-Tensorflow%E5%85%A5%E9%97%A8/">88.Tensorflow入门</a></li>
+<li><a href="/python100days/docs/Day76-90/89-Tensorflow%E5%AE%9E%E6%88%98/">89.Tensorflow实战</a></li>
+<li><a href="/python100days/docs/Day76-90/90-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98/">90.推荐系统实战</a></li>
+</ul></li>
+<li><strong>Day91-100</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day91-100/91-%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%87%86%E5%A4%87/">91.团队项目开发准备</a></li>
+<li><a href="/python100days/docs/Day91-100/92-%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/">92.使用Docker部署服务</a></li>
+<li><a href="/python100days/docs/Day91-100/93-MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">93.MySQL性能优化</a></li>
+<li><a href="/python100days/docs/Day91-100/94-%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/">94.网络API接口设计</a></li>
+<li><a href="/python100days/docs/Day91-100/95-%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E5%95%86%E4%B8%9A%E9%A1%B9%E7%9B%AE/">95.使用Django开发商业项目</a></li>
+<li><a href="/python100days/docs/Day91-100/96-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">96.软件测试和自动化测试</a></li>
+<li><a href="/python100days/docs/Day91-100/97-%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90/">97.电商网站技术要点剖析</a></li>
+<li><a href="/python100days/docs/Day91-100/98-%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/">98.项目部署上线和性能调优</a></li>
+<li><a href="/python100days/docs/Day91-100/99-%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98/">99.面试中的公共问题</a></li>
+<li><a href="/python100days/docs/Day91-100/100-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/">100.英语面试</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/python100days/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>66 网络爬虫和相关工具</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="网络爬虫和相关工具">网络爬虫和相关工具</h1>
+
+<h2 id="网络爬虫的概念">网络爬虫的概念</h2>
+
+<p>网络爬虫（web crawler），以前经常称之为网络蜘蛛（spider），是按照一定的规则自动浏览万维网并获取信息的机器人程序（或脚本），曾经被广泛的应用于互联网搜索引擎。使用过互联网和浏览器的人都知道，网页中除了供用户阅读的文字信息之外，还包含一些超链接。网络爬虫系统正是通过网页中的超链接信息不断获得网络上的其它页面。正因如此，网络数据采集的过程就像一个爬虫或者蜘蛛在网络上漫游，所以才被形象的称为网络爬虫或者网络蜘蛛。</p>
+
+<h3 id="爬虫的应用领域">爬虫的应用领域</h3>
+
+<p>在理想的状态下，所有ICP（Internet Content Provider）都应该为自己的网站提供API接口来共享它们允许其他程序获取的数据，在这种情况下爬虫就不是必需品，国内比较有名的电商平台（如淘宝、京东等）、社交平台（如腾讯微博等）等网站都提供了自己的Open API，但是这类Open API通常会对可以抓取的数据以及抓取数据的频率进行限制。对于大多数的公司而言，及时的获取行业相关数据是企业生存的重要环节之一，然而大部分企业在行业数据方面的匮乏是其与生俱来的短板，合理的利用爬虫来获取数据并从中提取出有商业价值的信息是至关重要的。当然爬虫还有很多重要的应用领域，下面列举了其中的一部分：</p>
+
+<ol>
+<li>搜索引擎</li>
+<li>新闻聚合</li>
+<li>社交应用</li>
+<li>舆情监控</li>
+<li>行业数据</li>
+</ol>
+
+<h2 id="合法性和背景调研">合法性和背景调研</h2>
+
+<h3 id="爬虫合法性探讨">爬虫合法性探讨</h3>
+
+<ol>
+<li>网络爬虫领域目前还属于拓荒阶段，虽然互联网世界已经通过自己的游戏规则建立起一定的道德规范(Robots协议，全称是“网络爬虫排除标准”)，但法律部分还在建立和完善中，也就是说，现在这个领域暂时还是灰色地带。</li>
+<li>“法不禁止即为许可”，如果爬虫就像浏览器一样获取的是前端显示的数据（网页上的公开信息）而不是网站后台的私密敏感信息，就不太担心法律法规的约束，因为目前大数据产业链的发展速度远远超过了法律的完善程度。</li>
+<li>在爬取网站的时候，需要限制自己的爬虫遵守Robots协议，同时控制网络爬虫程序的抓取数据的速度；在使用数据的时候，必须要尊重网站的知识产权（从Web 2.0时代开始，虽然Web上的数据很多都是由用户提供的，但是网站平台是投入了运营成本的，当用户在注册和发布内容时，平台通常就已经获得了对数据的所有权、使用权和分发权）。如果违反了这些规定，在打官司的时候败诉几率相当高。</li>
+</ol>
+
+<h3 id="robots-txt文件">Robots.txt文件</h3>
+
+<p>大多数网站都会定义robots.txt文件，下面以淘宝的<a href="http://www.taobao.com/robots.txt">robots.txt</a>文件为例，看看该网站对爬虫有哪些限制。</p>
+
+<pre><code>
+User-agent:  Baiduspider
+Allow:  /article
+Allow:  /oshtml
+Disallow:  /product/
+Disallow:  /
+
+User-Agent:  Googlebot
+Allow:  /article
+Allow:  /oshtml
+Allow:  /product
+Allow:  /spu
+Allow:  /dianpu
+Allow:  /oversea
+Allow:  /list
+Disallow:  /
+
+User-agent:  Bingbot
+Allow:  /article
+Allow:  /oshtml
+Allow:  /product
+Allow:  /spu
+Allow:  /dianpu
+Allow:  /oversea
+Allow:  /list
+Disallow:  /
+
+User-Agent:  360Spider
+Allow:  /article
+Allow:  /oshtml
+Disallow:  /
+
+User-Agent:  Yisouspider
+Allow:  /article
+Allow:  /oshtml
+Disallow:  /
+
+User-Agent:  Sogouspider
+Allow:  /article
+Allow:  /oshtml
+Allow:  /product
+Disallow:  /
+
+User-Agent:  Yahoo!  Slurp
+Allow:  /product
+Allow:  /spu
+Allow:  /dianpu
+Allow:  /oversea
+Allow:  /list
+Disallow:  /
+
+User-Agent:  *
+Disallow:  /
+</code></pre>
+
+<p>注意上面robots.txt第一段的最后一行，通过设置“Disallow: /”禁止百度爬虫访问除了“Allow”规定页面外的其他所有页面。因此当你在百度搜索“淘宝”的时候，搜索结果下方会出现：“由于该网站的robots.txt文件存在限制指令（限制搜索引擎抓取），系统无法提供该页面的内容描述”。百度作为一个搜索引擎，至少在表面上遵守了淘宝网的robots.txt协议，所以用户不能从百度上搜索到淘宝内部的产品信息。</p>
+
+<p><img src="/Day66-75/res/baidu-search-taobao.png" alt="" /></p>
+
+<h2 id="相关工具介绍">相关工具介绍</h2>
+
+<h3 id="http协议">HTTP协议</h3>
+
+<p>在开始讲解爬虫之前，我们稍微对HTTP（超文本传输协议）做一些回顾，因为我们在网页上看到的内容通常是浏览器执行HTML语言得到的结果，而HTTP就是传输HTML数据的协议。HTTP和其他很多应用级协议一样是构建在TCP（传输控制协议）之上的，它利用了TCP提供的可靠的传输服务实现了Web应用中的数据交换。按照维基百科上的介绍，设计HTTP最初的目的是为了提供一种发布和接收<a href="https://zh.wikipedia.org/wiki/HTML">HTML</a>页面的方法，也就是说这个协议是浏览器和Web服务器之间传输的数据的载体。关于这个协议的详细信息以及目前的发展状况，大家可以阅读阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2016/08/http.html">《HTTP 协议入门》</a>、<a href="http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html">《互联网协议入门》</a>系列以及<a href="http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html">《图解HTTPS协议》</a>进行了解，下图是我在四川省网络通信技术重点实验室工作期间用开源协议分析工具Ethereal（抓包工具WireShark的前身）截取的访问百度首页时的HTTP请求和响应的报文（协议数据），由于Ethereal截取的是经过网络适配器的数据，因此可以清晰的看到从物理链路层到应用层的协议数据。</p>
+
+<p>HTTP请求（请求行+请求头+空行+[消息体]）：</p>
+
+<p><img src="/Day66-75/res/http-request.png" alt="" /></p>
+
+<p>HTTP响应（响应行+响应头+空行+消息体）：</p>
+
+<p><img src="/Day66-75/res/http-response.png" alt="" /></p>
+
+<blockquote>
+<p>说明：但愿这两张如同泛黄照片般的截图帮助你大概的了解到HTTP是一个怎样的协议。</p>
+</blockquote>
+
+<h3 id="相关工具">相关工具</h3>
+
+<ol>
+<li>Chrome Developer Tools：谷歌浏览器内置的开发者工具。</li>
+</ol>
+
+<p><img src="/Day66-75/res/chrome-developer-tools.png" alt="" /></p>
+
+<ol>
+<li>POSTMAN：功能强大的网页调试与RESTful请求工具。</li>
+</ol>
+
+<p><img src="/Day66-75/res/postman.png" alt="" /></p>
+
+<ol>
+<li><p>HTTPie：命令行HTTP客户端。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">pip3 install httpie</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">http --header http://www.scu.edu.cn
+HTTP/1.1 <span style="color:#ae81ff">200</span> OK
+Accept-Ranges: bytes
+Cache-Control: private, max-age<span style="color:#f92672">=</span><span style="color:#ae81ff">600</span>
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Language: zh-CN
+Content-Length: <span style="color:#ae81ff">14403</span>
+Content-Type: text/html
+Date: Sun, <span style="color:#ae81ff">27</span> May <span style="color:#ae81ff">2018</span> <span style="color:#ae81ff">15</span>:38:25 GMT
+ETag: <span style="color:#e6db74">&#34;e6ec-56d3032d70a32-gzip&#34;</span>
+Expires: Sun, <span style="color:#ae81ff">27</span> May <span style="color:#ae81ff">2018</span> <span style="color:#ae81ff">15</span>:48:25 GMT
+Keep-Alive: timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, max<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>
+Last-Modified: Sun, <span style="color:#ae81ff">27</span> May <span style="color:#ae81ff">2018</span> <span style="color:#ae81ff">13</span>:44:22 GMT
+Server: VWebServer
+Vary: User-Agent,Accept-Encoding
+X-Frame-Options: SAMEORIGIN</code></pre></div></li>
+
+<li><p>BuiltWith：识别网站所用技术的工具。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">pip3 install builtwith</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> builtwith
+<span style="color:#f92672">&gt;&gt;&gt;</span> builtwith<span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;http://www.bootcss.com/&#39;</span>)
+{<span style="color:#e6db74">&#39;web-servers&#39;</span>: [<span style="color:#e6db74">&#39;Nginx&#39;</span>], <span style="color:#e6db74">&#39;font-scripts&#39;</span>: [<span style="color:#e6db74">&#39;Font Awesome&#39;</span>], <span style="color:#e6db74">&#39;javascript-frameworks&#39;</span>: [<span style="color:#e6db74">&#39;Lo-dash&#39;</span>, <span style="color:#e6db74">&#39;Underscore.js&#39;</span>, <span style="color:#e6db74">&#39;Vue.js&#39;</span>, <span style="color:#e6db74">&#39;Zepto&#39;</span>, <span style="color:#e6db74">&#39;jQuery&#39;</span>], <span style="color:#e6db74">&#39;web-frameworks&#39;</span>: [<span style="color:#e6db74">&#39;Twitter Bootstrap&#39;</span>]}
+<span style="color:#f92672">&gt;&gt;&gt;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> ssl
+<span style="color:#f92672">&gt;&gt;&gt;</span> ssl<span style="color:#f92672">.</span>_create_default_https_context <span style="color:#f92672">=</span> ssl<span style="color:#f92672">.</span>_create_unverified_context
+<span style="color:#f92672">&gt;&gt;&gt;</span> builtwith<span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#39;https://www.jianshu.com/&#39;</span>)
+{<span style="color:#e6db74">&#39;web-servers&#39;</span>: [<span style="color:#e6db74">&#39;Tengine&#39;</span>], <span style="color:#e6db74">&#39;web-frameworks&#39;</span>: [<span style="color:#e6db74">&#39;Twitter Bootstrap&#39;</span>, <span style="color:#e6db74">&#39;Ruby on Rails&#39;</span>], <span style="color:#e6db74">&#39;programming-languages&#39;</span>: [<span style="color:#e6db74">&#39;Ruby&#39;</span>]}</code></pre></div></li>
+
+<li><p>python-whois：查询网站所有者的工具。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">pip3 install python-whois</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> whois
+<span style="color:#f92672">&gt;&gt;&gt;</span> whois<span style="color:#f92672">.</span>whois(<span style="color:#e6db74">&#39;baidu.com&#39;</span>)
+{<span style="color:#e6db74">&#39;domain_name&#39;</span>: [<span style="color:#e6db74">&#39;BAIDU.COM&#39;</span>, <span style="color:#e6db74">&#39;baidu.com&#39;</span>], <span style="color:#e6db74">&#39;registrar&#39;</span>: <span style="color:#e6db74">&#39;MarkMonitor, Inc.&#39;</span>, <span style="color:#e6db74">&#39;whois_server&#39;</span>: <span style="color:#e6db74">&#39;whois.markmonitor.com&#39;</span>, <span style="color:#e6db74">&#39;referral_url&#39;</span>: None, <span style="color:#e6db74">&#39;updated_date&#39;</span>: [datetime<span style="color:#f92672">.</span>datetime(<span style="color:#ae81ff">2017</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">28</span>), datetime<span style="color:#f92672">.</span>datetime(<span style="color:#ae81ff">2017</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">28</span>)], <span style="color:#e6db74">&#39;creation_date&#39;</span>: [datetime<span style="color:#f92672">.</span>datetime(<span style="color:#ae81ff">1999</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">17</span>), datetime<span style="color:#f92672">.</span>datetime(<span style="color:#ae81ff">1999</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">17</span>)], <span style="color:#e6db74">&#39;expiration_date&#39;</span>: [datetime<span style="color:#f92672">.</span>datetime(<span style="color:#ae81ff">2026</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">17</span>), datetime<span style="color:#f92672">.</span>datetime(<span style="color:#ae81ff">2026</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)], <span style="color:#e6db74">&#39;name_servers&#39;</span>: [<span style="color:#e6db74">&#39;DNS.BAIDU.COM&#39;</span>, <span style="color:#e6db74">&#39;NS2.BAIDU.COM&#39;</span>, <span style="color:#e6db74">&#39;NS3.BAIDU.COM&#39;</span>, <span style="color:#e6db74">&#39;NS4.BAIDU.COM&#39;</span>, <span style="color:#e6db74">&#39;NS7.BAIDU.COM&#39;</span>, <span style="color:#e6db74">&#39;dns.baidu.com&#39;</span>, <span style="color:#e6db74">&#39;ns4.baidu.com&#39;</span>, <span style="color:#e6db74">&#39;ns3.baidu.com&#39;</span>, <span style="color:#e6db74">&#39;ns7.baidu.com&#39;</span>, <span style="color:#e6db74">&#39;ns2.baidu.com&#39;</span>], <span style="color:#e6db74">&#39;status&#39;</span>: [<span style="color:#e6db74">&#39;clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited&#39;</span>, <span style="color:#e6db74">&#39;clientTransferProhibited https://icann.org/epp#clientTransferProhibited&#39;</span>, <span style="color:#e6db74">&#39;clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited&#39;</span>, <span style="color:#e6db74">&#39;serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited&#39;</span>, <span style="color:#e6db74">&#39;serverTransferProhibited https://icann.org/epp#serverTransferProhibited&#39;</span>, <span style="color:#e6db74">&#39;serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited&#39;</span>, <span style="color:#e6db74">&#39;clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)&#39;</span>, <span style="color:#e6db74">&#39;clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)&#39;</span>, <span style="color:#e6db74">&#39;clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)&#39;</span>, <span style="color:#e6db74">&#39;serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)&#39;</span>, <span style="color:#e6db74">&#39;serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)&#39;</span>, <span style="color:#e6db74">&#39;serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)&#39;</span>], <span style="color:#e6db74">&#39;emails&#39;</span>: [<span style="color:#e6db74">&#39;abusecomplaints@markmonitor.com&#39;</span>, <span style="color:#e6db74">&#39;whoisrelay@markmonitor.com&#39;</span>], <span style="color:#e6db74">&#39;dnssec&#39;</span>: <span style="color:#e6db74">&#39;unsigned&#39;</span>, <span style="color:#e6db74">&#39;name&#39;</span>: None, <span style="color:#e6db74">&#39;org&#39;</span>: <span style="color:#e6db74">&#39;Beijing Baidu Netcom Science Technology Co., Ltd.&#39;</span>, <span style="color:#e6db74">&#39;address&#39;</span>: None, <span style="color:#e6db74">&#39;city&#39;</span>: None, <span style="color:#e6db74">&#39;state&#39;</span>: <span style="color:#e6db74">&#39;Beijing&#39;</span>, <span style="color:#e6db74">&#39;zipcode&#39;</span>: None, <span style="color:#e6db74">&#39;country&#39;</span>: <span style="color:#e6db74">&#39;CN&#39;</span>}</code></pre></div></li>
+
+<li><p>robotparser：解析robots.txt的工具。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> urllib <span style="color:#f92672">import</span> robotparser
+<span style="color:#f92672">&gt;&gt;&gt;</span> parser <span style="color:#f92672">=</span> robotparser<span style="color:#f92672">.</span>RobotFileParser()
+<span style="color:#f92672">&gt;&gt;&gt;</span> parser<span style="color:#f92672">.</span>set_url(<span style="color:#e6db74">&#39;https://www.taobao.com/robots.txt&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> parser<span style="color:#f92672">.</span>read()
+<span style="color:#f92672">&gt;&gt;&gt;</span> parser<span style="color:#f92672">.</span>can_fetch(<span style="color:#e6db74">&#39;Baiduspider&#39;</span>, <span style="color:#e6db74">&#39;http://www.taobao.com/article&#39;</span>)
+True
+<span style="color:#f92672">&gt;&gt;&gt;</span> parser<span style="color:#f92672">.</span>can_fetch(<span style="color:#e6db74">&#39;Baiduspider&#39;</span>, <span style="color:#e6db74">&#39;http://www.taobao.com/product&#39;</span>)
+False</code></pre></div></li>
+</ol>
+
+<h2 id="一个简单的爬虫">一个简单的爬虫</h2>
+
+<p>一个基本的爬虫通常分为数据采集（网页下载）、数据处理（网页解析）和数据存储（将有用的信息持久化）三个部分的内容，当然更为高级的爬虫在数据采集和处理时会使用并发编程或分布式技术，这就需要有调度器（安排线程或进程执行对应的任务）、后台管理程序（监控爬虫的工作状态以及检查数据抓取的结果）等的参与。</p>
+
+<p><img src="/Day66-75/res/crawler-workflow.png" alt="" /></p>
+
+<p>一般来说，爬虫的工作流程包括以下几个步骤：</p>
+
+<ol>
+<li>设定抓取目标（种子页面/起始页面）并获取网页。</li>
+<li>当服务器无法访问时，按照指定的重试次数尝试重新下载页面。</li>
+<li>在需要的时候设置用户代理或隐藏真实IP，否则可能无法访问页面。</li>
+<li>对获取的页面进行必要的解码操作然后抓取出需要的信息。</li>
+<li>在获取的页面中通过某种方式（如正则表达式）抽取出页面中的链接信息。</li>
+<li>对链接进行进一步的处理（获取页面并重复上面的动作）。</li>
+<li>将有用的信息进行持久化以备后续的处理。</li>
+</ol>
+
+<p>下面的例子给出了一个从“搜狐体育”上获取NBA新闻标题和链接的爬虫。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> urllib.error <span style="color:#f92672">import</span> URLError
+<span style="color:#f92672">from</span> urllib.request <span style="color:#f92672">import</span> urlopen
+
+<span style="color:#f92672">import</span> re
+<span style="color:#f92672">import</span> pymysql
+<span style="color:#f92672">import</span> ssl
+
+<span style="color:#f92672">from</span> pymysql <span style="color:#f92672">import</span> Error
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decode_page</span>(page_bytes, charsets<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;utf-8&#39;</span>,)):
+    <span style="color:#e6db74">&#34;&#34;&#34;通过指定的字符集对页面进行解码(不是每个网站都将字符集设置为utf-8)&#34;&#34;&#34;</span>
+    page_html <span style="color:#f92672">=</span> None
+    <span style="color:#66d9ef">for</span> charset <span style="color:#f92672">in</span> charsets:
+        <span style="color:#66d9ef">try</span>:
+            page_html <span style="color:#f92672">=</span> page_bytes<span style="color:#f92672">.</span>decode(charset)
+            <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">UnicodeDecodeError</span>:
+            <span style="color:#66d9ef">pass</span>
+            <span style="color:#75715e"># logging.error(&#39;Decode:&#39;, error)</span>
+    <span style="color:#66d9ef">return</span> page_html
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_page_html</span>(seed_url, <span style="color:#f92672">*</span>, retry_times<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, charsets<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;utf-8&#39;</span>,)):
+    <span style="color:#e6db74">&#34;&#34;&#34;获取页面的HTML代码(通过递归实现指定次数的重试操作)&#34;&#34;&#34;</span>
+    page_html <span style="color:#f92672">=</span> None
+    <span style="color:#66d9ef">try</span>:
+        page_html <span style="color:#f92672">=</span> decode_page(urlopen(seed_url)<span style="color:#f92672">.</span>read(), charsets)
+    <span style="color:#66d9ef">except</span> URLError:
+        <span style="color:#75715e"># logging.error(&#39;URL:&#39;, error)</span>
+        <span style="color:#66d9ef">if</span> retry_times <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">return</span> get_page_html(seed_url, retry_times<span style="color:#f92672">=</span>retry_times <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>,
+                                 charsets<span style="color:#f92672">=</span>charsets)
+    <span style="color:#66d9ef">return</span> page_html
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_matched_parts</span>(page_html, pattern_str, pattern_ignore_case<span style="color:#f92672">=</span>re<span style="color:#f92672">.</span>I):
+    <span style="color:#e6db74">&#34;&#34;&#34;从页面中提取需要的部分(通常是链接也可以通过正则表达式进行指定)&#34;&#34;&#34;</span>
+    pattern_regex <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(pattern_str, pattern_ignore_case)
+    <span style="color:#66d9ef">return</span> pattern_regex<span style="color:#f92672">.</span>findall(page_html) <span style="color:#66d9ef">if</span> page_html <span style="color:#66d9ef">else</span> []
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">start_crawl</span>(seed_url, match_pattern, <span style="color:#f92672">*</span>, max_depth<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;开始执行爬虫程序并对指定的数据进行持久化操作&#34;&#34;&#34;</span>
+    conn <span style="color:#f92672">=</span> pymysql<span style="color:#f92672">.</span>connect(host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;localhost&#39;</span>, port<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span>,
+                           database<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;crawler&#39;</span>, user<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;root&#39;</span>,
+                           password<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;123456&#39;</span>, charset<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf8&#39;</span>)
+    <span style="color:#66d9ef">try</span>:
+        <span style="color:#66d9ef">with</span> conn<span style="color:#f92672">.</span>cursor() <span style="color:#66d9ef">as</span> cursor:
+            url_list <span style="color:#f92672">=</span> [seed_url]
+            <span style="color:#75715e"># 通过下面的字典避免重复抓取并控制抓取深度</span>
+            visited_url_list <span style="color:#f92672">=</span> {seed_url: <span style="color:#ae81ff">0</span>}
+            <span style="color:#66d9ef">while</span> url_list:
+                current_url <span style="color:#f92672">=</span> url_list<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)
+                depth <span style="color:#f92672">=</span> visited_url_list[current_url]
+                <span style="color:#66d9ef">if</span> depth <span style="color:#f92672">!=</span> max_depth:
+                    <span style="color:#75715e"># 尝试用utf-8/gbk/gb2312三种字符集进行页面解码</span>
+                    page_html <span style="color:#f92672">=</span> get_page_html(current_url, charsets<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;utf-8&#39;</span>, <span style="color:#e6db74">&#39;gbk&#39;</span>, <span style="color:#e6db74">&#39;gb2312&#39;</span>))
+                    links_list <span style="color:#f92672">=</span> get_matched_parts(page_html, match_pattern)
+                    param_list <span style="color:#f92672">=</span> []
+                    <span style="color:#66d9ef">for</span> link <span style="color:#f92672">in</span> links_list:
+                        <span style="color:#66d9ef">if</span> link <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> visited_url_list:
+                            visited_url_list[link] <span style="color:#f92672">=</span> depth <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+                            page_html <span style="color:#f92672">=</span> get_page_html(link, charsets<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;utf-8&#39;</span>, <span style="color:#e6db74">&#39;gbk&#39;</span>, <span style="color:#e6db74">&#39;gb2312&#39;</span>))
+                            headings <span style="color:#f92672">=</span> get_matched_parts(page_html, <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;h1&gt;(.*)&lt;span&#39;</span>)
+                            <span style="color:#66d9ef">if</span> headings:
+                                param_list<span style="color:#f92672">.</span>append((headings[<span style="color:#ae81ff">0</span>], link))
+                    cursor<span style="color:#f92672">.</span>executemany(<span style="color:#e6db74">&#39;insert into tb_result values (default, </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">, </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">)&#39;</span>,
+                                       param_list)
+                    conn<span style="color:#f92672">.</span>commit()
+    <span style="color:#66d9ef">except</span> Error:
+        <span style="color:#66d9ef">pass</span>
+        <span style="color:#75715e"># logging.error(&#39;SQL:&#39;, error)</span>
+    <span style="color:#66d9ef">finally</span>:
+        conn<span style="color:#f92672">.</span>close()
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    <span style="color:#e6db74">&#34;&#34;&#34;主函数&#34;&#34;&#34;</span>
+    ssl<span style="color:#f92672">.</span>_create_default_https_context <span style="color:#f92672">=</span> ssl<span style="color:#f92672">.</span>_create_unverified_context
+    start_crawl(<span style="color:#e6db74">&#39;http://sports.sohu.com/nba_a.shtml&#39;</span>,
+                <span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&lt;a[^&gt;]+test=a\s[^&gt;]*href=[&#34;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">](.*?)[&#34;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">]&#39;</span>,
+                max_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    main()</code></pre></div>
+<p>由于使用了MySQL实现持久化操作，所以要先启动MySQL服务器并创建名为<code>crawler</code>的数据库和名为<code>tb_result</code>的二维表才能运行该程序。</p>
+
+<h2 id="爬虫注意事项">爬虫注意事项</h2>
+
+<p>通过上面的例子，我们对爬虫已经有了一个感性的认识，在编写爬虫时有以下一些注意事项：</p>
+
+<ol>
+<li><p>处理相对链接。有的时候我们从页面中获取的链接不是一个完整的绝对链接而是一个相对链接，这种情况下需要将其与URL前缀进行拼接（<code>urllib.parse</code>中的<code>urljoin()</code>函数可以完成此项操作）。</p></li>
+
+<li><p>设置代理服务。有些网站会限制访问的区域（例如美国的Netflix屏蔽了很多国家的访问），有些爬虫需要隐藏自己的身份，在这种情况下可以设置使用代理服务器，代理服务器有免费的服务器和付费的商业服务器，但后者稳定性和可用性都更好，强烈建议在商业项目中使用付费的代理服务器。可以通过修改<code>urllib.request</code>中的<code>ProxyHandler</code>来为请求设置代理服务器。</p></li>
+
+<li><p>限制下载速度。如果我们的爬虫获取网页的速度过快，可能就会面临被封禁或者产生“损害动产”的风险（这个可能会导致吃官司且败诉），可以在两次下载之间添加延时从而对爬虫进行限速。</p></li>
+
+<li><p>避免爬虫陷阱。有些网站会动态生成页面内容，这会导致产生无限多的页面（例如在线万年历通常会有无穷无尽的链接）。可以通过记录到达当前页面经过了多少个链接（链接深度）来解决该问题，当达到事先设定的最大深度时爬虫就不再像队列中添加该网页中的链接了。</p></li>
+
+<li><p>SSL相关问题。在使用<code>urlopen</code>打开一个HTTPS链接时会验证一次SSL证书，如果不做出处理会产生错误提示“SSL: CERTIFICATE_VERIFY_FAILED”，可以通过以下两种方式加以解决：</p>
+
+<ul>
+<li><p>使用未经验证的上下文</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> ssl
+
+request <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>Request(url<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;...&#39;</span>, headers<span style="color:#f92672">=</span>{<span style="color:#f92672">...</span>})
+context <span style="color:#f92672">=</span> ssl<span style="color:#f92672">.</span>_create_unverified_context()
+web_page <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>urlopen(request, context<span style="color:#f92672">=</span>context)</code></pre></div></li>
+
+<li><p>设置全局性取消证书验证</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> ssl
+
+ssl<span style="color:#f92672">.</span>_create_default_https_context <span style="color:#f92672">=</span> ssl<span style="color:#f92672">.</span>_create_unverified_context</code></pre></div></li>
+</ul></li>
+</ol>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#网络爬虫和相关工具">网络爬虫和相关工具</a>
+<ul>
+<li><a href="#网络爬虫的概念">网络爬虫的概念</a>
+<ul>
+<li><a href="#爬虫的应用领域">爬虫的应用领域</a></li>
+</ul></li>
+<li><a href="#合法性和背景调研">合法性和背景调研</a>
+<ul>
+<li><a href="#爬虫合法性探讨">爬虫合法性探讨</a></li>
+<li><a href="#robots-txt文件">Robots.txt文件</a></li>
+</ul></li>
+<li><a href="#相关工具介绍">相关工具介绍</a>
+<ul>
+<li><a href="#http协议">HTTP协议</a></li>
+<li><a href="#相关工具">相关工具</a></li>
+</ul></li>
+<li><a href="#一个简单的爬虫">一个简单的爬虫</a></li>
+<li><a href="#爬虫注意事项">爬虫注意事项</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

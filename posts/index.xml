@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Python-100天从新手到大师</title>
+    <link>https://ezzdoc.github.io/python100days/posts/</link>
+    <description>Recent content in Posts on Python-100天从新手到大师</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ezzdoc.github.io/python100days/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PEP 8风格指南</title>
+      <link>https://ezzdoc.github.io/python100days/posts/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;h2 id=&#34;pep-8风格指南&#34;&gt;PEP 8风格指南&lt;/h2&gt;
+
+&lt;p&gt;PEP是Python Enhancement Proposal的缩写，通常翻译为“Python增强提案”。每个PEP都是一份为Python社区提供的指导Python往更好的方向发展的技术文档，其中的第8号增强提案（PEP 8）是针对Python语言编订的代码风格指南。尽管我们可以在保证语法没有问题的前提下随意书写Python代码，但是在实际开发中，采用一致的风格书写出可读性强的代码是每个专业的程序员应该做到的事情，也是每个公司的编程规范中会提出的要求，这些在多人协作开发一个项目（团队开发）的时候显得尤为重要。我们可以从Python官方网站的&lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34;&gt;PEP 8链接&lt;/a&gt;中找到该文档，下面我们对该文档的关键部分做一个简单的总结。&lt;/p&gt;
+
+&lt;h3 id=&#34;空格的使用&#34;&gt;空格的使用&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;u&gt;使用空格来表示缩进而不要用制表符（Tab）。&lt;/u&gt;这一点对习惯了其他编程语言的人来说简直觉得不可理喻，因为绝大多数的程序员都会用Tab来表示缩进，但是要知道Python并没有像C/C++或Java那样的用花括号来构造一个代码块的语法，在Python中分支和循环结构都使用缩进来表示哪些代码属于同一个级别，鉴于此Python代码对缩进以及缩进宽度的依赖比其他很多语言都强得多。在不同的编辑器中，Tab的宽度可能是2、4或8个字符，甚至是其他更离谱的值，用Tab来表示缩进对Python代码来说可能是一场灾难。&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;和语法相关的每一层缩进都用4个空格来表示。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;每行的字符数不要超过79个字符，如果表达式因太长而占据了多行，除了首行之外的其余各行都应该在正常的缩进宽度上再加上4个空格。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;函数和类的定义，代码前后都要用两个空行进行分隔。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;在同一个类中，各个方法之间应该用一个空行进行分隔。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;二元运算符的左右两侧应该保留一个空格，而且只要一个空格就好。&lt;/u&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python之禅</title>
+      <link>https://ezzdoc.github.io/python100days/posts/Python%E4%B9%8B%E7%A6%85/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/Python%E4%B9%8B%E7%A6%85/</guid>
+      <description>&lt;h2 id=&#34;python之禅&#34;&gt;Python之禅&lt;/h2&gt;
+
+&lt;p&gt;Beautiful is better than ugly. （优美比丑陋好）&lt;br /&gt;
+Explicit is better than implicit.（清晰比晦涩好）&lt;br /&gt;
+Simple is better than complex.（简单比复杂好）&lt;br /&gt;
+Complex is better than complicated.（复杂比错综复杂好）&lt;br /&gt;
+Flat is better than nested.（扁平比嵌套好）&lt;br /&gt;
+Sparse is better than dense.（稀疏比密集好）&lt;br /&gt;
+Readability counts.（可读性很重要）&lt;br /&gt;
+Special cases aren&amp;rsquo;t special enough to break the rules.（特殊情况也不应该违反这些规则）&lt;br /&gt;
+Although practicality beats purity.（但现实往往并不那么完美）&lt;br /&gt;
+Errors should never pass silently.（异常不应该被静默处理）&lt;br /&gt;
+Unless explicitly silenced.（除非你希望如此）&lt;br /&gt;
+In the face of ambiguity, refuse the temptation to guess.（遇到模棱两可的地方，不要胡乱猜测）&lt;br /&gt;
+There should be one&amp;ndash; and preferably only one &amp;ndash;obvious way to do it.（肯定有一种通常也是唯一一种最佳的解决方案）&lt;br /&gt;
+Although that way may not be obvious at first unless you&amp;rsquo;re Dutch.（虽然这种方案并不是显而易见的，因为你不是那个荷兰人^这里指的是Python之父Guido^）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python参考书籍</title>
+      <link>https://ezzdoc.github.io/python100days/posts/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/</guid>
+      <description>&lt;h2 id=&#34;python参考书籍&#34;&gt;Python参考书籍&lt;/h2&gt;
+
+&lt;h3 id=&#34;入门读物&#34;&gt;入门读物&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;《Python基础教程》（*Beginning Python From Novice to Professional*）&lt;/li&gt;
+&lt;li&gt;《Python学习手册》（*Learning Python*）&lt;/li&gt;
+&lt;li&gt;《Python编程》（*Programming Python*）&lt;/li&gt;
+&lt;li&gt;《Python Cookbook》&lt;/li&gt;
+&lt;li&gt;《Python程序设计》（*Python Programming: An Introduction to Computer Science*）&lt;/li&gt;
+&lt;li&gt;《Modern Python Cookbook》&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python惯例</title>
+      <link>https://ezzdoc.github.io/python100days/posts/Python%E6%83%AF%E4%BE%8B/</link>
+      <pubDate>Sat, 07 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/Python%E6%83%AF%E4%BE%8B/</guid>
+      <description>&lt;h2 id=&#34;python惯例&#34;&gt;Python惯例&lt;/h2&gt;
+
+&lt;p&gt;“惯例”这个词指的是“习惯的做法，常规的办法，一贯的做法”，与这个词对应的英文单词叫“idiom”。由于Python跟其他很多编程语言在语法和使用上还是有比较显著的差别，因此作为一个Python开发者如果不能掌握这些惯例，就无法写出“Pythonic”的代码。下面我们总结了一些在Python开发中的惯用的代码。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;让代码既可以被导入又可以被执行。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Hexo搭建自己的博客</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;h2 id=&#34;使用hexo搭建自己的博客&#34;&gt;使用Hexo搭建自己的博客&lt;/h2&gt;
+
+&lt;p&gt;对于一个程序员来说，搭建一个属于自己的博客平台是非常有意义的事情。首先，博客可以记录自己的成长历程，也是对自己一段时间学习和工作的总结和沉淀；其他，通过博客可以营销自己，增强自己在互联网或行业内的影响力，为将来更好的职业生涯打一个坚实的基础。前几年有一本名为《软技能 - 代码之外的生存指南》的畅销书，我记得书中有这么一段话：“流行乐队的音乐才华可能并不比夜店驻场乐队高多少，他们为什么就可以在全世界巡回演出，创造一个又一个白金记录？……你的营销做得越好，你的才华才能表现得淋漓尽致。”&lt;/p&gt;
+
+&lt;p&gt;这里顺便啰嗦两句，在互联网如此发达的今天，我们应该如何营销自己呢？自我营销首先要从打造个人品牌做起，对于程序员来说，最容易去做好的一件事情还是搭建自己的博客。博客相当于是你在互联网上的一个基地，尤其是当你拥有了属于自己的独立博客后，你可以做很多自己想做的事情，既可以传达自己的思想，又可以提升自己的影响力，当然如果你的博客经营得非常好，你可以从中获利。当然，除了博客，直播、视频网站、投稿、写书、技术活动都是可选的自我营销方式。当然，做自我营销也需要持之以恒，三天打鱼两天晒网是很难有什么收获的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>常见反爬策略及应对方案</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/</guid>
+      <description>&lt;h2 id=&#34;常见反爬策略及应对方案&#34;&gt;常见反爬策略及应对方案&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;构造合理的HTTP请求头。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Accept&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;User-Agent - 三方库fake-useragent&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; fake_useragent &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; UserAgent
+ua &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; UserAgent()
+
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ie
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US);&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;msie
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (compatible; MSIE 10.0; Macintosh; Intel Mac OS X 10_7_3; Trident/6.0)&amp;#39;&lt;/span&gt;
+ua[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Internet Explorer&amp;#39;&lt;/span&gt;]
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; GTB7.4; InfoPath.2; SV1; .NET CLR 3.3.69573; WOW64; en-US)&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;opera
+&lt;span style=&#34;color:#75715e&#34;&gt;# Opera/9.80 (X11; Linux i686; U; ru) Presto/2.8.131 Version/11.11&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;chrome
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) Chrome/22.0.1216.0 Safari/537.2&amp;#39;&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;google
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13&lt;/span&gt;
+ua[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;google chrome&amp;#39;&lt;/span&gt;]
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;firefox
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ff
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safari
+&lt;span style=&#34;color:#75715e&#34;&gt;# Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# and the best one, random via real world browser usage statistic&lt;/span&gt;
+ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>玩转PyCharm</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E7%8E%A9%E8%BD%ACPyCharm/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E7%8E%A9%E8%BD%ACPyCharm/</guid>
+      <description>&lt;h2 id=&#34;玩转pycharm&#34;&gt;玩转PyCharm&lt;/h2&gt;
+
+&lt;p&gt;PyCharm是由JetBrains公司开发的提供给Python专业的开发者的一个集成开发环境，它最大的优点是能够大大提升Python开发者的工作效率，为开发者集成了很多用起来非常顺手的功能，包括代码调试、高亮语法、代码跳转、智能提示、自动补全、单元测试、版本控制等等。此外，PyCharm还提供了对一些高级功能的支持，包括支持基于Django框架的Web开发。&lt;/p&gt;
+
+&lt;h3 id=&#34;pycharm的安装&#34;&gt;PyCharm的安装&lt;/h3&gt;
+
+&lt;p&gt;可以在[JetBrains公司的官方网站]()找到PyCharm的&lt;a href=&#34;https://www.jetbrains.com/pycharm/download/&#34;&gt;下载链接&lt;/a&gt;，有两个可供下载的版本一个是社区版一个是专业版，社区版在&lt;a href=&#34;https://zh.wikipedia.org/wiki/Apache%E8%AE%B8%E5%8F%AF%E8%AF%81&#34;&gt;Apache许可证&lt;/a&gt;下发布，专业版在专用许可证下发布（需要购买授权下载后可试用30天），其拥有许多额外功能。安装PyCharm需要有JRE（Java运行时环境）的支持，如果没有可以在安装过程中选择在线下载安装。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;说明：如果你是一名学生，希望购买PyCharm来使用，可以看看&lt;a href=&#34;https://sales.jetbrains.com/hc/zh-cn/articles/207154369&#34;&gt;教育优惠官方申请指南&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;首次使用的设置&#34;&gt;首次使用的设置&lt;/h3&gt;
+
+&lt;p&gt;第一次使用PyCharm时，会有一个导入设置的向导，如果之前没有使用PyCharm或者没有保存过设置的就直接选择“Do not import settings”进入下一步即可。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用函数还是用复杂的表达式</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>&lt;h2 id=&#34;用函数还是用复杂的表达式&#34;&gt;用函数还是用复杂的表达式&lt;/h2&gt;
+
+&lt;h3 id=&#34;要不要使用复杂表达式&#34;&gt;要不要使用复杂表达式&lt;/h3&gt;
+
+&lt;p&gt;Perl语言的原作者*Larry Wall*曾经说过，伟大的程序员都有三个优点：懒惰、暴躁和自负。乍一看这三个词语没有一个是褒义词，但在程序员的世界里，这三个词有不同的意义。首先，懒惰会促使程序员去写一些省事儿的程序来辅助自己或别人更好的完成工作，这样我们就无需做那些重复和繁琐的劳动；同理能够用3行代码解决的事情，我们也绝不会写出10行代码来。其次，暴躁会让程序员主动的去完成一些你还没有提出的工作，去优化自己的代码让它更有效率，能够3秒钟完成的任务，我们绝不能容忍1分钟的等待。最后，自负会促使程序员写出可靠无误的代码，我们写代码不是为了接受批评和指责，而是为了让其他人来膜拜。&lt;/p&gt;
+
+&lt;p&gt;那么接下来就有一个很有意思的问题值得探讨一下，我们需要一个程序从输入的三个数中找出最大的那个数。这个程序对任何会编程的人来说都是小菜一碟，甚至不会编程的人经过10分钟的学习也能搞定。下面是用来解决这个问题的Python代码。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a = &amp;#39;&lt;/span&gt;))
+b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;b = &amp;#39;&lt;/span&gt;))
+c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;c = &amp;#39;&lt;/span&gt;))
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; b:
+	the_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a
+&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+	the_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; b
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; c &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; the_max:
+	the_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; c
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;The max is:&amp;#39;&lt;/span&gt;, the_max)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;但是我们刚才说了，程序员都是懒惰的，很多程序员都会使用三元条件运算符来改写上面的代码。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>知乎问题回答</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/</link>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/</guid>
+      <description>&lt;h2 id=&#34;知乎问题回答&#34;&gt;知乎问题回答&lt;/h2&gt;
+
+&lt;h3 id=&#34;python学习完基础语法知识后-如何进一步提高&#34;&gt;Python学习完基础语法知识后，如何进一步提高？&lt;/h3&gt;
+
+&lt;p&gt;如果你已经完成了Python基础语法的学习，想要知道接下来如何提高，那么你得先问问自己你要用Python来做什么？目前学习Python后可能的就业方向包括以下几个领域，我把每个领域需要的技术作为了一个简单的关键词摘要。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;说明：以下数据参考了主要的招聘门户网站以及职友集。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;职位&lt;/th&gt;
+&lt;th&gt;所需技能&lt;/th&gt;
+&lt;th&gt;招聘需求量&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Python后端开发工程师&lt;/td&gt;
+&lt;td&gt;Python基础&lt;br&gt;Django / Flask / Tornado / Sanic&lt;br&gt;RESTful / 接口文档撰写&lt;br&gt;MySQL / Redis / MongoDB / ElasticSearch&lt;br&gt;Linux / Git / Scrum / PyCharm&lt;/td&gt;
+&lt;td&gt;大&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python爬虫开发工程师&lt;/td&gt;
+&lt;td&gt;Python基础&lt;br&gt;常用标准库和三方库&lt;br&gt;Scrapy / PySpider&lt;br&gt;Selenium / Appnium&lt;br&gt;Redis / MongoDB / MySQL&lt;br&gt;前端 / HTTP(S) / 抓包工具&lt;/td&gt;
+&lt;td&gt;较少&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python量化交易开发工程师&lt;/td&gt;
+&lt;td&gt;Python基础&lt;br&gt;数据结构 / 算法 / 设计模式&lt;br&gt;NoSQL（KV数据库）&lt;br&gt;金融学（两融、期权、期货、股票） / 数字货币&lt;/td&gt;
+&lt;td&gt;较大（一线城市）&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python数据分析工程师 /&lt;br&gt;Python机器学习工程师&lt;/td&gt;
+&lt;td&gt;统计学专业 / 数学专业 / 计算机专业&lt;br&gt;Python基础 / 算法设计&lt;br&gt;SQL / NoSQL / Hive / Hadoop / Spark&lt;br&gt;NumPy / Scikit-Learn / Pandas / Seaborn&lt;br&gt;PyTorch / Tensorflow / OpenCV&lt;/td&gt;
+&lt;td&gt;较大（一线城市）&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python自动化测试工程师&lt;/td&gt;
+&lt;td&gt;Python基础 / 单元测试 / 软件测试基础&lt;br&gt;Linux / Shell / JIRA / 禅道 / Jenkins / CI / CD&lt;br&gt;Selenium / Robot Framework / Appnium&lt;br&gt;ab / sysbench / JMeter / LoadRunner / QTP&lt;/td&gt;
+&lt;td&gt;大&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python自动化运维工程师&lt;/td&gt;
+&lt;td&gt;Python基础 / Linux / Shell &lt;br&gt;Fabric / Ansible / Playbook&lt;br&gt;Zabbix / Saltstack / Puppet&lt;br&gt;Docker / paramiko&lt;/td&gt;
+&lt;td&gt;较大（一线城市）&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Python云平台开发工程师&lt;/td&gt;
+&lt;td&gt;Python基础&lt;br&gt;OpenStack / CloudStack&lt;br&gt;Ovirt / KVM&lt;br&gt;Docker / K8S&lt;/td&gt;
+&lt;td&gt;较少（一线城市）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;如果弄清了自己将来要做的方向，就可以开始有针对性的学习了，下面给大家一个推荐书籍的清单。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>那些年我们踩过的那些坑</title>
+      <link>https://ezzdoc.github.io/python100days/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ezzdoc.github.io/python100days/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</guid>
+      <description>&lt;h2 id=&#34;那些年我们踩过的那些坑&#34;&gt;那些年我们踩过的那些坑&lt;/h2&gt;
+
+&lt;h3 id=&#34;坑1-整数比较的坑&#34;&gt;坑1 - 整数比较的坑&lt;/h3&gt;
+
+&lt;p&gt;在 Python 中一切都是对象，整数也是对象，在比较两个整数时有两个运算符&lt;code&gt;==&lt;/code&gt;和&lt;code&gt;is&lt;/code&gt;，它们的区别是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;is&lt;/code&gt;比较的是两个整数对象的id值是否相等，也就是比较两个引用是否代表了内存中同一个地址。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;==&lt;/code&gt;比较的是两个整数对象的内容是否相等，使用&lt;code&gt;==&lt;/code&gt;时其实是调用了对象的&lt;code&gt;__eq__()&lt;/code&gt;方法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;知道了&lt;code&gt;is&lt;/code&gt;和&lt;code&gt;==&lt;/code&gt;的区别之后，我们可以来看看下面的代码，了解Python中整数比较有哪些坑：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;():
+	x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; True:
+		x &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+		y &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; y:
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; is &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; (x, y))
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Attention! &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; is not &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; (x, y))
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+
+	x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; True:
+		x &lt;span style=&#34;color:#f92672&#34;&gt;-=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+		y &lt;span style=&#34;color:#f92672&#34;&gt;-=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; y:
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; is &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; (x, y))
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Attention! &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; is not &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; (x, y))
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+	main()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

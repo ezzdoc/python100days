@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>97 电商网站技术要点剖析 | Python-100天从新手到大师</title>
+
+
+<link rel="stylesheet" href="/python100days/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
+
+
+<script defer src="/python100days/search.min.b25353bf447b40ce763a87a5aeda2a120689c46cd381b6c3037ed276ab6bced3.js" integrity="sha256-slNTv0R7QM52OoelrtoqEgaJxGzTgbbDA37SdqtrztM="></script>
+
+
+
+<link rel="icon" href="/python100days/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://ezzdoc.github.io/python100days/"><span>Python-100天从新手到大师</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" readonly />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2fpython100days\2f docs\2f Day91-100\2f 97-%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="/python100days/posts/"><strong>相关文章</strong></a></li>
+<li><strong>Day01-15</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day01-15/01-%E5%88%9D%E8%AF%86Python/">01.初识Python</a></li>
+<li><a href="/python100days/docs/Day01-15/02-%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/">02.语言元素</a></li>
+<li><a href="/python100days/docs/Day01-15/03-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">03.分支结构</a></li>
+<li><a href="/python100days/docs/Day01-15/04-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">04.循环结构</a></li>
+<li><a href="/python100days/docs/Day01-15/05-%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/">05.构造程序逻辑</a></li>
+<li><a href="/python100days/docs/Day01-15/06-%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/">06.函数和模块的使用</a></li>
+<li><a href="/python100days/docs/Day01-15/07-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">07.字符串和常用数据结构</a></li>
+<li><a href="/python100days/docs/Day01-15/08-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">08.面向对象编程基础</a></li>
+<li><a href="/python100days/docs/Day01-15/09-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">09.面向对象进阶</a></li>
+<li><a href="/python100days/docs/Day01-15/10-%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">10.图形用户界面和游戏开发</a></li>
+<li><a href="/python100days/docs/Day01-15/11-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">11.文件和异常</a></li>
+<li><a href="/python100days/docs/Day01-15/12-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">12.字符串和正则表达式</a></li>
+<li><a href="/python100days/docs/Day01-15/13-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">13.进程和线程</a></li>
+<li><a href="/python100days/docs/Day01-15/14-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">14.网络编程入门和网络应用开发</a></li>
+<li><a href="/python100days/docs/Day01-15/15-%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">15.图像和办公文档处理</a></li>
+</ul></li>
+<li><strong>Day16-20</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day16-20/16-20-Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">16-20.Python语言进阶</a></li>
+</ul></li>
+<li><strong>Day21-30</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day21-30/21-30-Web%E5%89%8D%E7%AB%AF%E6%A6%82%E8%BF%B0/">21-30.Web前端概述</a></li>
+</ul></li>
+<li><strong>Day31-35</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day31-35/31-35-%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">31-35.玩转Linux操作系统</a></li>
+</ul></li>
+<li><strong>Day36-40</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day36-40/36-38-%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93MySQL/">36-38.关系型数据库MySQL</a></li>
+<li><a href="/python100days/docs/Day36-40/39-40-NoSQL%E5%85%A5%E9%97%A8/">39-40.NoSQL入门</a></li>
+</ul></li>
+<li><strong>Day41-55</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day41-55/41-%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">41.快速上手</a></li>
+<li><a href="/python100days/docs/Day41-55/42-%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/">42.深入模型</a></li>
+<li><a href="/python100days/docs/Day41-55/43-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82/">43.静态资源和Ajax请求</a></li>
+<li><a href="/python100days/docs/Day41-55/44-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%BA%94%E7%94%A8/">44.表单的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/45-Cookie%E5%92%8CSession/">45.Cookie和Session</a></li>
+<li><a href="/python100days/docs/Day41-55/46-%E6%8A%A5%E8%A1%A8%E5%92%8C%E6%97%A5%E5%BF%97/">46.报表和日志</a></li>
+<li><a href="/python100days/docs/Day41-55/47-%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/">47.中间件的应用</a></li>
+<li><a href="/python100days/docs/Day41-55/48-%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/">48.前后端分离开发入门</a></li>
+<li><a href="/python100days/docs/Day41-55/49-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/">49.RESTful架构和DRF入门</a></li>
+<li><a href="/python100days/docs/Day41-55/50-RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/">50.RESTful架构和DRF进阶</a></li>
+<li><a href="/python100days/docs/Day41-55/51-%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/">51.使用缓存</a></li>
+<li><a href="/python100days/docs/Day41-55/52-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">52.文件上传和富文本编辑</a></li>
+<li><a href="/python100days/docs/Day41-55/53-%E7%9F%AD%E4%BF%A1%E5%92%8C%E9%82%AE%E4%BB%B6/">53.短信和邮件</a></li>
+<li><a href="/python100days/docs/Day41-55/54-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">54.异步任务和定时任务</a></li>
+<li><a href="/python100days/docs/Day41-55/55-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%92%8C%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/">55.单元测试和项目上线</a></li>
+</ul></li>
+<li><strong>Day56-60</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day56-60/56-Flask%E5%85%A5%E9%97%A8/">56.Flask入门</a></li>
+<li><a href="/python100days/docs/Day56-60/57-%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8/">57.模板的使用</a></li>
+<li><a href="/python100days/docs/Day56-60/58-%E8%A1%A8%E5%8D%95%E7%9A%84%E5%A4%84%E7%90%86/">58.表单的处理</a></li>
+<li><a href="/python100days/docs/Day56-60/59-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/">59.数据库操作</a></li>
+<li><a href="/python100days/docs/Day56-60/60-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">60.项目实战</a></li>
+</ul></li>
+<li><strong>Day61-65</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day61-65/61-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/">61.预备知识</a></li>
+<li><a href="/python100days/docs/Day61-65/62-Tornado%E5%85%A5%E9%97%A8/">62.Tornado入门</a></li>
+<li><a href="/python100days/docs/Day61-65/63-%E5%BC%82%E6%AD%A5%E5%8C%96/">63.异步化</a></li>
+<li><a href="/python100days/docs/Day61-65/64-WebSocket%E7%9A%84%E5%BA%94%E7%94%A8/">64.WebSocket的应用</a></li>
+<li><a href="/python100days/docs/Day61-65/65-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">65.项目实战</a></li>
+</ul></li>
+<li><strong>Day66-75</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day66-75/66-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">66.网络爬虫和相关工具</a></li>
+<li><a href="/python100days/docs/Day66-75/67-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%92%8C%E8%A7%A3%E6%9E%90/">67.数据采集和解析</a></li>
+<li><a href="/python100days/docs/Day66-75/68-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE/">68.存储数据</a></li>
+<li><a href="/python100days/docs/Day66-75/69-%E5%B9%B6%E5%8F%91%E4%B8%8B%E8%BD%BD/">69.并发下载</a></li>
+<li><a href="/python100days/docs/Day66-75/70-%E8%A7%A3%E6%9E%90%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/">70.解析动态内容</a></li>
+<li><a href="/python100days/docs/Day66-75/71-%E8%A1%A8%E5%8D%95%E4%BA%A4%E4%BA%92%E5%92%8C%E9%AA%8C%E8%AF%81%E7%A0%81%E5%A4%84%E7%90%86/">71.表单交互和验证码处理</a></li>
+<li><a href="/python100days/docs/Day66-75/72-Scrapy%E5%85%A5%E9%97%A8/">72.Scrapy入门</a></li>
+<li><a href="/python100days/docs/Day66-75/73-Scrapy%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8/">73.Scrapy高级应用</a></li>
+<li><a href="/python100days/docs/Day66-75/74-Scrapy%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E7%8E%B0/">74.Scrapy分布式实现</a></li>
+<li><a href="/python100days/docs/Day66-75/75-%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">75.爬虫项目实战</a></li>
+</ul></li>
+<li><strong>Day76-90</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day76-90/76-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/">76.机器学习基础</a></li>
+<li><a href="/python100days/docs/Day76-90/77-Pandas%E7%9A%84%E5%BA%94%E7%94%A8/">77.Pandas的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/78-NumPy%E5%92%8CSciPy%E7%9A%84%E5%BA%94%E7%94%A8/">78.NumPy和SciPy的应用</a></li>
+<li><a href="/python100days/docs/Day76-90/79-Matplotlib%E5%92%8C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">79.Matplotlib和数据可视化</a></li>
+<li><a href="/python100days/docs/Day76-90/80-k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB/">80.k最近邻分类</a></li>
+<li><a href="/python100days/docs/Day76-90/81-%E5%86%B3%E7%AD%96%E6%A0%91/">81.决策树</a></li>
+<li><a href="/python100days/docs/Day76-90/82-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">82.贝叶斯分类</a></li>
+<li><a href="/python100days/docs/Day76-90/83-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/">83.支持向量机</a></li>
+<li><a href="/python100days/docs/Day76-90/84-K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/">84.K-均值聚类</a></li>
+<li><a href="/python100days/docs/Day76-90/85-%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/">85.回归分析</a></li>
+<li><a href="/python100days/docs/Day76-90/86-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8/">86.大数据分析入门</a></li>
+<li><a href="/python100days/docs/Day76-90/87-%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%9B%E9%98%B6/">87.大数据分析进阶</a></li>
+<li><a href="/python100days/docs/Day76-90/88-Tensorflow%E5%85%A5%E9%97%A8/">88.Tensorflow入门</a></li>
+<li><a href="/python100days/docs/Day76-90/89-Tensorflow%E5%AE%9E%E6%88%98/">89.Tensorflow实战</a></li>
+<li><a href="/python100days/docs/Day76-90/90-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98/">90.推荐系统实战</a></li>
+</ul></li>
+<li><strong>Day91-100</strong>
+
+<ul>
+<li><a href="/python100days/docs/Day91-100/91-%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%87%86%E5%A4%87/">91.团队项目开发准备</a></li>
+<li><a href="/python100days/docs/Day91-100/92-%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/">92.使用Docker部署服务</a></li>
+<li><a href="/python100days/docs/Day91-100/93-MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">93.MySQL性能优化</a></li>
+<li><a href="/python100days/docs/Day91-100/94-%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/">94.网络API接口设计</a></li>
+<li><a href="/python100days/docs/Day91-100/95-%E4%BD%BF%E7%94%A8Django%E5%BC%80%E5%8F%91%E5%95%86%E4%B8%9A%E9%A1%B9%E7%9B%AE/">95.使用Django开发商业项目</a></li>
+<li><a href="/python100days/docs/Day91-100/96-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">96.软件测试和自动化测试</a></li>
+<li><a href="/python100days/docs/Day91-100/97-%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90/">97.电商网站技术要点剖析</a></li>
+<li><a href="/python100days/docs/Day91-100/98-%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/">98.项目部署上线和性能调优</a></li>
+<li><a href="/python100days/docs/Day91-100/99-%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98/">99.面试中的公共问题</a></li>
+<li><a href="/python100days/docs/Day91-100/100-%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/">100.英语面试</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/python100days/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>97 电商网站技术要点剖析</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="电商网站技术要点剖析">电商网站技术要点剖析</h1>
+
+<h2 id="商业模式">商业模式</h2>
+
+<ol>
+<li>B2B - 商家对商家，交易双方都是企业（商家），最典型的案例就是阿里巴巴。</li>
+<li>C2C - 个人对个人，例如：淘宝、人人车。</li>
+<li>B2C - 商家对个人，例如：唯品会，聚美优品。</li>
+<li>C2B - 个人对商家，先有消费者提出需求，后有商家按需求组织生产，例如： 尚品宅配。</li>
+<li>O2O - 线上到线下，将线下的商务机会与互联网结合，让互联网成为线下交易的平台，例如：美团外卖、饿了么。</li>
+<li>B2B2C - 商家对商家对个人，例如：天猫、京东。</li>
+</ol>
+
+<h2 id="需求要点">需求要点</h2>
+
+<ol>
+<li><p>用户端</p>
+
+<ul>
+<li><p>首页（商品分类、广告轮播、滚动快讯、瀑布加载、推荐、折扣、热销、……）</p></li>
+
+<li><p>用户（登录（第三方登录）、注册、注销、自服务（个人信息、浏览历史、收货地址、……））</p></li>
+
+<li><p>商品（分类、列表、详情、搜索、热门搜索、搜索历史、添加到购物车、收藏、关注、……）</p></li>
+
+<li><p>购物车（查看、编辑（修改数量、删除商品、清空））</p></li>
+
+<li><p>订单（提交订单（支付）、历史订单、订单详情、订单评价、……）</p></li>
+</ul></li>
+
+<li><p>管理端</p>
+
+<ul>
+<li>核心业务实体的CRUD</li>
+<li>定时任务（周期性和非周期性）</li>
+<li>报表功能（Excel、PDF、ECharts）</li>
+<li>权限控制（RBAC）</li>
+<li>业务流转（Activity、Airflow、Spiff、自定义）</li>
+<li>三方服务（地图、短信、物流、支付、实名认证、天气、监控、……）</li>
+</ul></li>
+</ol>
+
+<blockquote>
+<p>提示：可以通过思维导图来进行需求的整理，思维导图上的每个叶子节点都是不可再拆分的功能，而且都是动词。</p>
+</blockquote>
+
+<h2 id="物理模型设计">物理模型设计</h2>
+
+<p>两个概念：SPU（Standard Product Unit）和SKU（Stock Keeping Unit）。</p>
+
+<ul>
+<li>SPU：iPhone 6s</li>
+<li>SKU：iPhone 6s 64G 土豪金</li>
+</ul>
+
+<p><img src="/Day91-100/res/shopping-pdm.png" alt="" /></p>
+
+<h2 id="第三方登录">第三方登录</h2>
+
+<p>第三方登录是指利用第三方网站（通常是知名社交网站）的账号进行登录验证，比如国内的 QQ、微博，国外的Google、Facebook等，第三方登录大部分都是使用[OAuth]()，它是一个关于授权的开放网络标准，得到了广泛的应用，目前通常使用的是2.0版本。关于OAuth的基础知识，可以阅读阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html">《理解OAuth 2.0》</a>。</p>
+
+<h3 id="oauth-2-0授权流程">OAuth 2.0授权流程</h3>
+
+<ol>
+<li>用户打开客户端以后，客户端要求用户（资源所有者）给予授权。</li>
+<li>用户（资源所有者）同意给予客户端授权。</li>
+<li>客户端使用上一步获得的授权，向认证服务器申请访问令牌。</li>
+<li>认证服务器对客户端进行认证以后，发放访问令牌。</li>
+<li>客户端使用访问令牌向资源服务器申请获取资源。</li>
+<li>资源服务器确认访问令牌无误，同意向客户端开放资源。</li>
+</ol>
+
+<p><img src="/Day91-100/res/oauth2.png" alt="" /></p>
+
+<p>如果使用微博登录进行接入，其具体步骤可以参考微博开放平台上的<a href="http://open.weibo.com/wiki/Connect/login">“微博登录接入”</a>文档。使用QQ登录进行接入，需要首先注册成为QQ互联开发者并通过审核，具体的步骤可以参考QQ互联上的<a href="http://wiki.connect.qq.com/">“接入指南”</a>，具体的步骤可以参考<a href="http://wiki.connect.qq.com/%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C_oauth2-0">“网站开发流程”</a>。</p>
+
+<blockquote>
+<p>提示：在Gitbook上面有一本名为<a href="https://shenxgan.gitbooks.io/django/content/publish/2015-08-10-django-oauth-login.html">《Django博客入门》</a>的书以Github为例介绍了第三方账号登录，有兴趣的可以自行阅读。</p>
+</blockquote>
+
+<p>通常电商网站在使用第三方登录时，会要求与网站账号进行绑定或者根据获取到的第三方账号信息（如：手机号）自动完成账号绑定。</p>
+
+<h2 id="缓存预热和查询缓存">缓存预热和查询缓存</h2>
+
+<h3 id="缓存预热">缓存预热</h3>
+
+<p>所谓缓存预热，是指在启动服务器时将数据提前加载到缓存中，为此可以在Django应用的<code>apps.py</code>模块中编写<code>AppConfig</code>的子类并重写<code>ready()</code>方法，代码如下所示。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">import</span> pymysql
+
+<span style="color:#f92672">from</span> django.apps <span style="color:#f92672">import</span> AppConfig
+<span style="color:#f92672">from</span> django.core.cache <span style="color:#f92672">import</span> cache
+
+SELECT_PROVINCE_SQL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;select distid, name from tb_district where pid is null&#39;</span>
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CommonConfig</span>(AppConfig):
+    name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;common&#39;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ready</span>(self):
+        conn <span style="color:#f92672">=</span> pymysql<span style="color:#f92672">.</span>connect(host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;1.2.3.4&#39;</span>, port<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span>,
+                               user<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;root&#39;</span>, password<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pass&#39;</span>,
+                               database<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;db&#39;</span>, charset<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;utf8&#39;</span>,
+                               cursorclass<span style="color:#f92672">=</span>pymysql<span style="color:#f92672">.</span>cursors<span style="color:#f92672">.</span>DictCursor)
+        <span style="color:#66d9ef">try</span>:
+            <span style="color:#66d9ef">with</span> conn<span style="color:#f92672">.</span>cursor() <span style="color:#66d9ef">as</span> cursor:
+                cursor<span style="color:#f92672">.</span>execute(SELECT_PROVINCE_SQL)
+                provinces <span style="color:#f92672">=</span> cursor<span style="color:#f92672">.</span>fetchall()
+                cache<span style="color:#f92672">.</span>set(<span style="color:#e6db74">&#39;provinces&#39;</span>, provinces)
+        <span style="color:#66d9ef">finally</span>:
+            conn<span style="color:#f92672">.</span>close()</code></pre></div>
+<p>接下来，还需要在应用的<code>__init__.py</code>中编写下面的代码。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">default_app_config <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;common.apps.CommonConfig&#39;</span></code></pre></div>
+<p>或者在项目的<code>settings.py</code>文件中注册应用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">INSTALLED_APPS <span style="color:#f92672">=</span> [
+    <span style="color:#f92672">...</span>
+    <span style="color:#e6db74">&#39;common.apps.CommonConfig&#39;</span>,
+    <span style="color:#f92672">...</span>
+]</code></pre></div>
+<h3 id="查询缓存">查询缓存</h3>
+
+<p>自定义装饰器实现查询结果的缓存。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> pickle <span style="color:#f92672">import</span> dumps
+<span style="color:#f92672">from</span> pickle <span style="color:#f92672">import</span> loads
+
+<span style="color:#f92672">from</span> django.core.cache <span style="color:#f92672">import</span> caches
+
+MODEL_CACHE_KEY <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;project:modelcache:</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span>
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_model_cache</span>(key, section<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;default&#39;</span>, timeout<span style="color:#f92672">=</span>None):
+    <span style="color:#e6db74">&#34;&#34;&#34;实现模型缓存的装饰器&#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper1</span>(func):
+
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper2</span>(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+            real_key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">:</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (MODEL_CACHE_KEY <span style="color:#f92672">%</span> key, <span style="color:#e6db74">&#39;:&#39;</span><span style="color:#f92672">.</span>join(map(str, args)))
+            serialized_data <span style="color:#f92672">=</span> caches[section]<span style="color:#f92672">.</span>get(real_key)
+            <span style="color:#66d9ef">if</span> serialized_data:
+                data <span style="color:#f92672">=</span> loads(serialized_data)
+            <span style="color:#66d9ef">else</span>:
+                data <span style="color:#f92672">=</span> func(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
+                cache<span style="color:#f92672">.</span>set(real_key, dumps(data), timeout<span style="color:#f92672">=</span>timeout)
+            <span style="color:#66d9ef">return</span> data
+
+        <span style="color:#66d9ef">return</span> wrapper2
+
+    <span style="color:#66d9ef">return</span> wrapper1</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#a6e22e">@my_model_cache</span>(key<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;provinces&#39;</span>)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_all_provinces</span>():
+    <span style="color:#66d9ef">return</span> list(Province<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>all())</code></pre></div>
+<h2 id="购物车实现">购物车实现</h2>
+
+<p>问题一：已登录用户的购物车放在哪里？未登录用户的购物车放在哪里？</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CartItem</span>(object):
+    <span style="color:#e6db74">&#34;&#34;&#34;购物车中的商品项&#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> __init__(self, sku, amount<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, selected<span style="color:#f92672">=</span>False):
+        self<span style="color:#f92672">.</span>sku <span style="color:#f92672">=</span> sku
+        self<span style="color:#f92672">.</span>amount <span style="color:#f92672">=</span> amount
+        self<span style="color:#f92672">.</span>selected <span style="color:#f92672">=</span> selected
+
+    <span style="color:#a6e22e">@property</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">total</span>(self):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>sku<span style="color:#f92672">.</span>price <span style="color:#f92672">*</span> self<span style="color:#f92672">.</span>amount
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ShoppingCart</span>(object):
+    <span style="color:#e6db74">&#34;&#34;&#34;购物车&#34;&#34;&#34;</span>
+
+    <span style="color:#66d9ef">def</span> __init__(self):
+        self<span style="color:#f92672">.</span>items <span style="color:#f92672">=</span> {}
+        self<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_item</span>(self, item):
+        <span style="color:#66d9ef">if</span> item<span style="color:#f92672">.</span>sku<span style="color:#f92672">.</span>id <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>items:
+            self<span style="color:#f92672">.</span>items[item<span style="color:#f92672">.</span>sku<span style="color:#f92672">.</span>id]<span style="color:#f92672">.</span>amount <span style="color:#f92672">+=</span> item<span style="color:#f92672">.</span>amount
+        <span style="color:#66d9ef">else</span>:
+            self<span style="color:#f92672">.</span>items[item<span style="color:#f92672">.</span>sku<span style="color:#f92672">.</span>id] <span style="color:#f92672">=</span> item
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">remove_item</span>(self, sku_id):
+        <span style="color:#66d9ef">if</span> sku_id <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>items:
+            self<span style="color:#f92672">.</span>items<span style="color:#f92672">.</span>remove(sku_id)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">clear_all_items</span>(self):
+        self<span style="color:#f92672">.</span>items<span style="color:#f92672">.</span>clear()
+
+    <span style="color:#a6e22e">@property</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cart_items</span>(self):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>items<span style="color:#f92672">.</span>values()
+
+    <span style="color:#a6e22e">@property</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cart_total</span>(self):
+        total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>items<span style="color:#f92672">.</span>values():
+            total <span style="color:#f92672">+=</span> item<span style="color:#f92672">.</span>total
+        <span style="color:#66d9ef">return</span> total</code></pre></div>
+<p>已登录用户的购物车可以放在数据库中（可以先在Redis中缓存）；未登录用户的购物车可以保存在Cookie、localStorage或sessionStorage中（减少服务器端内存开销）。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+    <span style="color:#960050;background-color:#1e0010">&#39;1001&#39;:</span> <span style="color:#960050;background-color:#1e0010">{sku:</span> <span style="color:#960050;background-color:#1e0010">{...</span>}<span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">&#39;amount&#39;:</span> <span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">&#39;selected&#39;:</span> <span style="color:#960050;background-color:#1e0010">True},</span>
+    <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#ae81ff">1002</span><span style="color:#960050;background-color:#1e0010">&#39;:</span> {<span style="color:#960050;background-color:#1e0010">sku:</span> <span style="color:#960050;background-color:#1e0010">{...</span>}<span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">&#39;amount&#39;:</span> <span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">&#39;selected&#39;:</span> <span style="color:#960050;background-color:#1e0010">False},</span>
+    <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#ae81ff">1003</span><span style="color:#960050;background-color:#1e0010">&#39;:</span> {<span style="color:#960050;background-color:#1e0010">sku:</span> <span style="color:#960050;background-color:#1e0010">{...</span>}<span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">&#39;amount&#39;:</span> <span style="color:#ae81ff">3</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">&#39;selected&#39;:</span> <span style="color:#960050;background-color:#1e0010">True},</span>
+<span style="color:#960050;background-color:#1e0010">}</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">request<span style="color:#f92672">.</span>get_signed_cookie(<span style="color:#e6db74">&#39;cart&#39;</span>)
+
+cart_base64 <span style="color:#f92672">=</span> base64<span style="color:#f92672">.</span>base64encode(pickle<span style="color:#f92672">.</span>dumps(cart))
+response<span style="color:#f92672">.</span>set_signed_cookie(<span style="color:#e6db74">&#39;cart&#39;</span>, cart_base64)</code></pre></div>
+<p>问题二：用户登录之后，如何合并购物车？（目前电商应用的购物车几乎都做了持久化处理，主要是方便在多个终端之间共享数据）</p>
+
+<h2 id="集成支付功能">集成支付功能</h2>
+
+<p>问题一：支付信息如何持久化？（必须保证每笔交易都有记录）</p>
+
+<p>问题二：如何接入支付宝？（接入其他平台基本类似）</p>
+
+<ol>
+<li><a href="https://open.alipay.com/platform/home.htm">蚂蚁金服开放平台</a>。</li>
+<li><a href="https://open.alipay.com/platform/homeRoleSelection.htm">入驻平台</a>。</li>
+<li><a href="https://openhome.alipay.com/platform/appManage.htm#/apps">开发者中心</a>。</li>
+<li><a href="https://docs.open.alipay.com/270/105899/">文档中心</a>。</li>
+<li><a href="https://docs.open.alipay.com/54/103419">SDK集成</a> - <a href="https://pypi.org/project/alipay-sdk-python/">PYPI链接</a>。</li>
+<li><a href="https://docs.open.alipay.com/270/105900/">API列表</a>。</li>
+</ol>
+
+<p><img src="/Day91-100/res/alipay_web_developer.png" alt="" /></p>
+
+<p>配置文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">ALIPAY_APPID <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;......&#39;</span>
+ALIPAY_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://openapi.alipaydev.com/gateway.do&#39;</span>
+ALIPAY_DEBUG <span style="color:#f92672">=</span> False</code></pre></div>
+<p>获得支付链接（发起支付）：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># 创建调用支付宝的对象</span>
+alipay <span style="color:#f92672">=</span> AliPay(
+    <span style="color:#75715e"># 在线创建应用时分配的ID</span>
+    appid<span style="color:#f92672">=</span>settings<span style="color:#f92672">.</span>ALIPAY_APPID,
+    app_notify_url<span style="color:#f92672">=</span>None,
+    <span style="color:#75715e"># 自己应用的私钥</span>
+    app_private_key_path<span style="color:#f92672">=</span>os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+        os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(__file__)),
+        <span style="color:#e6db74">&#39;keys/app_private_key.pem&#39;</span>),
+    <span style="color:#75715e"># 支付宝的公钥</span>
+    alipay_public_key_path<span style="color:#f92672">=</span>os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+        os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(__file__)),
+        <span style="color:#e6db74">&#39;keys/alipay_public_key.pem&#39;</span>),
+    sign_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;RSA2&#39;</span>,
+    debug<span style="color:#f92672">=</span>settings<span style="color:#f92672">.</span>ALIPAY_DEBUG
+)
+<span style="color:#75715e"># 调用获取支付页面操作</span>
+order_info <span style="color:#f92672">=</span> alipay<span style="color:#f92672">.</span>api_alipay_trade_page_pay(
+    out_trade_no<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;...&#39;</span>,
+    total_amount<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;...&#39;</span>,
+    subject<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;...&#39;</span>,
+    return_url<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;http://...&#39;</span>
+)
+<span style="color:#75715e"># 生成完整的支付页面URL</span>
+alipay_url <span style="color:#f92672">=</span> settings<span style="color:#f92672">.</span>ALIPAY_URL <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;?&#39;</span> <span style="color:#f92672">+</span> order_info
+<span style="color:#66d9ef">return</span> JsonResponse({<span style="color:#e6db74">&#39;alipay_url&#39;</span>: alipay_url})</code></pre></div>
+<p>通过上面返回的链接可以进入支付页面，支付完成后会自动跳转回上面代码中设定好的项目页面，在该页面中可以获得订单号（out_trade_no）、支付流水号（trade_no）、交易金额（total_amount）和对应的签名（sign）并请求后端验证和保存交易结果，代码如下所示：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># 创建调用支付宝的对象</span>
+alipay <span style="color:#f92672">=</span> AliPay(
+    <span style="color:#75715e"># 在线创建应用时分配的ID</span>
+    appid<span style="color:#f92672">=</span>settings<span style="color:#f92672">.</span>ALIPAY_APPID,
+    app_notify_url<span style="color:#f92672">=</span>None,
+    <span style="color:#75715e"># 自己应用的私钥</span>
+    app_private_key_path<span style="color:#f92672">=</span>os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+        os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(__file__)),
+        <span style="color:#e6db74">&#39;keys/app_private_key.pem&#39;</span>),
+    <span style="color:#75715e"># 支付宝的公钥</span>
+    alipay_public_key_path<span style="color:#f92672">=</span>os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+        os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>abspath(__file__)),
+        <span style="color:#e6db74">&#39;keys/alipay_public_key.pem&#39;</span>),
+    sign_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;RSA2&#39;</span>,
+    debug<span style="color:#f92672">=</span>settings<span style="color:#f92672">.</span>ALIPAY_DEBUG
+)
+<span style="color:#75715e"># 请求参数（假设是POST请求）中包括订单号、支付流水号、交易金额和签名</span>
+params <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST<span style="color:#f92672">.</span>dict()
+<span style="color:#75715e"># 调用验证操作</span>
+<span style="color:#66d9ef">if</span> alipay<span style="color:#f92672">.</span>verify(params, params<span style="color:#f92672">.</span>pop(<span style="color:#e6db74">&#39;sign&#39;</span>)):
+    <span style="color:#75715e"># 对交易进行持久化操作</span></code></pre></div>
+<p>支付宝的支付API还提供了交易查询、交易结算、退款、退款查询等一系列的接口，可以根据业务需要进行调用，此处不再进行赘述。</p>
+
+<h2 id="秒杀和超卖">秒杀和超卖</h2>
+
+<ol>
+<li>秒杀：秒杀是通常意味着要在很短的时间处理极高的并发，系统在短时间需要承受平时百倍以上的流量，因此秒杀架构是一个比较复杂的问题，其核心思路是流量控制和性能优化，需要从前端（通过JavaScript实现倒计时、避免重复提交和限制频繁刷新）到后台各个环节的配合。流量控制主要是限制只有少部分流量进入服务后端（毕竟最终只有少部分用户能够秒杀成功），同时在物理架构上使用缓存（一方面是因为读操作多写操作少；另外可以将库存放在Redis中，利用DECR原语实现减库存；同时也可以利用Redis来进行限流，道理跟限制频繁发送手机验证码是一样的）和消息队列（消息队列最为重要的作用就是“削峰”和“上下游节点解耦合”）来进行优化；此外还要采用无状态服务设计，这样才便于进行水平扩展（通过增加设备来为系统扩容）。</li>
+<li>超卖现象：比如某商品的库存为1，此时用户1和用户2并发购买该商品，用户1提交订单后该商品的库存被修改为0，而此时用户2并不知道的情况下提交订单，该商品的库存再次被修改为-1这就是超卖现象。解决超卖现象有三种常见的思路：
+
+<ul>
+<li>悲观锁控制：查询商品数量的时候就用<code>select ... for update</code>对数据加锁，这样的话用户1查询库存时，用户2因无法读取库存数量被阻塞，直到用户1提交或者回滚了更新库存的操作后才能继续，从而解决了超卖问题。但是这种做法对并发访问量很高的商品来说性能太过糟糕，实际开发中可以在库存小于某个值时才考虑加锁，但是总的来说这种做法不太可取。</li>
+<li>乐观锁控制：查询商品数量不用加锁，更新库存的时候设定商品数量必须与之前查询数量相同才能更新，否则说明其他事务已经更新了库存，必须重新发出请求。这种做法要求事务隔离级别为可重复读，否则仍然会产生问题。</li>
+<li>尝试减库存：将上面的查询（<code>select</code>）和更新（<code>update</code>）操作合并为一条SQL操作，更新库存的时候，在<code>where</code>筛选条件中加上<code>库存&gt;=购买数量</code>或<code>库存-购买数量&gt;=0</code>的条件。</li>
+</ul></li>
+</ol>
+
+<blockquote>
+<p>提示：有兴趣的可以自己在知乎上看看关于这类问题的讨论。</p>
+</blockquote>
+
+<h2 id="静态资源管理">静态资源管理</h2>
+
+<p>静态资源的管理可以自己架设文件服务器或者分布式文件服务器（FastDFS），但是一般的项目中没有必要这样做而且效果未必是最好的，我们建议使用云存储服务来管理网站的静态资源，国内外的云服务提供商如亚马逊、阿里云、腾讯云、七牛、LeanCloud、Bmob等都提供了非常优质的云存储服务，而且价格也是一般公司可以接受的。可以参考《在阿里云OSS上托管静态网站》一文来完成对网站静态资源的管理，代码相关的内容可以参考阿里云的<a href="https://www.alibabacloud.com/zh/support/developer-resources">对象存储 OSS开发人员指南</a>。</p>
+
+<h2 id="全文检索">全文检索</h2>
+
+<h3 id="方案选择">方案选择</h3>
+
+<ol>
+<li>使用数据库的模糊查询功能 - 效率低，每次需要全表扫描，不支持分词。</li>
+<li>使用数据库的全文检索功能 - MySQL 5.6以前只适用于MyISAM引擎，检索操作和其他的DML操作耦合在数据库中，可能导致检索操作非常缓慢，数据量达到百万级性能显著下降，查询时间很长。</li>
+<li>使用开源搜索引擎 - 索引数据和原始数据分离，可以使用ElasticSearch或Solr来提供外置索引服务，如果不考虑高并发的全文检索需求，纯Python的Whoosh也可以考虑。</li>
+</ol>
+
+<h3 id="elasticsearch">ElasticSearch</h3>
+
+<p>ElasticSearch既是一个分布式文档数据库又是一个高可扩展的开源全文搜索和分析引擎，它允许存储、搜索和分析大量的数据，并且这个过程是近实时的。它通常被用作底层引擎和技术，为复杂的搜索功能和要求提供动力，大家熟知的维基百科、Stack-Overflow、Github都使用了ElasticSearch。</p>
+
+<p>ElasticSearch的底层是开源搜索引擎<a href="https://lucene.apache.org/">Lucene</a>，但是直接用Lucene会非常麻烦，必须自己编写代码去调用它的接口而且只支持Java语言。ElasticSearch相当于对Lucene进行了一次全面的封装，提供了REST风格的API接口，通过基于HTTP协议的访问方式屏蔽了编程语言的差异。ElasticSearch会为数据构建<a href="https://zh.wikipedia.org/zh-hans/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95">倒排索引</a>，但是ElasticSearch内置的分词器对中文分词的支持几乎为零，因此需要通过安装elasticsearch-analysis-ik插件来提供中文分词服务。</p>
+
+<p>ElasticSearch的安装和配置可以参考<a href="https://blog.csdn.net/jinyidong/article/details/80475320">《ElasticSearch之Docker安装》</a>。除了ElasticSearch之外，也可以使用Solr、Whoosh等来提供搜索引擎服务，基本上Django项目中可以考虑如下两套方案：</p>
+
+<ul>
+<li>haystack（django-haystack / drf-haystack） + whoosh + Jieba</li>
+<li>haystack （django-haystack / drf-haystack）+ elasticsearch</li>
+</ul>
+
+<p>####安装和使用ElasticSearch</p>
+
+<ol>
+<li><p>使用Docker安装ElasticSearch。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">docker pull elasticsearch:6.5.3
+docker run -d -p <span style="color:#ae81ff">9200</span>:9200 -p <span style="color:#ae81ff">9300</span>:9300 -e <span style="color:#e6db74">&#34;discovery.type=single-node&#34;</span> -e ES_JAVA_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-Xms512m -Xmx512m&#34;</span> --name es elasticsearch:6.5.3</code></pre></div></li>
+</ol>
+
+<blockquote>
+<p>说明：上面创建容器时通过<code>-e</code>参数指定了使用单机模式和Java虚拟机最小最大可用堆空间的大小，堆空间大小可以根据服务器实际能够提供给ElasticSearch的内存大小来决定，默认为2G。</p>
+</blockquote>
+
+<ol>
+<li>创建数据库。</li>
+</ol>
+
+<p>请求：PUT - <code>http://1.2.3.4:9200/demo</code></p>
+
+<p>响应：</p>
+
+<pre><code>```JSON
+</code></pre>
+
+<p>{
+       &ldquo;acknowledged&rdquo;: true,
+       &ldquo;shards_acknowledged&rdquo;: true,
+       &ldquo;index&rdquo;: &ldquo;demo&rdquo;
+   }
+    ```</p>
+
+<ol>
+<li>查看创建的数据库。</li>
+</ol>
+
+<p>请求：GET - <code>http://1.2.3.4:9200/demo</code></p>
+
+<p>响应：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+       <span style="color:#f92672">&#34;demo&#34;</span>: {
+           <span style="color:#f92672">&#34;aliases&#34;</span>: {},
+           <span style="color:#f92672">&#34;mappings&#34;</span>: {},
+           <span style="color:#f92672">&#34;settings&#34;</span>: {
+               <span style="color:#f92672">&#34;index&#34;</span>: {
+                   <span style="color:#f92672">&#34;creation_date&#34;</span>: <span style="color:#e6db74">&#34;1552213970199&#34;</span>,
+                   <span style="color:#f92672">&#34;number_of_shards&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>,
+                   <span style="color:#f92672">&#34;number_of_replicas&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+                   <span style="color:#f92672">&#34;uuid&#34;</span>: <span style="color:#e6db74">&#34;ny3rCn10SAmCsqW6xPP1gw&#34;</span>,
+                   <span style="color:#f92672">&#34;version&#34;</span>: {
+                       <span style="color:#f92672">&#34;created&#34;</span>: <span style="color:#e6db74">&#34;6050399&#34;</span>
+                   },
+                   <span style="color:#f92672">&#34;provided_name&#34;</span>: <span style="color:#e6db74">&#34;demo&#34;</span>
+               }
+           }
+       }
+   }</code></pre></div>
+<ol>
+<li>插入数据。</li>
+</ol>
+
+<p>请求：POST - <code>http://1.2.3.4:9200/demo/goods/1/</code></p>
+
+<p>请求头：Content-Type: application/json</p>
+
+<p>参数：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+       <span style="color:#f92672">&#34;no&#34;</span>: <span style="color:#e6db74">&#34;5089253&#34;</span>,
+       <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Apple iPhone X (A1865) 64GB 深空灰色 移动联通电信4G手机&#34;</span>,
+       <span style="color:#f92672">&#34;brand&#34;</span>: <span style="color:#e6db74">&#34;Apple&#34;</span>,
+       <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Apple iPhone X&#34;</span>,
+       <span style="color:#f92672">&#34;product&#34;</span>: <span style="color:#e6db74">&#34;中国大陆&#34;</span>,
+       <span style="color:#f92672">&#34;resolution&#34;</span>: <span style="color:#e6db74">&#34;2436 x 1125&#34;</span>,
+       <span style="color:#f92672">&#34;intro&#34;</span>: <span style="color:#e6db74">&#34;一直以来，Apple都心存一个设想，期待能够打造出这样一部iPhone：它有整面屏幕，能让你在使用时，完全沉浸其中，仿佛忘了它的存在。它是如此智能，哪怕轻轻一瞥，都能得到它心有灵犀的回应。而这个设想，终于随着iPhone X的到来成为了现实。现在，就跟未来见个面吧。&#34;</span>
+   }</code></pre></div>
+<p>响应：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+       <span style="color:#f92672">&#34;_index&#34;</span>: <span style="color:#e6db74">&#34;demo&#34;</span>,
+       <span style="color:#f92672">&#34;_type&#34;</span>: <span style="color:#e6db74">&#34;goods&#34;</span>,
+       <span style="color:#f92672">&#34;_id&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+       <span style="color:#f92672">&#34;_version&#34;</span>: <span style="color:#ae81ff">4</span>,
+       <span style="color:#f92672">&#34;result&#34;</span>: <span style="color:#e6db74">&#34;created&#34;</span>,
+       <span style="color:#f92672">&#34;_shards&#34;</span>: {
+           <span style="color:#f92672">&#34;total&#34;</span>: <span style="color:#ae81ff">2</span>,
+           <span style="color:#f92672">&#34;successful&#34;</span>: <span style="color:#ae81ff">1</span>,
+           <span style="color:#f92672">&#34;failed&#34;</span>: <span style="color:#ae81ff">0</span>
+       },
+       <span style="color:#f92672">&#34;_seq_no&#34;</span>: <span style="color:#ae81ff">3</span>,
+       <span style="color:#f92672">&#34;_primary_term&#34;</span>: <span style="color:#ae81ff">1</span>
+   }</code></pre></div>
+<ol>
+<li>删除数据。</li>
+</ol>
+
+<p>请求：DELETE -  <code>http://1.2.3.4:9200/demo/goods/1/</code></p>
+
+<p>响应：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+       <span style="color:#f92672">&#34;_index&#34;</span>: <span style="color:#e6db74">&#34;demo&#34;</span>,
+       <span style="color:#f92672">&#34;_type&#34;</span>: <span style="color:#e6db74">&#34;goods&#34;</span>,
+       <span style="color:#f92672">&#34;_id&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+       <span style="color:#f92672">&#34;_version&#34;</span>: <span style="color:#ae81ff">2</span>,
+       <span style="color:#f92672">&#34;result&#34;</span>: <span style="color:#e6db74">&#34;deleted&#34;</span>,
+       <span style="color:#f92672">&#34;_shards&#34;</span>: {
+           <span style="color:#f92672">&#34;total&#34;</span>: <span style="color:#ae81ff">2</span>,
+           <span style="color:#f92672">&#34;successful&#34;</span>: <span style="color:#ae81ff">1</span>,
+           <span style="color:#f92672">&#34;failed&#34;</span>: <span style="color:#ae81ff">0</span>
+       },
+       <span style="color:#f92672">&#34;_seq_no&#34;</span>: <span style="color:#ae81ff">1</span>,
+       <span style="color:#f92672">&#34;_primary_term&#34;</span>: <span style="color:#ae81ff">1</span>
+   }</code></pre></div>
+<ol>
+<li>更新数据。</li>
+</ol>
+
+<p>请求：PUT - <code>http://1.2.3.4:9200/demo/goods/1/_update</code></p>
+
+<p>请求头：Content-Type: application/json</p>
+
+<p>参数：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+   	<span style="color:#f92672">&#34;doc&#34;</span>: {
+   		<span style="color:#f92672">&#34;no&#34;</span>: <span style="color:#e6db74">&#34;5089253&#34;</span>,
+       	<span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Apple iPhone X (A1865) 64GB 深空灰色 移动联通电信4G手机&#34;</span>,
+       	<span style="color:#f92672">&#34;brand&#34;</span>: <span style="color:#e6db74">&#34;Apple(苹果)&#34;</span>,
+       	<span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Apple iPhone X&#34;</span>,
+       	<span style="color:#f92672">&#34;product&#34;</span>: <span style="color:#e6db74">&#34;美国&#34;</span>,
+       	<span style="color:#f92672">&#34;resolution&#34;</span>: <span style="color:#e6db74">&#34;2436 x 1125&#34;</span>,
+       	<span style="color:#f92672">&#34;intro&#34;</span>: <span style="color:#e6db74">&#34;一直以来，Apple都心存一个设想，期待能够打造出这样一部iPhone：它有整面屏幕，能让你在使用时，完全沉浸其中，仿佛忘了它的存在。它是如此智能，哪怕轻轻一瞥，都能得到它心有灵犀的回应。而这个设想，终于随着iPhone X的到来成为了现实。现在，就跟未来见个面吧。&#34;</span>
+       }
+   }</code></pre></div>
+<p>响应：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+       <span style="color:#f92672">&#34;_index&#34;</span>: <span style="color:#e6db74">&#34;demo&#34;</span>,
+       <span style="color:#f92672">&#34;_type&#34;</span>: <span style="color:#e6db74">&#34;goods&#34;</span>,
+       <span style="color:#f92672">&#34;_id&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+       <span style="color:#f92672">&#34;_version&#34;</span>: <span style="color:#ae81ff">10</span>,
+       <span style="color:#f92672">&#34;result&#34;</span>: <span style="color:#e6db74">&#34;updated&#34;</span>,
+       <span style="color:#f92672">&#34;_shards&#34;</span>: {
+           <span style="color:#f92672">&#34;total&#34;</span>: <span style="color:#ae81ff">2</span>,
+           <span style="color:#f92672">&#34;successful&#34;</span>: <span style="color:#ae81ff">1</span>,
+           <span style="color:#f92672">&#34;failed&#34;</span>: <span style="color:#ae81ff">0</span>
+       },
+       <span style="color:#f92672">&#34;_seq_no&#34;</span>: <span style="color:#ae81ff">9</span>,
+       <span style="color:#f92672">&#34;_primary_term&#34;</span>: <span style="color:#ae81ff">1</span>
+   }</code></pre></div>
+<ol>
+<li>查询数据。</li>
+</ol>
+
+<p>请求：GET - <code>http://1.2.3.4:9200/demo/goods/1/</code></p>
+
+<p>响应：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+       <span style="color:#f92672">&#34;_index&#34;</span>: <span style="color:#e6db74">&#34;demo&#34;</span>,
+       <span style="color:#f92672">&#34;_type&#34;</span>: <span style="color:#e6db74">&#34;goods&#34;</span>,
+       <span style="color:#f92672">&#34;_id&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+       <span style="color:#f92672">&#34;_version&#34;</span>: <span style="color:#ae81ff">10</span>,
+       <span style="color:#f92672">&#34;found&#34;</span>: <span style="color:#66d9ef">true</span>,
+       <span style="color:#f92672">&#34;_source&#34;</span>: {
+           <span style="color:#f92672">&#34;doc&#34;</span>: {
+               <span style="color:#f92672">&#34;no&#34;</span>: <span style="color:#e6db74">&#34;5089253&#34;</span>,
+               <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Apple iPhone X (A1865) 64GB 深空灰色 移动联通电信4G手机&#34;</span>,
+               <span style="color:#f92672">&#34;brand&#34;</span>: <span style="color:#e6db74">&#34;Apple(苹果)&#34;</span>,
+               <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Apple iPhone X&#34;</span>,
+               <span style="color:#f92672">&#34;product&#34;</span>: <span style="color:#e6db74">&#34;美国&#34;</span>,
+               <span style="color:#f92672">&#34;resolution&#34;</span>: <span style="color:#e6db74">&#34;2436 x 1125&#34;</span>,
+               <span style="color:#f92672">&#34;intro&#34;</span>: <span style="color:#e6db74">&#34;一直以来，Apple都心存一个设想，期待能够打造出这样一部iPhone：它有整面屏幕，能让你在使用时，完全沉浸其中，仿佛忘了它的存在。它是如此智能，哪怕轻轻一瞥，都能得到它心有灵犀的回应。而这个设想，终于随着iPhone X的到来成为了现实。现在，就跟未来见个面吧。&#34;</span>
+           }
+       }
+   }</code></pre></div>
+<h3 id="配置中文分词和拼音插件">配置中文分词和拼音插件</h3>
+
+<ol>
+<li><p>进入Docker容器的plugins目录。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">docker exec -it es /bin/bash</code></pre></div></li>
+
+<li><p>下载和ElasticSearch版本对应的<a href="https://github.com/medcl/elasticsearch-analysis-ik">ik</a>和<a href="https://github.com/medcl/elasticsearch-analysis-pinyin">pinyin</a>插件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">cd plugins/
+mkdir ik
+cd ik
+wget https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v6.5.3/elasticsearch-analysis-ik-6.5.3.zip
+unzip elasticsearch-analysis-ik-6.5.3.zip
+rm -f elasticsearch-analysis-ik-6.5.3.zip
+cd ..
+mkdir pinyin
+cd pinyin
+wget https://github.com/medcl/elasticsearch-analysis-pinyin/releases/download/v6.5.3/elasticsearch-analysis-pinyin-6.5.3.zip
+unzip elasticsearch-analysis-pinyin-6.5.3.zip
+rm -f elasticsearch-analysis-pinyin-6.5.3.zip</code></pre></div></li>
+
+<li><p>退出容器，重启ElasticSearch。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">docker restart es</code></pre></div></li>
+
+<li><p>测试中文分词效果。</p></li>
+</ol>
+
+<p>请求：POST - <code>http://1.2.3.4:9200/_analyze</code></p>
+
+<p>请求头：Content-Type: application/json</p>
+
+<p>参数：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+     <span style="color:#f92672">&#34;analyzer&#34;</span>: <span style="color:#e6db74">&#34;ik_smart&#34;</span>,
+     <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;中国男足在2022年卡塔尔世界杯预选赛中勇夺小组最后一名&#34;</span>
+   }</code></pre></div>
+<p>响应：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+       <span style="color:#f92672">&#34;tokens&#34;</span>: [
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;中国&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">0</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">2</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_WORD&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">0</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;男足&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">2</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">4</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_WORD&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">1</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;在&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">4</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">5</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_CHAR&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">2</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;2022年&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">5</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">10</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;TYPE_CQUAN&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">3</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;卡塔尔&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">10</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">13</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_WORD&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">4</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;世界杯&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">13</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">16</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_WORD&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">5</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;预选赛&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">16</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">19</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_WORD&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">6</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;中&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">19</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">20</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_CHAR&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">7</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;勇夺&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">20</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">22</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_WORD&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">8</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;小组&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">22</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">24</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_WORD&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">9</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;最后&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">24</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">26</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_WORD&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">10</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;一名&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">26</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">28</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;CN_WORD&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">11</span>
+           }
+       ]
+   }</code></pre></div>
+<ol>
+<li>测试拼音分词效果。</li>
+</ol>
+
+<p>请求：POST - <code>http://1.2.3.4:9200/_analyze</code></p>
+
+<p>请求头：Content-Type: application/json</p>
+
+<p>参数：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"></code></pre></div>
+<p>响应：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+       <span style="color:#f92672">&#34;tokens&#34;</span>: [
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;zhang&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">0</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">0</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;word&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">0</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;zxy&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">0</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">0</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;word&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">0</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;xue&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">0</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">0</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;word&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">1</span>
+           },
+           {
+               <span style="color:#f92672">&#34;token&#34;</span>: <span style="color:#e6db74">&#34;you&#34;</span>,
+               <span style="color:#f92672">&#34;start_offset&#34;</span>: <span style="color:#ae81ff">0</span>,
+               <span style="color:#f92672">&#34;end_offset&#34;</span>: <span style="color:#ae81ff">0</span>,
+               <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;word&#34;</span>,
+               <span style="color:#f92672">&#34;position&#34;</span>: <span style="color:#ae81ff">2</span>
+           }
+       ]
+   }</code></pre></div>
+<h3 id="全文检索功能">全文检索功能</h3>
+
+<p>可以通过GET或者POST请求进行搜索，下面演示了搜索有“未来”关键词商品。</p>
+
+<ol>
+<li>GET - <code>http://120.77.222.217:9200/demo/goods/_search?q=未来</code></li>
+</ol>
+
+<blockquote>
+<p>注意：URL中的中文应该要处理成百分号编码。</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">   {
+       <span style="color:#f92672">&#34;took&#34;</span>: <span style="color:#ae81ff">19</span>,
+       <span style="color:#f92672">&#34;timed_out&#34;</span>: <span style="color:#66d9ef">false</span>,
+       <span style="color:#f92672">&#34;_shards&#34;</span>: {
+           <span style="color:#f92672">&#34;total&#34;</span>: <span style="color:#ae81ff">5</span>,
+           <span style="color:#f92672">&#34;successful&#34;</span>: <span style="color:#ae81ff">5</span>,
+           <span style="color:#f92672">&#34;skipped&#34;</span>: <span style="color:#ae81ff">0</span>,
+           <span style="color:#f92672">&#34;failed&#34;</span>: <span style="color:#ae81ff">0</span>
+       },
+       <span style="color:#f92672">&#34;hits&#34;</span>: {
+           <span style="color:#f92672">&#34;total&#34;</span>: <span style="color:#ae81ff">2</span>,
+           <span style="color:#f92672">&#34;max_score&#34;</span>: <span style="color:#ae81ff">0.73975396</span>,
+           <span style="color:#f92672">&#34;hits&#34;</span>: [
+               {
+                   <span style="color:#f92672">&#34;_index&#34;</span>: <span style="color:#e6db74">&#34;demo&#34;</span>,
+                   <span style="color:#f92672">&#34;_type&#34;</span>: <span style="color:#e6db74">&#34;goods&#34;</span>,
+                   <span style="color:#f92672">&#34;_id&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+                   <span style="color:#f92672">&#34;_score&#34;</span>: <span style="color:#ae81ff">0.73975396</span>,
+                   <span style="color:#f92672">&#34;_source&#34;</span>: {
+                       <span style="color:#f92672">&#34;doc&#34;</span>: {
+                           <span style="color:#f92672">&#34;no&#34;</span>: <span style="color:#e6db74">&#34;5089253&#34;</span>,
+                           <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Apple iPhone X (A1865) 64GB 深空灰色 移动联通电信4G手机&#34;</span>,
+                           <span style="color:#f92672">&#34;brand&#34;</span>: <span style="color:#e6db74">&#34;Apple(苹果)&#34;</span>,
+                           <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Apple iPhone X&#34;</span>,
+                           <span style="color:#f92672">&#34;product&#34;</span>: <span style="color:#e6db74">&#34;美国&#34;</span>,
+                           <span style="color:#f92672">&#34;resolution&#34;</span>: <span style="color:#e6db74">&#34;2436*1125&#34;</span>,
+                           <span style="color:#f92672">&#34;intro&#34;</span>: <span style="color:#e6db74">&#34;一直以来，Apple都心存一个设想，期待能够打造出这样一部iPhone：它有整面屏幕，能让你在使用时，完全沉浸其中，仿佛忘了它的存在。它是如此智能，哪怕轻轻一瞥，都能得到它心有灵犀的回应。而这个设想，终于随着iPhone X的到来成为了现实。现在，就跟未来见个面吧。&#34;</span>
+                       }
+                   }
+               },
+               {
+                   <span style="color:#f92672">&#34;_index&#34;</span>: <span style="color:#e6db74">&#34;demo&#34;</span>,
+                   <span style="color:#f92672">&#34;_type&#34;</span>: <span style="color:#e6db74">&#34;goods&#34;</span>,
+                   <span style="color:#f92672">&#34;_id&#34;</span>: <span style="color:#e6db74">&#34;3&#34;</span>,
+                   <span style="color:#f92672">&#34;_score&#34;</span>: <span style="color:#ae81ff">0.68324494</span>,
+                   <span style="color:#f92672">&#34;_source&#34;</span>: {
+                       <span style="color:#f92672">&#34;no&#34;</span>: <span style="color:#e6db74">&#34;42417956432&#34;</span>,
+                       <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;小米9 透明尊享版 手机 透明尊享 全网通(12GB + 256GB)&#34;</span>,
+                       <span style="color:#f92672">&#34;brand&#34;</span>: <span style="color:#e6db74">&#34;小米（MI）&#34;</span>,
+                       <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;小米（MI）小米9透明&#34;</span>,
+                       <span style="color:#f92672">&#34;product&#34;</span>: <span style="color:#e6db74">&#34;中国大陆&#34;</span>,
+                       <span style="color:#f92672">&#34;resolution&#34;</span>: <span style="color:#e6db74">&#34;2340*1080&#34;</span>,
+                       <span style="color:#f92672">&#34;intro&#34;</span>: <span style="color:#e6db74">&#34;全面透明机身，独特科幻机甲风，来自未来的设计。&#34;</span>
+                   }
+               }
+           ]
+       }
+   }</code></pre></div>
+<p>URL中可用的搜索参数如下表所示：</p>
+
+<p>| 参数             | 说明                                              |
+   | &mdash;&mdash;&mdash;&mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- |
+   | q                | 查询字符串                                        |
+   | analyzer         | 分析查询字符串使用的分词器                        |
+   | analyze_wildcard | 通配符或者前缀查询是否被分析，默认为false         |
+   | default_operator | 多个条件之间的关系，默认为OR，可以修改为AND       |
+   | explain          | 在返回的结果中包含评分机制的解释                  |
+   | fields           | 只返回索引中指定的列，多个列中间用逗号隔开        |
+   | sort             | 排序参考的字段，可以用:asc和:desc来指定升序和降序 |
+   | timeout          | 超时时间                                          |
+   | from             | 匹配结果的开始值，默认为0                         |
+   | size             | 匹配结果的条数，默认为10                          |</p>
+
+<ol>
+<li>POST - <code>http://120.77.222.217:9200/demo/goods/_search</code></li>
+</ol>
+
+<p>请求头：Content-Type: application/json</p>
+
+<p>参数：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"></code></pre></div>
+<p>响应：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"></code></pre></div>
+<h3 id="django对接elasticsearch">Django对接ElasticSearch</h3>
+
+<p>Python对接ElasticSearch的第三方库是HayStack，在Django项目中可以使用django-haystack，通过HayStack可以在不修改代码对接多种搜索引擎服务。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install django-haystack elasticsearch</code></pre></div>
+<p>配置文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">INSTALLED_APPS <span style="color:#f92672">=</span> [
+    <span style="color:#f92672">...</span>
+    <span style="color:#e6db74">&#39;haystack&#39;</span>,
+    <span style="color:#f92672">...</span>
+]
+
+HAYSTACK_CONNECTIONS <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#39;default&#39;</span>: {
+        <span style="color:#75715e"># 引擎配置</span>
+        <span style="color:#e6db74">&#39;ENGINE&#39;</span>: <span style="color:#e6db74">&#39;haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine&#39;</span>,
+        <span style="color:#75715e"># 搜索引擎服务的URL</span>
+        <span style="color:#e6db74">&#39;URL&#39;</span>: <span style="color:#e6db74">&#39;http://1.2.3.4:9200&#39;</span>,
+        <span style="color:#75715e"># 索引库的名称</span>
+        <span style="color:#e6db74">&#39;INDEX_NAME&#39;</span>: <span style="color:#e6db74">&#39;goods&#39;</span>,
+    },
+}
+
+<span style="color:#75715e"># 添加/删除/更新数据时自动生成索引</span>
+HAYSTACK_SIGNAL_PROCESSOR <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;haystack.signals.RealtimeSignalProcessor&#39;</span></code></pre></div>
+<p>索引类：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#f92672">from</span> haystack <span style="color:#f92672">import</span> indexes
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GoodsIndex</span>(indexes<span style="color:#f92672">.</span>SearchIndex, indexes<span style="color:#f92672">.</span>Indexable):
+    text <span style="color:#f92672">=</span> indexes<span style="color:#f92672">.</span>CharField(document<span style="color:#f92672">=</span>True, use_template<span style="color:#f92672">=</span>True)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_model</span>(self):
+        <span style="color:#66d9ef">return</span> Goods
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index_queryset</span>(self, using<span style="color:#f92672">=</span>None):
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>get_model()<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>all()</code></pre></div>
+<p>编辑text字段的模板（需要放在templates/search/indexes/demo/goods_text.txt）：</p>
+
+<pre><code>{{object.title}}
+{{object.intro}}
+</code></pre>
+
+<p>配置URL：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">urlpatterns <span style="color:#f92672">=</span> [
+    <span style="color:#75715e"># ...</span>
+    url(<span style="color:#e6db74">&#39;search/&#39;</span>, include(<span style="color:#e6db74">&#39;haystack.urls&#39;</span>)),
+]</code></pre></div>
+<p>生成初始索引：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell">python manage.py rebuild_index</code></pre></div>
+<blockquote>
+<p>说明：可以参考<a href="https://www.zmrenwu.com/post/45/">《Django Haystack 全文检索与关键词高亮》</a>一文来更深入的了解基于Haystack的全文检索操作。</p>
+</blockquote>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#电商网站技术要点剖析">电商网站技术要点剖析</a>
+<ul>
+<li><a href="#商业模式">商业模式</a></li>
+<li><a href="#需求要点">需求要点</a></li>
+<li><a href="#物理模型设计">物理模型设计</a></li>
+<li><a href="#第三方登录">第三方登录</a>
+<ul>
+<li><a href="#oauth-2-0授权流程">OAuth 2.0授权流程</a></li>
+</ul></li>
+<li><a href="#缓存预热和查询缓存">缓存预热和查询缓存</a>
+<ul>
+<li><a href="#缓存预热">缓存预热</a></li>
+<li><a href="#查询缓存">查询缓存</a></li>
+</ul></li>
+<li><a href="#购物车实现">购物车实现</a></li>
+<li><a href="#集成支付功能">集成支付功能</a></li>
+<li><a href="#秒杀和超卖">秒杀和超卖</a></li>
+<li><a href="#静态资源管理">静态资源管理</a></li>
+<li><a href="#全文检索">全文检索</a>
+<ul>
+<li><a href="#方案选择">方案选择</a></li>
+<li><a href="#elasticsearch">ElasticSearch</a></li>
+<li><a href="#配置中文分词和拼音插件">配置中文分词和拼音插件</a></li>
+<li><a href="#全文检索功能">全文检索功能</a></li>
+<li><a href="#django对接elasticsearch">Django对接ElasticSearch</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>
