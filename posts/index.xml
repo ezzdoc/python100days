@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Python-100天从新手到大师</title>
-    <link>https://ezzdoc.github.io/python100days/posts/</link>
+    <link>https://ezzdoc.com/python100days/posts/</link>
     <description>Recent content in Posts on Python-100天从新手到大师</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 10 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ezzdoc.github.io/python100days/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ezzdoc.com/python100days/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PEP 8风格指南</title>
-      <link>https://ezzdoc.github.io/python100days/posts/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</link>
+      <link>https://ezzdoc.com/python100days/posts/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</link>
       <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/</guid>
       <description>&lt;h2 id=&#34;pep-8风格指南&#34;&gt;PEP 8风格指南&lt;/h2&gt;
 
 &lt;p&gt;PEP是Python Enhancement Proposal的缩写，通常翻译为“Python增强提案”。每个PEP都是一份为Python社区提供的指导Python往更好的方向发展的技术文档，其中的第8号增强提案（PEP 8）是针对Python语言编订的代码风格指南。尽管我们可以在保证语法没有问题的前提下随意书写Python代码，但是在实际开发中，采用一致的风格书写出可读性强的代码是每个专业的程序员应该做到的事情，也是每个公司的编程规范中会提出的要求，这些在多人协作开发一个项目（团队开发）的时候显得尤为重要。我们可以从Python官方网站的&lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34;&gt;PEP 8链接&lt;/a&gt;中找到该文档，下面我们对该文档的关键部分做一个简单的总结。&lt;/p&gt;
@@ -35,10 +35,10 @@
     
     <item>
       <title>Python之禅</title>
-      <link>https://ezzdoc.github.io/python100days/posts/Python%E4%B9%8B%E7%A6%85/</link>
+      <link>https://ezzdoc.com/python100days/posts/Python%E4%B9%8B%E7%A6%85/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/Python%E4%B9%8B%E7%A6%85/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/Python%E4%B9%8B%E7%A6%85/</guid>
       <description>&lt;h2 id=&#34;python之禅&#34;&gt;Python之禅&lt;/h2&gt;
 
 &lt;p&gt;Beautiful is better than ugly. （优美比丑陋好）&lt;br /&gt;
@@ -59,10 +59,10 @@ Although that way may not be obvious at first unless you&amp;rsquo;re Dutch.（�
     
     <item>
       <title>Python参考书籍</title>
-      <link>https://ezzdoc.github.io/python100days/posts/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/</link>
+      <link>https://ezzdoc.com/python100days/posts/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/</link>
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/</guid>
       <description>&lt;h2 id=&#34;python参考书籍&#34;&gt;Python参考书籍&lt;/h2&gt;
 
 &lt;h3 id=&#34;入门读物&#34;&gt;入门读物&lt;/h3&gt;
@@ -79,10 +79,10 @@ Although that way may not be obvious at first unless you&amp;rsquo;re Dutch.（�
     
     <item>
       <title>Python惯例</title>
-      <link>https://ezzdoc.github.io/python100days/posts/Python%E6%83%AF%E4%BE%8B/</link>
+      <link>https://ezzdoc.com/python100days/posts/Python%E6%83%AF%E4%BE%8B/</link>
       <pubDate>Sat, 07 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/Python%E6%83%AF%E4%BE%8B/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/Python%E6%83%AF%E4%BE%8B/</guid>
       <description>&lt;h2 id=&#34;python惯例&#34;&gt;Python惯例&lt;/h2&gt;
 
 &lt;p&gt;“惯例”这个词指的是“习惯的做法，常规的办法，一贯的做法”，与这个词对应的英文单词叫“idiom”。由于Python跟其他很多编程语言在语法和使用上还是有比较显著的差别，因此作为一个Python开发者如果不能掌握这些惯例，就无法写出“Pythonic”的代码。下面我们总结了一些在Python开发中的惯用的代码。&lt;/p&gt;
@@ -95,10 +95,10 @@ Although that way may not be obvious at first unless you&amp;rsquo;re Dutch.（�
     
     <item>
       <title>使用Hexo搭建自己的博客</title>
-      <link>https://ezzdoc.github.io/python100days/posts/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://ezzdoc.com/python100days/posts/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;h2 id=&#34;使用hexo搭建自己的博客&#34;&gt;使用Hexo搭建自己的博客&lt;/h2&gt;
 
 &lt;p&gt;对于一个程序员来说，搭建一个属于自己的博客平台是非常有意义的事情。首先，博客可以记录自己的成长历程，也是对自己一段时间学习和工作的总结和沉淀；其他，通过博客可以营销自己，增强自己在互联网或行业内的影响力，为将来更好的职业生涯打一个坚实的基础。前几年有一本名为《软技能 - 代码之外的生存指南》的畅销书，我记得书中有这么一段话：“流行乐队的音乐才华可能并不比夜店驻场乐队高多少，他们为什么就可以在全世界巡回演出，创造一个又一个白金记录？……你的营销做得越好，你的才华才能表现得淋漓尽致。”&lt;/p&gt;
@@ -108,10 +108,10 @@ Although that way may not be obvious at first unless you&amp;rsquo;re Dutch.（�
     
     <item>
       <title>常见反爬策略及应对方案</title>
-      <link>https://ezzdoc.github.io/python100days/posts/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/</link>
+      <link>https://ezzdoc.com/python100days/posts/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/</guid>
       <description>&lt;h2 id=&#34;常见反爬策略及应对方案&#34;&gt;常见反爬策略及应对方案&lt;/h2&gt;
 
 &lt;ol&gt;
@@ -153,10 +153,10 @@ ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;/code&gt;&lt
     
     <item>
       <title>玩转PyCharm</title>
-      <link>https://ezzdoc.github.io/python100days/posts/%E7%8E%A9%E8%BD%ACPyCharm/</link>
+      <link>https://ezzdoc.com/python100days/posts/%E7%8E%A9%E8%BD%ACPyCharm/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/%E7%8E%A9%E8%BD%ACPyCharm/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/%E7%8E%A9%E8%BD%ACPyCharm/</guid>
       <description>&lt;h2 id=&#34;玩转pycharm&#34;&gt;玩转PyCharm&lt;/h2&gt;
 
 &lt;p&gt;PyCharm是由JetBrains公司开发的提供给Python专业的开发者的一个集成开发环境，它最大的优点是能够大大提升Python开发者的工作效率，为开发者集成了很多用起来非常顺手的功能，包括代码调试、高亮语法、代码跳转、智能提示、自动补全、单元测试、版本控制等等。此外，PyCharm还提供了对一些高级功能的支持，包括支持基于Django框架的Web开发。&lt;/p&gt;
@@ -176,10 +176,10 @@ ua&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;/code&gt;&lt
     
     <item>
       <title>用函数还是用复杂的表达式</title>
-      <link>https://ezzdoc.github.io/python100days/posts/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <link>https://ezzdoc.com/python100days/posts/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
       <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
       <description>&lt;h2 id=&#34;用函数还是用复杂的表达式&#34;&gt;用函数还是用复杂的表达式&lt;/h2&gt;
 
 &lt;h3 id=&#34;要不要使用复杂表达式&#34;&gt;要不要使用复杂表达式&lt;/h3&gt;
@@ -202,10 +202,10 @@ c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(input(&lt;span st
     
     <item>
       <title>知乎问题回答</title>
-      <link>https://ezzdoc.github.io/python100days/posts/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/</link>
+      <link>https://ezzdoc.com/python100days/posts/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/</link>
       <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/</guid>
       <description>&lt;h2 id=&#34;知乎问题回答&#34;&gt;知乎问题回答&lt;/h2&gt;
 
 &lt;h3 id=&#34;python学习完基础语法知识后-如何进一步提高&#34;&gt;Python学习完基础语法知识后，如何进一步提高？&lt;/h3&gt;
@@ -275,10 +275,10 @@ c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(input(&lt;span st
     
     <item>
       <title>那些年我们踩过的那些坑</title>
-      <link>https://ezzdoc.github.io/python100days/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</link>
+      <link>https://ezzdoc.com/python100days/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</link>
       <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://ezzdoc.github.io/python100days/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</guid>
+      <guid>https://ezzdoc.com/python100days/posts/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/</guid>
       <description>&lt;h2 id=&#34;那些年我们踩过的那些坑&#34;&gt;那些年我们踩过的那些坑&lt;/h2&gt;
 
 &lt;h3 id=&#34;坑1-整数比较的坑&#34;&gt;坑1 - 整数比较的坑&lt;/h3&gt;
